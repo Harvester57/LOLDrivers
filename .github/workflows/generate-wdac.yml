@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        submodules: true
+        submodules: false
         lfs: true
     - name: Scan drivers
       shell: powershell
@@ -22,7 +22,6 @@ jobs:
         $drivers = Get-SystemDriver -ScanPath .\drivers\ -NoShadowCopy;
         $NewDriverRules = New-CIPolicyRule -DriverFiles $drivers -Level Hash -Deny;
         Merge-CIPolicy -OutputFilePath Denylist.xml -PolicyPaths C:\Windows\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml -Rules $NewDriverRules | Out-Null;
-        cat Denylist.xml
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
