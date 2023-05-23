@@ -1,0 +1,29 @@
+name: Generate WDAC denylist
+
+on: 
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches: [main]
+
+jobs:
+  generate-wdac:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: false
+        lfs: true
+    - name: Scan drivers
+      shell: powershell
+      run: |
+        Get-ChildItem .\drivers\*.bin | Rename-Item -newname { $_.name -replace '.bin','.sys' };
+        $drivers = Get-SystemDriver -ScanPath .\drivers\ -NoShadowCopy;
+        $NewDriverRules = New-CIPolicyRule -DriverFiles $drivers -Level Hash -Deny;
+        Merge-CIPolicy -OutputFilePath Denylist.xml -PolicyPaths C:\Windows\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml -Rules $NewDriverRules | Out-Null;
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Denylist
+        path: Denylist.xml
