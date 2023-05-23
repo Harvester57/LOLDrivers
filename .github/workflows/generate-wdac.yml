@@ -16,7 +16,7 @@ jobs:
         submodules: true
         lfs: true
     - name: Scan drivers
-      shell: pwsh
+      shell: powershell
       run: |
         Get-ChildItem .\drivers\*.bin | Rename-Item -newname { $_.name -replace '.bin','.sys' };
         $drivers = Get-SystemDriver -ScanPath .\drivers\ -NoShadowCopy;
