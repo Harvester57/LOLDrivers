@@ -155,6 +155,7 @@ def generate_doc_drivers(REPO_PATH, OUTPUT_DIR, TEMPLATE_PATH, messages, VERBOSE
                 print(exc)
                 print("Error reading {0}".format(manifest_file))
                 sys.exit(1)
+
         drivers.append(object)
 
     # write markdowns

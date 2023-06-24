@@ -3,7 +3,7 @@
 description = ""
 title = "2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9"
 weight = 10
-
+displayTitle = "vmdrv.sys"
 +++
 
 
@@ -31,23 +31,75 @@ This download link contains the vulnerable driver!
 ### Commands
 
 ```
-
+sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &amp;&amp; sc.exe start vmdrv.sys
 ```
+
 
 | Use Case | Privileges | Operating System | 
 |:---- | ---- | ---- |
-|  |  |  |
+| Elevate privileges | kernel | Windows 10 |
+
+
+
+### Detections
+
+
+{{< block "grid-3" >}}
+{{< column >}}
+#### YARA 🏹
+{{< details "Expand" >}}
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers_strict.yar" "Exact Match" >}}{{< tip >}}with header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_drivers.yar" "Threat Hunting" >}}{{< tip >}}without header and size limitation{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/yara/yara-rules_vuln_strict_renamed.yar" "Renamed" >}}{{< tip >}}for renamed driver files{{< /tip >}} 
+
+
+{{< /details >}}
+{{< /column >}}
+
+
+
+{{< column >}}
+
+#### Sigma 🛡️
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers_names.yml" "Names" >}}{{< tip >}}detects loading using name only{{< /tip >}} 
+
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sigma/driver_load_win_vuln_drivers.yml" "Hashes" >}}{{< tip >}}detects loading using hashes only{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+
+
+{{< column "mb-2" >}}
+
+#### Sysmon 🔎
+{{< details "Expand" >}}
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml" "Block" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< button "https://github.com/magicsword-io/LOLDrivers/tree/main/detections/sysmon_config_vulnerable_hashes.xml" "Alert" >}}{{< tip >}}on hashes{{< /tip >}} 
+
+{{< /details >}}
+
+{{< /column >}}
+{{< /block >}}
+
 
 ### Resources
 <br>
 <li><a href="Internal Research">Internal Research</a></li>
 <br>
 
+
 ### Known Vulnerable Samples
 
 | Property           | Value |
 |:-------------------|:------|
-| Filename           |  |
+| Filename           | vmdrv.sys |
 | MD5                | [6d67da13cf84f15f6797ed929dd8cf5d](https://www.virustotal.com/gui/file/6d67da13cf84f15f6797ed929dd8cf5d) |
 | SHA1               | [1a17cc64e47d3db7085a4dc365049a2d4552dc8a](https://www.virustotal.com/gui/file/1a17cc64e47d3db7085a4dc365049a2d4552dc8a) |
 | SHA256             | [5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921](https://www.virustotal.com/gui/file/5c0b429e5935814457934fa9c10ac7a88e19068fa1bd152879e4e9b89c103921) |
@@ -59,7 +111,17 @@ This download link contains the vulnerable driver!
 | Product           | Windows (R) Win 7 DDK driver |
 | OriginalFilename  | vmdrv.sys |
 
+#### Certificates
 
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### Imports
+{{< details "Expand" >}}
+* ntoskrnl.exe
+* portcls.sys
+
+{{< /details >}}
 #### Imports
 {{< details "Expand" >}}
 * ntoskrnl.exe
@@ -156,7 +218,7 @@ This download link contains the vulnerable driver!
 -----
 | Property           | Value |
 |:-------------------|:------|
-| Filename           |  |
+| Filename           | vmdrv.sys |
 | MD5                | [0e625b7a7c3f75524e307b160f8db337](https://www.virustotal.com/gui/file/0e625b7a7c3f75524e307b160f8db337) |
 | SHA1               | [5088c71a740ef7c4156dcaa31e543052fe226e1c](https://www.virustotal.com/gui/file/5088c71a740ef7c4156dcaa31e543052fe226e1c) |
 | SHA256             | [d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3](https://www.virustotal.com/gui/file/d884ca8cc4ef1826ca3ab03eb3c2d8f356ba25f2d20db0a7d9fc251c565be7f3) |
@@ -168,7 +230,17 @@ This download link contains the vulnerable driver!
 | Product           | Windows (R) Win 7 DDK driver |
 | OriginalFilename  | vmdrv.sys |
 
+#### Certificates
 
+{{< details "Expand" >}}
+
+{{< /details >}}
+#### Imports
+{{< details "Expand" >}}
+* ntoskrnl.exe
+* portcls.sys
+
+{{< /details >}}
 #### Imports
 {{< details "Expand" >}}
 * ntoskrnl.exe
@@ -268,7 +340,7 @@ This download link contains the vulnerable driver!
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9.yaml)
 
-*last_updated:* 2023-05-22
+*last_updated:* 2023-06-24
 
 
 
