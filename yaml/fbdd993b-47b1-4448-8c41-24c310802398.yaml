@@ -28,6 +28,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: fbdd993b-47b1-4448-8c41-24c310802398
 KnownVulnerableSamples:
 - Authentihash:
@@ -138,6 +148,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -150,6 +161,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, CN=ChongKim Chan
       ValidFrom: '2012-07-31 20:41:59'
       ValidTo: '2013-08-01 20:41:59'
@@ -162,6 +174,7 @@ KnownVulnerableSamples:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
         SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -175,6 +188,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -187,10 +201,12 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 176d8e75a27a45e2c6f5d4cceca4d869
 - Authentihash:
     MD5: 9c15e4f6f0e218cbaae27bf6952f6303
     SHA1: e15698840eaa0d72abce8207b4e57966e8c064b2
@@ -294,6 +310,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, CN=ChongKim Chan
       ValidFrom: '2012-07-31 20:41:59'
       ValidTo: '2013-08-01 20:41:59'
@@ -306,6 +323,7 @@ KnownVulnerableSamples:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
         SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services CA
         , G2
       ValidFrom: '2012-10-18 14:38:35'
@@ -319,6 +337,7 @@ KnownVulnerableSamples:
         MD5: 1c4eabb6695c77091994554285e367d1
         SHA1: 01ee4a5386a24a8b6805c4dfcbc5816c38583ce2
         SHA256: e2ccfe68a71dc3bd439a8ba3934461748dacd7a9aaaa5358bed91a4e654829ad
+        SHA384: 23b294260204c6450aa7a05f438dea1c0974056755bbfc6e69760106e64a934b50b356d1ea2bdedf7562876cf8671c32
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -332,6 +351,7 @@ KnownVulnerableSamples:
         MD5: e451247dadf3cdbd75735f81335ede9a
         SHA1: 6488fdef17121c59aba8e4d9ee03fed253995625
         SHA256: 0428cd5afa2e236b4e6d5b767f16d696c3232ad4dae5d5d31800d084937879c3
+        SHA384: 763791c9569bbd8d6c83b1af674b9cac806fca862283d7a0bda0f033de9c9ede9f1ea163251749f9faa7f3ba01662831
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -344,10 +364,12 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 955e7b12a8fa06444c68e54026c45de1
 - Authentihash:
     MD5: 26e06bbacf3f202b0295342c22e71124
     SHA1: 53aea389ddaba5c52c577a82e416c8c533d1cd1d
@@ -452,6 +474,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -464,6 +487,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -476,6 +500,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, CN=ChongKim Chan
       ValidFrom: '2012-07-31 20:41:59'
       ValidTo: '2013-08-01 20:41:59'
@@ -488,6 +513,7 @@ KnownVulnerableSamples:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
         SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -500,10 +526,12 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 955e7b12a8fa06444c68e54026c45de1
 - Authentihash:
     MD5: d82a89cc750ae680af9f463b1b4ec8d9
     SHA1: 3b61791f361c785019347cff13712400198c9364
@@ -610,6 +638,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -622,6 +651,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, CN=ChongKim Chan
       ValidFrom: '2012-07-31 20:41:59'
       ValidTo: '2013-08-01 20:41:59'
@@ -634,6 +664,7 @@ KnownVulnerableSamples:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
         SHA256: 5b8b9e8e3ddd3ab7cc1f8531e88d83cb075539bb4473ed348d80a13dc1a4e065
+        SHA384: 98aa58231d0881595c83ab26289a982c0ff7f697e2a30eb1ff3bea3058897a722b67966a665b5a893cb0daa9dc88f93e
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -647,6 +678,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -659,10 +691,12 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     Signer:
     - SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: 6f0b9814da4da038669c47e77c2f268f
 MitreID: T1068
 Resources:
 - https://github.com/jbaines-r7/dellicious

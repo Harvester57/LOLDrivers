@@ -28,6 +28,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 1c6e1d3b-f825-4065-9e0c-83386883e40f
 KnownVulnerableSamples:
 - Authentihash:
@@ -162,6 +172,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -175,6 +186,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -189,11 +201,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 700a9350ac8b218ab9fc62cf25337ad3
 - Authentihash:
     MD5: 76934be6e996e801ea4d68c504d427c3
     SHA1: b2e03d9e602a6026f45c08b686c6810abd43bfac
@@ -324,6 +338,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -337,6 +352,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -351,11 +367,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 700a9350ac8b218ab9fc62cf25337ad3
 - Authentihash:
     MD5: 64c80e12a495fb117c5db8f0ab70dc91
     SHA1: 39c687c1c70ea61e122ef145364fa123ddeb3383
@@ -499,6 +517,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -512,6 +531,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -526,11 +546,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 74081c86ad3e9771011f162c107927de
 - Authentihash:
     MD5: 43ffd546261cc9a839107caae118b47e
     SHA1: cd5db11f0d5aa7c13242e424463266d9cfd7be44
@@ -659,6 +681,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -672,6 +695,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=KY, ST=Cayman Islands, L=George Town, O=Razer Inc., OU=Digital ID
         Class 3 , Microsoft Software Validation v2, CN=Razer Inc.
       ValidFrom: '2013-09-13 00:00:00'
@@ -685,6 +709,7 @@ KnownVulnerableSamples:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
         SHA256: 3b43e76a05117b0ee9c87f7b98005a1a4b804d633660c8e3a43d342ba9184e1b
+        SHA384: 06fa6279fc3c74eade44518adb2b1c269e30736e11ff02f8e3b1f4a3e55a9f0b07ec215f9654d579c25c90627809182c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -699,6 +724,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -713,12 +739,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 805e4a267f9495e7c0c430d92b78f8bd
 - Authentihash:
     MD5: 151f2aa65417bbb3563e02d1f60484dc
     SHA1: 970bd6388867c86b786d4e218d1a6967d7304ee4
@@ -861,6 +889,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -874,6 +903,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -888,11 +918,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 5192bc7311bdeb1f3977bdc0d2e943e4
 - Authentihash:
     MD5: 700c4e80369a63127263fb1702bbe07b
     SHA1: d6729e750660410644fb73361bc7113523a70c05
@@ -1020,6 +1052,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -1033,6 +1066,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1047,11 +1081,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 42e3f2ffa29901e572f2df03cb872159
 - Authentihash:
     MD5: 78276d9e5e7111419e997b4ea0dc0bcc
     SHA1: 876a391320ff8b3e545c53bb933d6afd8ace66e6
@@ -1192,6 +1228,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1205,6 +1242,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=KY, ST=Cayman Islands, L=George Town, O=Razer Inc., OU=Digital ID
         Class 3 , Microsoft Software Validation v2, CN=Razer Inc.
       ValidFrom: '2013-09-13 00:00:00'
@@ -1218,6 +1256,7 @@ KnownVulnerableSamples:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
         SHA256: 3b43e76a05117b0ee9c87f7b98005a1a4b804d633660c8e3a43d342ba9184e1b
+        SHA384: 06fa6279fc3c74eade44518adb2b1c269e30736e11ff02f8e3b1f4a3e55a9f0b07ec215f9654d579c25c90627809182c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1232,6 +1271,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1246,12 +1286,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: dd7c5c0c762169d40ee01280e4ac74fc
 - Authentihash:
     MD5: 13d7aa7733e7db4e391dba54f3f4b61f
     SHA1: d466b8fa00d2fdd9834d5d3bafdf8cbc0ccf139c
@@ -1379,6 +1421,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -1392,6 +1435,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1406,11 +1450,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: d67b7c7501e5261df5e66b3219fa52ee
 - Authentihash:
     MD5: 49143ee3e5fc7193b0826428979792c8
     SHA1: 2fa99a65d8992e07ac5af3a935861b493669d870
@@ -1538,6 +1584,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -1551,6 +1598,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1565,11 +1613,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 7fb9382c0d754d5aac897d7a3e72b10c
 - Authentihash:
     MD5: 3b53b1da67c8917786be48c57c6a2db1
     SHA1: b2aac760470a4575bc0f6508179ed32d7c37a5d9
@@ -1713,6 +1763,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -1726,6 +1777,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1740,11 +1792,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 6b7d4c6283b9b951b7b2f47a0c5be8c7
 - Authentihash:
     MD5: 428e1d8063028ac66be9501b5bccb038
     SHA1: e4e33d2ad37a0e7edf98f9384d0167dfaa540e77
@@ -1885,6 +1939,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -1898,6 +1953,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1912,11 +1968,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: e1ecbd956bd016618b07e7dddcaf6e60
 - Authentihash:
     MD5: 49143ee3e5fc7193b0826428979792c8
     SHA1: 2fa99a65d8992e07ac5af3a935861b493669d870
@@ -2044,6 +2102,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -2057,6 +2116,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2071,11 +2131,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 7fb9382c0d754d5aac897d7a3e72b10c
 - Authentihash:
     MD5: 4b6d5f6c61c9820aaf6dd10acbcc8385
     SHA1: 1ac31466261a6da69fbeb8e99d0b7b772071ac7f
@@ -2217,6 +2279,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2230,6 +2293,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=KY, ST=Cayman Islands, L=George Town, O=Razer Inc., OU=Digital ID
         Class 3 , Microsoft Software Validation v2, CN=Razer Inc.
       ValidFrom: '2013-09-13 00:00:00'
@@ -2243,6 +2307,7 @@ KnownVulnerableSamples:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
         SHA256: 3b43e76a05117b0ee9c87f7b98005a1a4b804d633660c8e3a43d342ba9184e1b
+        SHA384: 06fa6279fc3c74eade44518adb2b1c269e30736e11ff02f8e3b1f4a3e55a9f0b07ec215f9654d579c25c90627809182c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2257,6 +2322,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2271,12 +2337,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: e1ecbd956bd016618b07e7dddcaf6e60
 - Authentihash:
     MD5: 870f5888401c299ad7b0cacabd53edc2
     SHA1: fb21a2be31b336ac5da2f69c93c4ff4f8fe30a42
@@ -2406,6 +2474,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2419,6 +2488,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=KY, ST=Cayman Islands, L=George Town, O=Razer Inc., OU=Digital ID
         Class 3 , Microsoft Software Validation v2, CN=Razer Inc.
       ValidFrom: '2013-09-13 00:00:00'
@@ -2432,6 +2502,7 @@ KnownVulnerableSamples:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
         SHA256: 3b43e76a05117b0ee9c87f7b98005a1a4b804d633660c8e3a43d342ba9184e1b
+        SHA384: 06fa6279fc3c74eade44518adb2b1c269e30736e11ff02f8e3b1f4a3e55a9f0b07ec215f9654d579c25c90627809182c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2446,6 +2517,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2460,12 +2532,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: cc335217d6f7ab7a53dcfa55cbda5fb0
 - Authentihash:
     MD5: 13d7aa7733e7db4e391dba54f3f4b61f
     SHA1: d466b8fa00d2fdd9834d5d3bafdf8cbc0ccf139c
@@ -2593,6 +2667,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -2606,6 +2681,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2620,11 +2696,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: d67b7c7501e5261df5e66b3219fa52ee
 - Authentihash:
     MD5: 76934be6e996e801ea4d68c504d427c3
     SHA1: b2e03d9e602a6026f45c08b686c6810abd43bfac
@@ -2755,6 +2833,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -2768,6 +2847,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2782,11 +2862,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 700a9350ac8b218ab9fc62cf25337ad3
 - Authentihash:
     MD5: 4b6d5f6c61c9820aaf6dd10acbcc8385
     SHA1: 1ac31466261a6da69fbeb8e99d0b7b772071ac7f
@@ -2928,6 +3010,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2941,6 +3024,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=KY, ST=Cayman Islands, L=George Town, O=Razer Inc., OU=Digital ID
         Class 3 , Microsoft Software Validation v2, CN=Razer Inc.
       ValidFrom: '2013-09-13 00:00:00'
@@ -2954,6 +3038,7 @@ KnownVulnerableSamples:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
         SHA256: 3b43e76a05117b0ee9c87f7b98005a1a4b804d633660c8e3a43d342ba9184e1b
+        SHA384: 06fa6279fc3c74eade44518adb2b1c269e30736e11ff02f8e3b1f4a3e55a9f0b07ec215f9654d579c25c90627809182c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2968,6 +3053,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2982,12 +3068,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: e1ecbd956bd016618b07e7dddcaf6e60
 - Authentihash:
     MD5: 3b53b1da67c8917786be48c57c6a2db1
     SHA1: b2aac760470a4575bc0f6508179ed32d7c37a5d9
@@ -3131,6 +3219,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -3144,6 +3233,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3158,11 +3248,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 6b7d4c6283b9b951b7b2f47a0c5be8c7
 - Authentihash:
     MD5: 151f2aa65417bbb3563e02d1f60484dc
     SHA1: 970bd6388867c86b786d4e218d1a6967d7304ee4
@@ -3305,6 +3397,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -3318,6 +3411,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3332,11 +3426,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 5192bc7311bdeb1f3977bdc0d2e943e4
 - Authentihash:
     MD5: 870f5888401c299ad7b0cacabd53edc2
     SHA1: fb21a2be31b336ac5da2f69c93c4ff4f8fe30a42
@@ -3466,6 +3562,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3479,6 +3576,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=KY, ST=Cayman Islands, L=George Town, O=Razer Inc., OU=Digital ID
         Class 3 , Microsoft Software Validation v2, CN=Razer Inc.
       ValidFrom: '2013-09-13 00:00:00'
@@ -3492,6 +3590,7 @@ KnownVulnerableSamples:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
         SHA256: 3b43e76a05117b0ee9c87f7b98005a1a4b804d633660c8e3a43d342ba9184e1b
+        SHA384: 06fa6279fc3c74eade44518adb2b1c269e30736e11ff02f8e3b1f4a3e55a9f0b07ec215f9654d579c25c90627809182c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3506,6 +3605,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3520,12 +3620,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: cc335217d6f7ab7a53dcfa55cbda5fb0
 - Authentihash:
     MD5: 049d38cee6bf9975ca33274d57bb4666
     SHA1: 1d96772942225757522ddd38d52e9616089377b2
@@ -3666,6 +3768,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3679,6 +3782,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=KY, ST=Cayman Islands, L=George Town, O=Razer Inc., OU=Digital ID
         Class 3 , Microsoft Software Validation v2, CN=Razer Inc.
       ValidFrom: '2013-09-13 00:00:00'
@@ -3692,6 +3796,7 @@ KnownVulnerableSamples:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
         SHA256: 3b43e76a05117b0ee9c87f7b98005a1a4b804d633660c8e3a43d342ba9184e1b
+        SHA384: 06fa6279fc3c74eade44518adb2b1c269e30736e11ff02f8e3b1f4a3e55a9f0b07ec215f9654d579c25c90627809182c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3706,6 +3811,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3720,12 +3826,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: dd7c5c0c762169d40ee01280e4ac74fc
 - Authentihash:
     MD5: 64c80e12a495fb117c5db8f0ab70dc91
     SHA1: 39c687c1c70ea61e122ef145364fa123ddeb3383
@@ -3869,6 +3977,7 @@ KnownVulnerableSamples:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
         SHA256: 506eaba716a689df7e0bb57b6f41afea02cce8c4af4d2392e96bd2e1bf483528
+        SHA384: 0edb1fa0ccc2600fcd37358eb158fae5b72cc13fd3ff6cd0518aa6c780377dd5a7e39145784d4b9c595f163be613f2f1
     - Subject: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       ValidFrom: '2013-12-10 00:00:00'
@@ -3882,6 +3991,7 @@ KnownVulnerableSamples:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
         SHA256: a08e79c386083d875014c409c13d144e0a24386132980df11ff59737c8489eb1
+        SHA384: fa2729064b49e0d77540c1ee95d5f74acaf8eaf55197851a3a40383335f8113e51190bc48b552196edf8ac5cf0c89278
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3896,11 +4006,13 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     Signer:
     - SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 SHA256 Code Signing CA
       Version: 1
+  Imphash: 74081c86ad3e9771011f162c107927de
 MitreID: T1068
 Resources:
 - https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13

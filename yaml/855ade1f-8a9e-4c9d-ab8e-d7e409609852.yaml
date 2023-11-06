@@ -24,6 +24,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 855ade1f-8a9e-4c9d-ab8e-d7e409609852
 KnownVulnerableSamples:
 - Authentihash:
@@ -139,6 +149,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -151,6 +162,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -164,6 +176,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=CH, O=Elaborate Bytes AG, CN=Elaborate Bytes AG, emailAddress=admin@elby.ch
       ValidFrom: '2008-12-23 13:26:11'
       ValidTo: '2011-12-23 13:26:11'
@@ -176,6 +189,7 @@ KnownVulnerableSamples:
         MD5: f39798a2df6dda6c76b4697e743c8b80
         SHA1: d97d9f0d2cad2881eda58fa0467cff6396be6408
         SHA256: 5086b06e5d91585b5a110b3ec4048ce6a43a58e4fc7eb8aa99c391af5b2f8d9f
+        SHA384: 99096e0926f74d7dd4bc744bea78d7310e623f6c782a3f38d4db933e9cdf2bc8e1b813e5f6a0aacd8e59606f075e4afd
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -189,6 +203,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -201,11 +216,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011e643e96d0
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: f531646e31cc12dfaac5b8352653c384
 - Authentihash:
     MD5: 350ab25a105b2fee583f1b903d48788e
     SHA1: 23a6345ab41ff68e31cef025de23cc8c81c90725
@@ -310,6 +327,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -322,6 +340,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -335,6 +354,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=CH, O=Elaborate Bytes AG, CN=Elaborate Bytes AG, emailAddress=admin@elby.ch
       ValidFrom: '2008-12-23 13:26:11'
       ValidTo: '2011-12-23 13:26:11'
@@ -347,6 +367,7 @@ KnownVulnerableSamples:
         MD5: f39798a2df6dda6c76b4697e743c8b80
         SHA1: d97d9f0d2cad2881eda58fa0467cff6396be6408
         SHA256: 5086b06e5d91585b5a110b3ec4048ce6a43a58e4fc7eb8aa99c391af5b2f8d9f
+        SHA384: 99096e0926f74d7dd4bc744bea78d7310e623f6c782a3f38d4db933e9cdf2bc8e1b813e5f6a0aacd8e59606f075e4afd
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -360,6 +381,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -372,11 +394,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011e643e96d0
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 959dce366573a7aae10b74a08931722a
 - Authentihash:
     MD5: 5560e048b895a592a481f9340852e3cd
     SHA1: 1e73dbe3d0bed9def62c1f76a0c58aa6c61e8f74
@@ -473,6 +497,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -485,6 +510,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -498,6 +524,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -510,6 +537,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -523,6 +551,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -535,11 +564,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: b91054cdc4c8b3169cfe6c157f6d9f07
 - Authentihash:
     MD5: 46eca1eab6ab83208b56787f55ed4117
     SHA1: 1b62759087cbe7f5f9a82477bc2f2b19bb51f41d
@@ -652,6 +683,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -665,6 +697,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -677,6 +710,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -690,6 +724,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -703,6 +738,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -715,11 +751,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 3a4e0bc46866ca54459753f62c879b62
 - Authentihash:
     MD5: efa9728ff65fc5bd690400a9a6252642
     SHA1: b827692fe57b0b51f7671d55c0a5dd6446342acd
@@ -836,6 +874,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -849,6 +888,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -861,6 +901,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -874,6 +915,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -887,6 +929,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -899,11 +942,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: f4b8d579fbdb32eabd01954394f5bf3a
 - Authentihash:
     MD5: 2b8c47b3e15625119ef7576646fdefda
     SHA1: 5ad820b5cac4e44ded1534169631e7d3fc8547d1
@@ -1021,6 +1066,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -1034,6 +1080,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1046,6 +1093,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -1059,6 +1107,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -1072,6 +1121,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1084,11 +1134,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 0265c50548889ffd5c2d3a2539885efe
 - Authentihash:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
@@ -1185,6 +1237,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1197,6 +1250,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -1210,6 +1264,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -1222,6 +1277,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -1235,6 +1291,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1247,11 +1304,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: b91054cdc4c8b3169cfe6c157f6d9f07
 - Authentihash:
     MD5: b5cb05a635b6932ea1f7c0ee35592e37
     SHA1: e8dc3aa48d494fb2bc096523e11859afdd18b10a
@@ -1362,6 +1421,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -1375,6 +1435,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1387,6 +1448,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -1400,6 +1462,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -1413,6 +1476,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1425,11 +1489,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: e804d4ee2c20f3eb1d3c955e38a2fe11
 - Authentihash:
     MD5: 47a02497d57e9ffa7ab2490d15a0bf90
     SHA1: da00f69b9d1e4a997094651f4af2c0faad653a10
@@ -1542,6 +1608,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -1555,6 +1622,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1567,6 +1635,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -1580,6 +1649,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -1593,6 +1663,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1605,11 +1676,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 751c6b5c201f8c52f5512350cad88ddc
 - Authentihash:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
@@ -1706,6 +1779,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1718,6 +1792,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -1731,6 +1806,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -1743,6 +1819,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -1756,6 +1833,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1768,11 +1846,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: b91054cdc4c8b3169cfe6c157f6d9f07
 - Authentihash:
     MD5: c18c29b48a4e04a3cd761dc733cfda55
     SHA1: f43590d096d3ed0bbcfd2b0e41a327ba365bd9ec
@@ -1890,6 +1970,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -1903,6 +1984,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1915,6 +1997,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -1928,6 +2011,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -1941,6 +2025,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1953,11 +2038,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: bc44fdc145156a15d0a803d18877b218
 - Authentihash:
     MD5: 8fded3a6c81ca6901a7d7f618e79695c
     SHA1: f164f2b99d6d505009a431e7e7702a8c07ce6df8
@@ -2070,6 +2157,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2082,6 +2170,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2095,6 +2184,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=CH, O=Elaborate Bytes AG, CN=Elaborate Bytes AG, emailAddress=admin@elby.ch
       ValidFrom: '2008-12-23 13:26:11'
       ValidTo: '2011-12-23 13:26:11'
@@ -2107,6 +2197,7 @@ KnownVulnerableSamples:
         MD5: f39798a2df6dda6c76b4697e743c8b80
         SHA1: d97d9f0d2cad2881eda58fa0467cff6396be6408
         SHA256: 5086b06e5d91585b5a110b3ec4048ce6a43a58e4fc7eb8aa99c391af5b2f8d9f
+        SHA384: 99096e0926f74d7dd4bc744bea78d7310e623f6c782a3f38d4db933e9cdf2bc8e1b813e5f6a0aacd8e59606f075e4afd
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2120,6 +2211,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2132,11 +2224,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011e643e96d0
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 71c580daf556775f690f0af3db12506f
 - Authentihash:
     MD5: ffb66883d7aead2388847f28741500fe
     SHA1: bf589f9a1a1db11133f2c33285694e4e578bd3eb
@@ -2248,6 +2342,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2260,6 +2355,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2273,6 +2369,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=CH, O=Elaborate Bytes AG, CN=Elaborate Bytes AG, emailAddress=admin@elby.ch
       ValidFrom: '2008-12-23 13:26:11'
       ValidTo: '2011-12-23 13:26:11'
@@ -2285,6 +2382,7 @@ KnownVulnerableSamples:
         MD5: f39798a2df6dda6c76b4697e743c8b80
         SHA1: d97d9f0d2cad2881eda58fa0467cff6396be6408
         SHA256: 5086b06e5d91585b5a110b3ec4048ce6a43a58e4fc7eb8aa99c391af5b2f8d9f
+        SHA384: 99096e0926f74d7dd4bc744bea78d7310e623f6c782a3f38d4db933e9cdf2bc8e1b813e5f6a0aacd8e59606f075e4afd
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2298,6 +2396,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2310,11 +2409,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011e643e96d0
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 656ad5c2eac95f75d3fe6d5ca59e0d8d
 - Authentihash:
     MD5: f6ec1910d05b0270c47ce480c15bc7cd
     SHA1: 43632833ba3e81cc5a130e11f6feb5937c1c6f21
@@ -2429,6 +2530,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -2442,6 +2544,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2454,6 +2557,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2467,6 +2571,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2480,6 +2585,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2492,11 +2598,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 8919b7bae28d98c4a9e5967c9c55ce70
 - Authentihash:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
@@ -2597,6 +2705,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2609,6 +2718,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2622,6 +2732,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -2634,6 +2745,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2647,6 +2759,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2659,11 +2772,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: b91054cdc4c8b3169cfe6c157f6d9f07
 - Authentihash:
     MD5: b1fd26613e70e4254f5aa6b399971f97
     SHA1: c97772d482a4a30a18fc44e6253e5cb30b9e5bfb
@@ -2742,6 +2857,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2754,6 +2870,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2767,6 +2884,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -2779,6 +2897,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2792,6 +2911,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2804,11 +2924,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: bd4f9a93da2bb4b5f6e90d4f9381661c
 - Authentihash:
     MD5: b1fd26613e70e4254f5aa6b399971f97
     SHA1: c97772d482a4a30a18fc44e6253e5cb30b9e5bfb
@@ -2887,6 +3009,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2899,6 +3022,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2912,6 +3036,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -2924,6 +3049,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2937,6 +3063,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2949,11 +3076,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: bd4f9a93da2bb4b5f6e90d4f9381661c
 - Authentihash:
     MD5: 697316476aee4bef0d581e458007fedd
     SHA1: 83481f6760efd3c9c85a603afb3c3e4b73733da8
@@ -3041,6 +3170,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x1d2'
   Signature: ''
   Signatures: {}
+  Imphash: 32247962aa01af8ad5dca696260a05ab
 - Authentihash:
     MD5: 41a6b67cc46b4cfab21bdd50f4f04cbc
     SHA1: 442d1f5509d9653ea1f11acf77ac42e41ba61eee
@@ -3108,6 +3238,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x82'
   Signature: ''
   Signatures: {}
+  Imphash: f233a65b937c69b447824889fb7425ff
 - Authentihash:
     MD5: b1fd26613e70e4254f5aa6b399971f97
     SHA1: c97772d482a4a30a18fc44e6253e5cb30b9e5bfb
@@ -3186,6 +3317,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3198,6 +3330,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -3211,6 +3344,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -3223,6 +3357,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -3236,6 +3371,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3248,11 +3384,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: bd4f9a93da2bb4b5f6e90d4f9381661c
 - Authentihash:
     MD5: 56f8e517fb77f6ac31085b190051e447
     SHA1: 2817006c320dcad5d27737f8ffa76b3652dd8a1a
@@ -3361,6 +3499,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3373,6 +3512,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -3386,6 +3526,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=CH, O=Elaborate Bytes AG, CN=Elaborate Bytes AG, emailAddress=admin@elby.ch
       ValidFrom: '2008-12-23 13:26:11'
       ValidTo: '2011-12-23 13:26:11'
@@ -3398,6 +3539,7 @@ KnownVulnerableSamples:
         MD5: f39798a2df6dda6c76b4697e743c8b80
         SHA1: d97d9f0d2cad2881eda58fa0467cff6396be6408
         SHA256: 5086b06e5d91585b5a110b3ec4048ce6a43a58e4fc7eb8aa99c391af5b2f8d9f
+        SHA384: 99096e0926f74d7dd4bc744bea78d7310e623f6c782a3f38d4db933e9cdf2bc8e1b813e5f6a0aacd8e59606f075e4afd
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -3411,6 +3553,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3423,15 +3566,17 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011e643e96d0
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 037b9d19995faadf69a2ce134473e346
 - Authentihash:
-    MD5: 4be47ca586cc6b4f4336bbf9b661cc76
-    SHA1: 8fbc16f2212b74de4a4ff5efcb7026bc3f5952bc
-    SHA256: d7cc4ed41cc0ac5056e7d9435f850f7cc7021901c26e698e8f2056dbb53d3323
+    MD5: 36afdbf3a369c8ff9c0ca2f665dcc935
+    SHA1: 2c4c54ed54d72f63861fbfdcb05814a2227d055c
+    SHA256: bb6e40eebe61bc24353169707d927c3ecc2adc58111560d1b09831c6e6a92e21
   Company: Elaborate Bytes
   Copyright: Copyright (C) Elaborate Bytes 2000
   CreationTimestamp: '2000-11-30 16:02:08'
@@ -3488,6 +3633,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x78'
   Signature: ''
   Signatures: {}
+  Imphash: cb876abd8c6ca8a47d50aec4a520a020
 - Authentihash:
     MD5: 38585151f074ca827f399c34778b18c9
     SHA1: 48d8d3e47c7963bda3400e91f436959492cd2ad9
@@ -3576,6 +3722,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x1ee'
   Signature: ''
   Signatures: {}
+  Imphash: ca6e77f472ebd5b2ade876e7c773bb57
 - Authentihash:
     MD5: 18fb56fabbd62de931ed334197e5989c
     SHA1: 83e3725839448a2324dc280ebb5aeb21cf1a41e8
@@ -3663,6 +3810,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x1d2'
   Signature: ''
   Signatures: {}
+  Imphash: 32247962aa01af8ad5dca696260a05ab
 - Authentihash:
     MD5: 6322f5016d86ff1f4d4e5473881d1feb
     SHA1: 8cefaf430f293e4700861112a94f360ef6b57907
@@ -3781,6 +3929,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -3794,6 +3943,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3806,6 +3956,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -3819,6 +3970,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -3832,6 +3984,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3844,11 +3997,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 7e798c3abcbd0f1cfa8b2b9688e01936
 - Authentihash:
     MD5: da95f12b1f0747d1890aa9224b3753cd
     SHA1: 63ab2ebc7c24394a2273150f8cf416aa9a043ce9
@@ -3968,6 +4123,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3980,6 +4136,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -3993,6 +4150,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=CH, O=Elaborate Bytes AG, CN=Elaborate Bytes AG, emailAddress=admin@elby.ch
       ValidFrom: '2008-12-23 13:26:11'
       ValidTo: '2011-12-23 13:26:11'
@@ -4005,6 +4163,7 @@ KnownVulnerableSamples:
         MD5: f39798a2df6dda6c76b4697e743c8b80
         SHA1: d97d9f0d2cad2881eda58fa0467cff6396be6408
         SHA256: 5086b06e5d91585b5a110b3ec4048ce6a43a58e4fc7eb8aa99c391af5b2f8d9f
+        SHA384: 99096e0926f74d7dd4bc744bea78d7310e623f6c782a3f38d4db933e9cdf2bc8e1b813e5f6a0aacd8e59606f075e4afd
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -4018,6 +4177,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4030,11 +4190,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011e643e96d0
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: aa03d5a319bc221875846e19e01276f7
 - Authentihash:
     MD5: fc16498ddf3716e03fdd527c456ea80b
     SHA1: 7436e16cf348558015593cbf5ab9c117d97738cc
@@ -4135,6 +4297,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4147,6 +4310,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -4160,6 +4324,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -4172,6 +4337,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -4185,6 +4351,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4197,15 +4364,17 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: b91054cdc4c8b3169cfe6c157f6d9f07
 - Authentihash:
-    MD5: 0deadda87ba63ea29ce9c581ea9faa21
-    SHA1: c7e53f82c59df11843f4d9201c6e897673204141
-    SHA256: 01927b3cbbbc24763d9a932aaa164c6e81f9ae2e0f88bb7baea7c099044ddd5e
+    MD5: ea9d1332583bfa9f5ac5f04fe5369899
+    SHA1: 8971f6be64e046f2d04262af06cddd4032dadacb
+    SHA256: 096946d71621fdec7879ca4b219926fb435bddb9940bdb86a5741e4191b23f61
   Company: Elaborate Bytes AG
   Copyright: Copyright (C) 2000 - 2002 Elaborate Bytes AG
   CreationTimestamp: '2002-11-29 04:38:16'
@@ -4291,6 +4460,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x1b2'
   Signature: ''
   Signatures: {}
+  Imphash: b7a0100fe60d7a8263da64820f7d0120
 - Authentihash:
     MD5: 90d8ab45c4a785f983786f7c088ba9ea
     SHA1: cd9c30ba2ab80129eaa603a81ae3a7050add5894
@@ -4410,6 +4580,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -4423,6 +4594,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4435,6 +4607,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -4448,6 +4621,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -4461,6 +4635,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4473,15 +4648,17 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: afee876e89b51e2cc7c91353fb588fe6
 - Authentihash:
-    MD5: f77fa8cff09efa7c3fec79d0593aba52
-    SHA1: c1bf449ae19d7e75d6f889051005a848394b4b6d
-    SHA256: 37b561128161b34e140065ed771f3614fa9dd7b8c4bd90e49e8b39145c985000
+    MD5: fedc7776f0f8bf6c2cbc56413a3bbf80
+    SHA1: 5c93165d6a432c58ac7ea149d2d1b7787ec56208
+    SHA256: cfd605d38f358d62bdc8cdd26dd0507adb732e0bf4dc5c5123e900daee91263d
   Company: Elaborate Bytes
   Copyright: Copyright (C) Elaborate Bytes 2000
   CreationTimestamp: '2001-03-27 07:38:46'
@@ -4552,6 +4729,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x112'
   Signature: ''
   Signatures: {}
+  Imphash: b5967a61e1a4e1d57b3d8ffefc5721ed
 - Authentihash:
     MD5: a3e446885ff8aeb08aebf648e0658e2f
     SHA1: 8644110e1460c97743ad9f632dde2e5122bfbb26
@@ -4670,6 +4848,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer ,
         G2
       ValidFrom: '2007-06-15 00:00:00'
@@ -4683,6 +4862,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4695,6 +4875,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -4708,6 +4889,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -4721,6 +4903,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4733,11 +4916,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 9fd359d308a1e93106189b4ebd945855
 - Authentihash:
     MD5: d00443b7b4e5529a942c4866001af949
     SHA1: 31913db2c43fa5b235b701dd0f79ef5f0110f322
@@ -4837,6 +5022,7 @@ KnownVulnerableSamples:
         MD5: 832074a51bea8e4758c8dfeb2e96ad84
         SHA1: 04ba895ed074635a01875a1f25da93e2e2cbbfba
         SHA256: c5ba90a16c07cee0cb480ee21c9bedaf3ea4cbe004589b74fb9c2c0bedbc7c1b
+        SHA384: 94a7139c5e1fb29c73f8882dc40027a3929d0aab66c9be0138707c68ba43a1f329477f4bcec47cb0d0d48e918fecc91d
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4849,6 +5035,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -4862,6 +5049,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services Signer
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2008-12-03 23:59:59'
@@ -4874,6 +5062,7 @@ KnownVulnerableSamples:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
         SHA256: e32839dddc0f4ed2474efaf37f59d46db400c700fd19533cb0895a111124bc77
+        SHA384: ee9c75832cb252218b3201619852209df490d2ef7a5f7a28afdb37f1c1dd56f4604898838e558f615b1c798d4a488223
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -4887,6 +5076,7 @@ KnownVulnerableSamples:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
         SHA256: 9238292d441c56dc89684c253343c17de3ed9cecd7f83d1d8f793b5ebc91f7b9
+        SHA384: 9279c1377eb701fdd79ef85038ff151cd8902169ba55fca84b9850f003563f73a1daaf869544252a2e42f06f58d2275f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4899,11 +5089,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000010f5c98b8f5
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: 84d83741445d9f5a6717b874fed3d8f3
 MitreID: T1068
 Resources:
 - ' https://github.com/jbaines-r7/dellicious'

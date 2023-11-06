@@ -15,7 +15,17 @@ Commands:
   Privileges: kernel
   Usecase: Elevate privileges
 Created: '2023-06-05'
-Detection: []
+Detection:
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 93740202-930c-4ab4-8603-8ec9532c5415
 KnownVulnerableSamples:
 - Authentihash:
@@ -131,6 +141,7 @@ KnownVulnerableSamples:
         MD5: 5c037797b52b0dacf4eaf3f7dca4982a
         SHA1: d1d8fe6c1dded9e1309b3d4a7bb062e542701669
         SHA256: 5c98c23aba5a9d7b3f522cdcd6f6c6c2274d5a98dea818f202dda8a47eeb220f
+        SHA384: 1e7d8f8068fe94389a8a431aea1000598d009e69a01b102f831b60a5c3778e11336a6eb2d5fbd56057190d74916d5d53
     - Subject: C=CN, ST=Beijing, L=Beijing, O=Beijing JoinHope Image Technology Ltd.,
         CN=Beijing JoinHope Image Technology Ltd.
       ValidFrom: '2014-05-16 00:00:00'
@@ -144,6 +155,7 @@ KnownVulnerableSamples:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
         SHA256: ea947432de238a25fdb7892e436f4ef44f30ab16ae9e1eb914860f4808b25ef2
+        SHA384: 430e932514f35ed55f31f050f33bcc0b9244fd83c6d1d28ee240306e54292e93b5894ef4eb9c09bf84cdc8068c6a7230
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -158,6 +170,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -172,12 +185,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 65ccc2c578a984c31880b6c5e65257d3
 - Authentihash:
     MD5: b39131751dda6e639ad70e2480d5fcd9
     SHA1: cf1390d2e70d6ee560d3030b891d90f5fc897f8f
@@ -291,6 +306,7 @@ KnownVulnerableSamples:
         MD5: 5c037797b52b0dacf4eaf3f7dca4982a
         SHA1: d1d8fe6c1dded9e1309b3d4a7bb062e542701669
         SHA256: 5c98c23aba5a9d7b3f522cdcd6f6c6c2274d5a98dea818f202dda8a47eeb220f
+        SHA384: 1e7d8f8068fe94389a8a431aea1000598d009e69a01b102f831b60a5c3778e11336a6eb2d5fbd56057190d74916d5d53
     - Subject: C=CN, ST=Beijing, L=Beijing, O=Beijing JoinHope Image Technology Ltd.,
         CN=Beijing JoinHope Image Technology Ltd.
       ValidFrom: '2014-05-16 00:00:00'
@@ -304,6 +320,7 @@ KnownVulnerableSamples:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
         SHA256: ea947432de238a25fdb7892e436f4ef44f30ab16ae9e1eb914860f4808b25ef2
+        SHA384: 430e932514f35ed55f31f050f33bcc0b9244fd83c6d1d28ee240306e54292e93b5894ef4eb9c09bf84cdc8068c6a7230
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -318,6 +335,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -332,12 +350,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 65ccc2c578a984c31880b6c5e65257d3
 - Authentihash:
     MD5: 5858899869ed5c70f3af5287d4f4299c
     SHA1: b52e5da0ba19dc71148c4d4499f688ff4d86ed59
@@ -442,6 +462,7 @@ KnownVulnerableSamples:
         MD5: f1587fcabfcc45e870238853daf0aa43
         SHA1: 3076e8e83fc858bb8547145202fc4790573e3287
         SHA256: a45a86473b8344cc6690997658f54ad8bbad3f33c26c823f5517359b0b72c103
+        SHA384: b136829c9ba16789b068169c1cc1cdcaec4ffb3355700267e9984a8e57dbdafc118b2ab44691b24f568c9f58f52c2bad
     - Subject: C=CN, ST=guangdong, L=zhuhai, O=Zhuhai liancheng Technology Co., Ltd.,
         OU=Digital ID Class 3 , Microsoft Software Validation v2, CN=Zhuhai liancheng
         Technology Co., Ltd.
@@ -456,6 +477,7 @@ KnownVulnerableSamples:
         MD5: b91ec3270e80aa93214c42d1eed66d36
         SHA1: c27a40cbc754d2bb1f7b872a5a9fd385ff1c2b2f
         SHA256: 7b4a9879162ce64e75cca2bcc675be06dacb6c9eeae4df6c929080b4db819cd4
+        SHA384: 394fa6e52375f53d18f79f1abb7b26b02bbb000784279547bd81d16c18fabe1b8156b64ad1c356e85e1829fa2ab3f870
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -470,6 +492,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -484,12 +507,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 627dfdf73a1455de5143a270799e6b7b
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 8d070a93a45ed8ba6dba6bfbe0d084e7
 MitreID: T1068
 Resources:
 - https://www.fortinet.com/blog/threat-research/wintapix-kernal-driver-middle-east-countries

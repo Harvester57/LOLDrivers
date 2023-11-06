@@ -70,6 +70,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x2c'
   Signature: []
   Signatures: {}
+  Imphash: ''
 - Authentihash:
     MD5: 188d812252f224a8ea618f8e9f1fdadb
     SHA1: ede3868d6bb27bee5c0b9a71fef486e405d59816
@@ -123,6 +124,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x2c'
   Signature: []
   Signatures: {}
+  Imphash: ''
 - Authentihash:
     MD5: 188d812252f224a8ea618f8e9f1fdadb
     SHA1: ede3868d6bb27bee5c0b9a71fef486e405d59816
@@ -176,6 +178,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x2c'
   Signature: []
   Signatures: {}
+  Imphash: ''
 - Company: ''
   Date: ''
   Description: ''

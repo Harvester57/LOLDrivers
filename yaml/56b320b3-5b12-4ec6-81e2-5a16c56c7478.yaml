@@ -86,10 +86,12 @@ KnownVulnerableSamples:
         MD5: 7773789c84ab7bbe854ea7a8e3fc4a13
         SHA1: 45c7568ed49b056a5db0e62aa4f42a50173b9ba1
         SHA256: 4a60ee2fae435938b5bad02905c117d3e23c663856966971ad15c2d2acf98fed
+        SHA384: ae738b47a85d6fb9eff03d6a7221773d1a0fd2b44cc1d87562da099504608fb0cce03eca0b8ee8622cc5e43d8cac536f
     Signer:
     - SerialNumber: 459f66550fe479a84170eb50c75c9f3c
       Issuer: CN=WDKTestCert LuckyStrike,132606458839688289
       Version: 1
+  Imphash: 8464f3f6600ee4eccbbfe08f3a2a53e0
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

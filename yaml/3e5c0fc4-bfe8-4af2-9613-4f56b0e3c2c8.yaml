@@ -91,10 +91,12 @@ KnownVulnerableSamples:
         MD5: d606eff6aa2f4e57d695c323c6a3591d
         SHA1: 83bcbb816007b04a98dddc2ce9d83569e0a913d8
         SHA256: f367ed049a014c61efef0ed4a4e726dc97c83b58e36b346b68b3039342f2f53c
+        SHA384: 28180687451e1c889191ef51deada86464e2918530084d6d17378238660a39488fc819a164ec225091dd75734d1ebcbd
     Signer:
     - SerialNumber: 7b475bcb4233f98946d0a1fbeb9de9ce
       Issuer: CN=WDKTestCert zezec,132961360795713868
       Version: 1
+  Imphash: 2de3451f3e7b02970582bb8f9fd8c73a
 MitreID: T1068
 Resources:
 - https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo

@@ -26,6 +26,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 9c3c6e89-3916-498f-81e5-da057ab3ed42
 KnownVulnerableSamples:
 - Authentihash:
@@ -195,6 +205,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -209,6 +220,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -222,11 +234,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
 - Authentihash:
     MD5: dbc72430b48b0ca636a84b9e5ed0d534
     SHA1: 58ca196bfd54c6166aae0f8000fa8a1a66a0073e
@@ -394,6 +408,7 @@ KnownVulnerableSamples:
         MD5: 8d4476692bcda36ed89244b94bd705f0
         SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
         SHA256: dd1db9c0e7e50040ac6c586c1b6fd479cef240c064473373f75fbeb3e04ff972
+        SHA384: 6f8e6245a2f817203781cc38a9463e5ac7a7db499aede35d3321b4848fc1389dd29831cdfc26984a691d5875c4eebf1a
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -407,11 +422,13 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000f3158ea57d1c559f290000000000f3
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
 - Authentihash:
     MD5: 98a3ab2b723de48256701b417ff87a65
     SHA1: ff80d6663a92ff454526e88847cbb4d9bd00e21e
@@ -576,6 +593,7 @@ KnownVulnerableSamples:
         MD5: bf6aed18e4c3fd6ac87330096df18117
         SHA1: f96be504b875f1e63bf51eacc6768e4fdecddcc6
         SHA256: 76c137a4dd29ebb1cb6a5d319d17e7049ad6d524f9de5d47c24c14b16a4f0720
+        SHA384: f1d9ab8315a45f1b96431b009f4b5c12cb4d05428d5b003a4100d4b31124799e8d70dbf72a47787657c42e198bbdff33
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -589,11 +607,13 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
 - Authentihash:
     MD5: 3a2404b8c4c87facf5316e4ff16bd603
     SHA1: ff3d240cf0faeafb37f176b71151dd83b2177a0e
@@ -757,6 +777,7 @@ KnownVulnerableSamples:
         MD5: e01323d4e9f20b9c042abdd9585d2d81
         SHA1: d1fab71f563191354037fe0bb8bf73718c721e45
         SHA256: 9db6a214ff40e20a9785ef23e93d98de1c0f3b018703c86e6c7cd0d4ade37a14
+        SHA384: 9977259d83cbe7a02e23c446aa606f37b48ab088e375bb4f09a356fdd3abfc114eb2d22305c3d9daeaa47be4fef9f16b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -771,6 +792,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -785,6 +807,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping CA
       ValidFrom: '2019-05-02 00:00:00'
@@ -798,6 +821,7 @@ KnownVulnerableSamples:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
         SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
     - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
         Signer #3'
       ValidFrom: '2022-05-11 00:00:00'
@@ -811,12 +835,14 @@ KnownVulnerableSamples:
         MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
         SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
+        SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
     Signer:
     - SerialNumber: 5f9e06262d2eed425c886a4709350426
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 63fd1582ac2edee50f7ec7eedde38ee8
 - Authentihash:
     MD5: dab51577c44fda1574532847f4deb56c
     SHA1: c7cb92f60ffe07d1c9bfa43ea1213f8c8f766022
@@ -984,6 +1010,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -998,6 +1025,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1011,11 +1039,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
 - Authentihash:
     MD5: 98a3ab2b723de48256701b417ff87a65
     SHA1: ff80d6663a92ff454526e88847cbb4d9bd00e21e
@@ -1164,6 +1194,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x174'
   Signature: ''
   Signatures: {}
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
 - Authentihash:
     MD5: 75c70824590d4db183418c7fd9e47d2d
     SHA1: 1ccd8bc3104fe1654806752e1e6730d3ee0b4ee4
@@ -1326,6 +1357,7 @@ KnownVulnerableSamples:
         MD5: b5ff0da6f1d327dca52b08e9c7c8d439
         SHA1: c7acfdfc234a3bb37535cbe2785d9202b4b0a10c
         SHA256: 80a8f0e8652dcea59596b4238f4c2d9f0212a25ea7434fde70a68a202b7ed0b1
+        SHA384: 5cb5027c847cd97082d64888db37cd3fed2ce3663ae3c7466d16887661fb8772f84f9a756782bd9eadde048ceb0f3773
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -1338,6 +1370,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -1351,10 +1384,12 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 5d11784fb81765023f89a4f4243fe1a9
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       Version: 1
+  Imphash: 63fd1582ac2edee50f7ec7eedde38ee8
 - Authentihash:
     MD5: c12f9f4027088d2ca69b2d2fec33131b
     SHA1: f73aa876791246fb7486214e4d3f81a0d375e649
@@ -1449,6 +1484,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -1463,6 +1499,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1476,11 +1513,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 6b387c029257f024a43a73f38afb2629
 - Authentihash:
     MD5: 5d9b4ff04047d06a76354c7f7caa1e9e
     SHA1: 6230645a707228e023d7fc9c5c86c340be05f9c3
@@ -1645,6 +1684,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -1659,6 +1699,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1672,11 +1713,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
 - Authentihash:
     MD5: 1584b06241f08d74434a452e798b2809
     SHA1: 8eca36d54d04736f61f54285bcee8c30ed892553
@@ -1841,6 +1884,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -1855,6 +1899,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -1868,11 +1913,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
 - Authentihash:
     MD5: 1959eac3bb98c3032791b0dc6d662281
     SHA1: f8df5fd765770a56c227c66b47edcf38f868ef33
@@ -2037,6 +2084,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -2051,6 +2099,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2064,11 +2113,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
 - Authentihash:
     MD5: 98a3ab2b723de48256701b417ff87a65
     SHA1: ff80d6663a92ff454526e88847cbb4d9bd00e21e
@@ -2233,6 +2284,7 @@ KnownVulnerableSamples:
         MD5: bf6aed18e4c3fd6ac87330096df18117
         SHA1: f96be504b875f1e63bf51eacc6768e4fdecddcc6
         SHA256: 76c137a4dd29ebb1cb6a5d319d17e7049ad6d524f9de5d47c24c14b16a4f0720
+        SHA384: f1d9ab8315a45f1b96431b009f4b5c12cb4d05428d5b003a4100d4b31124799e8d70dbf72a47787657c42e198bbdff33
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -2246,11 +2298,13 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
 - Authentihash:
     MD5: 01788e7162863cfe7aeba0f040a6cc08
     SHA1: ded2c02db6b5addf9d521361fd3657b2b6894a48
@@ -2416,6 +2470,7 @@ KnownVulnerableSamples:
         MD5: e01323d4e9f20b9c042abdd9585d2d81
         SHA1: d1fab71f563191354037fe0bb8bf73718c721e45
         SHA256: 9db6a214ff40e20a9785ef23e93d98de1c0f3b018703c86e6c7cd0d4ade37a14
+        SHA384: 9977259d83cbe7a02e23c446aa606f37b48ab088e375bb4f09a356fdd3abfc114eb2d22305c3d9daeaa47be4fef9f16b
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2430,6 +2485,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2444,6 +2500,7 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     - Subject: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Time Stamping CA
       ValidFrom: '2019-05-02 00:00:00'
@@ -2457,6 +2514,7 @@ KnownVulnerableSamples:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
         SHA256: 8c8d2046b29e792e71b28705fe67c435208a336dde074a75452d98e72c734937
+        SHA384: 5dbc5eae13908fee4c4e5216f87e3e87208fff0d1052f5fa9f0856a429d6a6c422c625f2318f2f29aea26ece09c1e811
     - Subject: 'C=GB, ST=Manchester, O=Sectigo Limited, CN=Sectigo RSA Time Stamping
         Signer #3'
       ValidFrom: '2022-05-11 00:00:00'
@@ -2470,12 +2528,14 @@ KnownVulnerableSamples:
         MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
         SHA256: 2219bd6adf84dc8f6f04833974d150f75f5ce79cbf85788a6f7efaa4a5205839
+        SHA384: 62d3259a3af5706e5bd6ca3f7ca35c0978253facbf7bee54f61d6afdd548e39e435fb55f952dbf8ed2bd6ee0c6b69660
     Signer:
     - SerialNumber: 5f9e06262d2eed425c886a4709350426
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: cf0eb2dce2ba2c9ff5dd0da794b8b372
 - Authentihash:
     MD5: 0318de365e28ee38442c92b03747b088
     SHA1: ff0497dbd779bd65bbb7302b360dc0738a464e9b
@@ -2640,6 +2700,7 @@ KnownVulnerableSamples:
         MD5: b5ff0da6f1d327dca52b08e9c7c8d439
         SHA1: c7acfdfc234a3bb37535cbe2785d9202b4b0a10c
         SHA256: 80a8f0e8652dcea59596b4238f4c2d9f0212a25ea7434fde70a68a202b7ed0b1
+        SHA384: 5cb5027c847cd97082d64888db37cd3fed2ce3663ae3c7466d16887661fb8772f84f9a756782bd9eadde048ceb0f3773
     - Subject: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       ValidFrom: '2010-02-08 00:00:00'
       ValidTo: '2020-02-07 23:59:59'
@@ -2652,6 +2713,7 @@ KnownVulnerableSamples:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
         SHA256: d8844186775bddbccaf3dc017064df7d760fd4b85c5d07561a3efd7da950f89e
+        SHA384: 78d972495720b43a6470b18ae1226bcca20707628087717a9364c14ca053ba264e6d149718b103542d9942200138a69d
     - Subject: C=US, O=thawte, Inc., OU=Certification Services Division, OU=(c) 2006
         thawte, Inc. , For authorized use only, CN=thawte Primary Root CA
       ValidFrom: '2011-02-22 19:31:57'
@@ -2665,10 +2727,12 @@ KnownVulnerableSamples:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
         SHA256: a39ed0d6fd4eb1a6f7fed60f726e23eae668b7591bc004644625d22c701213fa
+        SHA384: 64b7643e4146016cbf83c911eb67e4601b6bb8d66f8ee8dcee67b815f91770d86ab23678b984430f22a963e5484881b7
     Signer:
     - SerialNumber: 5d11784fb81765023f89a4f4243fe1a9
       Issuer: C=US, O=Thawte, Inc., CN=Thawte Code Signing CA , G2
       Version: 1
+  Imphash: cf0eb2dce2ba2c9ff5dd0da794b8b372
 - Authentihash:
     MD5: 619b74b682d2abd190cb3e0ac5ecd6f7
     SHA1: ed5e61e534550b1f286d0801d4464d45f38d2739
@@ -2761,6 +2825,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -2775,6 +2840,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2788,11 +2854,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 514298d18002920ee5a917fc34426417
 - Authentihash:
     MD5: 265462dbda175886e0c02257f2385753
     SHA1: 0e45b675fec76249e64f8a2d4bd5483886b91169
@@ -2960,6 +3028,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -2974,6 +3043,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -2987,11 +3057,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
 - Authentihash:
     MD5: 096f2e1d163a780fa3cb7f0870fe2b34
     SHA1: 0e4f45b762d5c548322cde3d0e2d5ff2d81c87f1
@@ -3159,6 +3231,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -3173,6 +3246,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -3186,11 +3260,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
 - Authentihash:
     MD5: 207e5de5c589271ee469dd33442a0bb0
     SHA1: 34e83718226e039ebf28c4ea2284b011701710d0
@@ -3358,6 +3434,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -3372,6 +3449,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -3385,11 +3463,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
 - Authentihash:
     MD5: dbc72430b48b0ca636a84b9e5ed0d534
     SHA1: 58ca196bfd54c6166aae0f8000fa8a1a66a0073e
@@ -3557,6 +3637,7 @@ KnownVulnerableSamples:
         MD5: 8d4476692bcda36ed89244b94bd705f0
         SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
         SHA256: dd1db9c0e7e50040ac6c586c1b6fd479cef240c064473373f75fbeb3e04ff972
+        SHA384: 6f8e6245a2f817203781cc38a9463e5ac7a7db499aede35d3321b4848fc1389dd29831cdfc26984a691d5875c4eebf1a
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       ValidFrom: '2012-04-18 23:48:38'
@@ -3570,11 +3651,13 @@ KnownVulnerableSamples:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
         SHA256: cec1afd0e310c55c1dcc601ab8e172917706aa32fb5eaf826813547fdf02dd46
+        SHA384: e947cac936803f5683196e4ff1b259096073395d0b908522ddce90d57597c9f7b57f7ddcdbe021ba863d843c340da8ba
     Signer:
     - SerialNumber: 33000000f3158ea57d1c559f290000000000f3
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2012
       Version: 1
+  Imphash: f8e4844312e81dbdb4e8e95e2ad2c127
 - Authentihash:
     MD5: ff65997d5644ff042a7e3a5cb9030af2
     SHA1: a1c5483d4d29d0cd9edc6e42a21d70f56de12aaf
@@ -3739,6 +3822,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: ??=CN, ??=, ??=, ??=Private Organization, serialNumber=91420100MA4KN92W72,
         C=CN, ST=, L=, O=Wuhan Jiajia Yiyong Technology Co., Ltd., CN=Wuhan Jiajia
         Yiyong Technology Co., Ltd.
@@ -3753,6 +3837,7 @@ KnownVulnerableSamples:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
         SHA256: d7380ff1b3d400fdf8cf2d8ab18ac65a071ae51c83cce017fa236fb530c4af74
+        SHA384: 9feb1b57516ca5131bb53e05cfc2c1d1df028761ede93e58f42026a9781507a72e28bb2aca693c72f29da7f0421f45bc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       ValidFrom: '2012-04-18 12:00:00'
@@ -3766,11 +3851,13 @@ KnownVulnerableSamples:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
         SHA256: 2cd702a7dec30aa441345672e8992ef9770ce4946f276d767b45b0ed627658fb
+        SHA384: 511b0e0d7f3a48935cf2413348ff5f327887dc1e58f887bb5ed528d09f79173b55ab6439cf097fc7693b5749f7304ace
     Signer:
     - SerialNumber: 012eab44fa8853d913e7107c89406432
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA
       Version: 1
+  Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
 MitreID: T1068
 Resources:
 - https://www.proofpoint.com/us/blog/threat-insight/now-you-see-it-now-you-dont-copperstealer-performs-widespread-theft

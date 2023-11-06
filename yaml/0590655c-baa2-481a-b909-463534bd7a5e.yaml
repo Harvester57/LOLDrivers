@@ -122,6 +122,7 @@ KnownVulnerableSamples:
       Virtual Size: '0x724'
   Signature: Unsigned
   Signatures: {}
+  Imphash: a09170ef09c55cdca9472c02cb1f2647
 MitreID: T1068
 Resources:
 - https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48

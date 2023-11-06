@@ -185,6 +185,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -198,6 +199,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -210,6 +212,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -223,6 +226,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -235,11 +239,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: a74f61fdcea718cb9579907b2caf54ab
 - Authentihash:
     MD5: 0abb783d69d8120a232f3be1411b9f79
     SHA1: dcf13f12b2429a0a50e0094776b59bea641b142c
@@ -411,6 +417,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -424,6 +431,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -436,6 +444,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -449,6 +458,7 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -461,11 +471,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 5095ddaed3abc22c1510a141d72735cc
 - Authentihash:
     MD5: 6f769353f497a9f17430d02ff1291281
     SHA1: f408ad59f7590d26afc84a7109dd56cfe98ebea9
@@ -638,6 +650,7 @@ KnownVulnerableSamples:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
         SHA256: 50814710213afec410f26e573d25267a2e21d3d15f158be8a43a666c9cc6fa08
+        SHA384: 8d48f066b0284071d64bbc556e018824a8388ccd142a56c7b7b04ef6d27cade07da57ac82d8067e18ad64d35af11e2a7
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -651,11 +664,13 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 330000004de597a775e3157f7b00000000004d
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: ebb99842fa08915eb8b7f67d8dc7a13a
 - Authentihash:
     MD5: 372e018ebaa20ffbd474b39c3d97fba9
     SHA1: 05234d1a267c9b6c1754272658fbebb22633cac0
@@ -821,6 +836,7 @@ KnownVulnerableSamples:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
         SHA256: 3ca71e85908ff67368e4dc00253f5691b9e6d50c966e7784143d75fb92aa3448
+        SHA384: d9d366f9328f2b55ee19a32cc5fd5148b81d764282fe5dc196c872ae249caa51d2c212ef39f33945dfe0cda81925e326
     - Subject: C=SG, O=GMO GlobalSign Pte Ltd, CN=GlobalSign TSA for MS Authenticode
         , G2
       ValidFrom: '2016-05-24 00:00:00'
@@ -834,6 +850,7 @@ KnownVulnerableSamples:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
         SHA256: 4783380498acf592286ef2dea0fcc5bdea3f54d5e374d3e3497df9d5f662cfb6
+        SHA384: 4f428f115cf3d008248f15f32007fc7c54bd454e1b48b765776b4c87c23ab8818d8fbcbb3646d35eca012b025260a3b8
     - Subject: C=CN, L=Shanghai, O=miHoYo Co.,Ltd., OU=OPS, CN=miHoYo Co.,Ltd.
       ValidFrom: '2019-04-08 00:00:00'
       ValidTo: '2022-04-08 12:00:00'
@@ -846,6 +863,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -859,6 +877,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -872,11 +891,13 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 409d2ab916237fb129c57aacbb7cb4fe
 - Authentihash:
     MD5: 0bf04830652ccd02dca462c6f965b678
     SHA1: 8e6248135ad596861d8f6d42703deb79382f285a
@@ -1048,6 +1069,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1061,6 +1083,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=CN, L=Shanghai, O=miHoYo Co.,Ltd., OU=OPS, CN=miHoYo Co.,Ltd.
       ValidFrom: '2019-04-08 00:00:00'
       ValidTo: '2022-04-08 12:00:00'
@@ -1073,6 +1096,7 @@ KnownVulnerableSamples:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
         SHA256: 5a504a929cb21f72008d5d57bcd992a7cac13f6aa90cbb886b5ecd809e3b59dd
+        SHA384: 72916ab6c7eb3f5cb7444b3d7d2ac8cb52944605477c5a0f181d060e4edb4c37ebe5eb3c0566dda9de2d2707636ec355
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Root
         CA
       ValidFrom: '2011-04-15 19:41:37'
@@ -1086,6 +1110,7 @@ KnownVulnerableSamples:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
         SHA256: 5f6a519ed2e35cd0fa1cdfc90f4387162c36287bbf9e4d6648251d99542a9e83
+        SHA384: 5f014b60511ddab3247ef0b3c03fe82c622237ba76015e2911d1adc50dc632d56ebd1ee532f3c2b6cbfe68d80a2c91dc
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1099,11 +1124,13 @@ KnownVulnerableSamples:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
         SHA256: c826846e4b1d73edb7561ab1b41c949354e237a91e82fe1be5b7e2e1701f52d1
+        SHA384: 86f49574f368a561914a52d7ae043ec6784ef8c718960700f834e123594605d25d39f1ad45f1eb5052c9567f3edd0e16
     Signer:
     - SerialNumber: 05a7559541e0fdc678d79e3272468907
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
+  Imphash: 4b0b017b23567cf8b9e1268957acd032
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

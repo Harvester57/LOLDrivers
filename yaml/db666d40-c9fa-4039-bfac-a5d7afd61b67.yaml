@@ -93,6 +93,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -106,6 +107,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -118,6 +120,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -131,6 +134,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -143,11 +147,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 3673f3a2d07f53d16a2f5680c355ed11
     SHA1: 40f77890fc527c559f222acd91f3d1013ff82df9
@@ -225,6 +231,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -238,6 +245,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -250,6 +258,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -263,6 +272,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -275,11 +285,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 4c08353501d5d65fde7a04f134186087
     SHA1: 6a0fc9c1b6267bd2fb1c71d7eee45caf1f4e7b83
@@ -360,6 +372,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Tbingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2015-11-10 00:00:00'
@@ -373,6 +386,7 @@ KnownVulnerableSamples:
         MD5: ce9b7df7ccbb74619a38ab27993cac4a
         SHA1: a7a50e97b1eb82aede99df2bbdd77a0ee638d7c0
         SHA256: 320f980020cbfb6b87abeaac03b2f1394e2fe5ff0f58d9c8b5afa500fce79099
+        SHA384: c849398347d2f1df8c61b85b544cf2545f1ca4c48cf55fb43d56968ff27882d892abacb6374eecf593e0e9eb00ea37d7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -385,6 +399,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -398,6 +413,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -410,11 +426,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0f5a57726999506b6f93fd9a150b88fa
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: c595d64014770bdb47a49a237c89feea
     SHA1: 5ad637dcdb85221e5bbd23ae7c13745bc19d2f50
@@ -495,6 +513,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -508,6 +527,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -520,6 +540,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -533,6 +554,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -545,11 +567,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 42e75fe3c1e87568679be91d37a82620
     SHA1: 2c7ac53b0d5f48fea6816b561ccf1b925d878476
@@ -627,6 +651,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -640,6 +665,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -652,6 +678,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -665,6 +692,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -677,11 +705,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: c289a81988145dfebed1199b1e9eb921
     SHA1: 9f49c6de4ff1375d8e0369d8ffb6935e37cfc365
@@ -759,6 +789,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -772,6 +803,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -784,6 +816,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -797,6 +830,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -809,11 +843,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 98a34f93ea5e94a71b6b798a85d93f13
     SHA1: 01a89dbc757ada8b800c05e190ab5e527220d855
@@ -891,6 +927,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -904,6 +941,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -916,6 +954,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -929,6 +968,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -941,11 +981,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: b9821174225ea0d99a279e446c279bd5
     SHA1: faecbf954a50e1198b45635994baee4c72f08dba
@@ -1023,6 +1065,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -1036,6 +1079,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1048,6 +1092,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1061,6 +1106,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1073,11 +1119,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: ea4ee6a954883c3a6134076cf27dc0fc
     SHA1: 48360c28ffa27e0316856c5d392a251add2a83b8
@@ -1158,6 +1206,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -1171,6 +1220,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1183,6 +1233,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1196,6 +1247,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1208,11 +1260,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 4e3fad5e7756d873a4854c0aaea4ce16
     SHA1: 06dafe91fd89a1d1f88501ba04649e70770d04a4
@@ -1290,6 +1344,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -1303,6 +1358,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1315,6 +1371,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1328,6 +1385,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1340,11 +1398,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 24b6bd1e14bebf28ec2b10d9f745fcdc
     SHA1: 604d6b46e39d0a635fdc853c8260c4dd003baabc
@@ -1422,6 +1482,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -1435,6 +1496,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1447,6 +1509,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1460,6 +1523,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1472,11 +1536,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 96d64636bf6a8d855ee56021e9bf2ca3
     SHA1: 344bcc6e97ec8026c1684bb97c58fa37973176a0
@@ -1554,6 +1620,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -1567,6 +1634,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1579,6 +1647,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1592,6 +1661,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1604,11 +1674,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 8073baae1a8124bd231f1ee431e78ee4
     SHA1: b72d85f73296f5ef58082050db39ca5f80b932c0
@@ -1686,6 +1758,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -1699,6 +1772,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1711,6 +1785,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1724,6 +1799,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1736,11 +1812,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 3dad3438a45b30a52d10447f2bed9dbf
     SHA1: 8b20c1ee70505588cdf27f5b1cf4bf1ce2ef3dd6
@@ -1821,6 +1899,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Tbingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2015-11-10 00:00:00'
@@ -1834,6 +1913,7 @@ KnownVulnerableSamples:
         MD5: ce9b7df7ccbb74619a38ab27993cac4a
         SHA1: a7a50e97b1eb82aede99df2bbdd77a0ee638d7c0
         SHA256: 320f980020cbfb6b87abeaac03b2f1394e2fe5ff0f58d9c8b5afa500fce79099
+        SHA384: c849398347d2f1df8c61b85b544cf2545f1ca4c48cf55fb43d56968ff27882d892abacb6374eecf593e0e9eb00ea37d7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1846,6 +1926,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1859,6 +1940,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -1871,11 +1953,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0f5a57726999506b6f93fd9a150b88fa
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 2cc0df9191b874e7821a7d7bf292800f
     SHA1: 6a6529fbb133c9535692d92148629418e2bc315e
@@ -1956,6 +2040,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Tbingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2015-11-10 00:00:00'
@@ -1969,6 +2054,7 @@ KnownVulnerableSamples:
         MD5: ce9b7df7ccbb74619a38ab27993cac4a
         SHA1: a7a50e97b1eb82aede99df2bbdd77a0ee638d7c0
         SHA256: 320f980020cbfb6b87abeaac03b2f1394e2fe5ff0f58d9c8b5afa500fce79099
+        SHA384: c849398347d2f1df8c61b85b544cf2545f1ca4c48cf55fb43d56968ff27882d892abacb6374eecf593e0e9eb00ea37d7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -1981,6 +2067,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -1994,6 +2081,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2006,11 +2094,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0f5a57726999506b6f93fd9a150b88fa
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: b56b5360b0e294d26c840bf3ad8c6ad4
     SHA1: 489cb134ee754835a6a9c0d202e67e05434d8b95
@@ -2088,6 +2178,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -2101,6 +2192,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2113,6 +2205,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2126,6 +2219,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2138,11 +2232,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 89210e34f569d4a83649220f95cf14bd
     SHA1: 427ddaccca98cfda7f6778da1e7ff824c9b49ff8
@@ -2220,6 +2316,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -2233,6 +2330,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2245,6 +2343,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2258,6 +2357,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2270,11 +2370,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 043864883d69e1ff2c94a9e6a700c5f3
     SHA1: 28f9f951c83666c0a84493e2646693bfa0d227bb
@@ -2355,6 +2457,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -2368,6 +2471,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2380,6 +2484,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2393,6 +2498,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2405,11 +2511,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 9c10517dc293a376373a7b1e711e4faa
     SHA1: 2090e9738915845d1171561cb01d15cd043e80cf
@@ -2487,6 +2595,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -2500,6 +2609,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2512,6 +2622,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2525,6 +2636,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2537,11 +2649,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 1a22dcc55fa79a2c8255a529f7e55d94
     SHA1: 0cf32234e257819204c2881fa579f16f29df7984
@@ -2619,6 +2733,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -2632,6 +2747,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2644,6 +2760,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2657,6 +2774,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2669,11 +2787,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: d9b5ead8e8216d9dfa63835428e99038
     SHA1: bd3558fb46fcb2165f4965f3ba08a0640e9259ef
@@ -2751,6 +2871,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -2764,6 +2885,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2776,6 +2898,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2789,6 +2912,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2801,11 +2925,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 6c1ab3f6531a440ad85b7e7d8717bac8
     SHA1: b52b9bec86703af89322ebbc412dc499fa9ca13e
@@ -2886,6 +3012,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -2899,6 +3026,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -2911,6 +3039,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -2924,6 +3053,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -2936,11 +3066,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: bad68e0a55b3e8acab4f2886d3be875b
     SHA1: 36ed967bc3b6973b695aa18c57f5b3be5e20bb6a
@@ -3021,6 +3153,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -3034,6 +3167,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3046,6 +3180,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3059,6 +3194,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -3071,11 +3207,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 0546bd323c625b7418791623dc8baec1
     SHA1: 95ee60eef4d011ed8e748bbc0b531b21ce95c66c
@@ -3153,6 +3291,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -3166,6 +3305,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3178,6 +3318,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3191,6 +3332,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -3203,11 +3345,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: c98adcc1e66228fb22bb7c579bc9c5f1
     SHA1: 60ff2c96436f6cf2a1e0db1c3dbb203f1f6c93a6
@@ -3288,6 +3432,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -3301,6 +3446,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3313,6 +3459,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3326,6 +3473,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -3338,11 +3486,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: c21a5342e4fdb719935f8a9c45ddd16e
     SHA1: 72f17ffb8a9676a099207ddd28bc616e018173b4
@@ -3423,6 +3573,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Tbingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2015-11-10 00:00:00'
@@ -3436,6 +3587,7 @@ KnownVulnerableSamples:
         MD5: ce9b7df7ccbb74619a38ab27993cac4a
         SHA1: a7a50e97b1eb82aede99df2bbdd77a0ee638d7c0
         SHA256: 320f980020cbfb6b87abeaac03b2f1394e2fe5ff0f58d9c8b5afa500fce79099
+        SHA384: c849398347d2f1df8c61b85b544cf2545f1ca4c48cf55fb43d56968ff27882d892abacb6374eecf593e0e9eb00ea37d7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3448,6 +3600,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3461,6 +3614,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -3473,11 +3627,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0f5a57726999506b6f93fd9a150b88fa
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 2cb93b2245caed99ebf25ba4de80f923
     SHA1: e52946d26810573ce95df496337d68246dbe0c47
@@ -3555,6 +3711,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -3568,6 +3725,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3580,6 +3738,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3593,6 +3752,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -3605,11 +3765,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 8502ba895dd1127a4cdefc6cf470a748
     SHA1: 2b195297ae70b4858ba8db425f1c807e996f10bf
@@ -3690,6 +3852,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -3703,6 +3866,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3715,6 +3879,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3728,6 +3893,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -3740,11 +3906,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: d3b4ebfa52d807a0772e3c870b870c24
     SHA1: aabd3742ab7e0d8568acbe964ef32fa7b85672b7
@@ -3825,6 +3993,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -3838,6 +4007,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3850,6 +4020,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3863,6 +4034,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -3875,11 +4047,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 51d7485ae8861a772916e0c6ca290128
     SHA1: 7ecbe0821f670b243837f7a98c08e3229f301339
@@ -3957,6 +4131,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -3970,6 +4145,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -3982,6 +4158,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -3995,6 +4172,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -4007,11 +4185,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: a8025a82a6bb9f60e76fff45df7a0e13
     SHA1: 5cb6613e446fa2d17036f6a63de658c90bfb0070
@@ -4092,6 +4272,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Tbingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2015-11-10 00:00:00'
@@ -4105,6 +4286,7 @@ KnownVulnerableSamples:
         MD5: ce9b7df7ccbb74619a38ab27993cac4a
         SHA1: a7a50e97b1eb82aede99df2bbdd77a0ee638d7c0
         SHA256: 320f980020cbfb6b87abeaac03b2f1394e2fe5ff0f58d9c8b5afa500fce79099
+        SHA384: c849398347d2f1df8c61b85b544cf2545f1ca4c48cf55fb43d56968ff27882d892abacb6374eecf593e0e9eb00ea37d7
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -4117,6 +4299,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -4130,6 +4313,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -4142,11 +4326,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 0f5a57726999506b6f93fd9a150b88fa
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: d9f7f6af0eab15b131532a887860459c
     SHA1: aa98203bb8c6fb612712a5e44dd118beea49b1ab
@@ -4224,6 +4410,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2020-01-09 00:00:00'
@@ -4237,6 +4424,7 @@ KnownVulnerableSamples:
         MD5: c91a4116374ff20074633022a6090b91
         SHA1: b514fc31b903e3100c109b83f229da98fc1c668d
         SHA256: fda57f4c9af500847bc36b92730b5df4c16d23b46bd8c379d400972bbb062632
+        SHA384: 50235ed2bcf548f675e120d3d8383dcae55e910e23f79144d4b9ea1aab987a7dc2bb757dccc66ce2b1f46df5cb04672d
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -4249,6 +4437,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -4262,6 +4451,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -4274,11 +4464,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 094dc9c3b9d09b4f1d07fa327100e5d5
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: cbd39d71071c7b0d4fbb59c3b8a33048
     SHA1: 0ba998452dde334262e0fe1c8fec365805c8b199
@@ -4359,6 +4551,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -4372,6 +4565,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -4384,6 +4578,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -4397,6 +4592,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -4409,11 +4605,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 - Authentihash:
     MD5: 917e4e62a46f9c176a641372dc3c7f0b
     SHA1: e647041e015042f8542cc042a07d0b0ac1d2f39f
@@ -4494,6 +4692,7 @@ KnownVulnerableSamples:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
         SHA256: 59826b69bc8c28118c96323b627da59aaca0b142cc5d8bad25a8fcfd399aa821
+        SHA384: f2dab7e56a33298654924501499487f6ba72c7d9477476a186e1ed7a9be031fade0e35ac09eff5e56bbbab95ae5374e7
     - Subject: C=DE, ST=Baden,Wrttemberg, L=Reutlingen, O=BattlEye Innovations e.K.,
         CN=BattlEye Innovations e.K.
       ValidFrom: '2018-11-09 00:00:00'
@@ -4507,6 +4706,7 @@ KnownVulnerableSamples:
         MD5: 92a5605ad9f5e70845ba94ce69497daf
         SHA1: f8a4a34935c94181552bb1234efdc495551be6bc
         SHA256: 161cb49b11bf44ed701c827c37583768771ed9066e0fb8f7ab5b3768296eae70
+        SHA384: 1e3a6de3e866ff92b95b63b0bfb74810952db516d7fec925c281acbe00fe8008a0f8bdd2d3fc30d354fd0fb785dfc598
     - Subject: C=US, O=DigiCert, CN=DigiCert Timestamp Responder
       ValidFrom: '2014-10-22 00:00:00'
       ValidTo: '2024-10-22 00:00:00'
@@ -4519,6 +4719,7 @@ KnownVulnerableSamples:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
         SHA256: 82560fa7efec30b5ff82af643e6f3bf3d46868bbd5e7d76f93db185e9e3553a1
+        SHA384: e8b11408c88f877ade4ca51114a175fb5dfd2d18d2a66be547c1c9e080fa8f592c7870e30dfab1c04d234993dd0907f3
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       ValidFrom: '2011-02-11 12:00:00'
@@ -4532,6 +4733,7 @@ KnownVulnerableSamples:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
         SHA256: 92914d016cc46e125e50c4bd0bd7f72db87eed4ba68f3c589b4e86aa563108db
+        SHA384: dbb72e38c3bc17b08aa00535ebd48502058ce6ecfd24bd4dd45c7b33e3d523510a4a649d86dfc77436c58754bd0754ea
     - Subject: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID CA,1
       ValidFrom: '2006-11-10 00:00:00'
       ValidTo: '2021-11-10 00:00:00'
@@ -4544,11 +4746,13 @@ KnownVulnerableSamples:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
         SHA256: 37560fb9d548ab62cc3ed4669a4ab74828b5a108e67e829937ffb2d10a5f78dd
+        SHA384: 173bfb77183785621ef15f43ea807338cea6a02e8183317d9ef050c7237adda3fa2a5bdcd5a4c96da9f2c55900675b9f
     Signer:
     - SerialNumber: 060323c3204df4501ea15b73390dd856
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
+  Imphash: e38cca61999fb8a0308c0eb798b07989
 MitreID: T1068
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/23

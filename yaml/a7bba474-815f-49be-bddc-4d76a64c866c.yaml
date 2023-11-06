@@ -104,6 +104,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: a7bba474-815f-49be-bddc-4d76a64c866c
 KnownVulnerableSamples:
 - Authentihash:
@@ -188,6 +198,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -200,6 +211,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -213,6 +225,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -225,6 +238,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -239,10 +253,12 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: b3f5d7d5ea5ddb56cae089ab780d2058
     SHA1: b648e51b784f071adbf9f53048e3765efb96ab8a
@@ -325,6 +341,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -337,6 +354,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -350,6 +368,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -364,6 +383,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -376,10 +396,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 63cc49f8ae8897706dec2444951c0414
     SHA1: ae69d3501e7fe1e2109998beed9da13f74e032c2
@@ -462,6 +484,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -474,6 +497,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -486,6 +510,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -500,6 +525,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -512,10 +538,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 07744c410b3e3a459576524f1b522a88
     SHA1: bfa958230e3816f9879e16ec391e94b607f292e6
@@ -598,6 +626,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -610,6 +639,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -623,6 +653,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -635,6 +666,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -649,10 +681,12 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 575bfa9a34097f8d19982dcdd9118094
     SHA1: 9369dbe6e082a2af351daebeef1c464af33cc270
@@ -735,6 +769,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -747,6 +782,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -760,6 +796,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -772,6 +809,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -786,10 +824,12 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: fb364fe88525eface63e291f7e86338e
     SHA1: 0f661f61f0106faeda1d6cbe83b81aaf3ea4d28c
@@ -872,6 +912,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -884,6 +925,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -896,6 +938,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -910,6 +953,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -922,10 +966,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 1a384cdc0edc4e14d6dfb5b242e9313f
     SHA1: 13874ae76957845e9315eedf0f5f2b59eedcb9a6
@@ -1008,6 +1054,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1020,6 +1067,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1033,6 +1081,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1047,6 +1096,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1059,10 +1109,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 9e87790870d27c78e12a870557a5decf
     SHA1: ff09c47ebaa82cdde41a1be4e65f5a7cafb28322
@@ -1145,6 +1197,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1157,6 +1210,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1169,6 +1223,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1183,6 +1238,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1195,10 +1251,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 4f3fc3f46b55c66e36a411e0389d9740
     SHA1: fed54cfff38966133b7fbc067246bbfca871118b
@@ -1282,6 +1340,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1294,6 +1353,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -1307,6 +1367,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -1319,6 +1380,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -1332,6 +1394,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1344,11 +1407,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: d3ef4e7146fce9f2a17134d42c07166b
     SHA1: ee34907ac4afce04fe1bab85e68d7e743db05841
@@ -1431,6 +1496,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1443,6 +1509,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1455,6 +1522,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1469,6 +1537,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1481,10 +1550,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: ff9b15a51f11874a9abe7a1b9f4cfd0d
     SHA1: 0d3956de7c3a7788727358867abf34880eaa7100
@@ -1567,6 +1638,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1579,6 +1651,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1592,6 +1665,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1606,6 +1680,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1618,10 +1693,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 2d87365d63e81ef0edc577bf0cb33995
     SHA1: b472d32094e258b2af60914db8604cd0bf439c4b
@@ -1704,6 +1781,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1716,6 +1794,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1729,6 +1808,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -1741,6 +1821,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1755,10 +1836,12 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 1d0d0ef174a767359bb32e53fe346416
     SHA1: 4dbbf2558cdbdaf4a5e5ec65e844f5abdace5514
@@ -1841,6 +1924,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1853,6 +1937,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -1865,6 +1950,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -1879,6 +1965,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -1891,10 +1978,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 922f6d3d0dda7748bad7a537a8bc9e4e
     SHA1: 71355d9ebcf35492b60c3f936550d30310a31049
@@ -1978,6 +2067,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1990,6 +2080,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2003,6 +2094,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -2015,6 +2107,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2028,6 +2121,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2040,11 +2134,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: c6830e904e56ea951005ea7639eedd35
     SHA1: c57c0dd18135bca5fdb094858a70033c006cd281
@@ -2127,6 +2223,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2139,6 +2236,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2152,6 +2250,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2166,6 +2265,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2178,10 +2278,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 3b7d9b57810ca80137223615a97635e0
     SHA1: 8d9f65a6a9048ec91dd010216071c4ec983887c7
@@ -2264,6 +2366,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2276,6 +2379,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2288,6 +2392,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2302,6 +2407,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2314,10 +2420,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 066bcfa3fdd0925385faf92debce887c
     SHA1: a2948b9d2e2ee9f4929b39acad6c850ea70dd34c
@@ -2400,6 +2508,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2412,6 +2521,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2425,6 +2535,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -2437,6 +2548,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2451,10 +2563,12 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 7c60ced61bb34cad2982f5ddb1306754
     SHA1: d02d19abf19569df72ea2c5071330de3d57e0982
@@ -2538,6 +2652,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2550,6 +2665,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -2563,6 +2679,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -2575,6 +2692,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2588,6 +2706,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2600,11 +2719,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: ef516589154145d31284df600c9ad58b
     SHA1: dbed3d7755df2c30d7e445529ed2bbe60ce9ee2d
@@ -2688,6 +2809,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -2700,6 +2822,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2713,6 +2836,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2725,11 +2849,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 133e1582c5d14c52ac3590c9d2ada850
     SHA1: a22e6b855062f1154ae8f244e2652e04b4ea5b4c
@@ -2812,6 +2938,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2824,6 +2951,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -2836,6 +2964,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -2850,6 +2979,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2862,10 +2992,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 761bee6879171d50932f73cfa9c718e0
     SHA1: 33b2e3af695f0febd39d02d8f931e92ad88461f4
@@ -2949,6 +3081,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -2961,6 +3094,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -2974,6 +3108,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -2986,11 +3121,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 63ea2f5ce789857efaf657ae86d029c5
     SHA1: 33286e984b12811b38b2ad3396451388e2f24424
@@ -3073,6 +3210,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3085,6 +3223,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3097,6 +3236,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3111,6 +3251,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3123,10 +3264,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: c6788d75093368b6dc2bc373df4591b8
     SHA1: a3799e1aa983ad65de762a430f3286eefeff61e0
@@ -3209,6 +3352,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3221,6 +3365,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3234,6 +3379,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3248,6 +3394,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3260,10 +3407,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 5e4c54660e02b951d67e54ce3c16dcc9
     SHA1: 14e798609095df77d135dd2afae8277e0a968d99
@@ -3346,6 +3495,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3358,6 +3508,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3370,6 +3521,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3384,6 +3536,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3396,10 +3549,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: e2fde714a590d75cec614058707ac9d7
     SHA1: 450a92b5d604ad2c7d848ab96dc1c0455c7d1f92
@@ -3482,6 +3637,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -3494,6 +3650,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3507,6 +3664,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -3521,6 +3679,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3533,10 +3692,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: b36ce3dc6e3ca0e76c9f9a7d4d331524
     SHA1: 0b68901f632deadc3f0691febe7d0dacb8a2d4d8
@@ -3620,6 +3781,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3632,6 +3794,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -3645,6 +3808,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -3657,6 +3821,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -3670,6 +3835,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3682,11 +3848,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 498e18a0df3d49779e5d50e2ce1e8385
     SHA1: cb7ed29416920b38a00695d11751ca6766a7b5f9
@@ -3770,6 +3938,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3782,6 +3951,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -3795,6 +3965,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -3807,6 +3978,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -3820,6 +3992,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3832,11 +4005,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: b70f71ebef5d45dcf99098beb0f72951
     SHA1: 049b1cd656849214bd5c864c79e3b27be6b46b34
@@ -3920,6 +4095,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -3932,6 +4108,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -3945,6 +4122,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -3957,11 +4135,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: ec3966c4b4ec6fc15ff0940548fd10c2
     SHA1: 531a782723ecc50ea4fcfbbfe4b94465782a21d0
@@ -4044,6 +4224,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4056,6 +4237,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -4068,6 +4250,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -4082,6 +4265,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4094,10 +4278,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 364af1be1135ce8bede31bb6c201f7bb
     SHA1: 3d0c8e9e7fcd431a91d4c4ea088d94fa371d546b
@@ -4181,6 +4367,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -4193,6 +4380,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -4206,6 +4394,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4218,11 +4407,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: c7069e41aab11ec8cb06657e6e8babd0
     SHA1: 156907d0ca2ecff7efa07f479622b018af74bf2f
@@ -4305,6 +4496,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -4317,6 +4509,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -4330,6 +4523,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -4342,6 +4536,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -4356,10 +4551,12 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 55cd6f1f309b3409bf2cb92a4eb56e74
     SHA1: e7558eaa5e3357ca3010ee219cf52fdf46e5cd5a
@@ -4442,6 +4639,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4454,6 +4652,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -4466,6 +4665,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -4480,6 +4680,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4492,10 +4693,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 0c06dcbb129db21d296df3f6f8e98514
     SHA1: d3642da8e37cb772b1dd7b75a69323a4a00566c8
@@ -4578,6 +4781,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -4590,6 +4794,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -4602,6 +4807,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -4616,6 +4822,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4628,10 +4835,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 37256f56e87f5530dd63e3069a3e3252
     SHA1: 17f4ab1865a5a2be4768cd25019439441fd0e10b
@@ -4714,6 +4923,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -4726,6 +4936,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -4739,6 +4950,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2011-04-15 19:55:08'
       ValidTo: '2021-04-15 20:05:08'
@@ -4751,6 +4963,7 @@ KnownVulnerableSamples:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
         SHA256: f970426cc46d2ae0fc5f899fa19dbe76e05f07e525654c60c3c9399492c291f4
+        SHA384: c0df876be008c26ca407fe904e6f5e7ccded17f9c16830ce9f8022309c9e64c97f494810f152811ae43e223b82ad7cc6
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -4765,10 +4978,12 @@ KnownVulnerableSamples:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
         SHA256: 5b81998ed98b343c04134c336e03f3051779eae0e9f882e8339593d18556375d
+        SHA384: db0076cad41a0ef4ea68754ef6905bd5ff772adcb745b05c0060344e43588abc95952dc3ad272f5a8f17b206e4089aca
     Signer:
     - SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: c6830e904e56ea951005ea7639eedd35
     SHA1: c57c0dd18135bca5fdb094858a70033c006cd281
@@ -4852,6 +5067,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -4864,6 +5080,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -4877,6 +5094,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -4889,11 +5107,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 6b5dd12cfdee0cf8a654eacc65028c36
     SHA1: 081d87fdb40a348b85382c63ea029281f213b778
@@ -4975,6 +5195,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -4989,6 +5210,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -5001,10 +5223,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: c80d819869c1718a58dfada2167e842c
     SHA1: 0d6b74ac325c816bfdc20aa4a0fc0eb2cd45f4e6
@@ -5087,6 +5311,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -5099,6 +5324,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -5111,6 +5337,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -5125,6 +5352,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -5137,10 +5365,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 7e9154ee514d494701eb8559524f8e2e
     SHA1: 95c5f63e97d18e1ccc449a79ec952a5f6e76b9eb
@@ -5223,6 +5453,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -5235,6 +5466,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -5248,6 +5480,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -5262,6 +5495,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -5274,10 +5508,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 01a9049b40b0e848649dd1e0d224e63e
     SHA1: 9030ba396131afec733fc208ef55a4d37b6ffc07
@@ -5360,6 +5596,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -5372,6 +5609,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -5384,6 +5622,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -5398,6 +5637,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -5410,10 +5650,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 94faebdbb74a0b99a8a17430671cdf9e
     SHA1: aca4c47b4823b5653cb42e599ee6168f435bdcc7
@@ -5496,6 +5738,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -5508,6 +5751,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -5521,6 +5765,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -5535,6 +5780,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -5547,10 +5793,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: 85dcbf05c91ceacc919a1638dd3c8f9f
     SHA1: 3d947aff431bb8ec02d9be3b4499312a62d4fec9
@@ -5633,6 +5881,7 @@ KnownVulnerableSamples:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
         SHA256: 7e722dc40e6b9abf8c20aa4d887e34b6d2c6b8cbe53a055d49bf9f5e946e0d27
+        SHA384: 7e14609969a388d38d227df1dbb9ce086c9a820142c94fd1a28ef2835a8aa528aef4c6399bce344d79adb5f3dad86afa
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -5645,6 +5894,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       ValidFrom: '2011-04-13 10:00:00'
       ValidTo: '2019-04-13 10:00:00'
@@ -5657,6 +5907,7 @@ KnownVulnerableSamples:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
         SHA256: cbdc9a0ad785d0c2013211746b42234e18bdc7d54a7a260647badc1c9e712ed4
+        SHA384: dcec542f242317863d0b3d23947e17d6982e381003831777b07ed75b46fb18bd0392a89c9beb6862981cd05f3f2fb77b
     - Subject: C=TW, ST=Taiwan, L=New Taipei City, O=MICRO,STAR INTERNATIONAL CO.,
         LTD., OU=MICRO,STAR INTERNATIONAL CO., LTD., CN=MICRO,STAR INTERNATIONAL CO.,
         LTD.
@@ -5671,6 +5922,7 @@ KnownVulnerableSamples:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
         SHA256: 01a2e2d31d0a4f3005753cce5972b5da2a7c08b0750fb6947e0fd231e64ae7ec
+        SHA384: 722398e51e6b5bbe064df372be6b6a9ccfcc9719ad775213cae46920e0a3e6c5a4dc8b912de3148abfc60ff4a59050ea
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -5683,10 +5935,12 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 - Authentihash:
     MD5: b9951498dd00ac42a36a6f5d59ebe98d
     SHA1: 0c429ee64668374fdf6d187071d4f0a932992a5f
@@ -5770,6 +6024,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -5782,6 +6037,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Primary Object Publishing CA, CN=GlobalSign
         Primary Object Publishing CA
       ValidFrom: '1999-01-28 12:00:00'
@@ -5795,6 +6051,7 @@ KnownVulnerableSamples:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
         SHA256: a8622cca0913a20477be8313b8d16fcad5d83088b46b36ddac10b31e96abb5e8
+        SHA384: a50291d3b15caf28d96e972cefcb88455a58ce1c802920fdcc2f4feafb1553510fd9b464d25e81635f4ad37570225a67
     - Subject: C=TW, O=Micro,Star Int'l Co. Ltd., CN=Micro,Star Int'l Co. Ltd.
       ValidFrom: '2008-08-28 09:49:45'
       ValidTo: '2011-08-28 09:49:45'
@@ -5807,6 +6064,7 @@ KnownVulnerableSamples:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
         SHA256: 88a8e9a799af515b9223e4cdf24d0ef1e72f12124be02786f026a3c26317b417
+        SHA384: d8d8769d5b6a0fe7c56fcde24c735475ee0e5d01c63dbf7690cdae5a3e251818bed42443d0c6424d39e81a19d6c83bdb
     - Subject: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       ValidFrom: '2004-01-22 09:00:00'
@@ -5820,6 +6078,7 @@ KnownVulnerableSamples:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
         SHA256: 60846fc990e271a707cd2d53d0bb21834a04f7652214aa0c12597ff6649d352d
+        SHA384: 6b37b28ca97b32a31b0fa53b5e961ae0f2d1aae2c5bf46de132e57834ee3968d9af7ad204821f9389cc4e0b5a8481fe8
     - Subject: C=BE, O=GlobalSign nv,sa, OU=Root CA, CN=GlobalSign Root CA
       ValidFrom: '2006-05-23 17:00:51'
       ValidTo: '2016-05-23 17:10:51'
@@ -5832,11 +6091,13 @@ KnownVulnerableSamples:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
         SHA256: ef14ea05bb066ee9f4188196dd69cd769b283ac4d7555db52f5e76922d3456e1
+        SHA384: 6e7450a139856aeda6fa6284ff89b3752a9b646e096b4d33dd7e8e727742a2111481531581c0aa2cda0338e22cfdbad3
     Signer:
     - SerialNumber: 0100000000011c08b7f67e
       Issuer: C=BE, O=GlobalSign nv,sa, OU=ObjectSign CA, CN=GlobalSign ObjectSign
         CA
       Version: 1
+  Imphash: d6f977640d4810a784d152e4d3c63a6b
 MitreID: T1068
 Resources:
 - ' https://github.com/namazso/physmem_drivers'

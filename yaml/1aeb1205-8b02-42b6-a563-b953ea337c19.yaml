@@ -15,6 +15,16 @@ Created: '2023-07-22'
 Detection:
 - type: ''
   value: ''
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 1aeb1205-8b02-42b6-a563-b953ea337c19
 KnownVulnerableSamples:
 - Authentihash:
@@ -117,6 +127,7 @@ KnownVulnerableSamples:
         MD5: 3d599ae8f2823b242ef0b42a48eb116c
         SHA1: 87d1616058dae44dd602ab9acd4ac4e736bbd451
         SHA256: eda5653cc4fffbaeded2567b92aa03abb6c60ade2da823b8a07d826e0856c0af
+        SHA384: f3d5d7e6a53e96d5c44b92c6bd81d71c6ffaf0ed77c13229adb301bc10ba7c2d5afde3d6a5eb553244666b0ce9ec68af
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -130,11 +141,13 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 330000000a35c02110041db90300000000000a
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: e53133e314605f61696ede9f23dbc14e
 - Authentihash:
     MD5: 93de89630be80425a0f5571498b89048
     SHA1: 6f39048e31f8e835f7537998bbd3b6ac5cff2c04
@@ -234,6 +247,7 @@ KnownVulnerableSamples:
         MD5: 3d599ae8f2823b242ef0b42a48eb116c
         SHA1: 87d1616058dae44dd602ab9acd4ac4e736bbd451
         SHA256: eda5653cc4fffbaeded2567b92aa03abb6c60ade2da823b8a07d826e0856c0af
+        SHA384: f3d5d7e6a53e96d5c44b92c6bd81d71c6ffaf0ed77c13229adb301bc10ba7c2d5afde3d6a5eb553244666b0ce9ec68af
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -247,11 +261,13 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 330000000a35c02110041db90300000000000a
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: f6aeb7d666f83d90492fb76d8af4e15b
 - Authentihash:
     MD5: 517db4899b3d996cb6f902b0611d233f
     SHA1: a9c9cb2548322748208199a7702d8056ad9a24fd
@@ -350,6 +366,7 @@ KnownVulnerableSamples:
         MD5: 3d599ae8f2823b242ef0b42a48eb116c
         SHA1: 87d1616058dae44dd602ab9acd4ac4e736bbd451
         SHA256: eda5653cc4fffbaeded2567b92aa03abb6c60ade2da823b8a07d826e0856c0af
+        SHA384: f3d5d7e6a53e96d5c44b92c6bd81d71c6ffaf0ed77c13229adb301bc10ba7c2d5afde3d6a5eb553244666b0ce9ec68af
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -363,11 +380,13 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 330000000a35c02110041db90300000000000a
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: e54f28e331d8e2b722551f3b280cc686
 MitreID: T1068
 Resources:
 - https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c

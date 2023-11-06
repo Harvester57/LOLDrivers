@@ -22,6 +22,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: a66d0413-cc82-4f1e-bcf1-0dcf9d79f6c0
 KnownVulnerableSamples:
 - Authentihash:
@@ -121,6 +131,7 @@ KnownVulnerableSamples:
         MD5: adc809facabcdfc353d4e5d9f8956845
         SHA1: ec1181c8eafabeee4ba13edd8f260a880474b665
         SHA256: cca1b4b3969e9dc0065cfa36ee48648341771a5af94db2d51320d6352c16c85b
+        SHA384: a2dfd2d0ad5b27d66da28e972c313ebc2395004638dc6344fafd26d79735359f7562d273b7dbacf6ab294a913a20cd0b
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -134,11 +145,13 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 330000001f9800c911029569be00000000001f
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: 095c0cdb9c0421da216371c1f4e8790e
 MitreID: T1068
 Resources:
 - ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'

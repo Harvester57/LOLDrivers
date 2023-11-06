@@ -22,6 +22,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: fdf4f85b-47f4-4c98-a0d5-a6583463f565
 KnownVulnerableSamples:
 - Authentihash:
@@ -139,6 +149,7 @@ KnownVulnerableSamples:
         MD5: b4a3c39dbd2935ac070032406fa082e4
         SHA1: 891bf1b0a017f5aadbc0d997fe63eb0ec25a1655
         SHA256: 81d8278fe4857a2dfa510a0af74deeb0623ef79e25fcf171644808a3ec652305
+        SHA384: 17653c0976e1370da584b5eaf4a6deb1d3b7cad97c2f12592e7b96c5302b88bde20b30fa5963ef0ac9f2063083b48e9e
     - Subject: ??=Private Organization, ??=ES, ??=Valencia, serialNumber=B98657844,
         C=ES, L=Valencia, O=Voicemod Sociedad Limitada, CN=Voicemod Sociedad Limitada
       ValidFrom: '2021-10-21 00:00:00'
@@ -152,11 +163,13 @@ KnownVulnerableSamples:
         MD5: 59e2799dd07c9a450f06c376eb220a48
         SHA1: 8588e052171ee54d148087ef5e2b8cf81017d199
         SHA256: 3a0fbfc101d7832c403769e3f28cdfcea533abdd1461c09b134594a1d21aabe8
+        SHA384: 6df23072f503ec2ff425603e606c706a149144483579648653c5e1f40c64243b77cc021873ed46c5ac9597ba452f11fc
     Signer:
     - SerialNumber: 014d8930c6a3fceb0f4021734d5ed508
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Global G3 Code Signing ECC SHA384
         2021 CA1
       Version: 1
+  Imphash: 7c24141cdcfc23f5eb0e2b6792d80740
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'

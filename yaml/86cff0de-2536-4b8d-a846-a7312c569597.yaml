@@ -24,6 +24,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 86cff0de-2536-4b8d-a846-a7312c569597
 KnownVulnerableSamples:
 - Authentihash:
@@ -172,6 +182,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -184,6 +195,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -198,6 +210,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -211,6 +224,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -223,12 +237,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: f2dc136141066311fddef65f7f417c44
 - Authentihash:
     MD5: 7697518920cf8fbf166debae5a206af1
     SHA1: 1f88ab369211281a41f2b14032beec28dfa8fb9a
@@ -374,6 +390,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -387,6 +404,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -400,6 +418,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -414,6 +433,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -428,12 +448,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 8ec78cf864273fd81203678b61c41f04
 - Authentihash:
     MD5: 3b9d5fd8e9bbb6a450a9d8e0e0d7e586
     SHA1: b532f7e149057c438812c98d253786608b269f9c
@@ -580,6 +602,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -592,6 +615,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -606,6 +630,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -619,6 +644,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -631,12 +657,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: f2dc136141066311fddef65f7f417c44
 - Authentihash:
     MD5: cc800895376e2545965a860cd6087f2c
     SHA1: 1db41ce46ac93d045f5e2d282018d142e19b796c
@@ -783,6 +811,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -795,6 +824,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -809,6 +839,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -822,6 +853,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -834,12 +866,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: f2dc136141066311fddef65f7f417c44
 - Authentihash:
     MD5: 03cdc4a6f210907018e5feed9e180b74
     SHA1: 8332c7bb24562beafcdf743797ff2774ff81b7f1
@@ -992,6 +1026,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -1004,6 +1039,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1018,6 +1054,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -1031,6 +1068,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1043,12 +1081,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 0e4f5481813eeec4e5dd96e36020135f
 - Authentihash:
     MD5: f92697db36bdb2c33b58b765f9a1c4cc
     SHA1: c7cee16eed16089b709b7af6c0cc8d7aacb0a5a5
@@ -1200,6 +1240,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1213,6 +1254,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -1227,6 +1269,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -1240,6 +1283,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -1252,12 +1296,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 24c3d3be20e794c17844d030be03fd2f
 - Authentihash:
     MD5: 3190ab9249afb0e3915a6a96b42b79a3
     SHA1: 2c3d046b089521c5cac415b28f55e498d3050622
@@ -1409,6 +1455,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1422,6 +1469,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -1435,6 +1483,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1449,6 +1498,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1463,12 +1513,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 24c3d3be20e794c17844d030be03fd2f
 - Authentihash:
     MD5: 16ad7e2dcc5d51f8d844c5817a3ada77
     SHA1: 2871eec82d1c7ce329579dee37f610f6994eed1a
@@ -1614,6 +1666,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1627,6 +1680,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -1640,6 +1694,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1654,6 +1709,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1668,12 +1724,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 8ec78cf864273fd81203678b61c41f04
 - Authentihash:
     MD5: 1c0d53f4b9788aab37c192d5dab8ac40
     SHA1: 6202e85a712c45daa25dc706388e10d05b42a467
@@ -1825,6 +1883,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -1838,6 +1897,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -1851,6 +1911,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -1865,6 +1926,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -1879,12 +1941,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 24c3d3be20e794c17844d030be03fd2f
 - Authentihash:
     MD5: 3e6b489741cdcae17a01ede87b89d875
     SHA1: 231651011a36b45626a9c2245496225221887af7
@@ -2036,6 +2100,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2049,6 +2114,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -2062,6 +2128,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2076,6 +2143,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2090,12 +2158,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 24c3d3be20e794c17844d030be03fd2f
 - Authentihash:
     MD5: d79f773ee0e6eb9aa7d9859747fde271
     SHA1: 16077b3894a11e1b4df8e959a7e0795bc0c7505a
@@ -2248,6 +2318,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2260,6 +2331,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
@@ -2274,6 +2346,7 @@ KnownVulnerableSamples:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
         SHA256: 88dd3952638ee82738c03168e6fd863fe4eab1059ee5e2926ad8cb587c255dc0
+        SHA384: a00aa5ed457c41e37967882644d63366bae014f03a986576d8514164d7027acf7d0b5e03d764db2558f60db148954459
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2007-04-04 00:00:00'
@@ -2287,6 +2360,7 @@ KnownVulnerableSamples:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
         SHA256: d98d63f26125a94eb767fdd2526f6c74bfb40cb4d117a1d87ca3ed0d99bd6f0b
+        SHA384: cf20d9d6343b52b05ebaeace8a75ad950089e2d55508571cf5b153583fdf2d7b11bc61b8f38bfa70f09b2e7ac63d9ef5
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2299,12 +2373,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)04, CN=VeriSign Class 3 Code Signing 2004
         CA
       Version: 1
+  Imphash: 0e4f5481813eeec4e5dd96e36020135f
 - Authentihash:
     MD5: 550070ba1cc4ceefec2641c34e562615
     SHA1: b3adf811059eaac7549c2cce862b9db7b8d9cdbd
@@ -2456,6 +2532,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -2468,6 +2545,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -2482,6 +2560,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -2495,6 +2574,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -2507,12 +2587,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 24c3d3be20e794c17844d030be03fd2f
 - Authentihash:
     MD5: 18eec5455bfbebf459329a19b4ea57ba
     SHA1: 5c95416bf48f3a90950900480ca4c8781405d5f1
@@ -2664,6 +2746,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2677,6 +2760,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -2690,6 +2774,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2704,6 +2789,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2718,12 +2804,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 24c3d3be20e794c17844d030be03fd2f
 - Authentihash:
     MD5: 4acd0e96aa76c12056afd12ef9dc9921
     SHA1: 961cf1db80588039ede3e8ee66cd2efe915f9212
@@ -2869,6 +2957,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -2882,6 +2971,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -2895,6 +2985,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -2909,6 +3000,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -2923,12 +3015,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 8ec78cf864273fd81203678b61c41f04
 - Authentihash:
     MD5: e10e33b01f0b4a6c8ff0717b07801600
     SHA1: 9cb2ec59f9d2186643b7e2c52e0dc0c17646b04b
@@ -3074,6 +3168,7 @@ KnownVulnerableSamples:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
         SHA256: a612fb22ce8be6dab75e47c98508f98496583e79c9c97b936a8caee9ea9f3fff
+        SHA384: 35c249d6ad0261a6229b2a727067ac6ba32a5d24b30b9249051f748c7735fbe2ec2ef26a702c50df1790fbe32a65aee7
     - Subject: C=US, O=VeriSign, Inc., CN=VeriSign Time Stamping Services CA
       ValidFrom: '2003-12-04 00:00:00'
       ValidTo: '2013-12-03 23:59:59'
@@ -3086,6 +3181,7 @@ KnownVulnerableSamples:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
         SHA256: 1ec3b4f02e03930a470020e0e48d24b84678bb558f46182888d870541f5e25c7
+        SHA384: 53e346bbde23779a5d116cc9d86fdd71c97b1f1b343439f8a11aa1d3c87af63864bb8488a5aeb2d0c26a6a1e0b15f03f
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
@@ -3100,6 +3196,7 @@ KnownVulnerableSamples:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
         SHA256: 07b8f662558ec85b71b43a79c6e94698144f4ced2308af21e7ba1e5d461da214
+        SHA384: 2a271d052213438467d09d60eaa4010c8642fff3eb0070e0cf9969428713c8fdc066b90996d594dd3136f5bd0af5a22a
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, OU=Novell Products Group, CN=Novell, Inc.
       ValidFrom: '2010-04-03 00:00:00'
@@ -3113,6 +3210,7 @@ KnownVulnerableSamples:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
         SHA256: ae1dc09d08e93ace95fe203adfbfadcd4c029529d3f99ab381c368064b58d9a0
+        SHA384: 18c6db711578cfcd4bce87c63d053e242c7c196efc892c2d4a8733cb75bb7dc3cac3f702e0e1d4b7fa2c590acb53fdee
     - Subject: C=US, O=VeriSign, Inc., OU=Class 3 Public Primary Certification Authority
       ValidFrom: '2006-05-23 17:01:29'
       ValidTo: '2016-05-23 17:11:29'
@@ -3125,12 +3223,14 @@ KnownVulnerableSamples:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
         SHA256: 40bddadac24dc61ca4fb5cab2a2bc5d876bc36808311039a7a3e1a4066f7489b
+        SHA384: f51d4e75ba638f7314cd59b8d6d45f3b34d35ce6986e9d205cd6f333e8e8d8e9c91f636e6bc84731b6661673f40963d8
     Signer:
     - SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)09, CN=VeriSign Class 3 Code Signing 2009,2
         CA
       Version: 1
+  Imphash: 8ec78cf864273fd81203678b61c41f04
 - Authentihash:
     MD5: 84acbd4402cbc982e115a6ed21b3364d
     SHA1: ca3b0d9947aa3815ae10464b798de78ec76b5651
@@ -3276,6 +3376,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3289,6 +3390,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -3302,6 +3404,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3316,6 +3419,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3330,12 +3434,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 8ec78cf864273fd81203678b61c41f04
 - Authentihash:
     MD5: e50506bd02b4f5442507e136a72328c3
     SHA1: d7a975782001f16be555f1d23ee9de91da5e04d8
@@ -3481,6 +3587,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3494,6 +3601,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -3507,6 +3615,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3521,6 +3630,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3535,12 +3645,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 8ec78cf864273fd81203678b61c41f04
 - Authentihash:
     MD5: 21bfc53f9d30070cd588f335582a1f62
     SHA1: 59b835feb61bc84836702a4c885293547132f695
@@ -3692,6 +3804,7 @@ KnownVulnerableSamples:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
         SHA256: c2abb7484da91a658548de089d52436175fdb760a1387d225611dc0613a1e2ff
+        SHA384: eab4fe5ef90e0de4a6aa3a27769a5e879f588df5e4785aa4104debd1f81e19ea56d33e3a16e5facf99f68b5d8e3d287b
     - Subject: C=US, O=Symantec Corporation, CN=Symantec Time Stamping Services Signer
         , G4
       ValidFrom: '2012-10-18 00:00:00'
@@ -3705,6 +3818,7 @@ KnownVulnerableSamples:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
         SHA256: 88901d86a4cc1f1bb193d08e1fb63d27452e63f83e228c657ab1a92e4ade3976
+        SHA384: e9f2a75334a9e336c5a4712eadee88d0374b0fdc273262f4e65c9040ad2793067cc076696db5279a478773485e285652
     - Subject: C=US, ST=Utah, L=Provo, O=Novell, Inc., OU=Digital ID Class 3 , Microsoft
         Software Validation v2, CN=Novell, Inc.
       ValidFrom: '2013-03-05 00:00:00'
@@ -3718,6 +3832,7 @@ KnownVulnerableSamples:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
         SHA256: 2b9c106aae9a1675874a797c8571eb9fcec0a503ca4ddff69603321350fe3e68
+        SHA384: eac8e04313e7d424d650203026e3011abf7f02f40fecd7ab1a139aa229fabe40ac62b1f262780c4b27758214b08f7e87
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=(c) 2006 VeriSign,
         Inc. , For authorized use only, CN=VeriSign Class 3 Public Primary Certification
         Authority , G5
@@ -3732,6 +3847,7 @@ KnownVulnerableSamples:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
         SHA256: 317fa1d234ebc49040ebc5e8746f8997471496051b185a91bdd9dfbb23fab5f8
+        SHA384: b71052da4eb9157c8c1a5d7f55df19d69b9128598b72fcca608e5b7cc7d64c43c5504b9c86355a6dc22ee40c88cc385c
     - Subject: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use
         at https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
@@ -3746,12 +3862,14 @@ KnownVulnerableSamples:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
         SHA256: 03cda47a6e654ed85d932714fc09ce4874600eda29ec6628cfbaeb155cab78c9
+        SHA384: bbda8407c4f9fc4e54d772f1c7fb9d30bc97e1f97ecd51c443063d1fa0644e266328781776cd5c44896c457c75f4d7da
     Signer:
     - SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Issuer: C=US, O=VeriSign, Inc., OU=VeriSign Trust Network, OU=Terms of use at
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
+  Imphash: 24c3d3be20e794c17844d030be03fd2f
 MitreID: T1068
 Resources:
 - https://github.com/jbaines-r7/dellicious

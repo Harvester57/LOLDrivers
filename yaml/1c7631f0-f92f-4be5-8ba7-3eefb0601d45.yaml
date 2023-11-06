@@ -22,6 +22,16 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+- type: yara_signature
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
+- type: sigma_hash
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers.yml
+- type: sigma_names
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sigma/driver_load_win_vuln_drivers_names.yml
+- type: sysmon_hash_detect
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
+- type: sysmon_hash_block
+  value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
 Id: 1c7631f0-f92f-4be5-8ba7-3eefb0601d45
 KnownVulnerableSamples:
 - Authentihash:
@@ -153,6 +163,7 @@ KnownVulnerableSamples:
         MD5: 60cb2d8488f8724a67bf3254e6a57ff1
         SHA1: 37aef77a1afaa33ac5787fc43a2c1e2509a19eb1
         SHA256: 495a6ff7ace92f915eb1753c4c0b32612056e6d320bb17ff90346db3aa357432
+        SHA384: 2a90dcf67abc92f070775de78ecf066e7730ea57b4c4d6c64cfdd66c3eb0f639ac188b24571a9f600ef017737a71decf
     - Subject: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       ValidFrom: '2014-10-15 20:31:27'
@@ -166,11 +177,13 @@ KnownVulnerableSamples:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
         SHA256: d8be9e4d9074088ef818bc6f6fb64955e90378b2754155126feebbbd969cf0ae
+        SHA384: 260ad59ba706420f68ba212931153bd89f760c464b21be55fba9d014fff322407859d4ebfb78ea9a3330f60dc9821a63
     Signer:
     - SerialNumber: 33000000253a2738690a3451c1000000000025
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  Imphash: c3fd2e688276a184b2528ee590054e5a
 MitreID: T1068
 Resources:
 - ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
