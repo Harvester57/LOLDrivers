@@ -101,6 +101,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | nt2.sys |
+| Creation Timestamp           |  |
 | MD5                | [](https://www.virustotal.com/gui/file/) |
 | SHA1               | [](https://www.virustotal.com/gui/file/) |
 | SHA256             | [cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec](https://www.virustotal.com/gui/file/cb9890d4e303a4c03095d7bc176c42dee1b47d8aa58e2f442ec1514c8f9e3cec) |
@@ -111,19 +112,19 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 {{< details "Expand" >}}
 
 {{< /details >}}
-#### Imports
+#### Imported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
-#### ImportedFunctions
-{{< details "Expand" >}}
-
-{{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 
@@ -134,7 +135,7 @@ sc.exe create nt2.sys binPath=C:\windows\temp \n \n \n  t2.sys type=kernel &amp;
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/cacc48e6-6ed8-431c-abee-88ee6c2dc3c1.yaml)
 
-*last_updated:* 2023-09-03
+*last_updated:* 2023-12-22
 
 {{< /column >}}
 {{< /block >}}

@@ -13,7 +13,6 @@ displayTitle = "cpuz141.sys"
 
 # cpuz141.sys ![:inline](/images/twitter_verified.png) 
 
-
 ### Description
 
 cpuz141.sys is a vulnerable driver and more information will be added as found.
@@ -101,6 +100,7 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 | Property           | Value |
 |:-------------------|:------|
 | Filename           | cpuz141.sys |
+| Creation Timestamp           | 2016-11-22 06:20:59 |
 | MD5                | [db72def618cbc3c5f9aa82f091b54250](https://www.virustotal.com/gui/file/db72def618cbc3c5f9aa82f091b54250) |
 | SHA1               | [f5696fb352a3fbd14fb1a89ad21a71776027f9ab](https://www.virustotal.com/gui/file/f5696fb352a3fbd14fb1a89ad21a71776027f9ab) |
 | SHA256             | [ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d](https://www.virustotal.com/gui/file/ded2927f9a4e64eefd09d0caba78e94f309e3a6292841ae81d5528cab109f95d) |
@@ -185,13 +185,7 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 * HAL.dll
 
 {{< /details >}}
-#### Imports
-{{< details "Expand" >}}
-* ntoskrnl.exe
-* HAL.dll
-
-{{< /details >}}
-#### ImportedFunctions
+#### Imported Functions
 {{< details "Expand" >}}
 * RtlInitUnicodeString
 * IoDeleteDevice
@@ -222,11 +216,21 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 * KeQueryPerformanceCounter
 
 {{< /details >}}
-#### ExportedFunctions
+#### Exported Functions
 {{< details "Expand" >}}
 
 {{< /details >}}
 
+#### Sections
+{{< details "Expand" >}}
+* .text
+* .rdata
+* .data
+* .pdata
+* INIT
+* .rsrc
+
+{{< /details >}}
 #### Signature
 {{< details "Expand" >}}
 ```
@@ -316,7 +320,7 @@ sc.exe create cpuz141.sys binPath=C:\windows\temp\cpuz141.sys type=kernel &amp;&
 
 [*source*](https://github.com/magicsword-io/LOLDrivers/tree/main/yaml/fab98aaa-e4e7-4c4a-af65-c00d35cf66e9.yaml)
 
-*last_updated:* 2023-09-03
+*last_updated:* 2023-12-22
 
 {{< /column >}}
 {{< /block >}}
