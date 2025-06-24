@@ -11,7 +11,7 @@ jobs:
   generate-wdac:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: false
         lfs: true
@@ -23,7 +23,7 @@ jobs:
         $NewDriverRules = New-CIPolicyRule -DriverFiles $drivers -Level FilePublisher -Fallback SignedVersion,Publisher,Hash -Deny;
         Merge-CIPolicy -OutputFilePath Denylist.xml -PolicyPaths C:\Windows\schemas\CodeIntegrity\ExamplePolicies\AllowAll.xml -Rules $NewDriverRules | Out-Null;
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Denylist
         path: Denylist.xml
