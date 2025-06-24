@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: edd29861-6984-4dbe-8e7c-22e9b6cf68d0
+Tags:
+- kprocesshacker.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create krpocesshacker.sys binPath=C:\windows\temp\krpocesshacker.sys     type=kernel
@@ -10,7 +13,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/312791-bypaph-process-hackers-bypass-read-write-process-virtual-memory-kernel-mem.html#post2315763
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c725919e6357126d512c638f993cf572112f323da359645e4088f789eb4c7b8c.yara
@@ -32,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: edd29861-6984-4dbe-8e7c-22e9b6cf68d0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: a9ccdbae433c4377abce8f514e4fe43e
@@ -40,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: c7b1bb39dcd7f0331989f16fcc7cd29a9ae126bee47746a4be385160da3c5a29
   Company: wj32
   Copyright: Licensed under the GNU GPL, v3.
-  CreationTimestamp: '2015-05-30 02:42:12'
+  CreationTimestamp: '2015-05-30 04:42:12'
   Date: ''
   Description: KProcessHacker
   ExportedFunctions: ''
@@ -173,6 +181,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -186,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -199,6 +213,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03e9017d54cd93f094d0a2ab7fc0e3f5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: edebe2eab71887f7571e5c501cf8b745
         SHA1: 9b039c3cc8d41568351b37628c8dd682b36872e4
@@ -213,6 +230,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -226,6 +246,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -244,7 +267,7 @@ KnownVulnerableSamples:
     SHA256: 4ee2a56c1592ff0e951b452c0de064eba05b7c98e3add04c8aa3b4a84eb797a5
   Company: wj32
   Copyright: Licensed under the GNU GPL, v3.
-  CreationTimestamp: '2016-03-28 12:20:42'
+  CreationTimestamp: '2016-03-28 14:20:42'
   Date: ''
   Description: KProcessHacker
   ExportedFunctions: ''
@@ -389,6 +412,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ff1ef66bd621c65b74b4de41425717f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 757eb14413aba2d993b15943483df3b8
         SHA1: 69f7d9ce7728f0a25643d4da3774704c699718b5
@@ -403,6 +429,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -416,6 +445,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -430,6 +462,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -443,6 +478,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -455,11 +493,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: f86759bb4de4320918615dc06e998a39
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/312791-bypaph-process-hackers-bypass-read-write-process-virtual-memory-kernel-mem.html#post2315763
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- kprocesshacker.sys
-Verified: 'TRUE'

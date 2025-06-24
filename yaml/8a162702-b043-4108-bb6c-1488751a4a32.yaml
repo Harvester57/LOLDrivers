@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: BushidoToken
-  Person: BushidoToken
+Id: 8a162702-b043-4108-bb6c-1488751a4a32
+Tags:
+- dkrTK.sys
+Verified: 'TRUE'
 Author: Will BushidoToken
+Created: '2023-05-22'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create dkrTK.sys binPath=C:\windows\temp\dkrTK.sys type=kernel &&
@@ -17,9 +20,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-22'
+Resources:
+- https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
 Detection: []
-Id: 8a162702-b043-4108-bb6c-1488751a4a32
+Acknowledgement:
+  Handle: BushidoToken
+  Person: BushidoToken
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 233c2815720d7aa90838780dc482ddb9
@@ -27,7 +34,7 @@ KnownVulnerableSamples:
     SHA256: 24395b622d4fd48864a50978ffd2b82fdded5189741a6deea9293cc075cd0c6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-02 04:09:08'
+  CreationTimestamp: '2022-06-02 06:09:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -132,6 +139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 38de06b8be15187f107e04f8b1138977
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1e71dd41570c4bb591861555853106a3
         SHA1: 1cb57dd770235af6c117b995e9c52909a0e44684
@@ -145,6 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -159,6 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -170,10 +186,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 26ceec6572c630bdad60c984e51b7da4
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.trendmicro.com/content/dam/trendmicro/global/en/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver/indicators-blackcat-ransomware-deploys-new-signed-kernel-driver.txt
-- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
-Tags:
-- dkrTK.sys
-Verified: 'TRUE'

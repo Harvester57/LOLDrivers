@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 0baa833c-e4e1-449e-86ee-cafeb11f5fd5
+Tags:
+- vboxguest.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 0baa833c-e4e1-449e-86ee-cafeb11f5fd5
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: c9fff1bf9b2dd3c53150aa7fa931e7a9
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: c3fa8f5c8094a6c6936faff1d1faa02fd489482f21c288e6c700446ade5c20be
   Company: innotek GmbH
   Copyright: Copyright (C) 2004-2007 innotek GmbH
-  CreationTimestamp: '2007-10-18 01:49:33'
+  CreationTimestamp: '2007-10-18 03:49:33'
   Date: ''
   Description: VirtualBox Guest Driver
   ExportedFunctions:
@@ -170,6 +174,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0100000000011006daed6b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: bfbe9f4dc7264d47b48dbc2ec48aa897
         SHA1: 699c3e67f349f262426097a4c9320951f0d56e8f
@@ -184,6 +191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -197,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -211,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -225,6 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9612448
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
@@ -238,6 +257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -256,7 +278,7 @@ KnownVulnerableSamples:
     SHA256: bfbc382decb986b6050268e53092eae5e981cb886ccfb116ca7a0b311cef3862
   Company: innotek GmbH
   Copyright: Copyright (C) 2004-2007 innotek GmbH
-  CreationTimestamp: '2008-02-19 09:09:00'
+  CreationTimestamp: '2008-02-19 11:09:00'
   Date: ''
   Description: VirtualBox Guest Driver
   ExportedFunctions:
@@ -392,6 +414,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 010000000001171c092665
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 5cfd8530475b20ed5a2bed70b37ee977
         SHA1: 4761dbd41ba2b01f21b9306ca21e8add93a30f09
@@ -406,6 +431,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -419,6 +447,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -433,6 +464,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -447,6 +481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9612448
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
@@ -460,6 +497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -472,9 +512,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 60c1eb7640a50cdacdac1212965b1b25
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- vboxguest.sys
-Verified: 'TRUE'

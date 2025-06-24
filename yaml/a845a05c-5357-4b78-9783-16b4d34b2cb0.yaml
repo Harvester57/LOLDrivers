@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a845a05c-5357-4b78-9783-16b4d34b2cb0
+Tags:
+- aswVmm.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create aswVmm.sys binPath=C:\windows\temp\aswVmm.sys type=kernel
@@ -10,7 +13,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/tanduRE/AvastHV
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/36505921af5a09175395ebaea29c72b2a69a3a9204384a767a5be8a721f31b10.yara
@@ -32,7 +37,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a845a05c-5357-4b78-9783-16b4d34b2cb0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 14260121e1984480cf6e7ec1adead3a3
@@ -40,7 +47,7 @@ KnownVulnerableSamples:
     SHA256: a2b0b2e9e458016b22ebbf47411008f0a87efd9103b125870ce37246ab5bdff0
   Company: AVAST Software
   Copyright: Copyright (c) 2013 AVAST Software
-  CreationTimestamp: '2013-08-30 01:36:44'
+  CreationTimestamp: '2013-08-30 03:36:44'
   Date: ''
   Description: avast! VM Monitor
   ExportedFunctions: ''
@@ -230,6 +237,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -244,6 +254,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -259,6 +272,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -272,6 +288,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -286,6 +305,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dd6d671fe0364d43b632131417e7b3f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 21d1d3208df2fa1d448ca0d6a7c3f767
         SHA1: 8c1c5b83db485fb02a60c5637d7a0e7dd61386e9
@@ -301,6 +323,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -314,11 +339,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 44e6f2f64092b48f8eb926c36ebd1d56
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/tanduRE/AvastHV
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- aswVmm.sys
-Verified: 'TRUE'

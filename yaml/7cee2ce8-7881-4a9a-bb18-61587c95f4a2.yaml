@@ -1,26 +1,28 @@
 Id: 7cee2ce8-7881-4a9a-bb18-61587c95f4a2
+Tags:
+- DcProtect.sys
+Verified: 'TRUE'
 Author: Wack0
 Created: '2023-11-30'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create DcProtect.sys binPath=C:\windows\temp\DcProtect.sys type=kernel
     && sc.exe start DcProtect.sys
-  Description: 'bundled with chinese application "DrvCeo" is a set of rootkits. The
+  Description: bundled with chinese application "DrvCeo" is a set of rootkits. The
     malicious functionality. prevents registry value writing where the registry key
     or value includes "dcprotect" or "drvceo". Prevents file deletion if pathname
-    contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"'
+    contains "driverdownload", "program files\sysceo", "program files (x86)\sysceo"
   Usecase: Elevate privileges
   Privileges: kernel
   OperatingSystem: Windows 10
 Resources:
 - https://github.com/magicsword-io/LOLDrivers/issues/154
 - https://www.virustotal.com/gui/user/slipstream
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: ''
   Libraries:
@@ -63,7 +65,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:17:50'
+  CreationTimestamp: '2021-01-06 11:17:50'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -115,6 +117,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -129,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -143,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -158,6 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -172,6 +186,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -198,6 +215,7 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -241,7 +259,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:15:15'
+  CreationTimestamp: '2021-01-06 11:15:15'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -290,6 +308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -304,6 +325,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -318,6 +342,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -333,6 +360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -347,6 +377,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -373,6 +406,7 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -414,7 +448,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:17:24'
+  CreationTimestamp: '2021-01-06 11:17:24'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -466,6 +500,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -480,6 +517,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -494,6 +534,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -509,6 +552,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -523,6 +569,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -549,6 +598,7 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -592,7 +642,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:14:24'
+  CreationTimestamp: '2021-01-06 11:14:24'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -641,6 +691,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -655,6 +708,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -669,6 +725,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -684,6 +743,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -698,6 +760,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -724,6 +789,7 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -765,7 +831,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:16:44'
+  CreationTimestamp: '2021-01-06 11:16:44'
   RichPEHeaderMD5: 4d8a663ae2f765ff317d5e042cf62899
   RichPEHeaderSHA1: b11ddc426a9801d4f3dd3b6cd1fa2ca1e1d86ada
   RichPEHeaderSHA256: 1427e72e0fca467e4abd192177e4e875daa5b27e2cb22ce10aee1f1500df6b2c
@@ -817,6 +883,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -831,6 +900,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -845,6 +917,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -860,6 +935,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -874,6 +952,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -900,6 +981,7 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -943,7 +1025,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:13:53'
+  CreationTimestamp: '2021-01-06 11:13:53'
   RichPEHeaderMD5: 555e8cb2ed5b1eea11f804a11c4aef99
   RichPEHeaderSHA1: 632b7ac9f88af93d18cefa583390b26172e109e5
   RichPEHeaderSHA256: be22bb21e6e37fe1daf872d2d703d4aa26a6a58f2d5844ae4c57990aaf50a389
@@ -992,6 +1074,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -1006,6 +1091,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -1020,6 +1108,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1035,6 +1126,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -1049,6 +1143,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1075,6 +1172,7 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -1116,7 +1214,7 @@ KnownVulnerableSamples:
   Imphash: e800cd3299d4cda0d9e02255acc3b7dd
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:16:01'
+  CreationTimestamp: '2021-01-06 11:16:01'
   RichPEHeaderMD5: c4e7e7af2fdd10d405127dc885585e78
   RichPEHeaderSHA1: bb15c357ab3f88e7eb311098667c091cd5f129c3
   RichPEHeaderSHA256: 7f2615ebe7385406ee5a6aba05c2a4b97cfdf498617fa8dae127640c6b6d465d
@@ -1168,6 +1266,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -1182,6 +1283,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -1196,6 +1300,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1211,6 +1318,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -1225,6 +1335,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1251,6 +1364,7 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
+  LoadsDespiteHVCI: 'TRUE'
 - Filename: ''
   Libraries:
   - FLTMGR.SYS
@@ -1294,7 +1408,7 @@ KnownVulnerableSamples:
   Imphash: 2ece23bdef16ee294bd905c7ba1be589
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-06 09:13:00'
+  CreationTimestamp: '2021-01-06 11:13:00'
   RichPEHeaderMD5: 331d5fbc7084c96f08da4705084c4bc3
   RichPEHeaderSHA1: 6e6ddabbb0c5d4d90269650e65477ae67bf17947
   RichPEHeaderSHA256: 50cf67aa86ee44eeccc56f3ebc2f441c284470cd58f40766cfa05f534542983e
@@ -1343,6 +1457,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -1357,6 +1474,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -1371,6 +1491,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1386,6 +1509,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0abe0ae214534ce0db8c4784e7b8b9f6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85b79b9fe18b3766b667a26271e4c146
         SHA1: 74ff1f4cae4c7cc002981fc5b4b01b62347bc21b
@@ -1400,6 +1526,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1426,5 +1555,4 @@ KnownVulnerableSamples:
   Imports:
   - FLTMGR.SYS
   - ntoskrnl.exe
-Tags:
-- DcProtect.sys
+  LoadsDespiteHVCI: 'TRUE'

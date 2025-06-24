@@ -1,7 +1,11 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 93740202-930c-4ab4-8603-8ec9532c5415
+Tags:
+- WinTapix.sys
+- SRVNET2.SYS
+Verified: 'TRUE'
 Author: Guus Verbeek
+Created: '2023-06-05'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create WinTapix.sys binPath=C:\windows\temp\WinTapix.sys type=kernel
@@ -14,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-06-05'
+Resources:
+- https://www.fortinet.com/blog/threat-research/wintapix-kernal-driver-middle-east-countries
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_mal_drivers_strict.yar
@@ -26,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 93740202-930c-4ab4-8603-8ec9532c5415
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: bb6790230efd9de2ee1a5be037f3c32e
@@ -34,7 +41,7 @@ KnownVulnerableSamples:
     SHA256: d0d8dcc01aba3ac08084ad40df3c64e7dfdd26ad403b08e610b96e2fcaf8a713
   Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2020-05-04 11:58:49'
+  CreationTimestamp: '2020-05-04 13:58:49'
   Date: ''
   Description: Windows Kernel Executive Module
   ExportedFunctions: ''
@@ -137,6 +144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191d1219374065650af30022cf4619f5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 5c037797b52b0dacf4eaf3f7dca4982a
         SHA1: d1d8fe6c1dded9e1309b3d4a7bb062e542701669
@@ -151,6 +161,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
@@ -166,6 +179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -181,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -200,7 +219,7 @@ KnownVulnerableSamples:
     SHA256: 6ca42465bf4101ff63117c171cb31204dd29c45ba4ea7c31fd950f17e19b5d03
   Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2020-05-03 08:29:44'
+  CreationTimestamp: '2020-05-03 10:29:44'
   Date: ''
   Description: Windows Kernel Executive Module
   ExportedFunctions: ''
@@ -303,6 +322,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191d1219374065650af30022cf4619f5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 5c037797b52b0dacf4eaf3f7dca4982a
         SHA1: d1d8fe6c1dded9e1309b3d4a7bb062e542701669
@@ -317,6 +339,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
@@ -332,6 +357,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -347,6 +375,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -366,7 +397,7 @@ KnownVulnerableSamples:
     SHA256: 9ac6d632f61d9abe287616ade35f555cd8cf5b91adda382c5ced0cbae468b0e7
   Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2021-06-28 23:28:49'
+  CreationTimestamp: '2021-06-29 01:28:49'
   Date: ''
   Description: Server Network driver
   ExportedFunctions: ''
@@ -460,6 +491,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6e9b297c7f929e056a311fabffcd96c5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f1587fcabfcc45e870238853daf0aa43
         SHA1: 3076e8e83fc858bb8547145202fc4790573e3287
@@ -475,6 +509,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 627dfdf73a1455de5143a270799e6b7b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b91ec3270e80aa93214c42d1eed66d36
         SHA1: c27a40cbc754d2bb1f7b872a5a9fd385ff1c2b2f
@@ -490,6 +527,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -505,6 +545,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -518,10 +561,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 8d070a93a45ed8ba6dba6bfbe0d084e7
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.fortinet.com/blog/threat-research/wintapix-kernal-driver-middle-east-countries
-Tags:
-- WinTapix.sys
-- SRVNET2.SYS
-Verified: 'TRUE'

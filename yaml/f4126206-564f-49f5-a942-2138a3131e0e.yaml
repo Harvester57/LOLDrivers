@@ -1,9 +1,11 @@
 Id: f4126206-564f-49f5-a942-2138a3131e0e
+Tags:
+- NICM.SYS
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create NICM.sys binPath=C:\windows\temp\NICM.SYS type=kernel &&
     sc.exe start NICM.SYS
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: NICM.SYS
   MD5: 52b7cd123f6d1b9ed76b08f2ee7d9433
@@ -134,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000002528b33aaf895f339db000000000252
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
@@ -148,6 +153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610e90d2000000000003
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
@@ -188,7 +196,7 @@ KnownVulnerableSamples:
       Entropy: 3.6567400216610486
       Virtual Size: '0x160'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:20:00'
+  CreationTimestamp: '2013-01-16 01:20:00'
   Imphash: 8ec78cf864273fd81203678b61c41f04
   LoadsDespiteHVCI: 'TRUE'
 - Filename: NICM.SYS
@@ -307,6 +315,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -320,6 +331,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -335,6 +349,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -349,6 +366,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -362,6 +382,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -400,7 +423,7 @@ KnownVulnerableSamples:
       Entropy: 6.153392798668095
       Virtual Size: '0x600'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:49:27'
+  CreationTimestamp: '2009-03-27 13:49:27'
   Imphash: 0e4f5481813eeec4e5dd96e36020135f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: NICM.SYS
@@ -510,6 +533,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -523,6 +549,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -538,6 +567,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -552,6 +584,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -565,6 +600,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -606,8 +644,6 @@ KnownVulnerableSamples:
       Entropy: 3.6567400216610486
       Virtual Size: '0x160'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:53:53'
+  CreationTimestamp: '2009-03-27 13:53:53'
   Imphash: f2dc136141066311fddef65f7f417c44
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- NICM.SYS

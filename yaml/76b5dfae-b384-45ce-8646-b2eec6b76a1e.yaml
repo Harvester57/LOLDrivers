@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: zwclose
-  Person: zwclose
+Id: 76b5dfae-b384-45ce-8646-b2eec6b76a1e
+Tags:
+- KfeCo11X64.sys
+Verified: 'TRUE'
 Author: Paul Michaud
+Created: '2023-05-12'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create KfeCo11X64.sys binPath=C:\windows\temp\KfeCo11X64.sys type=kernel
@@ -18,7 +21,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-12'
+Resources:
+- https://zwclose.github.io/2023/04/18/killer2.html
+- https://twitter.com/zwclose/status/1648441215808049153
+- https://zwclose.github.io/2022/12/18/killer1.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9a91d6e83b8fdec536580f6617f10dfc64eedf14ead29a6a644eb154426622ba.yara
@@ -40,7 +46,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 76b5dfae-b384-45ce-8646-b2eec6b76a1e
+Acknowledgement:
+  Handle: zwclose
+  Person: zwclose
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 758090532f58b19865d76a41389c2d58
@@ -48,7 +56,7 @@ KnownVulnerableSamples:
     SHA256: a7047cee090ddbd150d7337a9357e03ccea56f004a2d29ddb7b8a0636a396240
   Company: Rivet Networks, LLC.
   Copyright: Copyright (C) 2015-2018 Rivet Networks, LLC.
-  CreationTimestamp: '2022-03-29 11:25:42'
+  CreationTimestamp: '2022-03-29 13:25:42'
   Date: ''
   Description: Killer Traffic Control Callout Driver
   ExportedFunctions: ''
@@ -216,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 00bfcce9854e3f154ff8e62c2ce2fde84d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6e52024b4fb80fcfdb67508172f48293
         SHA1: 30760fb50b6398765ff477da4c21f1178e5408ca
@@ -230,6 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 1da248306f9b2618d082e0967d33d36a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
@@ -244,6 +258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000044b73ffcef5acfa27a000000000044
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
         SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
@@ -256,11 +273,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 13300d56528646611f26704266713952
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://zwclose.github.io/2023/04/18/killer2.html
-- https://twitter.com/zwclose/status/1648441215808049153
-- https://zwclose.github.io/2022/12/18/killer1.html
-Tags:
-- KfeCo11X64.sys
-Verified: 'TRUE'

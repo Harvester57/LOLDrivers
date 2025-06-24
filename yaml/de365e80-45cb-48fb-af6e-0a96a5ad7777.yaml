@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: '@zwclose'
-  Person: zwclose
+Id: de365e80-45cb-48fb-af6e-0a96a5ad7777
+Tags:
+- CtiIo64.sys
+Verified: 'True'
 Author: zwclose
+Created: '2023-05-22'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create CtiIo64.sys binPath=C:\windows\temp\CtiIo64.sys type=kernel
@@ -12,7 +15,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-22'
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/pull/81
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/2121a2bb8ebbf2e6e82c782b6f3c6b7904f686aa495def25cf1cf52a42e16109.yara
@@ -34,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: de365e80-45cb-48fb-af6e-0a96a5ad7777
+Acknowledgement:
+  Handle: '@zwclose'
+  Person: zwclose
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 6bbd44ee42e3bbc6b4acc12fe11d765a
@@ -42,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: 2b4af74d74a4380130a1c46d2f1ffe112d87d9d7646540bbbd201c5bd176082b
   Company: Creative Technology Innovation Co., LTd.
   Copyright: Copyright (c) 2021 CTI
-  CreationTimestamp: '2021-05-06 21:21:55'
+  CreationTimestamp: '2021-05-06 23:21:55'
   Date: ''
   Description: CTI IO driver
   ExportedFunctions: ''
@@ -113,6 +119,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000433a68189e33902987000000000043
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3d790bd5602e84a4aa8560133ced0a41
         SHA1: 909e31e3e3808ab55d508fc0ba47e0132a57d7ab
@@ -127,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -139,9 +151,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/magicsword-io/LOLDrivers/pull/81
-Tags:
-- CtiIo64.sys
-Verified: 'True'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: e4609b54-cb25-4433-a75a-7a17f43cec00
+Tags:
+- HwRwDrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create HwRwDrv.sys binPath=C:\windows\temp\HwRwDrv.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/21ccdd306b5183c00ecfd0475b3152e7d94b921e858e59b68a03e925d1715f21.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: e4609b54-cb25-4433-a75a-7a17f43cec00
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 62d9c8a109afc08e2858d98df9776850
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: d852810a7319e3249077a1b9f1317f6f4157a19bb99b90063d118c30c2c84ac2
   Company: "Windows\xAE winows 7 driver kits provider"
   Copyright: "Copyright\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2012-07-27 23:28:05'
+  CreationTimestamp: '2012-07-28 01:28:05'
   Date: ''
   Description: Hardware read & write driver
   ExportedFunctions: ''
@@ -112,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -125,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -139,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 160cb9192dc4e0fde5cbaf859feae671
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4bdf770073ad26561f90cbe53d65f4bb
         SHA1: 268caed0b5d2facdb838384601cac3d1fad185b8
@@ -154,6 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -169,6 +187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -182,10 +203,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: d6f977640d4810a784d152e4d3c63a6b
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- HwRwDrv.sys
-Verified: 'TRUE'

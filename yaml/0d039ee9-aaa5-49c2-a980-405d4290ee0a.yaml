@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 0d039ee9-aaa5-49c2-a980-405d4290ee0a
+Tags:
+- telephonuAfY.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-11'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create telephonuAfY.sys binPath=C:\windows\temp\telephonuAfY.sys
@@ -20,9 +23,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-11'
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Detection: []
-Id: 0d039ee9-aaa5-49c2-a980-405d4290ee0a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 43b75d04464038f6a49bdbe6b1e8b622
@@ -30,7 +36,7 @@ KnownVulnerableSamples:
     SHA256: f929b77636026cc0c57a0bd95e4c61f0b28a65e60331807e32235947f5c67931
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-05-23 01:23:25'
+  CreationTimestamp: '2023-05-23 03:23:25'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -170,6 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 71a0b73695ddb1afc23b2b9a18ee54cb
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 8314595952398203ab24badbbc927d39
         SHA1: b07dcf73133408eee2786a208ce4b2543bf6c583
@@ -183,6 +192,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dbdf488aeaa9795e332a1ca2747af0d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5037c865c427f7d514ac954ef7e66ccf
         SHA1: cfcc3ebb5c9003e88373beb66781dbdf9e1904d2
@@ -197,6 +209,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -208,9 +223,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: d51f0f6034eb5e45f0ed4e9b7bbc9c97
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Tags:
-- telephonuAfY.sys
-Verified: 'TRUE'

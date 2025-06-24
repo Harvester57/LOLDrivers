@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: e299b0b6-e5e2-45b3-bf0b-c008068cebfa
+Tags:
+- BS_Flash64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create BS_Flash64.sys binPath=C:\windows\temp\BS_Flash64.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection: []
-Id: e299b0b6-e5e2-45b3-bf0b-c008068cebfa
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: cf428ad377e1fd1a045e058b896fcee2
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: 543c3f024e4affd0aafa3a229fa19dbe7a70972bb18ed6347d3492dd174edac5
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2007-08-21 02:38:26'
+  CreationTimestamp: '2007-08-21 04:38:26'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -92,6 +98,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -105,6 +114,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -120,6 +132,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 49a570277854e9481d38e34c081226ee
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 27a32ddae1fd74f01b6324484fb5995a
         SHA1: d68dfe595f9f0f94672e1a7b876a2987ba81e675
@@ -133,10 +148,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 7a4a0df0bde1f8da6547a580d5bee7c3
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- BS_Flash64.sys
-Verified: 'TRUE'

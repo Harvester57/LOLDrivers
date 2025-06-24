@@ -1,9 +1,11 @@
 Id: afed9dff-245e-4875-a156-3c5584beed03
+Tags:
+- directio64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create directio64.sys binPath=C:\windows\temp\directio64.sys type=kernel
     && sc.exe start directio64.sys
@@ -13,10 +15,10 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: directio64.sys
   MD5: 537e2c3020b1d48b125da593e66508ec
@@ -99,6 +101,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -112,6 +117,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -126,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 38e7fa0db1a398f805bb85a69171dc9d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 159feaed9447c7d71653069c337ec2b3
         SHA1: 5079a8aa946ee016c86153d4456f58277360c036
@@ -141,6 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -154,6 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -189,7 +206,7 @@ KnownVulnerableSamples:
       Entropy: 5.227088557036365
       Virtual Size: '0x624'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-02-22 20:22:58'
+  CreationTimestamp: '2012-02-22 22:22:58'
   Imphash: cae90f82e91b9a60af9a0e36c1f73be4
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -272,6 +289,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -285,6 +305,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -299,6 +322,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 38e7fa0db1a398f805bb85a69171dc9d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 159feaed9447c7d71653069c337ec2b3
         SHA1: 5079a8aa946ee016c86153d4456f58277360c036
@@ -314,6 +340,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -327,6 +356,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -362,7 +394,7 @@ KnownVulnerableSamples:
       Entropy: 5.221465772836785
       Virtual Size: '0x60e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-12 22:30:24'
+  CreationTimestamp: '2012-08-13 00:30:24'
   Imphash: aa274f6b4b15691fd725d7044f98bf36
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -461,6 +493,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -475,6 +510,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 68d63143985e350ea05f95c3c989d910
         SHA1: 35d4099366238cdf0d0568367df87e76a721e4e4
@@ -488,6 +526,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -502,6 +543,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -516,6 +560,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -549,7 +596,7 @@ KnownVulnerableSamples:
       Entropy: 5.226965938564804
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-10 10:47:29'
+  CreationTimestamp: '2014-03-10 12:47:29'
   Imphash: 9521d8684357766840dbcac2b4cee67d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -648,6 +695,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -662,6 +712,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 68d63143985e350ea05f95c3c989d910
         SHA1: 35d4099366238cdf0d0568367df87e76a721e4e4
@@ -675,6 +728,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -689,6 +745,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -703,6 +762,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -736,7 +798,7 @@ KnownVulnerableSamples:
       Entropy: 5.226965938564804
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-25 12:43:27'
+  CreationTimestamp: '2013-11-25 14:43:27'
   Imphash: 9521d8684357766840dbcac2b4cee67d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -835,6 +897,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -849,6 +914,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6ec5060c23b767aa5eb4fe5ddad4af2d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 68d63143985e350ea05f95c3c989d910
         SHA1: 35d4099366238cdf0d0568367df87e76a721e4e4
@@ -862,6 +930,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -876,6 +947,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -890,6 +964,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -923,7 +1000,7 @@ KnownVulnerableSamples:
       Entropy: 5.235595172767805
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-03-27 21:48:42'
+  CreationTimestamp: '2014-03-27 23:48:42'
   Imphash: 9521d8684357766840dbcac2b4cee67d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -1028,6 +1105,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1041,6 +1121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -1055,6 +1138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1069,6 +1155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5ece8cdb4d508efee821a7cfff5b8016
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbbc2fd31bef7df6deb6127e593c71bb
         SHA1: 82b8bf771c8f1b038935f84e2a41a37c30650003
@@ -1083,6 +1172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -1119,7 +1211,7 @@ KnownVulnerableSamples:
       Entropy: 2.091917186688699
       Virtual Size: '0x10'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-25 17:13:06'
+  CreationTimestamp: '2016-08-25 19:13:06'
   Imphash: 832f0fb3579a07b1c4bec82b4478306b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -1218,6 +1310,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1231,6 +1326,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -1245,6 +1343,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1259,6 +1360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5ece8cdb4d508efee821a7cfff5b8016
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbbc2fd31bef7df6deb6127e593c71bb
         SHA1: 82b8bf771c8f1b038935f84e2a41a37c30650003
@@ -1273,6 +1377,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -1306,7 +1413,7 @@ KnownVulnerableSamples:
       Entropy: 5.236703969449414
       Virtual Size: '0x80e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-02-15 22:32:24'
+  CreationTimestamp: '2015-02-16 00:32:24'
   Imphash: 9521d8684357766840dbcac2b4cee67d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -1411,6 +1518,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1426,6 +1536,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d671c2c3c13676231329afa97b1ec2b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fd290a4891edd36420e082391a96d9b0
         SHA1: fe33d6386cb017f4d39d5b1e21861bbc387aae7a
@@ -1440,6 +1553,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -1477,7 +1593,7 @@ KnownVulnerableSamples:
       Entropy: 2.7678941476196224
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-11 23:44:52'
+  CreationTimestamp: '2020-08-12 01:44:52'
   Imphash: cef6a450f196b28e634aa3c0655d8eda
   LoadsDespiteHVCI: 'FALSE'
 - Filename: DirectIo64.sys
@@ -1582,6 +1698,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 00c230ef10f73148fd583fc3836a573892
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2baec9756b3a504265976c41516baaaf
         SHA1: ab61870aef61c26f46ca1b47b31cdb8e913e761a
@@ -1596,6 +1715,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
@@ -1633,7 +1755,7 @@ KnownVulnerableSamples:
       Entropy: 3.471001127588696
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-27 22:21:07'
+  CreationTimestamp: '2022-06-28 00:21:07'
   Imphash: 7863a0f25a0647ed7d52641222bd709a
   LoadsDespiteHVCI: 'TRUE'
 - Filename: DirectIo64.sys
@@ -1738,6 +1860,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 00c230ef10f73148fd583fc3836a573892
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2baec9756b3a504265976c41516baaaf
         SHA1: ab61870aef61c26f46ca1b47b31cdb8e913e761a
@@ -1752,6 +1877,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
@@ -1789,8 +1917,6 @@ KnownVulnerableSamples:
       Entropy: 3.471001127588696
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-27 22:21:07'
+  CreationTimestamp: '2022-06-28 00:21:07'
   Imphash: 7863a0f25a0647ed7d52641222bd709a
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- directio64.sys

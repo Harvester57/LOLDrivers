@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 75a66604-f024-4f11-8ba7-fdd64a0df3bf
+Tags:
+- mhyprotnap.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: 75a66604-f024-4f11-8ba7-fdd64a0df3bf
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 3a94d517fd2a56f4d20100a8f254b183
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 9e428c1d1cd7358e2c2f25ede45e718b22cb5d04634a4d1ec08a87e71248685b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-03-28 00:31:12'
+  CreationTimestamp: '2022-03-28 02:31:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -185,6 +191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004e595610832b4e0c6c00000000004e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cd4b92926b0c62a20cbbf01178422b63
         SHA1: 2172402fc331352ecf707599578205d2ad32da6e
@@ -199,6 +208,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -211,9 +223,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: ebb99842fa08915eb8b7f67d8dc7a13a
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- mhyprotnap.sys
-Verified: 'TRUE'

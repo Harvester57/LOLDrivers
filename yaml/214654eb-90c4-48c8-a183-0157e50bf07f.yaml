@@ -1,9 +1,11 @@
 Id: 214654eb-90c4-48c8-a183-0157e50bf07f
+Tags:
+- MsIo64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create MsIo64.sys binPath=C:\windows\temp\MsIo64.sys type=kernel
     && sc.exe start MsIo64.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: MsIo64.sys
   MD5: 88a6d84f4f1cc188741271ac1999a4e9
@@ -77,6 +79,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004de597a775e3157f7b00000000004d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
@@ -91,6 +96,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -125,7 +133,7 @@ KnownVulnerableSamples:
       Entropy: 3.385724178395201
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-06-09 01:43:50'
+  CreationTimestamp: '2022-06-09 03:43:50'
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'FALSE'
 - Filename: MsIo32.sys
@@ -189,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -204,6 +215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 49f161119a491d2a3faf4220f09db107
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b6dc6eecc4959ec6a25ad56ed4bc2451
         SHA1: 8c38527fd4e4db39db700ee86431a6670edb9005
@@ -219,6 +233,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -250,7 +267,7 @@ KnownVulnerableSamples:
       Entropy: 4.3106029983367184
       Virtual Size: '0xe8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-12 00:57:28'
+  CreationTimestamp: '2018-02-12 02:57:28'
   Imphash: 24b344cd341f8b20003ac85be08df979
   LoadsDespiteHVCI: 'FALSE'
 - Filename: MsIo64.sys
@@ -302,6 +319,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -317,6 +337,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 49f161119a491d2a3faf4220f09db107
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b6dc6eecc4959ec6a25ad56ed4bc2451
         SHA1: 8c38527fd4e4db39db700ee86431a6670edb9005
@@ -351,7 +374,7 @@ KnownVulnerableSamples:
       Entropy: 3.388654065082743
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-04-14 22:18:47'
+  CreationTimestamp: '2021-04-15 00:18:47'
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'TRUE'
 - Filename: MsIo64.sys
@@ -403,6 +426,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -417,6 +443,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -451,7 +480,7 @@ KnownVulnerableSamples:
       Entropy: 3.371121078414638
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-01-19 20:35:15'
+  CreationTimestamp: '2020-01-19 22:35:15'
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'FALSE'
 - Filename: MsIo64.sys
@@ -506,6 +535,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000005635887ede1882ef76000000000056
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b2247e5539fb97f429f20b17b38c4bcb
         SHA1: a3b745afc365e9ddf6abdb2f52f76f1714c0461c
@@ -520,6 +552,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -554,8 +589,6 @@ KnownVulnerableSamples:
       Entropy: 3.388654065082743
       Virtual Size: '0x390'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-04-05 19:54:11'
+  CreationTimestamp: '2023-04-05 21:54:11'
   Imphash: 12a08688ec92616a8b639d85cc13a3ed
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- MsIo64.sys

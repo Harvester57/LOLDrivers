@@ -1,9 +1,12 @@
 Id: 043773c5-120a-4c6b-8485-8f1f5c47fd3e
+Tags:
+- aswArPot.sys
+- avgArPot.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create aswArPot.sys binPath=C:\windows\temp\aswArPot.sys type=kernel
     && sc.exe start aswArPot.sys
@@ -13,9 +16,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: aswArPot.sys
   MD5: c61876aaca6ce822be18adb9d9bd4260
@@ -221,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -235,6 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -248,6 +257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -262,6 +274,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -275,6 +290,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -315,7 +333,7 @@ KnownVulnerableSamples:
       Entropy: 2.585838337225609
       Virtual Size: '0x4ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-10-02 03:42:06'
+  CreationTimestamp: '2018-10-02 05:42:06'
   Imphash: dd406d43857d7f5ad1b0aec04fdb7e5f
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -518,6 +536,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -532,6 +553,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ec0c9015079fab8a6f3fc9f839311c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf2831557abdf7e58917d0a2608080a5
         SHA1: 24ece342e4c4f2f17f32e6924f48c240ad6300ff
@@ -545,6 +569,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -559,6 +586,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -572,6 +602,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -612,7 +645,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-24 08:28:43'
+  CreationTimestamp: '2020-09-24 10:28:43'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -815,6 +848,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -829,6 +865,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ec0c9015079fab8a6f3fc9f839311c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf2831557abdf7e58917d0a2608080a5
         SHA1: 24ece342e4c4f2f17f32e6924f48c240ad6300ff
@@ -842,6 +881,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -856,6 +898,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -869,6 +914,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -909,7 +957,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-04-28 12:47:02'
+  CreationTimestamp: '2020-04-28 14:47:02'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -1105,6 +1153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -1119,6 +1170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -1132,6 +1186,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1146,6 +1203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -1159,6 +1219,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1199,7 +1262,7 @@ KnownVulnerableSamples:
       Entropy: 2.585838337225609
       Virtual Size: '0x4ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-02 05:23:13'
+  CreationTimestamp: '2018-11-02 07:23:13'
   Imphash: dd406d43857d7f5ad1b0aec04fdb7e5f
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -1397,6 +1460,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -1411,6 +1477,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1424,6 +1493,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1438,6 +1510,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1451,6 +1526,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1491,7 +1569,7 @@ KnownVulnerableSamples:
       Entropy: 2.5738028214326922
       Virtual Size: '0x4c4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-25 07:50:54'
+  CreationTimestamp: '2019-02-25 09:50:54'
   Imphash: 1aa10b05dee9268d7ce87f5f56ea9ded
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -1685,6 +1763,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1699,6 +1780,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1714,6 +1798,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -1727,6 +1814,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1741,6 +1831,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4b5e1897903602425d3cb25d75c4f4ce
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d4ce3e543458edafb2db286a26226b5b
         SHA1: e1f64883f78595bfbbbb6998babc3eaf8e335749
@@ -1756,6 +1849,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1797,7 +1893,7 @@ KnownVulnerableSamples:
       Entropy: 1.8352486494643003
       Virtual Size: '0x3fe'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-07 15:49:49'
+  CreationTimestamp: '2018-02-07 17:49:49'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -1996,6 +2092,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -2010,6 +2109,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -2023,6 +2125,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2037,6 +2142,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -2050,6 +2158,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2090,7 +2201,7 @@ KnownVulnerableSamples:
       Entropy: 2.5738028214326922
       Virtual Size: '0x4c4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-03-07 03:04:31'
+  CreationTimestamp: '2019-03-07 05:04:31'
   Imphash: 1aa10b05dee9268d7ce87f5f56ea9ded
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -2285,6 +2396,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -2299,6 +2413,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2312,6 +2429,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2326,6 +2446,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2339,6 +2462,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2379,7 +2505,7 @@ KnownVulnerableSamples:
       Entropy: 1.9886948791060113
       Virtual Size: '0x438'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-06-12 01:27:49'
+  CreationTimestamp: '2018-06-12 03:27:49'
   Imphash: 18502b56d9ea5dea7f9d31ef85db31d5
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -2572,6 +2698,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -2586,6 +2715,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2599,6 +2731,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2613,6 +2748,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2626,6 +2764,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2666,7 +2807,7 @@ KnownVulnerableSamples:
       Entropy: 1.8405309177627724
       Virtual Size: '0x3dc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-12-12 11:36:29'
+  CreationTimestamp: '2017-12-12 13:36:29'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -2869,6 +3010,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03f02aca051d1c9330eeabd3706e836f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f251d9cde0901fb67831855b4a592b51
         SHA1: cd0ac068faea4b875ded287512f20b6ba8dcb457
@@ -2883,6 +3027,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2896,6 +3043,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2910,6 +3060,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2923,6 +3076,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2963,7 +3119,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-10-05 12:20:35'
+  CreationTimestamp: '2020-10-05 14:20:35'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -3166,6 +3322,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3180,6 +3339,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ec0c9015079fab8a6f3fc9f839311c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf2831557abdf7e58917d0a2608080a5
         SHA1: 24ece342e4c4f2f17f32e6924f48c240ad6300ff
@@ -3193,6 +3355,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -3207,6 +3372,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -3220,6 +3388,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -3260,7 +3431,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-21 04:32:58'
+  CreationTimestamp: '2020-08-21 06:32:58'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -3458,6 +3629,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -3472,6 +3646,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3485,6 +3662,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -3499,6 +3679,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -3512,6 +3695,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -3552,7 +3738,7 @@ KnownVulnerableSamples:
       Entropy: 2.5738028214326922
       Virtual Size: '0x4c4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-03-07 03:04:42'
+  CreationTimestamp: '2019-03-07 05:04:42'
   Imphash: 1aa10b05dee9268d7ce87f5f56ea9ded
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -3746,6 +3932,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3760,6 +3949,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3775,6 +3967,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -3788,6 +3983,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3802,6 +4000,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4b5e1897903602425d3cb25d75c4f4ce
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d4ce3e543458edafb2db286a26226b5b
         SHA1: e1f64883f78595bfbbbb6998babc3eaf8e335749
@@ -3817,6 +4018,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3858,7 +4062,7 @@ KnownVulnerableSamples:
       Entropy: 1.9822497903370622
       Virtual Size: '0x438'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-03-28 08:03:49'
+  CreationTimestamp: '2018-03-28 10:03:49'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -4054,6 +4258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -4068,6 +4275,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -4081,6 +4291,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -4095,6 +4308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -4108,6 +4324,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -4148,7 +4367,7 @@ KnownVulnerableSamples:
       Entropy: 2.5894785090098025
       Virtual Size: '0x4ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-12-10 07:43:57'
+  CreationTimestamp: '2018-12-10 09:43:57'
   Imphash: 86682585c620fa85096a7bedaf990cd1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -4351,6 +4570,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -4365,6 +4587,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ec0c9015079fab8a6f3fc9f839311c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf2831557abdf7e58917d0a2608080a5
         SHA1: 24ece342e4c4f2f17f32e6924f48c240ad6300ff
@@ -4378,6 +4603,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -4392,6 +4620,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -4405,6 +4636,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -4445,7 +4679,7 @@ KnownVulnerableSamples:
       Entropy: 5.435120402444784
       Virtual Size: '0x1a0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-12-01 01:05:41'
+  CreationTimestamp: '2020-12-01 03:05:41'
   Imphash: 3702511999371bac8982d01820dd70f2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -4648,6 +4882,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -4662,6 +4899,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ec0c9015079fab8a6f3fc9f839311c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf2831557abdf7e58917d0a2608080a5
         SHA1: 24ece342e4c4f2f17f32e6924f48c240ad6300ff
@@ -4675,6 +4915,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -4689,6 +4932,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -4702,6 +4948,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -4742,7 +4991,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-23 10:34:33'
+  CreationTimestamp: '2020-06-23 12:34:33'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -4945,6 +5194,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03f02aca051d1c9330eeabd3706e836f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f251d9cde0901fb67831855b4a592b51
         SHA1: cd0ac068faea4b875ded287512f20b6ba8dcb457
@@ -4959,6 +5211,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -4972,6 +5227,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -4986,6 +5244,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -4999,6 +5260,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -5039,7 +5303,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-04-28 12:47:01'
+  CreationTimestamp: '2020-04-28 14:47:01'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -5242,6 +5506,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03f02aca051d1c9330eeabd3706e836f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f251d9cde0901fb67831855b4a592b51
         SHA1: cd0ac068faea4b875ded287512f20b6ba8dcb457
@@ -5256,6 +5523,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -5269,6 +5539,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -5283,6 +5556,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -5296,6 +5572,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -5336,7 +5615,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-21 04:32:58'
+  CreationTimestamp: '2020-08-21 06:32:58'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -5531,6 +5810,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -5545,6 +5827,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -5558,6 +5843,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -5572,6 +5860,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -5585,6 +5876,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -5625,7 +5919,7 @@ KnownVulnerableSamples:
       Entropy: 2.585838337225609
       Virtual Size: '0x4ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-09-24 07:23:41'
+  CreationTimestamp: '2018-09-24 09:23:41'
   Imphash: dd406d43857d7f5ad1b0aec04fdb7e5f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -5828,6 +6122,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -5842,6 +6139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ec0c9015079fab8a6f3fc9f839311c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf2831557abdf7e58917d0a2608080a5
         SHA1: 24ece342e4c4f2f17f32e6924f48c240ad6300ff
@@ -5855,6 +6155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -5869,6 +6172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -5882,6 +6188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -5922,7 +6231,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-23 06:09:55'
+  CreationTimestamp: '2020-07-23 08:09:55'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -6123,6 +6432,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -6137,6 +6449,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -6150,6 +6465,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -6164,6 +6482,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -6177,6 +6498,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -6217,7 +6541,7 @@ KnownVulnerableSamples:
       Entropy: 2.762350280644424
       Virtual Size: '0x4f4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-30 05:59:06'
+  CreationTimestamp: '2019-04-30 07:59:06'
   Imphash: 62dbb90b4be9282d52aff9ae1a101d6b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -6419,6 +6743,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -6433,6 +6760,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -6446,6 +6776,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -6460,6 +6793,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -6473,6 +6809,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -6513,7 +6852,7 @@ KnownVulnerableSamples:
       Entropy: 2.843075596963878
       Virtual Size: '0x516'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-19 22:05:36'
+  CreationTimestamp: '2019-06-20 00:05:36'
   Imphash: 62dbb90b4be9282d52aff9ae1a101d6b
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -6715,6 +7054,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -6729,6 +7071,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -6742,6 +7087,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -6756,6 +7104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -6769,6 +7120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -6809,7 +7163,7 @@ KnownVulnerableSamples:
       Entropy: 2.762350280644424
       Virtual Size: '0x4f4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-30 06:00:34'
+  CreationTimestamp: '2019-04-30 08:00:34'
   Imphash: 62dbb90b4be9282d52aff9ae1a101d6b
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -7017,6 +7371,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03f02aca051d1c9330eeabd3706e836f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f251d9cde0901fb67831855b4a592b51
         SHA1: cd0ac068faea4b875ded287512f20b6ba8dcb457
@@ -7031,6 +7388,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -7044,6 +7404,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -7058,6 +7421,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -7071,6 +7437,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -7111,7 +7480,7 @@ KnownVulnerableSamples:
       Entropy: 6.759752170608124
       Virtual Size: '0x227c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-01 01:48:04'
+  CreationTimestamp: '2020-06-01 03:48:04'
   Imphash: 49a12b06131d938e9dc40c693b88ba7f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -7305,6 +7674,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -7319,6 +7691,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -7334,6 +7709,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -7347,6 +7725,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -7361,6 +7742,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 266d333ede17a8b472053e4fa3934572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 56b59f4aab381d13396d1c100a2f46dc
         SHA1: 16943ddbd3b569119a81be71548717abd03f1736
@@ -7376,6 +7760,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -7417,7 +7804,7 @@ KnownVulnerableSamples:
       Entropy: 1.8405309177627724
       Virtual Size: '0x3dc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-12-19 11:09:16'
+  CreationTimestamp: '2017-12-19 13:09:16'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -7612,6 +7999,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -7626,6 +8016,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -7639,6 +8032,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -7653,6 +8049,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -7666,6 +8065,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -7706,7 +8108,7 @@ KnownVulnerableSamples:
       Entropy: 2.585838337225609
       Virtual Size: '0x4ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-02 05:51:13'
+  CreationTimestamp: '2018-11-02 07:51:13'
   Imphash: dd406d43857d7f5ad1b0aec04fdb7e5f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -7908,6 +8310,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -7922,6 +8327,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -7935,6 +8343,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -7949,6 +8360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -7962,6 +8376,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -8002,7 +8419,7 @@ KnownVulnerableSamples:
       Entropy: 2.891565286382792
       Virtual Size: '0x522'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-08-11 14:14:15'
+  CreationTimestamp: '2019-08-11 16:14:15'
   Imphash: 62dbb90b4be9282d52aff9ae1a101d6b
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -8205,6 +8622,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -8219,6 +8639,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ec0c9015079fab8a6f3fc9f839311c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf2831557abdf7e58917d0a2608080a5
         SHA1: 24ece342e4c4f2f17f32e6924f48c240ad6300ff
@@ -8232,6 +8655,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -8246,6 +8672,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -8259,6 +8688,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -8299,7 +8731,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-01 01:48:53'
+  CreationTimestamp: '2020-06-01 03:48:53'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -8496,6 +8928,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -8510,6 +8945,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -8523,6 +8961,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -8537,6 +8978,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -8550,6 +8994,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -8590,7 +9037,7 @@ KnownVulnerableSamples:
       Entropy: 2.5894785090098025
       Virtual Size: '0x4ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-12-10 07:58:34'
+  CreationTimestamp: '2018-12-10 09:58:34'
   Imphash: 86682585c620fa85096a7bedaf990cd1
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -8799,6 +9246,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -8813,6 +9263,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -8826,6 +9279,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -8840,6 +9296,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -8853,6 +9312,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -8893,7 +9355,7 @@ KnownVulnerableSamples:
       Entropy: 6.3599137895820474
       Virtual Size: '0x23ec'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-30 13:27:34'
+  CreationTimestamp: '2019-01-30 15:27:34'
   Imphash: f08e2ac6ca73cd2a924ed25dc6813638
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -9086,6 +9548,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -9100,6 +9565,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -9113,6 +9581,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -9127,6 +9598,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -9140,6 +9614,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -9180,7 +9657,7 @@ KnownVulnerableSamples:
       Entropy: 1.9822497903370622
       Virtual Size: '0x438'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-03-19 13:51:14'
+  CreationTimestamp: '2018-03-19 15:51:14'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -9373,6 +9850,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -9387,6 +9867,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -9400,6 +9883,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -9414,6 +9900,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -9427,6 +9916,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -9467,7 +9959,7 @@ KnownVulnerableSamples:
       Entropy: 1.9822497903370622
       Virtual Size: '0x438'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-26 05:01:25'
+  CreationTimestamp: '2018-02-26 07:01:25'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -9670,6 +10162,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03f02aca051d1c9330eeabd3706e836f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f251d9cde0901fb67831855b4a592b51
         SHA1: cd0ac068faea4b875ded287512f20b6ba8dcb457
@@ -9684,6 +10179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -9697,6 +10195,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -9711,6 +10212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -9724,6 +10228,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -9764,7 +10271,7 @@ KnownVulnerableSamples:
       Entropy: 5.3833020583275815
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-07-23 06:10:00'
+  CreationTimestamp: '2020-07-23 08:10:00'
   Imphash: 26150d69f50aa9247c3f3f17521d18a2
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -9957,6 +10464,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -9971,6 +10481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -9984,6 +10497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -9998,6 +10514,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -10011,6 +10530,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -10051,7 +10573,7 @@ KnownVulnerableSamples:
       Entropy: 1.9822497903370622
       Virtual Size: '0x438'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-27 12:33:22'
+  CreationTimestamp: '2018-04-27 14:33:22'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -10257,6 +10779,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -10271,6 +10796,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -10284,6 +10812,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -10298,6 +10829,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -10311,6 +10845,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -10351,7 +10888,7 @@ KnownVulnerableSamples:
       Entropy: 6.347666594226636
       Virtual Size: '0x2354'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-08-17 02:44:48'
+  CreationTimestamp: '2018-08-17 04:44:48'
   Imphash: 62473b41d695f075ad96abc4a408de5b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -10552,6 +11089,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -10566,6 +11106,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -10579,6 +11122,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -10593,6 +11139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -10606,6 +11155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -10646,7 +11198,7 @@ KnownVulnerableSamples:
       Entropy: 2.891565286382792
       Virtual Size: '0x522'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-08-11 14:15:51'
+  CreationTimestamp: '2019-08-11 16:15:51'
   Imphash: 62dbb90b4be9282d52aff9ae1a101d6b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: aswArPot.sys
@@ -10845,6 +11397,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -10859,6 +11414,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0557955e02a6b53dd1d574ede15f310e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9b558280379fbd2ac831a9850ec9c0e
         SHA1: c22448dd1388c2011166e2a203fe984bd702f355
@@ -10872,6 +11430,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -10886,6 +11447,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -10899,6 +11463,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -10939,7 +11506,7 @@ KnownVulnerableSamples:
       Entropy: 2.5738028214326922
       Virtual Size: '0x4c4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-03-28 09:56:24'
+  CreationTimestamp: '2019-03-28 11:56:24'
   Imphash: 1aa10b05dee9268d7ce87f5f56ea9ded
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -11133,6 +11700,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -11147,6 +11717,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -11162,6 +11735,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -11175,6 +11751,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -11189,6 +11768,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4b5e1897903602425d3cb25d75c4f4ce
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d4ce3e543458edafb2db286a26226b5b
         SHA1: e1f64883f78595bfbbbb6998babc3eaf8e335749
@@ -11204,6 +11786,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -11245,7 +11830,7 @@ KnownVulnerableSamples:
       Entropy: 1.9822497903370622
       Virtual Size: '0x438'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-27 04:28:46'
+  CreationTimestamp: '2018-02-27 06:28:46'
   Imphash: 1e8ee6407390a2d52051bec21c771fdb
   LoadsDespiteHVCI: 'TRUE'
 - Filename: aswArPot.sys
@@ -11443,6 +12028,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c70f7cab145bc1ed385fbe69fa3130
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2e1a5012cbe8b95785c794bc1c5584c3
         SHA1: f4753b06b08938794c32c2475cee663143036d08
@@ -11457,6 +12045,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -11470,6 +12061,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -11484,6 +12078,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -11497,6 +12094,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -11537,9 +12137,6 @@ KnownVulnerableSamples:
       Entropy: 2.591169638260909
       Virtual Size: '0x4ba'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-16 11:17:09'
+  CreationTimestamp: '2019-01-16 13:17:09'
   Imphash: 1aa10b05dee9268d7ce87f5f56ea9ded
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- aswArPot.sys
-- avgArPot.sys

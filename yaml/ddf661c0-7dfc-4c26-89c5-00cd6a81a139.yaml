@@ -1,7 +1,11 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: ddf661c0-7dfc-4c26-89c5-00cd6a81a139
+Tags:
+- wfshbr64.sys
+- wfshbr32.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-06-05'
+MitreID: T1068
 CVE:
 - CVE-2022-42046
 Category: malicious
@@ -19,9 +23,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-06-05'
+Resources:
+- https://github.com/kkent030315/CVE-2022-42046
 Detection: []
-Id: ddf661c0-7dfc-4c26-89c5-00cd6a81a139
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: f143857a68801478dbe4de842a9d4f6a
@@ -29,7 +36,7 @@ KnownVulnerableSamples:
     SHA256: b0399dd3c395f84cbd6ac2e3e8ca8ee344a0f699b17db0624f936ae4bb4b7953
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-11-28 03:10:24'
+  CreationTimestamp: '2022-11-28 05:10:24'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -93,6 +100,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -107,6 +117,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -125,7 +138,7 @@ KnownVulnerableSamples:
     SHA256: d16a59cd7c52d1d32bb43670cdca739aadb19ba15996bac62071845e1bfbdb95
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-30 23:25:32'
+  CreationTimestamp: '2022-07-01 01:25:32'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -189,6 +202,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004de597a775e3157f7b00000000004d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
@@ -203,6 +219,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -215,10 +234,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: df43355c636583e56e92142dcc69cc58
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/kkent030315/CVE-2022-42046
-Tags:
-- wfshbr64.sys
-- wfshbr32.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b745b5da-9cd6-4b3a-badf-fbe487497705
+Tags:
+- WINIODrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create WINIODrv.sys binPath=C:\windows\temp\WINIODrv.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection: []
-Id: b745b5da-9cd6-4b3a-badf-fbe487497705
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 83510d09c4d0f9f56c0d6caf40ee63cb
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: b3cbb2b364a494f096e68dc48cca89799ed27e6b97b17633036e363a98fd4421
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-12-26 02:45:03'
+  CreationTimestamp: '2013-12-26 04:45:03'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -93,6 +99,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -107,6 +116,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -121,6 +133,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1402447b9e4c23e066ef2991f6975d79
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c92ee9843a1ef53fdbb6981acc61ef9d
         SHA1: 4d1afa22d09fff91509bf1dfa475a4bf0fa2a9e3
@@ -136,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -151,6 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -170,7 +191,7 @@ KnownVulnerableSamples:
     SHA256: 9199979b9f3ea2108299d028373a6effcc41c81a46eecb430cc6653211d2913d
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-11-12 23:51:52'
+  CreationTimestamp: '2013-11-13 01:51:52'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -243,6 +264,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -257,6 +281,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -271,6 +298,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1402447b9e4c23e066ef2991f6975d79
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c92ee9843a1ef53fdbb6981acc61ef9d
         SHA1: 4d1afa22d09fff91509bf1dfa475a4bf0fa2a9e3
@@ -286,6 +316,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -301,6 +334,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -320,7 +356,7 @@ KnownVulnerableSamples:
     SHA256: 961012d06eeaabd9eff9b36173e566bf148a5c8f743f3329c70d8918eba26093
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-11-12 23:50:37'
+  CreationTimestamp: '2013-11-13 01:50:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -393,6 +429,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -407,6 +446,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -421,6 +463,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1402447b9e4c23e066ef2991f6975d79
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c92ee9843a1ef53fdbb6981acc61ef9d
         SHA1: 4d1afa22d09fff91509bf1dfa475a4bf0fa2a9e3
@@ -436,6 +481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -451,6 +499,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -464,10 +515,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 392aa6863da8d7c14ad7386026e93b58
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- WINIODrv.sys
-Verified: 'TRUE'

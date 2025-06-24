@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 62f76f62-ef82-49ea-a26f-36e5727e8d83
+Tags:
+- sysconp.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create sysconpsys binPath= C:\windows\temp\sysconpsys.sys type=kernel
@@ -15,9 +18,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection: []
-Id: 62f76f62-ef82-49ea-a26f-36e5727e8d83
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -59,7 +65,7 @@ KnownVulnerableSamples:
       Entropy: 5.184632949990556
       Virtual Size: '0x472'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-26 13:46:20'
+  CreationTimestamp: '2011-10-26 15:46:20'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -110,6 +116,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -123,6 +132,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -138,6 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -151,6 +166,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -165,6 +183,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3a0593c75cd5460ae4a6b31bdaac5ea4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0cbd510eccadadb08dd14dab94b78e8e
         SHA1: 567c2082d494ccc1ab4f5a18515521cecf63e646
@@ -180,6 +201,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -232,7 +256,7 @@ KnownVulnerableSamples:
       Entropy: 5.184632949990556
       Virtual Size: '0x472'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-01-31 11:42:33'
+  CreationTimestamp: '2012-01-31 13:42:33'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -283,6 +307,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -296,6 +323,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -311,6 +341,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -324,6 +357,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -338,6 +374,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3a0593c75cd5460ae4a6b31bdaac5ea4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0cbd510eccadadb08dd14dab94b78e8e
         SHA1: 567c2082d494ccc1ab4f5a18515521cecf63e646
@@ -353,6 +392,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -365,9 +407,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- sysconp.sys
-Verified: 'TRUE'

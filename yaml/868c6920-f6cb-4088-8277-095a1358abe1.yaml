@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 868c6920-f6cb-4088-8277-095a1358abe1
+Tags:
+- GLCKIO2.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection: []
-Id: 868c6920-f6cb-4088-8277-095a1358abe1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 505c5b85b442f9159ba715d4867f9ac4
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: 25a0854ef48a4dfbc7f04e94d2b11757e3613b241d39d46a19cb389ce42887e4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-03-07 20:19:59'
+  CreationTimestamp: '2018-03-07 22:19:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -95,6 +101,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 081666295845159f57ae88f441bf237e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 10f65f793a1d7843aca33673879fea69
         SHA1: e211b40ceb03f3e15ab8b2407bab60a5b072080a
@@ -109,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -123,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0b7e10903c38490ffa2f679a87a1a7b9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 7b0fbcf5c5aa55932726e9222f56efe2
         SHA1: f09486b2b82a88a8b82aa2a12440496c8e53c452
@@ -136,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -149,6 +167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -167,7 +188,7 @@ KnownVulnerableSamples:
     SHA256: 47dba240967fd0088be618163672dfbddf0138178cccd45b54037f622b221220
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-04-23 01:12:05'
+  CreationTimestamp: '2018-04-23 03:12:05'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -242,6 +263,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 081666295845159f57ae88f441bf237e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 10f65f793a1d7843aca33673879fea69
         SHA1: e211b40ceb03f3e15ab8b2407bab60a5b072080a
@@ -256,6 +280,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -270,6 +297,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0b7e10903c38490ffa2f679a87a1a7b9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 7b0fbcf5c5aa55932726e9222f56efe2
         SHA1: f09486b2b82a88a8b82aa2a12440496c8e53c452
@@ -283,6 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -296,6 +329,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -308,10 +344,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 531d2392dbdd314fb1d9318fe9e5c4d2
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- GLCKIO2.sys
-Verified: 'TRUE'

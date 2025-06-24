@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: fded7e63-0470-40fe-97ed-aa83fd027bad
+Tags:
+- PDFWKRNL.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create PDFWKRNLsys binPath= C:\windows\temp\PDFWKRNLsys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: fded7e63-0470-40fe-97ed-aa83fd027bad
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Advanced Micro Devices, Inc.
   Date: ''
@@ -75,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 3.569548827786958
       Virtual Size: '0x20'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-04-07 20:20:42'
+  CreationTimestamp: '2022-04-07 22:20:42'
   InternalName: PDFWKRNL.sys
   Copyright: Copyright (C) 2021 Advanced Micro Devices, Inc.
   Imports:
@@ -112,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 535091e6cab13af393b51ead0825f627
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f2f60243e26dcdf4729d28b1beb55f01
         SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
@@ -126,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 1da248306f9b2618d082e0967d33d36a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
@@ -140,6 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000044b73ffcef5acfa27a000000000044
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
         SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
@@ -200,7 +215,7 @@ KnownVulnerableSamples:
       Entropy: 3.92146948986705
       Virtual Size: '0x3c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-23 11:20:08'
+  CreationTimestamp: '2023-06-23 13:20:08'
   InternalName: PDFWKRNL.sys
   Copyright: Copyright (C) 2023 Advanced Micro Devices, Inc.
   Imports:
@@ -264,6 +279,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 535091e6cab13af393b51ead0825f627
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f2f60243e26dcdf4729d28b1beb55f01
         SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
@@ -278,6 +296,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 1da248306f9b2618d082e0967d33d36a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
@@ -292,6 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000044b73ffcef5acfa27a000000000044
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
         SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
@@ -302,7 +326,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Advanced Micro Devices, Inc.
   Date: ''
   Description: USB-C Power Delivery Firmware Update Utility Driver
@@ -349,7 +373,7 @@ KnownVulnerableSamples:
       Entropy: 3.5168756957665632
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-12-22 11:13:53'
+  CreationTimestamp: '2022-12-22 13:13:53'
   InternalName: PDFWKRNL.sys
   Copyright: Copyright (C) 2021 Advanced Micro Devices, Inc.
   Imports:
@@ -386,6 +410,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 535091e6cab13af393b51ead0825f627
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f2f60243e26dcdf4729d28b1beb55f01
         SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
@@ -400,6 +427,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 1da248306f9b2618d082e0967d33d36a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
@@ -414,6 +444,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000044b73ffcef5acfa27a000000000044
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
         SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
@@ -424,7 +457,7 @@ KnownVulnerableSamples:
       Issuer: C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo
         RSA Code Signing CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Advanced Micro Devices, Inc.
   Date: ''
   Description: USB-C Power Delivery Firmware Update Tool Kernel Driver
@@ -471,7 +504,7 @@ KnownVulnerableSamples:
       Entropy: 3.569548827786958
       Virtual Size: '0x20'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-09-08 12:42:11'
+  CreationTimestamp: '2021-09-08 14:42:11'
   InternalName: PDFWKRNL.sys
   Copyright: Copyright (C) 2021 Advanced Micro Devices, Inc.
   Imports:
@@ -508,6 +541,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 535091e6cab13af393b51ead0825f627
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f2f60243e26dcdf4729d28b1beb55f01
         SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
@@ -522,6 +558,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 1da248306f9b2618d082e0967d33d36a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
@@ -536,6 +575,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000044b73ffcef5acfa27a000000000044
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a2d2ae7554f77f6e9ffb0b1a9b700ac4
         SHA1: 9f69ff166f5dc446578a45d7d69482373755e141
@@ -547,9 +589,3 @@ KnownVulnerableSamples:
         RSA Code Signing CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- PDFWKRNL.sys
-Verified: 'TRUE'

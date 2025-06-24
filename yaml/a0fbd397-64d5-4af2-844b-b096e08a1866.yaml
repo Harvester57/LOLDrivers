@@ -1,9 +1,11 @@
 Id: a0fbd397-64d5-4af2-844b-b096e08a1866
+Tags:
+- libnicm.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create libnicm.sys binPath=C:\windows\temp\libnicm.sys type=kernel
     && sc.exe start libnicm.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: libnicm.sys
   MD5: 7a6a6d6921cd1a4e1d61f9672a4560d6
@@ -134,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000002528b33aaf895f339db000000000252
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
@@ -148,6 +153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610e90d2000000000003
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
@@ -188,7 +196,7 @@ KnownVulnerableSamples:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:19:18'
+  CreationTimestamp: '2013-01-16 01:19:18'
   Imphash: 262d8fbbf1f514399bb3f230cddc12af
   LoadsDespiteHVCI: 'TRUE'
 - Filename: libnicm.sys
@@ -297,6 +305,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -310,6 +321,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -325,6 +339,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -339,6 +356,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -352,6 +372,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -393,7 +416,7 @@ KnownVulnerableSamples:
       Entropy: 1.3741854163060885
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:53:33'
+  CreationTimestamp: '2009-03-27 13:53:33'
   Imphash: 96f270be3f73ec3fc2f2237fe84efca0
   LoadsDespiteHVCI: 'FALSE'
 - Filename: libnicm.sys
@@ -504,6 +527,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -517,6 +543,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -532,6 +561,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -546,6 +578,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -559,6 +594,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -597,7 +635,7 @@ KnownVulnerableSamples:
       Entropy: 5.760669973768758
       Virtual Size: '0x3d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-27 11:49:09'
+  CreationTimestamp: '2009-03-27 13:49:09'
   Imphash: 28d780857f0f6616f938aca3a38b5072
   LoadsDespiteHVCI: 'FALSE'
 - Filename: libnicm.sys
@@ -706,6 +744,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000002528b33aaf895f339db000000000252
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
@@ -720,6 +761,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610e90d2000000000003
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
@@ -760,7 +804,7 @@ KnownVulnerableSamples:
       Entropy: 3.5739348962840563
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:19:18'
+  CreationTimestamp: '2013-01-16 01:19:18'
   Imphash: 262d8fbbf1f514399bb3f230cddc12af
   LoadsDespiteHVCI: 'TRUE'
 - Filename: libnicm.sys
@@ -869,6 +913,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7ece739fdaa27d96b67f587db04186a7
         SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
@@ -883,6 +930,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61077656000000000008'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 30a3f0b64324ed7f465e7fc618cb69e7
         SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
@@ -923,8 +973,6 @@ KnownVulnerableSamples:
       Entropy: 3.5739348962840563
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-01-15 23:19:18'
+  CreationTimestamp: '2013-01-16 01:19:18'
   Imphash: 262d8fbbf1f514399bb3f230cddc12af
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- libnicm.sys

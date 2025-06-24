@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 2b949a0d-939f-456a-a34f-4589d7712227
+Tags:
+- libnicm.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create libnicm.sys binPath=C:\windows\temp\libnicm.sys type=kernel
@@ -10,7 +13,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/95d50c69cdbf10c9c9d61e64fe864ac91e6f6caa637d128eb20e1d3510e776d3.yara
@@ -32,7 +37,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 2b949a0d-939f-456a-a34f-4589d7712227
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: b30004dbb5ad9b8320c964273875a103
@@ -40,7 +47,7 @@ KnownVulnerableSamples:
     SHA256: b756d234559ee0ed93328bb598352ead2efb27eabaf1afac5fb3e2f43b9901f3
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:52:25'
+  CreationTimestamp: '2014-08-26 15:52:25'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -176,6 +183,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -190,6 +200,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -204,6 +217,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -219,6 +235,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -234,6 +253,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -253,7 +275,7 @@ KnownVulnerableSamples:
     SHA256: ae85245fcb873d6fbf61f1923b8c10f0680abeaf2bf5527aef1c4a52aae321d0
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-12-22 01:29:03'
+  CreationTimestamp: '2015-12-22 03:29:03'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -389,6 +411,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -403,6 +428,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -417,6 +445,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -432,6 +463,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -447,6 +481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -466,7 +503,7 @@ KnownVulnerableSamples:
     SHA256: 83e993691aa4f5f599dddd1fab2bc3e0791587c9e93eeb9e405c130922096343
   Company: Novell, Inc.
   Copyright: "Copyright \xA9 1997-2007 Novell, Inc."
-  CreationTimestamp: '2007-08-09 13:32:46'
+  CreationTimestamp: '2007-08-09 15:32:46'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -599,6 +636,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -612,6 +652,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -627,6 +670,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -641,6 +687,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -654,6 +703,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -673,7 +725,7 @@ KnownVulnerableSamples:
     SHA256: 6d4cb02a826973521678309a0076b2fd50894c09dda87ca86089e815f4bc9bce
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:30:06'
+  CreationTimestamp: '2012-03-18 21:30:06'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -808,6 +860,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -821,6 +876,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -836,6 +894,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -850,6 +911,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -863,6 +927,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -882,7 +949,7 @@ KnownVulnerableSamples:
     SHA256: 3ad340c8a4a6e071e15095fd286b600847cd600b7312bd573802f26a73600da7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-04-01 19:14:26'
+  CreationTimestamp: '2011-04-01 21:14:26'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -1016,6 +1083,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1029,6 +1099,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1044,6 +1117,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1058,6 +1134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -1071,6 +1150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1090,7 +1172,7 @@ KnownVulnerableSamples:
     SHA256: 1aee4d8a00f126582c4488025c7451fdbb9d0becbbfd58a396a2ac52011fac14
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2010, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2010-03-10 13:42:24'
+  CreationTimestamp: '2010-03-10 15:42:24'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -1224,6 +1306,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1237,6 +1322,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1252,6 +1340,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1266,6 +1357,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -1279,6 +1373,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1298,7 +1395,7 @@ KnownVulnerableSamples:
     SHA256: 9ce5188745ffcb5dc8304dac97cd037360600d8eb4739cfdbfb06bcd0efd72e4
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-11-18 01:05:43'
+  CreationTimestamp: '2014-11-18 03:05:43'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -1434,6 +1531,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1448,6 +1548,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1462,6 +1565,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -1477,6 +1583,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1492,6 +1601,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1511,7 +1623,7 @@ KnownVulnerableSamples:
     SHA256: 3b22adc61900fbdc26629dc1135344d878f6a368ec6df0d4ec374559cb669182
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-12-18 07:20:49'
+  CreationTimestamp: '2009-12-18 09:20:49'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -1645,6 +1757,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1658,6 +1773,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1673,6 +1791,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1687,6 +1808,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -1700,6 +1824,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1719,7 +1846,7 @@ KnownVulnerableSamples:
     SHA256: 5ebfc2c2fc43fc34cc98378f627e6147af473cb37076f4c2ba278210bd88b2bf
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-09-29 19:29:05'
+  CreationTimestamp: '2011-09-29 21:29:05'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -1854,6 +1981,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1867,6 +1997,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1882,6 +2015,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1896,6 +2032,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -1909,6 +2048,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1928,7 +2070,7 @@ KnownVulnerableSamples:
     SHA256: e2a330131ca4a9499736fdc72e819a6ff1f883b1c6dc7b83d5b69d288508e0fe
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:52:33'
+  CreationTimestamp: '2014-08-26 15:52:33'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -2063,6 +2205,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2077,6 +2222,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2091,6 +2239,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2106,6 +2257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2121,6 +2275,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2140,7 +2297,7 @@ KnownVulnerableSamples:
     SHA256: 6429f89dd7e9f8f7784736b6d3471be3c480d4eb4c9a573c698ede1dd64f5010
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-12-18 02:18:10'
+  CreationTimestamp: '2013-12-18 04:18:10'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -2275,6 +2432,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2289,6 +2449,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2303,6 +2466,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2318,6 +2484,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2333,6 +2502,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2352,7 +2524,7 @@ KnownVulnerableSamples:
     SHA256: 615c391666b0fdaa0a8096320d35c7b951e6a0ee7f984ab3e892f838cb212b60
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:07:19'
+  CreationTimestamp: '2015-06-26 08:07:19'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -2488,6 +2660,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2502,6 +2677,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2516,6 +2694,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2531,6 +2712,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2546,6 +2730,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2565,7 +2752,7 @@ KnownVulnerableSamples:
     SHA256: d0b918d766e6ce4218a833314525dd6eaeba83c597e9e1a9efefa7f95ec64a95
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:07:25'
+  CreationTimestamp: '2015-06-26 08:07:25'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -2700,6 +2887,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2714,6 +2904,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2728,6 +2921,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2743,6 +2939,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2758,6 +2957,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2777,7 +2979,7 @@ KnownVulnerableSamples:
     SHA256: 5e789b6d535b49c66c658978099e50fa2f8d02c2511bdaf9358bb8e40bdcef8e
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 13:26:55'
+  CreationTimestamp: '2009-09-08 15:26:55'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -2911,6 +3113,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2924,6 +3129,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2939,6 +3147,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2953,6 +3164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -2966,6 +3180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2985,7 +3202,7 @@ KnownVulnerableSamples:
     SHA256: 30accf1de5969ff5bf958786b9c9deb9001d1a19d121aac8b3c92c5b463a087e
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:27:38'
+  CreationTimestamp: '2012-03-18 21:27:38'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -3119,6 +3336,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3132,6 +3352,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3147,6 +3370,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -3161,6 +3387,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -3174,6 +3403,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3193,7 +3425,7 @@ KnownVulnerableSamples:
     SHA256: e03d8492926408a299100ef02c46bf3510a816bd9eed2f988b47c066049e9111
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-09-26 07:20:01'
+  CreationTimestamp: '2015-09-26 09:20:01'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -3329,6 +3561,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3343,6 +3578,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3357,6 +3595,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3372,6 +3613,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3387,6 +3631,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3406,7 +3653,7 @@ KnownVulnerableSamples:
     SHA256: a1b56ae08d822bb5d041c2a67584371ffddcb7f6d69191efec5b8189e0028331
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:19:24'
+  CreationTimestamp: '2013-01-16 01:19:24'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -3540,6 +3787,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3554,6 +3804,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3569,6 +3822,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -3583,6 +3839,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -3596,6 +3855,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3615,7 +3877,7 @@ KnownVulnerableSamples:
     SHA256: e0e65416f40cf3bea00d77515a7d8ab508d3aa2b7b622a8799a49635c4d5dbb5
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 13:35:51'
+  CreationTimestamp: '2009-09-08 15:35:51'
   Date: ''
   Description: Novell XTCOM Services Driver
   ExportedFunctions:
@@ -3750,6 +4012,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3763,6 +4028,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3778,6 +4046,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -3792,6 +4063,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -3805,6 +4079,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3824,7 +4101,7 @@ KnownVulnerableSamples:
     SHA256: bd1d579a15ec3c1120cc6e0c8ff6b265623980de3570a5dd2f57d0c5981334d8
   Company: Micro Focus
   Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  CreationTimestamp: '2022-03-03 03:49:58'
+  CreationTimestamp: '2022-03-03 05:49:58'
   Date: ''
   Description: XTier COM Services Driver
   ExportedFunctions:
@@ -3962,6 +4239,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004de597a775e3157f7b00000000004d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
@@ -3976,6 +4256,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -3988,10 +4271,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: ad34ea17f90a34f6f84a399a96383ada
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- libnicm.sys
-Verified: 'TRUE'

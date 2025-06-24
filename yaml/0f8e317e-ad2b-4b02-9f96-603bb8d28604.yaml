@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 0f8e317e-ad2b-4b02-9f96-603bb8d28604
+Tags:
+- NICM.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 0f8e317e-ad2b-4b02-9f96-603bb8d28604
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 290440da10e3caf10caea93952046a3f
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: 407ca87833bd0931eec8005bb125e56d5765058c9b6422620aa95d8b2044239a
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2008-08-18 10:16:41'
+  CreationTimestamp: '2008-08-18 12:16:41'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -169,6 +173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -182,6 +189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -197,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -211,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -224,6 +240,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -237,9 +256,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: f2dc136141066311fddef65f7f417c44
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- NICM.sys
-Verified: 'TRUE'

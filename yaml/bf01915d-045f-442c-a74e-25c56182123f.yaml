@@ -1,7 +1,11 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: bf01915d-045f-442c-a74e-25c56182123f
+Tags:
+- BSMI.sys
+- BSMIXP64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create BSMI.sys binPath=C:\windows\temp\BSMI.sys type=kernel &&
@@ -10,7 +14,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/59626cac380d8fe0b80a6d4c4406d62ba0683a2f0f68d50ad506ca1b1cf25347.yara
@@ -32,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: bf01915d-045f-442c-a74e-25c56182123f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0dea670f26bf6bf65701c4aa0dd89079
@@ -40,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: df82f155376b4e95a3f497b7362ba6039c04d2ae78926f626dbe1a459bc626d7
   Company: ''
   Copyright: Copyright (C) BIOSTAR Corp. 2011
-  CreationTimestamp: '2012-08-29 02:16:01'
+  CreationTimestamp: '2012-08-29 04:16:01'
   Date: ''
   Description: SMI Driver
   ExportedFunctions: ''
@@ -114,6 +122,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -127,6 +138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -142,6 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -155,6 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -170,6 +190,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 124dc5a63cc2bd8265445e912ed07d1f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: beccd5c41126e0c537cf489954b53feb
         SHA1: 109fbb823652c1148c4949cdc860abd5b4ad24e5
@@ -183,10 +206,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: bc5c06a7fa9555f3f34043d828d9b123
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- BSMI.sys
-Verified: 'TRUE'

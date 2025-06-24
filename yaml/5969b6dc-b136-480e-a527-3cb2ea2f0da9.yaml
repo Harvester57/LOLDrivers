@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 5969b6dc-b136-480e-a527-3cb2ea2f0da9
+Tags:
+- hw.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create hw_sys binPath=C:\windows\temp\hw.sys type=kernel && sc.exe
@@ -10,7 +13,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
+- https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4880f40f2e557cff38100620b9aa1a3a753cb693af16cd3d95841583edcb57a8.yara
@@ -38,7 +44,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 5969b6dc-b136-480e-a527-3cb2ea2f0da9
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 6eafc9b68f2047adf6879e955d3b69e8
@@ -46,7 +54,7 @@ KnownVulnerableSamples:
     SHA256: 615a7c647eba3f2dcea463d5705d5d59ca70b4250f895ad20ce6876076a8fa28
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 17:19:33'
+  CreationTimestamp: '2021-01-06 19:19:33'
   Date: ''
   Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -180,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01ee5f169dff97352b6465d66a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
@@ -194,6 +205,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 481b6a07a9424c1eaafef3cdf10f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
@@ -209,6 +223,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 716ef836a8ceb23aeaf9174e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c4e9591383494fbfb914aac72114934d
         SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
@@ -227,7 +244,7 @@ KnownVulnerableSamples:
     SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 17:52:05'
+  CreationTimestamp: '2015-06-24 19:52:05'
   Date: ''
   Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -329,6 +346,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -342,6 +362,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -356,6 +379,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -370,6 +396,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
         SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
@@ -383,6 +412,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -400,7 +432,7 @@ KnownVulnerableSamples:
     SHA256: 734b74798a680d2e534c14a033858c4081c7879af1f48037d9d5483aa27a7e90
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2015 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2015-06-24 17:52:05'
+  CreationTimestamp: '2015-06-24 19:52:05'
   Date: ''
   Description: HW - Windows NT-8 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -502,6 +534,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -515,6 +550,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -529,6 +567,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -543,6 +584,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
         SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
@@ -556,6 +600,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -573,7 +620,7 @@ KnownVulnerableSamples:
     SHA256: 25bc1b72ba6092674ec561d7de8f5e4a7adb23c29fa68de5b29a30a671257dac
   Company: Marvin Test Solutions, Inc.
   Copyright: "Copyright \xA9 1996-2021 Marvin Test Solutions, Inc. All Rights Reserved."
-  CreationTimestamp: '2021-01-06 17:19:31'
+  CreationTimestamp: '2021-01-06 19:19:31'
   Date: ''
   Description: HW - Windows NT-10 (32/64 bit) kernel mode driver for PC ports/memory/PCI
     access
@@ -675,6 +722,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01ee5f169dff97352b6465d66a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
@@ -689,6 +739,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 481b6a07a9424c1eaafef3cdf10f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
@@ -704,6 +757,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 716ef836a8ceb23aeaf9174e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c4e9591383494fbfb914aac72114934d
         SHA1: 336fa67dfea049342c5b9ad622c30f97262c04fc
@@ -716,11 +772,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 91ee149529956a79a91eeb8c48f00b3d
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-- https://decoded.avast.io/janvojtesek/the-return-of-candiru-zero-days-in-the-middle-east/
-- https://www.virustotal.com/gui/file/6a4875ae86131a594019dec4abd46ac6ba47e57a88287b814d07d929858fe3e5/detection
-Tags:
-- hw.sys
-Verified: 'TRUE'

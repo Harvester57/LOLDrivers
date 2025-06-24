@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: f4990bdd-8821-4a3c-a11a-4651e645810c
+Tags:
+- IOMap64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create IOMap64.sys binPath=C:\windows\temp\IOMap64.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea85bbe63d6f66f7efee7007e770af820d57f914c7f179c5fee3ef2845f19c41.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: f4990bdd-8821-4a3c-a11a-4651e645810c
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 3d840e2458fef30b0871bf1c13b060ff
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 34b3acdeac5002880071f73b70aa3abd3a6facb9e281b5c93cc82a7a8a6d5cc1
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2010 ASUSTeK Computer Inc.
-  CreationTimestamp: '2010-02-04 18:55:34'
+  CreationTimestamp: '2010-02-04 20:55:34'
   Date: ''
   Description: 'ASUS Kernel Mode Driver for NT '
   ExportedFunctions: ''
@@ -119,6 +125,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -132,6 +141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -147,6 +159,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -160,6 +175,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -175,6 +193,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
@@ -187,11 +208,4 @@ KnownVulnerableSamples:
         CA
       Version: 1
   Imphash: 9928d53dbe860aba1b7c891831680629
-  LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- IOMap64.sys
-Verified: 'TRUE'
+  LoadsDespiteHVCI: 'FALSE'

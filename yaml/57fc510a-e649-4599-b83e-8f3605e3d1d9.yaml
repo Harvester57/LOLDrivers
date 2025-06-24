@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: '@mattnotmax'
-  Person: ''
+Id: 57fc510a-e649-4599-b83e-8f3605e3d1d9
+Tags:
+- aswArPot.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2022-26522
 - CVE-2022-26523
@@ -16,7 +19,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version
+  22.1.'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4b5229b3250c8c08b98cb710d6c056144271de099a57ae09f5d2097fc41bd4f1.yara
@@ -38,7 +44,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 57fc510a-e649-4599-b83e-8f3605e3d1d9
+Acknowledgement:
+  Handle: '@mattnotmax'
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 66d55dcf5fe5e1b60f32880d48207105
@@ -46,7 +54,7 @@ KnownVulnerableSamples:
     SHA256: c0c131bc8d6c8b5a2be32474474b1221bce1289c174c87e743ed4a512f5571d4
   Company: AVAST Software
   Copyright: Copyright (c) 2021 AVAST Software
-  CreationTimestamp: '2021-02-01 02:08:43'
+  CreationTimestamp: '2021-02-01 04:08:43'
   Date: ''
   Description: Avast Anti Rootkit
   ExportedFunctions: ''
@@ -276,6 +284,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -290,6 +301,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03f02aca051d1c9330eeabd3706e836f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f251d9cde0901fb67831855b4a592b51
         SHA1: cd0ac068faea4b875ded287512f20b6ba8dcb457
@@ -304,6 +318,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -318,6 +335,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -332,6 +352,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -344,11 +367,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 3702511999371bac8982d01820dd70f2
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- 'CVE-2022-26522, CVE-2022-26523: Both of these vulnerabilities were fixed in version
-  22.1.'
-Tags:
-- aswArPot.sys
-Verified: 'TRUE'

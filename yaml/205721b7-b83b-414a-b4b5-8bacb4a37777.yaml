@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 205721b7-b83b-414a-b4b5-8bacb4a37777
+Tags:
+- elrawdsk.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create elrawdsk.sys binPath=C:\windows\temp\elrawdsk.sys type=kernel
@@ -10,7 +13,11 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
+- https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6.yara
@@ -34,7 +41,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 205721b7-b83b-414a-b4b5-8bacb4a37777
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 20f14b58e9548b6ea99b35006f631197
@@ -42,7 +51,7 @@ KnownVulnerableSamples:
     SHA256: 98a55dc61046f4509d2465cbc373a9391c07125e5f4a242d2f475f14f32e5430
   Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 09:51:24'
+  CreationTimestamp: '2011-12-28 11:51:24'
   Date: ''
   Description: RawDisk Driver. Allows write access to files and raw disk sectors for
     user mode applications in Windows 2000 and later.
@@ -176,6 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001261dec28f7
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ed6239e956d9b626e57a5167a2c220e2
         SHA1: d055c8586761071ece10d426a3dd0efd03fc91bc
@@ -190,6 +202,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0facb3
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
@@ -203,6 +218,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -216,6 +234,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -230,6 +251,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0faf24
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
@@ -243,6 +267,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -261,7 +288,7 @@ KnownVulnerableSamples:
     SHA256: 29a2ae6439381ea2aa3116df7025cbb5c6c7c07cc8d19508e6021e4d6177a565
   Company: EldoS Corporation
   Copyright: 'Copyright (C) 2007-2011, EldoS Corporation '
-  CreationTimestamp: '2011-12-28 09:51:29'
+  CreationTimestamp: '2011-12-28 11:51:29'
   Date: ''
   Description: RawDisk Driver. Allows write access to files and raw disk sectors for
     user mode applications in Windows 2000 and later.
@@ -387,6 +414,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001261dec28f7
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ed6239e956d9b626e57a5167a2c220e2
         SHA1: d055c8586761071ece10d426a3dd0efd03fc91bc
@@ -401,6 +431,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0facb3
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
@@ -414,6 +447,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -427,6 +463,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -441,6 +480,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0faf24
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
@@ -454,6 +496,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -466,13 +511,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 0cba56fa162378bc4ee09e94a4e2fe33
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://securelist.com/shamoon-the-wiper-further-details-part-ii/57784/
-- https://github.com/Yara-Rules/rules/blob/master/malware/MALW_Shamoon.yar
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Tags:
-- elrawdsk.sys
-Verified: 'TRUE'

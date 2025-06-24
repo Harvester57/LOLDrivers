@@ -1,11 +1,13 @@
 Id: a8f2da2a-369c-4b4d-9a00-d7a892b9f7c3
+Tags:
+- wsdkd.sys
+Verified: 'TRUE'
 Author: Chris Beckett, Jon Petersen
 Created: '2023-09-12'
 MitreID: T1068
 CVE:
 - CVE-2023-1453
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create wsdkd.sys binPath=C:\windows\temp\wsdkd.sys type=kernel &&
     sc.exe start wsdkd.sys
@@ -22,9 +24,6 @@ Resources:
 - https://github.com/zeze-zeze/WindowsKernelVuln/tree/master/CVE-2023-1453
 - https://nvd.nist.gov/vuln/detail/CVE-2023-1453
 - https://avd.aquasec.com/nvd/2023/cve-2023-1453/
-Acknowledgement:
-  Person: Chris Beckett, Jon Petersen
-  Handle: '@cbecks_2'
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -36,6 +35,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: Chris Beckett, Jon Petersen
+  Handle: '@cbecks_2'
 KnownVulnerableSamples:
 - Filename: wsdkd.sys
   MD5: eff3a9cc3e99ef3ddae57df72807f0c7
@@ -82,7 +84,7 @@ KnownVulnerableSamples:
       Entropy: 3.5339846406206146
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-22 05:33:30'
+  CreationTimestamp: '2022-02-22 07:33:30'
   InternalName: wsdkd.sys
   Copyright: Copyright (C) 2022
   Imports:
@@ -133,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1f7b0de3090ee13a436315a6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cf8f84376abaf814f76cb8332f32d76f
         SHA1: 1103e907c83a85682befe4adba4d03b8f6c95543
@@ -146,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
@@ -156,6 +164,4 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign GCC R45 EV CodeSigning CA 2020
       Version: 1
   Imphash: 1e13511288689b63b2e1348bf5eb567b
-  LoadsDespiteHVCI: 'FALSE'
-Tags:
-- wsdkd.sys
+  LoadsDespiteHVCI: 'TRUE'

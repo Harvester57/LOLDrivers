@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6
+Tags:
+- WiseUnlo.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create WiseUnlo.sys binPath=C:\windows\temp\WiseUnlo.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/358ac54be252673841a1d65bfc2fb6d549c1a4c877fa7f5e1bfa188f30375d69.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: b28cc2ee-d4a2-4fe4-9acb-a7a61cad20c6
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 8df54f216312cc14d959dcb858702b01
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: c10c70be4e36fa9c98a4796c2b03db86398e2b07018550b7f0d58edabc553ad2
   Company: WiseCleaner.com
   Copyright: "Copyright \xA9 2015"
-  CreationTimestamp: '2015-05-11 01:36:47'
+  CreationTimestamp: '2015-05-11 03:36:47'
   Date: ''
   Description: WiseUnlo
   ExportedFunctions: ''
@@ -117,6 +123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 57c76f616cbd9aeb18b22862a09d94dc
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d3b63256734014c7a7f5e01a335af2ac
         SHA1: b7c7ae11be35f9788e341a5b868b4b599b1d6763
@@ -132,6 +141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -147,6 +159,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -166,7 +181,7 @@ KnownVulnerableSamples:
     SHA256: 8a844a8d993db0ee1159b096aee959e32bb9155edd9167b1e6aad2e4019202dd
   Company: WiseCleaner.com
   Copyright: "Copyright \xA9 2015"
-  CreationTimestamp: '2017-06-29 01:22:02'
+  CreationTimestamp: '2017-06-29 03:22:02'
   Date: ''
   Description: WiseUnlo
   ExportedFunctions: ''
@@ -242,6 +257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
@@ -256,6 +274,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61185486000000000024'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: ad73330abdd8883ba17ac2572100221e
         SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
@@ -272,6 +293,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2e4a279bde2eb688e8ab30f5904fa875
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 99de6e0504f17e876cb9d36fc42080c4
         SHA1: dd527101c981e893497468a612193e679a2a53d6
@@ -290,7 +314,7 @@ KnownVulnerableSamples:
     SHA256: c36ace67f4e25f391e8709776348397e4fd3930e641b32c1b0da398e59199ca7
   Company: WiseCleaner.com
   Copyright: "Copyright \xA9 2015"
-  CreationTimestamp: '2017-06-29 01:21:54'
+  CreationTimestamp: '2017-06-29 03:21:54'
   Date: ''
   Description: WiseUnlo
   ExportedFunctions: ''
@@ -363,6 +387,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -379,6 +406,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0b847f536116fd6d5a31dbf8f6ad8aa1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c4a1cd15e009d0791fdb4d9e3612c0b7
         SHA1: 64d8e05d4deddf634440d1e326aacfb4e06c9a0b
@@ -392,6 +422,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -406,6 +439,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -419,6 +455,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -437,7 +476,7 @@ KnownVulnerableSamples:
     SHA256: 8a844a8d993db0ee1159b096aee959e32bb9155edd9167b1e6aad2e4019202dd
   Company: WiseCleaner.com
   Copyright: "Copyright \xA9 2015"
-  CreationTimestamp: '2017-06-29 01:22:02'
+  CreationTimestamp: '2017-06-29 03:22:02'
   Date: ''
   Description: WiseUnlo
   ExportedFunctions: ''
@@ -513,6 +552,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -529,6 +571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0b847f536116fd6d5a31dbf8f6ad8aa1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c4a1cd15e009d0791fdb4d9e3612c0b7
         SHA1: 64d8e05d4deddf634440d1e326aacfb4e06c9a0b
@@ -542,6 +587,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -556,6 +604,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -569,6 +620,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -587,7 +641,7 @@ KnownVulnerableSamples:
     SHA256: 36861bb32abd5ba7955aa69269d27772f75d0306485d10ed045125816422c423
   Company: WiseCleaner.com
   Copyright: "Copyright \xA9 2015"
-  CreationTimestamp: '2015-05-11 01:36:54'
+  CreationTimestamp: '2015-05-11 03:36:54'
   Date: ''
   Description: WiseUnlo
   ExportedFunctions: ''
@@ -667,6 +721,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 57c76f616cbd9aeb18b22862a09d94dc
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d3b63256734014c7a7f5e01a335af2ac
         SHA1: b7c7ae11be35f9788e341a5b868b4b599b1d6763
@@ -682,6 +739,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -697,6 +757,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -716,7 +779,7 @@ KnownVulnerableSamples:
     SHA256: c36ace67f4e25f391e8709776348397e4fd3930e641b32c1b0da398e59199ca7
   Company: WiseCleaner.com
   Copyright: "Copyright \xA9 2015"
-  CreationTimestamp: '2017-06-29 01:21:54'
+  CreationTimestamp: '2017-06-29 03:21:54'
   Date: ''
   Description: WiseUnlo
   ExportedFunctions: ''
@@ -789,6 +852,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
@@ -803,6 +869,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61185486000000000024'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: ad73330abdd8883ba17ac2572100221e
         SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
@@ -819,6 +888,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2e4a279bde2eb688e8ab30f5904fa875
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 99de6e0504f17e876cb9d36fc42080c4
         SHA1: dd527101c981e893497468a612193e679a2a53d6
@@ -837,7 +909,7 @@ KnownVulnerableSamples:
     SHA256: c36ace67f4e25f391e8709776348397e4fd3930e641b32c1b0da398e59199ca7
   Company: WiseCleaner.com
   Copyright: "Copyright \xA9 2015"
-  CreationTimestamp: '2017-06-29 01:21:54'
+  CreationTimestamp: '2017-06-29 03:21:54'
   Date: ''
   Description: WiseUnlo
   ExportedFunctions: ''
@@ -912,6 +984,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
@@ -926,6 +1001,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61185486000000000024'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: ad73330abdd8883ba17ac2572100221e
         SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
@@ -942,6 +1020,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2e4a279bde2eb688e8ab30f5904fa875
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 99de6e0504f17e876cb9d36fc42080c4
         SHA1: dd527101c981e893497468a612193e679a2a53d6
@@ -954,9 +1035,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: d5bc15465b63888cc8b98ecc63a81517
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- WiseUnlo.sys
-Verified: 'TRUE'

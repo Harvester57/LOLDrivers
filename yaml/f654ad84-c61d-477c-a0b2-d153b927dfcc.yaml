@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: f654ad84-c61d-477c-a0b2-d153b927dfcc
+Tags:
+- EIO.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-05-20'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create EIO.sys binPath=C:\windows\temp\EIO.sys type=kernel && sc.exe
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-20'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b17507a3246020fa0052a172485d7b3567e0161747927f2edf27c40e310852e0.yara
@@ -34,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: f654ad84-c61d-477c-a0b2-d153b927dfcc
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: ff6c5b1f92372186d4f9879e00e42fcf
@@ -42,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: 72b36c64f0b349d7816c8e5e2d1a7f59807de0c87d3f071a04dbc56bec9c00db
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2007 ASUSTeK Computer Inc.
-  CreationTimestamp: '2007-10-16 07:54:18'
+  CreationTimestamp: '2007-10-16 09:54:18'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -113,7 +119,7 @@ KnownVulnerableSamples:
     SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2004 ASUSTeK Computer Inc.
-  CreationTimestamp: '2009-07-21 20:34:42'
+  CreationTimestamp: '2009-07-21 22:34:42'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -187,7 +193,7 @@ KnownVulnerableSamples:
     SHA256: 047c1d5bb80826a6f66c182fc8b5f66f59609a71e734117f20a4f98b9866bde5
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2004 ASUSTeK Computer Inc.
-  CreationTimestamp: '2009-07-21 20:34:52'
+  CreationTimestamp: '2009-07-21 22:34:52'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -279,6 +285,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b9dcc79e9817431a597f16b483f5bab2
         SHA1: fae5bf9779eed37708a44ba44f440c60174daa14
@@ -293,6 +302,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -311,7 +323,7 @@ KnownVulnerableSamples:
     SHA256: d4e7335a177e47688d68ad89940c272f82728c882623f1630e7fd2e03e16f003
   Company: ASUSTeK Computer Inc.
   Copyright: Copyright 2004 ASUSTeK Computer Inc.
-  CreationTimestamp: '2009-07-21 20:34:42'
+  CreationTimestamp: '2009-07-21 22:34:42'
   Date: ''
   Description: ASUS VGA Kernel Mode Driver
   ExportedFunctions: ''
@@ -390,6 +402,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c5167c023b9adedf0f8918ee65712a1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b9dcc79e9817431a597f16b483f5bab2
         SHA1: fae5bf9779eed37708a44ba44f440c60174daa14
@@ -404,6 +419,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -416,9 +434,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: a96a02cf5f7896a9a9f045d1986bd83c
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- EIO.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 9a4fb66e-9084-4b21-9d76-a7afbe330606
+Tags:
+- AMDPowerProfiler.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create AMDPowerProfiler.sys binPath=C:\windows\temp\AMDPowerProfiler.sys     type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0af5ccb3d33a9ba92071c9637be6254030d61998733a5eb3583e865e17844e05.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 9a4fb66e-9084-4b21-9d76-a7afbe330606
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 7ed9c787e267b2606441010b65767771
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: e1d3963c55c7ffa96d16e47ec4bbb4e171f828650ce853eb0b83c90ae9c6265a
   Company: Advanced Micro Devices, Inc.
   Copyright: "\xA9 2021 AMD Inc. All rights reserved."
-  CreationTimestamp: '2021-07-26 10:06:46'
+  CreationTimestamp: '2021-07-26 12:06:46'
   Date: ''
   Description: AMD Power Profiling Driver
   ExportedFunctions: ''
@@ -201,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -215,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -229,6 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 535091e6cab13af393b51ead0825f627
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f2f60243e26dcdf4729d28b1beb55f01
         SHA1: a23ac91136dd79d77b93b12c813e0c6669ed9f4d
@@ -243,6 +258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3972443af922b751d7d36c10dd313595
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 3f5b269ded03667a7bad47c1885062b0
         SHA1: 0f01247aaf8b46e3617880e0f5f5dfac696ed7a3
@@ -257,6 +275,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 1da248306f9b2618d082e0967d33d36a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: c1eabfb5994258ad955adb7c2df165e6
         SHA1: fa33b3c00cebc469b269220d9eab26926c9b8ad8
@@ -269,10 +290,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 1422b8d354b95d9cd880c8726df45dfc
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- AMDPowerProfiler.sys
-Verified: 'TRUE'

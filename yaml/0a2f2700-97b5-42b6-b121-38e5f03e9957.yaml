@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 0a2f2700-97b5-42b6-b121-38e5f03e9957
+Tags:
+- BS_RCIO.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create BS_RCIO.sys binPath=C:\windows\temp\BS_RCIO.sys type=kernel
@@ -10,9 +13,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
-Id: 0a2f2700-97b5-42b6-b121-38e5f03e9957
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 8284660345377a69dd99b25fdf397314
@@ -20,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: f67e60228084151fdcb84e94a48693db864cf606b65faef5a1d829175380dbfa
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2017-01-16 19:29:00'
+  CreationTimestamp: '2017-01-16 21:29:00'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -114,6 +121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -129,6 +139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0240c40d347ee38f707adae8a101450b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 88a4c70dd696e5777929d272523d55bf
         SHA1: c4353dfabf88e1243b77bcbf451fecea1cd17a87
@@ -142,6 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -156,6 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -169,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -181,10 +203,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 1d05fb30a58133da2e9dbdfcf51b80fd
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- BS_RCIO.sys
-Verified: 'TRUE'

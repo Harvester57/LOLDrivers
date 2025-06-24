@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 3d7da79b-fe34-45cd-a0c9-d4432d40611c
+Tags:
+- nvoclock.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create nvoclocksys binPath= C:\windows\temp\nvoclocksys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 3d7da79b-fe34-45cd-a0c9-d4432d40611c
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: NVIDIA Corp.
   Date: ''
@@ -75,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 6.129197764938437
       Virtual Size: '0x388'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-09 13:25:07'
+  CreationTimestamp: '2009-03-09 15:25:07'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -123,6 +129,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -136,6 +145,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -151,6 +163,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -165,6 +180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3af820a6907699580410055228ecaddf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 175416493bada497157d28d65f476b32
         SHA1: 80854f578e2a3b5552ea839ba4f98ddfe94b2381
@@ -178,6 +196,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -236,7 +257,7 @@ KnownVulnerableSamples:
       Entropy: 4.539628081221655
       Virtual Size: '0xc6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-10 09:49:48'
+  CreationTimestamp: '2005-08-10 11:49:48'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -258,7 +279,7 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - IoCreateDevice
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: NVidia Corp.
   Date: ''
   Description: NVidia System Utility Driver
@@ -305,7 +326,7 @@ KnownVulnerableSamples:
       Entropy: 6.061802260394644
       Virtual Size: '0x326'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-08-18 09:59:59'
+  CreationTimestamp: '2008-08-18 11:59:59'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -330,7 +351,7 @@ KnownVulnerableSamples:
   - IoCreateDevice
   - _aullshr
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: NVidia Corp.
   Date: ''
   Description: NVidia System Utility Driver
@@ -374,7 +395,7 @@ KnownVulnerableSamples:
       Entropy: 3.2822975196509665
       Virtual Size: '0x378'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2004-03-17 09:34:32'
+  CreationTimestamp: '2004-03-17 11:34:32'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9 2003"
   Imports:
@@ -435,7 +456,7 @@ KnownVulnerableSamples:
       Entropy: 4.8663460630712105
       Virtual Size: '0xda'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-06-06 09:55:50'
+  CreationTimestamp: '2006-06-06 11:55:50'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -506,7 +527,7 @@ KnownVulnerableSamples:
       Entropy: 4.8793366894268075
       Virtual Size: '0xda'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-10-31 08:29:04'
+  CreationTimestamp: '2006-10-31 10:29:04'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -580,7 +601,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-01-22 18:23:23'
+  CreationTimestamp: '2007-01-22 20:23:23'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -615,6 +636,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -628,6 +652,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -643,6 +670,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -657,6 +687,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5a4e47e9647b984c10e1d6a42bb07abe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c52873115c87f9dcae09a44ca0131a28
         SHA1: 4886227ca80507903cdda1d879010f25c5711881
@@ -670,6 +703,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -728,7 +764,7 @@ KnownVulnerableSamples:
       Entropy: 4.539628081221655
       Virtual Size: '0xc6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-03-18 13:53:01'
+  CreationTimestamp: '2005-03-18 15:53:01'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -800,7 +836,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-09-15 15:59:25'
+  CreationTimestamp: '2009-09-15 17:59:25'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -848,6 +884,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -861,6 +900,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -876,6 +918,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -889,6 +934,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -903,6 +951,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 534abed0be56d9840dd12ddb84f8b031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4914c1d2c944d48a9636059155440df8
         SHA1: 0337264fca5a8d774786b5b275e03ab42edb11ae
@@ -958,7 +1009,7 @@ KnownVulnerableSamples:
       Entropy: 3.2704758500582933
       Virtual Size: '0x378'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2003-10-23 11:59:29'
+  CreationTimestamp: '2003-10-23 13:59:29'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9 2003"
   Imports:
@@ -1019,7 +1070,7 @@ KnownVulnerableSamples:
       Entropy: 4.8793366894268075
       Virtual Size: '0xda'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-10-13 09:18:12'
+  CreationTimestamp: '2006-10-13 11:18:12'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1093,7 +1144,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-10-13 09:18:17'
+  CreationTimestamp: '2006-10-13 11:18:17'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1128,6 +1179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1141,6 +1195,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -1156,6 +1213,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1170,6 +1230,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5a4e47e9647b984c10e1d6a42bb07abe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c52873115c87f9dcae09a44ca0131a28
         SHA1: 4886227ca80507903cdda1d879010f25c5711881
@@ -1183,6 +1246,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1244,7 +1310,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-01-07 17:10:51'
+  CreationTimestamp: '2009-01-07 19:10:51'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1280,6 +1346,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1293,6 +1362,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1308,6 +1380,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1322,6 +1397,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3af820a6907699580410055228ecaddf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 175416493bada497157d28d65f476b32
         SHA1: 80854f578e2a3b5552ea839ba4f98ddfe94b2381
@@ -1335,6 +1413,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1393,7 +1474,7 @@ KnownVulnerableSamples:
       Entropy: 4.8793366894268075
       Virtual Size: '0xda'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-07-03 13:33:02'
+  CreationTimestamp: '2007-07-03 15:33:02'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1464,7 +1545,7 @@ KnownVulnerableSamples:
       Entropy: 6.061802260394644
       Virtual Size: '0x326'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-09-29 14:17:05'
+  CreationTimestamp: '2008-09-29 16:17:05'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1489,7 +1570,7 @@ KnownVulnerableSamples:
   - IoCreateDevice
   - _aullshr
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: NVidia Corp.
   Date: ''
   Description: NVidia System Utility Driver
@@ -1539,7 +1620,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-10-31 08:29:07'
+  CreationTimestamp: '2006-10-31 10:29:07'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1574,6 +1655,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1587,6 +1671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -1602,6 +1689,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1616,6 +1706,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5a4e47e9647b984c10e1d6a42bb07abe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c52873115c87f9dcae09a44ca0131a28
         SHA1: 4886227ca80507903cdda1d879010f25c5711881
@@ -1629,6 +1722,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1687,7 +1783,7 @@ KnownVulnerableSamples:
       Entropy: 4.631989197719118
       Virtual Size: '0xbe'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2004-11-18 08:35:43'
+  CreationTimestamp: '2004-11-18 10:35:43'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1708,7 +1804,7 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - IoCreateDevice
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: NVIDIA Corp.
   Date: ''
   Description: NVIDIA System Utility Driver
@@ -1758,7 +1854,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-01-06 16:47:08'
+  CreationTimestamp: '2009-01-06 18:47:08'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1794,6 +1890,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1807,6 +1906,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1822,6 +1924,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1836,6 +1941,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3af820a6907699580410055228ecaddf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 175416493bada497157d28d65f476b32
         SHA1: 80854f578e2a3b5552ea839ba4f98ddfe94b2381
@@ -1849,6 +1957,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1910,7 +2021,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-09-04 20:26:33'
+  CreationTimestamp: '2007-09-04 22:26:33'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -1946,6 +2057,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1959,6 +2073,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1974,6 +2091,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1988,6 +2108,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3af820a6907699580410055228ecaddf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 175416493bada497157d28d65f476b32
         SHA1: 80854f578e2a3b5552ea839ba4f98ddfe94b2381
@@ -2001,6 +2124,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2059,7 +2185,7 @@ KnownVulnerableSamples:
       Entropy: 6.077496430797658
       Virtual Size: '0x324'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-09-04 20:26:31'
+  CreationTimestamp: '2007-09-04 22:26:31'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -2084,7 +2210,7 @@ KnownVulnerableSamples:
   - IoCreateDevice
   - _aullshr
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: NVIDIA Corp.
   Date: ''
   Description: NVIDIA System Utility Driver
@@ -2134,7 +2260,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-09 13:25:10'
+  CreationTimestamp: '2009-03-09 15:25:10'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -2182,6 +2308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2195,6 +2324,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2210,6 +2342,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2224,6 +2359,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3af820a6907699580410055228ecaddf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 175416493bada497157d28d65f476b32
         SHA1: 80854f578e2a3b5552ea839ba4f98ddfe94b2381
@@ -2237,6 +2375,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2298,7 +2439,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-08-18 10:00:01'
+  CreationTimestamp: '2008-08-18 12:00:01'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -2334,6 +2475,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2347,6 +2491,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2362,6 +2509,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2376,6 +2526,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3af820a6907699580410055228ecaddf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 175416493bada497157d28d65f476b32
         SHA1: 80854f578e2a3b5552ea839ba4f98ddfe94b2381
@@ -2389,6 +2542,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2450,7 +2606,7 @@ KnownVulnerableSamples:
       Entropy: 1.0689156580850052
       Virtual Size: '0x24'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-06-06 09:55:55'
+  CreationTimestamp: '2006-06-06 11:55:55'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -2486,6 +2642,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 05ab96
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 861ac2a336eb5977ee1d342b79b3339a
         SHA1: 172f39bca3dda7c6d5169c96b34a5fe7e96ff0bd
@@ -2500,6 +2659,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4be200010020da64b996e9157caa
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 003ad6ab7503faa11a0cb94d94a50f3b
         SHA1: 91091aed19f92255ba8c915f1a5eb92dee6f54dd
@@ -2513,6 +2675,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610bdc8f00000000001a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
@@ -2567,7 +2732,7 @@ KnownVulnerableSamples:
       Entropy: 3.2357669877277893
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2003-10-23 11:59:21'
+  CreationTimestamp: '2003-10-23 13:59:21'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9 2003"
   Imports:
@@ -2628,7 +2793,7 @@ KnownVulnerableSamples:
       Entropy: 6.127672955661517
       Virtual Size: '0x388'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-09-15 15:59:22'
+  CreationTimestamp: '2009-09-15 17:59:22'
   InternalName: nvoclock.sys
   Copyright: "Copyright \xA9NVIDIA Corp. 2003-2004"
   Imports:
@@ -2676,6 +2841,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2689,6 +2857,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2704,6 +2875,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2717,6 +2891,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2731,6 +2908,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 534abed0be56d9840dd12ddb84f8b031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4914c1d2c944d48a9636059155440df8
         SHA1: 0337264fca5a8d774786b5b275e03ab42edb11ae
@@ -2743,9 +2923,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- nvoclock.sys
-Verified: 'TRUE'

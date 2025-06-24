@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a261cd64-0d04-4bf5-ad73-f3bb96bf83cf
+Tags:
+- PCHunter.sys
+Verified: 'FALSE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create PCHunter.sys binPath=C:\windows\temp\PCHunter.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/1b7fb154a7b7903a3c81f12f4b094f24a3c60a6a8cffca894c67c264ab7545fa.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a261cd64-0d04-4bf5-ad73-f3bb96bf83cf
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 9655d43fd874e7a6720b36e7fd9fa6b7
@@ -41,7 +47,7 @@ KnownVulnerableSamples:
   Company: "\u4E00\u666E\u660E\u4E3A\uFF08\u5317\u4EAC\uFF09\u4FE1\u606F\u6280\u672F\
     \u6709\u9650\u516C\u53F8"
   Copyright: (C) 2013-2016 Epoolsoft Corporation. All Rights Reserved.
-  CreationTimestamp: '2016-04-10 08:17:05'
+  CreationTimestamp: '2016-04-10 10:17:05'
   Date: ''
   Description: Epoolsoft Windows Information View Tools
   ExportedFunctions: ''
@@ -173,6 +179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5c5d0a336ba298b9695d2cfa5a181510
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 22abfcdb0a677a41a0e98019f629e785
         SHA1: 3c68a9e0ba9434a54c9b731fed228bb0f662f6c5
@@ -186,6 +195,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 251f5d988182172e3c419e014fb0404c
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 626797c449e52df71f4d81ad5be6d993
         SHA1: 58672dea8f4352d39f2021436acf155a2dcbb224
@@ -199,6 +211,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 46bbb340fab9c17928938c93da108679
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1a335fef744b698e4bde0dbe71df85ba
         SHA1: 567c76a1da9fd89c9f8bc09fe4f1e8109b8794cd
@@ -212,6 +227,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000003965c472e0dc2bd965000000000039
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: ac25a5b7bc19804fd0911884d862f25c
         SHA1: d474e0b87ecde20a8aeaa4fa25431a620cbd4b63
@@ -226,6 +244,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6139bb9c000000000033
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5b3304180221a8328ce477b1fd93898f
         SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
@@ -239,6 +260,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 19c28530e93b36
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: dd50ed7562bd4ce20df7b5c24d9f1446
         SHA1: 188ce565932b1320e89f1c94e1b21eb49f714a6b
@@ -253,6 +277,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '01'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8df2b22eaf3cd2c53b65a50b1e9bb8aa
         SHA1: 84e608dd4cc47c78e2de0f831405996c467fc35d
@@ -264,10 +291,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: f510a429c6ce5c8d414550518b3823d2
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- PCHunter.sys
-Verified: 'FALSE'

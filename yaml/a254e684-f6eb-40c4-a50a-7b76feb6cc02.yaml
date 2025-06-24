@@ -1,7 +1,11 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a254e684-f6eb-40c4-a50a-7b76feb6cc02
+Tags:
+- directio64.sys
+- utiA2D4.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +15,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: a254e684-f6eb-40c4-a50a-7b76feb6cc02
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0c357509adc3c4e42390c50a6a79575d
@@ -23,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: e219276a4068b1eea5ce08f83a322845dce4eca89e05c71a0c2417065ce48813
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-07-08 05:23:10'
+  CreationTimestamp: '2020-07-08 07:23:10'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -151,6 +158,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -166,6 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d671c2c3c13676231329afa97b1ec2b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fd290a4891edd36420e082391a96d9b0
         SHA1: fe33d6386cb017f4d39d5b1e21861bbc387aae7a
@@ -180,6 +193,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -192,10 +208,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: cef6a450f196b28e634aa3c0655d8eda
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- directio64.sys
-- utiA2D4.sys
-Verified: 'TRUE'

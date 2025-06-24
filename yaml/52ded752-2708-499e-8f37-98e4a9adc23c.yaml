@@ -1,9 +1,11 @@
 Id: 52ded752-2708-499e-8f37-98e4a9adc23c
+Tags:
+- GLCKIO2.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create GLCKIO2.sys binPath=C:\windows\temp\GLCKIO2.sys type=kernel
     && sc.exe start GLCKIO2.sys
@@ -13,10 +15,10 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: GLCKIO2.sys
   MD5: dedd07993780d973c22c93e77ab69fa3
@@ -68,6 +70,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -82,6 +87,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c64962e4467edcc1579646b7337ec8c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 69796942ecdfadbd806bdea1460a5115
         SHA1: 0ce9329828324db04bd0a7b101b4fbfedb3be8b2
@@ -95,6 +103,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -109,6 +120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -122,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -156,8 +173,6 @@ KnownVulnerableSamples:
       Entropy: 3.046439344671015
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-22 07:44:46'
+  CreationTimestamp: '2019-04-22 09:44:46'
   Imphash: 531d2392dbdd314fb1d9318fe9e5c4d2
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- GLCKIO2.sys

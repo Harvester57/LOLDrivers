@@ -1,9 +1,11 @@
 Id: a9d9cbb7-b5f6-4e74-97a5-29993263280e
+Tags:
+- CorsairLLAccess64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create CorsairLLAccess64.sys binPath=C:\windows\temp\CorsairLLAccess64.sys
     type=kernel && sc.exe start CorsairLLAccess64.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: CorsairLLAccess64.sys
   MD5: b34361d151c793415ef92ee5d368c053
@@ -92,6 +94,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -106,6 +111,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -143,7 +151,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-05 21:33:31'
+  CreationTimestamp: '2019-09-05 23:33:31'
   Imphash: 163436e69f8e582bdc1c1e6f735de23b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: CorsairLLAccess64.sys
@@ -221,6 +229,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -235,6 +246,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -269,7 +283,7 @@ KnownVulnerableSamples:
       Entropy: 5.904008861740888
       Virtual Size: '0x11c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-05 21:33:16'
+  CreationTimestamp: '2019-09-05 23:33:16'
   Imphash: 44cbd2ee295f1a35795eb4cd7cdd0864
   LoadsDespiteHVCI: 'FALSE'
 - Filename: CorsairLLAccess64.sys
@@ -348,6 +362,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -362,6 +379,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -396,7 +416,7 @@ KnownVulnerableSamples:
       Entropy: 5.926808995856722
       Virtual Size: '0x128'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-28 17:18:58'
+  CreationTimestamp: '2019-10-28 19:18:58'
   Imphash: 82e75304c5b7ed87121b8b89c82f2389
   LoadsDespiteHVCI: 'FALSE'
 - Filename: CorsairLLAccess64.sys
@@ -474,6 +494,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -488,6 +511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -522,8 +548,6 @@ KnownVulnerableSamples:
       Entropy: 5.9065976115977605
       Virtual Size: '0x110'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-08-26 01:16:05'
+  CreationTimestamp: '2019-08-26 03:16:05'
   Imphash: 44cbd2ee295f1a35795eb4cd7cdd0864
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- CorsairLLAccess64.sys

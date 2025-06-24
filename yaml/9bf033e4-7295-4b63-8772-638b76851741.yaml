@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 9bf033e4-7295-4b63-8772-638b76851741
+Tags:
+- ComputerZ.Sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create ComputerZSys binPath= C:\windows\temp\ComputerZSys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 9bf033e4-7295-4b63-8772-638b76851741
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: 360.cn
   Date: ''
@@ -72,7 +78,7 @@ KnownVulnerableSamples:
       Entropy: 5.706460178916482
       Virtual Size: '0x23e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-11-13 19:34:11'
+  CreationTimestamp: '2014-11-13 21:34:11'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2014 www.ludashi.com"
   Imports:
@@ -129,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -144,6 +153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -157,6 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -172,6 +187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -187,6 +205,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -242,7 +263,7 @@ KnownVulnerableSamples:
       Entropy: 5.807110906252108
       Virtual Size: '0x2e2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-06-21 05:51:17'
+  CreationTimestamp: '2016-06-21 07:51:17'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2016 www.ludashi.com"
   Imports:
@@ -303,6 +324,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -317,6 +341,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -331,6 +358,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26279f0f2f11970dccf63eba88f2d4c4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbebdc165d8f4616444075e0a48855e6
         SHA1: f6bf44f1acae05fc1638190459485da95f4ed1ec
@@ -346,6 +376,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -361,6 +394,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -416,7 +452,7 @@ KnownVulnerableSamples:
       Entropy: 3.451496132005
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-09-01 02:09:04'
+  CreationTimestamp: '2010-09-01 04:09:04'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -458,6 +494,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -471,6 +510,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -486,6 +528,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -541,7 +586,7 @@ KnownVulnerableSamples:
       Entropy: 3.556864166617942
       Virtual Size: '0x480'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-04-17 21:58:34'
+  CreationTimestamp: '2014-04-17 23:58:34'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2014 www.ludashi.com"
   Imports:
@@ -592,6 +637,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -607,6 +655,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -620,6 +671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -635,6 +689,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -650,6 +707,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -705,7 +765,7 @@ KnownVulnerableSamples:
       Entropy: 3.574245952532775
       Virtual Size: '0x488'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-09-05 21:28:20'
+  CreationTimestamp: '2015-09-05 23:28:20'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -760,6 +820,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -775,6 +838,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -788,6 +854,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -803,6 +872,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -818,6 +890,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -873,7 +948,7 @@ KnownVulnerableSamples:
       Entropy: 5.46903370349161
       Virtual Size: '0x206'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-02-24 19:36:48'
+  CreationTimestamp: '2014-02-24 21:36:48'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2014 www.ludashi.com"
   Imports:
@@ -930,6 +1005,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -945,6 +1023,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -958,6 +1039,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -973,6 +1057,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -988,6 +1075,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1043,7 +1133,7 @@ KnownVulnerableSamples:
       Entropy: 3.507951771882346
       Virtual Size: '0x3b0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-03-02 00:49:07'
+  CreationTimestamp: '2012-03-02 02:49:07'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2012 360.cn"
   Imports:
@@ -1094,6 +1184,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1107,6 +1200,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1121,6 +1217,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 74f2958d31d03eb042f9081555305277
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4f5c7d4f95e9d6a9749876f33ae138c4
         SHA1: 3666bdaf7b0d6a9019d5111e2ffd0bf06587dd58
@@ -1136,6 +1235,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1149,6 +1251,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1204,7 +1309,7 @@ KnownVulnerableSamples:
       Entropy: 3.5298436640182693
       Virtual Size: '0x3b0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-07 03:16:36'
+  CreationTimestamp: '2012-11-07 05:16:36'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2012 360.cn"
   Imports:
@@ -1255,6 +1360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -1268,6 +1376,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1282,6 +1393,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 74f2958d31d03eb042f9081555305277
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4f5c7d4f95e9d6a9749876f33ae138c4
         SHA1: 3666bdaf7b0d6a9019d5111e2ffd0bf06587dd58
@@ -1297,6 +1411,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1310,6 +1427,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1365,7 +1485,7 @@ KnownVulnerableSamples:
       Entropy: 3.52687041352958
       Virtual Size: '0x3b0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-11-30 03:27:11'
+  CreationTimestamp: '2011-11-30 05:27:11'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2011 360.cn"
   Imports:
@@ -1416,6 +1536,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1429,6 +1552,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1443,6 +1569,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 74f2958d31d03eb042f9081555305277
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4f5c7d4f95e9d6a9749876f33ae138c4
         SHA1: 3666bdaf7b0d6a9019d5111e2ffd0bf06587dd58
@@ -1458,6 +1587,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1471,6 +1603,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1526,7 +1661,7 @@ KnownVulnerableSamples:
       Entropy: 3.5345136989811943
       Virtual Size: '0x3e0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-12-17 03:08:51'
+  CreationTimestamp: '2020-12-17 05:08:51'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2020 www.ludashi.com"
   Imports:
@@ -1579,6 +1714,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -1592,6 +1730,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03fd3e81a23e67968baf999b7a1b3bbc
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f59257898e29705841730d2e5f7360e2
         SHA1: 366a61045b4c61e4f763413993da98b2d1122d89
@@ -1605,6 +1746,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1619,6 +1763,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -1632,6 +1779,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1642,7 +1792,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: "\u9C81\u5927\u5E08"
   Date: ''
   Description: Ludashi System Driver
@@ -1686,7 +1836,7 @@ KnownVulnerableSamples:
       Entropy: 4.016862360862906
       Virtual Size: '0xda'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-08-02 02:58:39'
+  CreationTimestamp: '2010-08-02 04:58:39'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -1731,6 +1881,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1744,6 +1897,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1759,6 +1915,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1772,6 +1931,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1787,6 +1949,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -1842,7 +2007,7 @@ KnownVulnerableSamples:
       Entropy: 5.262723438442423
       Virtual Size: '0x1d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-15 03:21:16'
+  CreationTimestamp: '2011-04-15 05:21:16'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2011 360.cn"
   Imports:
@@ -1887,7 +2052,7 @@ KnownVulnerableSamples:
   - KeBugCheckEx
   - RtlUnwind
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: 360.cn
   Date: ''
   Description: Ludashi System Driver
@@ -1931,7 +2096,7 @@ KnownVulnerableSamples:
       Entropy: 5.262723438442423
       Virtual Size: '0x1d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-15 03:21:16'
+  CreationTimestamp: '2011-04-15 05:21:16'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2011 360.cn"
   Imports:
@@ -1988,6 +2153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2001,6 +2169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2016,6 +2187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2029,6 +2203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2044,6 +2221,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4eb872f0c388229ae038b56303fcfdd5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 08ba4b408576a45f9ae47b3bb6bee468
         SHA1: 8701103a3c6f007be112d5f0d1cdfe32f73d1c02
@@ -2059,6 +2239,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2114,7 +2297,7 @@ KnownVulnerableSamples:
       Entropy: 5.920309756075584
       Virtual Size: '0x2d8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-12-17 03:08:52'
+  CreationTimestamp: '2020-12-17 05:08:52'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2020 www.ludashi.com"
   Imports:
@@ -2174,6 +2357,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -2187,6 +2373,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03fd3e81a23e67968baf999b7a1b3bbc
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f59257898e29705841730d2e5f7360e2
         SHA1: 366a61045b4c61e4f763413993da98b2d1122d89
@@ -2200,6 +2389,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2214,6 +2406,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -2227,6 +2422,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2237,7 +2435,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: 360.cn
   Date: ''
   Description: Ludashi System Driver
@@ -2281,7 +2479,7 @@ KnownVulnerableSamples:
       Entropy: 5.46903370349161
       Virtual Size: '0x206'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-04-17 21:58:31'
+  CreationTimestamp: '2014-04-17 23:58:31'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2014 www.ludashi.com"
   Imports:
@@ -2338,6 +2536,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -2353,6 +2554,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2366,6 +2570,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2381,6 +2588,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -2396,6 +2606,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2451,7 +2664,7 @@ KnownVulnerableSamples:
       Entropy: 5.771234247296874
       Virtual Size: '0x286'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-04-18 20:27:25'
+  CreationTimestamp: '2016-04-18 22:27:25'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2016 www.ludashi.com"
   Imports:
@@ -2512,6 +2725,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2526,6 +2742,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2540,6 +2759,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26279f0f2f11970dccf63eba88f2d4c4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbebdc165d8f4616444075e0a48855e6
         SHA1: f6bf44f1acae05fc1638190459485da95f4ed1ec
@@ -2555,6 +2777,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2570,6 +2795,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2625,7 +2853,7 @@ KnownVulnerableSamples:
       Entropy: 5.745697158903053
       Virtual Size: '0x27e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-02-26 01:48:30'
+  CreationTimestamp: '2016-02-26 03:48:30'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2016 www.ludashi.com"
   Imports:
@@ -2686,6 +2914,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2700,6 +2931,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2714,6 +2948,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26279f0f2f11970dccf63eba88f2d4c4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbebdc165d8f4616444075e0a48855e6
         SHA1: f6bf44f1acae05fc1638190459485da95f4ed1ec
@@ -2729,6 +2966,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2744,6 +2984,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2799,7 +3042,7 @@ KnownVulnerableSamples:
       Entropy: 3.527424727145746
       Virtual Size: '0x3b0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-07 22:15:32'
+  CreationTimestamp: '2011-10-08 00:15:32'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2011 360.cn"
   Imports:
@@ -2850,6 +3093,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2863,6 +3109,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2878,6 +3127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2891,6 +3143,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2906,6 +3161,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4eb872f0c388229ae038b56303fcfdd5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 08ba4b408576a45f9ae47b3bb6bee468
         SHA1: 8701103a3c6f007be112d5f0d1cdfe32f73d1c02
@@ -2921,6 +3179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2976,7 +3237,7 @@ KnownVulnerableSamples:
       Entropy: 3.454357960132574
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-08-02 02:58:46'
+  CreationTimestamp: '2010-08-02 04:58:46'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -3017,6 +3278,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3030,6 +3294,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3045,6 +3312,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -3058,6 +3328,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3073,6 +3346,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -3128,7 +3404,7 @@ KnownVulnerableSamples:
       Entropy: 3.448470909792412
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-10 01:33:17'
+  CreationTimestamp: '2010-11-10 03:33:17'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -3169,6 +3445,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3182,6 +3461,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3197,6 +3479,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -3210,6 +3495,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3225,6 +3513,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -3280,7 +3571,7 @@ KnownVulnerableSamples:
       Entropy: 5.767403415227798
       Virtual Size: '0x282'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-09-05 21:28:18'
+  CreationTimestamp: '2015-09-05 23:28:18'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -3341,6 +3632,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -3356,6 +3650,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 541fda68b5e95006f2fec51bea326365
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f741ec6836bb74e2370476618157c432
         SHA1: a392f40f4b3dc57727804cbeef660bbf9e2fbb69
@@ -3370,6 +3667,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6c59efa9e100e10ee306ba8fe0292559
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: cc806ac6ce6822cccc165d63c1b8fa37
         SHA1: 261a24e7b2648867017e7e852258ef87ab84c5f1
@@ -3385,6 +3685,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3395,7 +3698,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: "Z\u6B66\u5668"
   Date: ''
   Description: Zwuqi System Driver
@@ -3439,7 +3742,7 @@ KnownVulnerableSamples:
       Entropy: 3.4310871150702678
       Virtual Size: '0x3d0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-15 21:38:10'
+  CreationTimestamp: '2009-04-15 23:38:10'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2009 www.zwuqi.com
   Imports:
@@ -3469,6 +3772,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3482,6 +3788,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3497,6 +3806,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -3510,6 +3822,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3525,6 +3840,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2b7f0f1afe0f348edec71b75a47165b8
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 051f7966823abbbf31c49631ca95b4c5
         SHA1: 3b53e6177f766345accfa2ec3124a18e0a025e17
@@ -3580,7 +3898,7 @@ KnownVulnerableSamples:
       Entropy: 3.6028735908357534
       Virtual Size: '0x5a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-09-25 04:04:43'
+  CreationTimestamp: '2008-09-25 06:04:43'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008 ComputerZ
   Imports:
@@ -3597,7 +3915,7 @@ KnownVulnerableSamples:
   - IoCreateSymbolicLink
   - IoCreateDevice
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ludashi.com
   Date: ''
   Description: Ludashi System Driver
@@ -3641,7 +3959,7 @@ KnownVulnerableSamples:
       Entropy: 5.853799317958882
       Virtual Size: '0x2d0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-02-25 23:36:00'
+  CreationTimestamp: '2020-02-26 01:36:00'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2019 www.ludashi.com"
   Imports:
@@ -3699,6 +4017,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -3713,6 +4034,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -3727,6 +4051,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -3741,6 +4068,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a3a9f12d727bbf01199e74e0a5c7d8a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4e1dd44417986e6b087613679af48015
         SHA1: 78273dbcf8cf746b5bdeccc6931246ea716adaea
@@ -3755,6 +4085,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -3765,7 +4098,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ludashi.com
   Date: ''
   Description: Ludashi System Driver
@@ -3809,7 +4142,7 @@ KnownVulnerableSamples:
       Entropy: 3.5718072271678527
       Virtual Size: '0x488'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-06-21 05:51:19'
+  CreationTimestamp: '2016-06-21 07:51:19'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2016 www.ludashi.com"
   Imports:
@@ -3864,6 +4197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3878,6 +4214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3892,6 +4231,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26279f0f2f11970dccf63eba88f2d4c4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbebdc165d8f4616444075e0a48855e6
         SHA1: f6bf44f1acae05fc1638190459485da95f4ed1ec
@@ -3907,6 +4249,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3922,6 +4267,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3977,7 +4325,7 @@ KnownVulnerableSamples:
       Entropy: 5.338836916876603
       Virtual Size: '0x1d8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-22 01:47:23'
+  CreationTimestamp: '2013-07-22 03:47:23'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2013 www.ludashi.com"
   Imports:
@@ -4034,6 +4382,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -4049,6 +4400,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -4062,6 +4416,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4077,6 +4434,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -4092,6 +4452,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4147,7 +4510,7 @@ KnownVulnerableSamples:
       Entropy: 5.767403415227798
       Virtual Size: '0x282'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-09-05 21:28:18'
+  CreationTimestamp: '2015-09-05 23:28:18'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -4208,6 +4571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -4223,6 +4589,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 541fda68b5e95006f2fec51bea326365
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f741ec6836bb74e2370476618157c432
         SHA1: a392f40f4b3dc57727804cbeef660bbf9e2fbb69
@@ -4237,6 +4606,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6c59efa9e100e10ee306ba8fe0292559
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: cc806ac6ce6822cccc165d63c1b8fa37
         SHA1: 261a24e7b2648867017e7e852258ef87ab84c5f1
@@ -4252,6 +4624,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4262,7 +4637,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ludashi.com
   Date: ''
   Description: Ludashi System Driver
@@ -4306,7 +4681,7 @@ KnownVulnerableSamples:
       Entropy: 3.6051192721485097
       Virtual Size: '0x498'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-02-25 23:35:59'
+  CreationTimestamp: '2020-02-26 01:35:59'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2019 www.ludashi.com"
   Imports:
@@ -4357,6 +4732,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -4371,6 +4749,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -4385,6 +4766,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -4399,6 +4783,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a3a9f12d727bbf01199e74e0a5c7d8a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4e1dd44417986e6b087613679af48015
         SHA1: 78273dbcf8cf746b5bdeccc6931246ea716adaea
@@ -4413,6 +4800,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -4423,7 +4813,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Assured ID Code
         Signing CA,1
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: 360.cn
   Date: ''
   Description: Ludashi System Driver
@@ -4467,7 +4857,7 @@ KnownVulnerableSamples:
       Entropy: 3.542055847545116
       Virtual Size: '0x480'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-12-08 03:37:06'
+  CreationTimestamp: '2014-12-08 05:37:06'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2014 www.ludashi.com"
   Imports:
@@ -4521,6 +4911,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -4536,6 +4929,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -4549,6 +4945,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4564,6 +4963,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -4579,6 +4981,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4634,7 +5039,7 @@ KnownVulnerableSamples:
       Entropy: 3.567653628026684
       Virtual Size: '0x480'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-22 01:47:25'
+  CreationTimestamp: '2013-07-22 03:47:25'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2013 www.ludashi.com"
   Imports:
@@ -4685,6 +5090,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -4700,6 +5108,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -4713,6 +5124,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4728,6 +5142,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -4743,6 +5160,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4798,7 +5218,7 @@ KnownVulnerableSamples:
       Entropy: 3.574245952532775
       Virtual Size: '0x488'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-09-05 21:28:20'
+  CreationTimestamp: '2015-09-05 23:28:20'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -4853,6 +5273,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -4868,6 +5291,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 541fda68b5e95006f2fec51bea326365
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f741ec6836bb74e2370476618157c432
         SHA1: a392f40f4b3dc57727804cbeef660bbf9e2fbb69
@@ -4882,6 +5308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6c59efa9e100e10ee306ba8fe0292559
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: cc806ac6ce6822cccc165d63c1b8fa37
         SHA1: 261a24e7b2648867017e7e852258ef87ab84c5f1
@@ -4897,6 +5326,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4907,7 +5339,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: "\u9C81\u5927\u5E08"
   Date: ''
   Description: Ludashi System Driver
@@ -4951,7 +5383,7 @@ KnownVulnerableSamples:
       Entropy: 4.119974163480037
       Virtual Size: '0xde'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-09-01 02:09:24'
+  CreationTimestamp: '2010-09-01 04:09:24'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -4996,6 +5428,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -5009,6 +5444,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -5024,6 +5462,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -5037,6 +5478,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5052,6 +5496,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -5107,7 +5554,7 @@ KnownVulnerableSamples:
       Entropy: 5.265565775816046
       Virtual Size: '0x1d8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-07 03:16:34'
+  CreationTimestamp: '2012-11-07 05:16:34'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2012 360.cn"
   Imports:
@@ -5164,6 +5611,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -5177,6 +5627,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -5191,6 +5644,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 74f2958d31d03eb042f9081555305277
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4f5c7d4f95e9d6a9749876f33ae138c4
         SHA1: 3666bdaf7b0d6a9019d5111e2ffd0bf06587dd58
@@ -5206,6 +5662,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -5261,7 +5720,7 @@ KnownVulnerableSamples:
       Entropy: 3.5180039714066043
       Virtual Size: '0x3b0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-15 03:21:45'
+  CreationTimestamp: '2011-04-15 05:21:45'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2011 360.cn"
   Imports:
@@ -5312,6 +5771,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -5325,6 +5787,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -5340,6 +5805,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -5353,6 +5821,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5368,6 +5839,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4eb872f0c388229ae038b56303fcfdd5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 08ba4b408576a45f9ae47b3bb6bee468
         SHA1: 8701103a3c6f007be112d5f0d1cdfe32f73d1c02
@@ -5383,6 +5857,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -5438,7 +5915,7 @@ KnownVulnerableSamples:
       Entropy: 5.274136623805015
       Virtual Size: '0x1d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-07 22:15:21'
+  CreationTimestamp: '2011-10-08 00:15:21'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2011 360.cn"
   Imports:
@@ -5495,6 +5972,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -5508,6 +5988,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -5523,6 +6006,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -5536,6 +6022,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5551,6 +6040,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4eb872f0c388229ae038b56303fcfdd5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 08ba4b408576a45f9ae47b3bb6bee468
         SHA1: 8701103a3c6f007be112d5f0d1cdfe32f73d1c02
@@ -5566,6 +6058,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -5621,7 +6116,7 @@ KnownVulnerableSamples:
       Entropy: 3.558317788181056
       Virtual Size: '0x480'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-02-24 19:36:50'
+  CreationTimestamp: '2014-02-24 21:36:50'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2014 www.ludashi.com"
   Imports:
@@ -5672,6 +6167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -5687,6 +6185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -5700,6 +6201,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5715,6 +6219,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -5730,6 +6237,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -5785,7 +6295,7 @@ KnownVulnerableSamples:
       Entropy: 5.2921858814119345
       Virtual Size: '0x1d4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-11-30 03:27:03'
+  CreationTimestamp: '2011-11-30 05:27:03'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2011 360.cn"
   Imports:
@@ -5842,6 +6352,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -5855,6 +6368,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -5869,6 +6385,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 74f2958d31d03eb042f9081555305277
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4f5c7d4f95e9d6a9749876f33ae138c4
         SHA1: 3666bdaf7b0d6a9019d5111e2ffd0bf06587dd58
@@ -5884,6 +6403,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -5897,6 +6419,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5952,7 +6477,7 @@ KnownVulnerableSamples:
       Entropy: 4.279777518236358
       Virtual Size: '0xde'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-11-04 23:10:36'
+  CreationTimestamp: '2009-11-05 01:10:36'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2009 www.ludashi.com
   Imports:
@@ -5996,6 +6521,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -6009,6 +6537,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -6024,6 +6555,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -6037,6 +6571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -6052,6 +6589,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2b7f0f1afe0f348edec71b75a47165b8
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 051f7966823abbbf31c49631ca95b4c5
         SHA1: 3b53e6177f766345accfa2ec3124a18e0a025e17
@@ -6107,7 +6647,7 @@ KnownVulnerableSamples:
       Entropy: 3.5686810464191256
       Virtual Size: '0x488'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-08-23 22:29:24'
+  CreationTimestamp: '2015-08-24 00:29:24'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -6161,6 +6701,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -6176,6 +6719,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -6189,6 +6735,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -6204,6 +6753,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -6219,6 +6771,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -6274,7 +6829,7 @@ KnownVulnerableSamples:
       Entropy: 4.180737038875145
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-23 03:33:00'
+  CreationTimestamp: '2010-11-23 05:33:00'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -6320,6 +6875,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -6333,6 +6891,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -6348,6 +6909,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -6361,6 +6925,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -6376,6 +6943,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -6431,7 +7001,7 @@ KnownVulnerableSamples:
       Entropy: 4.2069468941720505
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-10 01:33:15'
+  CreationTimestamp: '2010-11-10 03:33:15'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -6477,6 +7047,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -6490,6 +7063,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -6505,6 +7081,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -6518,6 +7097,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -6533,6 +7115,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -6588,7 +7173,7 @@ KnownVulnerableSamples:
       Entropy: 5.769235644091667
       Virtual Size: '0x266'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-12-08 03:37:05'
+  CreationTimestamp: '2014-12-08 05:37:05'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2014 www.ludashi.com"
   Imports:
@@ -6648,6 +7233,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -6663,6 +7251,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -6676,6 +7267,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -6691,6 +7285,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -6706,6 +7303,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -6761,7 +7361,7 @@ KnownVulnerableSamples:
       Entropy: 3.4645037781886088
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-11-04 23:13:28'
+  CreationTimestamp: '2009-11-05 01:13:28'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2009 www.ludashi.com
   Imports:
@@ -6802,6 +7402,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -6815,6 +7418,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -6830,6 +7436,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -6843,6 +7452,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -6858,6 +7470,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2b7f0f1afe0f348edec71b75a47165b8
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 051f7966823abbbf31c49631ca95b4c5
         SHA1: 3b53e6177f766345accfa2ec3124a18e0a025e17
@@ -6913,7 +7528,7 @@ KnownVulnerableSamples:
       Entropy: 5.288228242708726
       Virtual Size: '0x1d8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-03-02 00:49:05'
+  CreationTimestamp: '2012-03-02 02:49:05'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2012 360.cn"
   Imports:
@@ -6970,6 +7585,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -6983,6 +7601,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -6997,6 +7618,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 74f2958d31d03eb042f9081555305277
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4f5c7d4f95e9d6a9749876f33ae138c4
         SHA1: 3666bdaf7b0d6a9019d5111e2ffd0bf06587dd58
@@ -7012,6 +7636,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -7025,6 +7652,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -7080,7 +7710,7 @@ KnownVulnerableSamples:
       Entropy: 3.448470909792412
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-23 03:32:57'
+  CreationTimestamp: '2010-11-23 05:32:57'
   InternalName: ComputerZ.Sys
   Copyright: Copyright (C) 2008-2010 www.ludashi.com
   Imports:
@@ -7121,6 +7751,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -7134,6 +7767,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -7149,6 +7785,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -7162,6 +7801,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -7177,6 +7819,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 61359ac44514d781769fd643666b4572
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 416fc5d0038211bf34811efeff6d562f
         SHA1: e0acbd39e2fa410a22c96e2a3eaea4342a626f40
@@ -7232,7 +7877,7 @@ KnownVulnerableSamples:
       Entropy: 5.767403415227798
       Virtual Size: '0x282'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-09-05 21:28:18'
+  CreationTimestamp: '2015-09-05 23:28:18'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -7293,6 +7938,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -7308,6 +7956,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -7321,6 +7972,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -7336,6 +7990,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -7351,6 +8008,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -7406,7 +8066,7 @@ KnownVulnerableSamples:
       Entropy: 3.574245952532775
       Virtual Size: '0x488'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-09-05 21:28:20'
+  CreationTimestamp: '2015-09-05 23:28:20'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -7461,6 +8121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -7476,6 +8139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 541fda68b5e95006f2fec51bea326365
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f741ec6836bb74e2370476618157c432
         SHA1: a392f40f4b3dc57727804cbeef660bbf9e2fbb69
@@ -7490,6 +8156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6c59efa9e100e10ee306ba8fe0292559
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: cc806ac6ce6822cccc165d63c1b8fa37
         SHA1: 261a24e7b2648867017e7e852258ef87ab84c5f1
@@ -7505,6 +8174,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -7515,7 +8187,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ludashi.com
   Date: ''
   Description: Ludashi System Driver
@@ -7559,7 +8231,7 @@ KnownVulnerableSamples:
       Entropy: 5.752765178414186
       Virtual Size: '0x276'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-08-23 22:29:22'
+  CreationTimestamp: '2015-08-24 00:29:22'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2015 www.ludashi.com"
   Imports:
@@ -7619,6 +8291,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -7634,6 +8309,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -7647,6 +8325,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -7662,6 +8343,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 51bd5d8e45b82a0210f17fe4c5233468
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ad73c81b3174cc055d9718b2145a3d1f
         SHA1: 0cb9e92828857976774a9fe96c016cdc67a25e6d
@@ -7677,6 +8361,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -7732,7 +8419,7 @@ KnownVulnerableSamples:
       Entropy: 3.5641654969859053
       Virtual Size: '0x488'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-02-26 01:48:33'
+  CreationTimestamp: '2016-02-26 03:48:33'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2016 www.ludashi.com"
   Imports:
@@ -7787,6 +8474,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -7801,6 +8491,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -7815,6 +8508,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26279f0f2f11970dccf63eba88f2d4c4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbebdc165d8f4616444075e0a48855e6
         SHA1: f6bf44f1acae05fc1638190459485da95f4ed1ec
@@ -7830,6 +8526,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -7845,6 +8544,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -7900,7 +8602,7 @@ KnownVulnerableSamples:
       Entropy: 3.571306375348106
       Virtual Size: '0x488'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-04-18 20:27:28'
+  CreationTimestamp: '2016-04-18 22:27:28'
   InternalName: ComputerZ.Sys
   Copyright: "\u7248\u6743\u6240\u6709 (C) 2010-2016 www.ludashi.com"
   Imports:
@@ -7955,6 +8657,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -7969,6 +8674,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -7983,6 +8691,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26279f0f2f11970dccf63eba88f2d4c4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fbebdc165d8f4616444075e0a48855e6
         SHA1: f6bf44f1acae05fc1638190459485da95f4ed1ec
@@ -7998,6 +8709,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -8013,6 +8727,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -8025,9 +8742,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- ComputerZ.Sys
-Verified: 'TRUE'

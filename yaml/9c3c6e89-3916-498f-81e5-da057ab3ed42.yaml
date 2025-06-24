@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 9c3c6e89-3916-498f-81e5-da057ab3ed42
+Tags:
+- windbg.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-04-22'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create windbg.sys binPath=C:\windows\temp\windbg.sys type=kernel
@@ -10,7 +13,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-04-22'
+Resources:
+- https://www.proofpoint.com/us/blog/threat-insight/now-you-see-it-now-you-dont-copperstealer-performs-widespread-theft
+- https://twitter.com/jaydinbas/status/1642898531445886978?s=20
+- https://twitter.com/jaydinbas/status/1646475092006785027?s=20
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e1cb86386757b947b39086cc8639da988f6e8018ca9995dd669bdc03c8d39d7d.yara
@@ -36,7 +42,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 9c3c6e89-3916-498f-81e5-da057ab3ed42
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 265462dbda175886e0c02257f2385753
@@ -44,7 +52,7 @@ KnownVulnerableSamples:
     SHA256: 37a1a3fa4dc148924c1bfb60c88ffef082ee58cd0ee804d2de0f1d22c1e7802c
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:24:09'
+  CreationTimestamp: '2023-03-30 06:24:09'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -201,6 +209,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -216,6 +227,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -230,6 +244,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -248,7 +265,7 @@ KnownVulnerableSamples:
     SHA256: 45b969ae1b381716a29cd509622470b5b20b70c7efe4c9b7c0568faa298605ff
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:24:09'
+  CreationTimestamp: '2023-03-30 06:24:09'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -405,6 +422,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000f3158ea57d1c559f290000000000f3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8d4476692bcda36ed89244b94bd705f0
         SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
@@ -419,6 +439,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -437,7 +460,7 @@ KnownVulnerableSamples:
     SHA256: 79278979d9300670d1084493bbc03ae374efc5ab02850941e85753885fa88e47
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:23:58'
+  CreationTimestamp: '2023-03-30 06:23:58'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -591,6 +614,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf6aed18e4c3fd6ac87330096df18117
         SHA1: f96be504b875f1e63bf51eacc6768e4fdecddcc6
@@ -605,6 +631,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -623,7 +652,7 @@ KnownVulnerableSamples:
     SHA256: e307ebe2d43cc8e290e5ade032a6e38bc6961439f92d6e99b954bf1368a975ef
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-07 08:50:35'
+  CreationTimestamp: '2023-03-07 10:50:35'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -776,6 +805,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5f9e06262d2eed425c886a4709350426
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e01323d4e9f20b9c042abdd9585d2d81
         SHA1: d1fab71f563191354037fe0bb8bf73718c721e45
@@ -791,6 +823,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -806,6 +841,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -820,6 +858,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 300f6facdd6698747ca94636a7782db9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
@@ -834,6 +875,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0090397f9ad24a3a13f2bd915f0838a943
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
@@ -853,7 +897,7 @@ KnownVulnerableSamples:
     SHA256: 6ee267fc3d0ac2662a9cfdb0ed5a2354ee09ef4c218303f20350177cae125cf7
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:24:09'
+  CreationTimestamp: '2023-03-30 06:24:09'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -1010,6 +1054,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1025,6 +1072,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -1039,6 +1089,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1057,7 +1110,7 @@ KnownVulnerableSamples:
     SHA256: 79278979d9300670d1084493bbc03ae374efc5ab02850941e85753885fa88e47
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:23:58'
+  CreationTimestamp: '2023-03-30 06:23:58'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -1207,7 +1260,7 @@ KnownVulnerableSamples:
     SHA256: e7e7824d611527b67fc36128da1b35d9b8ce3ffdab3fb96e3dbabd6e9c9570c0
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-08 03:14:00'
+  CreationTimestamp: '2023-03-08 05:14:00'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -1359,6 +1412,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5d11784fb81765023f89a4f4243fe1a9
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b5ff0da6f1d327dca52b08e9c7c8d439
         SHA1: c7acfdfc234a3bb37535cbe2785d9202b4b0a10c
@@ -1372,6 +1428,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -1386,6 +1445,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -1403,7 +1465,7 @@ KnownVulnerableSamples:
     SHA256: 88b901ce8ee199bc371e9cf39ab5375d31c6881a25ba5827e9b32ba7946ecda1
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-09 06:55:38'
+  CreationTimestamp: '2023-03-09 08:55:38'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -1487,6 +1549,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1502,6 +1567,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -1516,6 +1584,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1534,7 +1605,7 @@ KnownVulnerableSamples:
     SHA256: 28d3a5a85eef4561c4ad08fd83aca4f7a946f8dca8bfb7958a855a80197f68a6
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:23:58'
+  CreationTimestamp: '2023-03-30 06:23:58'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -1688,6 +1759,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1703,6 +1777,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -1717,6 +1794,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1735,7 +1815,7 @@ KnownVulnerableSamples:
     SHA256: ff6108dd2017f9bc7ea93c43c1afbda0f1cc7b00f5afafb4ce3cf0a193e9598b
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-27 22:28:03'
+  CreationTimestamp: '2023-03-28 00:28:03'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -1889,6 +1969,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1904,6 +1987,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -1918,6 +2004,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1936,7 +2025,7 @@ KnownVulnerableSamples:
     SHA256: a0801ade5de44b65afb8c275e11e4d766ae64af1a5740ad4f1db1acc4e088774
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:23:58'
+  CreationTimestamp: '2023-03-30 06:23:58'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -2090,6 +2179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2105,6 +2197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -2119,6 +2214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -2137,7 +2235,7 @@ KnownVulnerableSamples:
     SHA256: 79278979d9300670d1084493bbc03ae374efc5ab02850941e85753885fa88e47
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:23:58'
+  CreationTimestamp: '2023-03-30 06:23:58'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -2291,6 +2389,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000f5e8773b206b1ccd610000000000f5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bf6aed18e4c3fd6ac87330096df18117
         SHA1: f96be504b875f1e63bf51eacc6768e4fdecddcc6
@@ -2305,6 +2406,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -2323,7 +2427,7 @@ KnownVulnerableSamples:
     SHA256: 223b320fb86cd4a1019ce31ac6901ce6bc41792810bd995db232dad790398852
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-07 08:50:54'
+  CreationTimestamp: '2023-03-07 10:50:54'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -2478,6 +2582,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5f9e06262d2eed425c886a4709350426
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e01323d4e9f20b9c042abdd9585d2d81
         SHA1: d1fab71f563191354037fe0bb8bf73718c721e45
@@ -2493,6 +2600,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2508,6 +2618,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2522,6 +2635,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 300f6facdd6698747ca94636a7782db9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
@@ -2536,6 +2652,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0090397f9ad24a3a13f2bd915f0838a943
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 26ec2c9bfcb06fdf8a6d95f2c616fd72
         SHA1: 635466f1432046f6fd338624c068872ab6488b12
@@ -2555,7 +2674,7 @@ KnownVulnerableSamples:
     SHA256: dd759c6b9c4222c7b19e8b0ba7288d7395594d6884b9bcdf0ccfada3e6b7a8d5
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-08 03:14:17'
+  CreationTimestamp: '2023-03-08 05:14:17'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -2709,6 +2828,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5d11784fb81765023f89a4f4243fe1a9
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b5ff0da6f1d327dca52b08e9c7c8d439
         SHA1: c7acfdfc234a3bb37535cbe2785d9202b4b0a10c
@@ -2722,6 +2844,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -2736,6 +2861,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -2753,7 +2881,7 @@ KnownVulnerableSamples:
     SHA256: 40e0be2ed5d07d5ecf14232fe64a95c7ad6fd942a60b4a6e21fda69c75bbb78d
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-09 06:55:46'
+  CreationTimestamp: '2023-03-09 08:55:46'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -2835,6 +2963,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2850,6 +2981,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -2864,6 +2998,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -2882,7 +3019,7 @@ KnownVulnerableSamples:
     SHA256: 37a1a3fa4dc148924c1bfb60c88ffef082ee58cd0ee804d2de0f1d22c1e7802c
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:24:09'
+  CreationTimestamp: '2023-03-30 06:24:09'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -3039,6 +3176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3054,6 +3194,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -3068,6 +3211,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -3086,7 +3232,7 @@ KnownVulnerableSamples:
     SHA256: 948735962436df24baa69e58421345d4a295e0821f4f93fd9f64e11f51a9666f
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-27 22:28:14'
+  CreationTimestamp: '2023-03-28 00:28:14'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -3243,6 +3389,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3258,6 +3407,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -3272,6 +3424,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -3290,7 +3445,7 @@ KnownVulnerableSamples:
     SHA256: aa833c9e3bcdc33eaf64fd913e80f5b9ce60618f6e3ff4c386420fea4a494380
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:24:09'
+  CreationTimestamp: '2023-03-30 06:24:09'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -3447,6 +3602,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3462,6 +3620,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -3476,6 +3637,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -3494,7 +3658,7 @@ KnownVulnerableSamples:
     SHA256: 45b969ae1b381716a29cd509622470b5b20b70c7efe4c9b7c0568faa298605ff
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:24:09'
+  CreationTimestamp: '2023-03-30 06:24:09'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -3651,6 +3815,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000f3158ea57d1c559f290000000000f3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8d4476692bcda36ed89244b94bd705f0
         SHA1: ce72176d5cad611366e13a9a997ad7ecc7eb815f
@@ -3665,6 +3832,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -3683,7 +3853,7 @@ KnownVulnerableSamples:
     SHA256: 9be868eb7e177ee6d762f2a022acf18b6b190fecbe445b3c09fc0494e8244ee8
   Company: Microsoft Corporation
   Copyright: '? Microsoft Corporation. All rights reserved.'
-  CreationTimestamp: '2023-03-30 04:23:58'
+  CreationTimestamp: '2023-03-30 06:23:58'
   Date: ''
   Description: Windows GUI symbolic debugger
   ExportedFunctions: ''
@@ -3837,6 +4007,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3852,6 +4025,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 012eab44fa8853d913e7107c89406432
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5d40693a8cfc4fd21f0c610ed3ee8477
         SHA1: 4dffeb59ea4c32c7b87c9fe44d55f5e622444824
@@ -3866,6 +4042,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -3878,11 +4057,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 3db9de43d5d530c10d0cd2d43c7a0771
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.proofpoint.com/us/blog/threat-insight/now-you-see-it-now-you-dont-copperstealer-performs-widespread-theft
-- https://twitter.com/jaydinbas/status/1642898531445886978?s=20
-- https://twitter.com/jaydinbas/status/1646475092006785027?s=20
-Tags:
-- windbg.sys
-Verified: 'TRUE'

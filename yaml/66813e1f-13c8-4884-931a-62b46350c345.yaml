@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 66813e1f-13c8-4884-931a-62b46350c345
+Tags:
+- 834761775.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-12'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create 834761775.sys binPath=C:\windows\temp\834761775.sys type=kernel
@@ -20,9 +23,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-12'
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Detection: []
-Id: 66813e1f-13c8-4884-931a-62b46350c345
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: d572a2339ab3259578bfb39301b78884
@@ -30,7 +36,7 @@ KnownVulnerableSamples:
     SHA256: 22074c412bb82bd97768eba0cb40e451d75d969e94d0548af804aafc04ca02fd
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-10-10 19:26:25'
+  CreationTimestamp: '2022-10-10 21:26:25'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -144,6 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
@@ -159,6 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -173,6 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1eb132d57e7968960df26e854eb0dda6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 5ab6e3eff526144c0498d28f2e8744cc
         SHA1: 7ab94f2c92d6886a876615876fb3c7d996cc0ea3
@@ -188,6 +203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -202,6 +220,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 1eb132d57e796896
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 953110dc4528bb8653d24128ec59f13b
         SHA1: 3a111b3ec6c092f7181132509479ba73bc3c828f
@@ -215,9 +236,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 0262d4147f21d681f8519ab2af79283f
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Tags:
-- 834761775.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 94eb0694-29ba-4f8e-b763-86c6371db6cc
+Tags:
+- winio64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create winio64.sys binPath=C:\windows\temp\winio64.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection: []
-Id: 94eb0694-29ba-4f8e-b763-86c6371db6cc
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 241252e4ebe7b4fdf6fd5a34ece5b127
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: cb5ebba562c33ef2ed93558913792726c8c2e5898531923589122ae31db64ebb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2014-05-19 09:29:34'
+  CreationTimestamp: '2014-05-19 11:29:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -100,6 +106,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -114,6 +123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -128,6 +140,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6139bb9c000000000033
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5b3304180221a8328ce477b1fd93898f
         SHA1: 9b7f1e1653a52d801387f1e51d17fabb8d435d0c
@@ -142,6 +157,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '26'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 40b719dc6e7a16f1672333943daca04b
         SHA1: fbb05f9486d50f8f35013e531f1504e9f62cb3df
@@ -156,6 +174,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0f69
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f5497dbe7af27561736a3ba6935044e8
         SHA1: 50728ba20d7ee0726bb8aa4a9d9659f7c938830f
@@ -174,7 +195,7 @@ KnownVulnerableSamples:
     SHA256: ebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-03-19 21:59:12'
+  CreationTimestamp: '2018-03-19 23:59:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -247,6 +268,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000001f9800c911029569be00000000001f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adc809facabcdfc353d4e5d9f8956845
         SHA1: ec1181c8eafabeee4ba13edd8f260a880474b665
@@ -261,6 +285,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -273,10 +300,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 85f86c7c8ce81a78e84efa545d7edc65
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- winio64.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 4e5064b4-48d3-418c-a7a8-f0dc7ac0a176
+Tags:
+- MsIo32.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2019-18845
 Category: vulnerable driver
@@ -15,9 +18,14 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
+- http://blog.rewolf.pl/blog/?p=1630
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection: []
-Id: 4e5064b4-48d3-418c-a7a8-f0dc7ac0a176
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 6491c34f274a0ed6258fadca85bd69fb
@@ -25,7 +33,7 @@ KnownVulnerableSamples:
     SHA256: 7018d515a6c781ea6097ca71d0f0603ad0d689f7ec99db27fcacd492a9e86027
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-02-12 00:57:50'
+  CreationTimestamp: '2018-02-12 02:57:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -96,6 +104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -111,6 +122,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 48e28f46a3e4ac760dfa9a58fa6c6363
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 388e7704244c6f77b4f54d467075a41c
         SHA1: 90fb8dec5a06fa52296ed951485dabce615ec76e
@@ -126,6 +140,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -138,12 +155,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://www.activecyber.us/activelabs/viper-rgb-driver-local-privilege-escalation-cve-2019-18845
-- http://blog.rewolf.pl/blog/?p=1630
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- MsIo32.sys
-Verified: 'TRUE'

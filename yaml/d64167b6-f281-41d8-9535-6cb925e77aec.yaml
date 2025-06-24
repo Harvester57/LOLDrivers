@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: d64167b6-f281-41d8-9535-6cb925e77aec
+Tags:
+- EneTechIo64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create EneTechIo64.sys binPath=C:\windows\temp\EneTechIo64.sys     type=kernel
@@ -10,9 +13,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
+- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Detection: []
-Id: d64167b6-f281-41d8-9535-6cb925e77aec
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0765c07a666231285972c3487acfc7b2
@@ -20,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: 865e4bc7290fc3b380e266ccd98c2d4e965beb711d7efd090d052e8326accdd2
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-10-14 10:04:53'
+  CreationTimestamp: '2019-10-14 12:04:53'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -95,6 +102,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -109,6 +119,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -121,11 +134,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 23eb5ffc060c6c52546d38e2b63019bd
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://github.com/hfiref0x/KDU/releases/tag/v1.2.0
-- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Tags:
-- EneTechIo64.sys
-Verified: 'TRUE'

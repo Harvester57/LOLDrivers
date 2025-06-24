@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 4db827b1-325b-444d-9f23-171285a4d12f
+Tags:
+- VProEventMonitor.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create VProEventMonitor.sys binPath=C:\windows\temp\VProEventMonitor.sys     type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/7877c1b0e7429453b750218ca491c2825dae684ad9616642eff7b41715c70aca.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 4db827b1-325b-444d-9f23-171285a4d12f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: ed01170d94a5e21d04b6d7212b53c994
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 9994990c02c37472625cc7b2255044feef9b73c08ca3a70c06861b7d26b27a25
   Company: Symantec Corporation
   Copyright: "Copyright \xA9 2007-2008 Symantec Corporation. All rights reserved."
-  CreationTimestamp: '2012-06-28 04:53:46'
+  CreationTimestamp: '2012-06-28 06:53:46'
   Date: ''
   Description: VProEventMonitor.Sys - Event Monitoring driver
   ExportedFunctions: ''
@@ -127,6 +133,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -140,6 +149,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -155,6 +167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -169,6 +184,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7b00eb4233c0876e11580566d44735fe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0ea74c1d804f5fe5fe6ed67acb4af319
         SHA1: cca391a27aee49e324789ab17802a63035334e7c
@@ -182,6 +200,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -197,6 +218,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -210,10 +234,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: c7f08aed5725fe6a53a62ebe354ff135
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- VProEventMonitor.sys
-Verified: 'TRUE'

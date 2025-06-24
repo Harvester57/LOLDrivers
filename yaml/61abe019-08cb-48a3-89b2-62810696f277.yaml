@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 61abe019-08cb-48a3-89b2-62810696f277
+Tags:
+- NQrmq.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-06-05'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create NQrmq.sys binPath=C:\windows\temp\NQrmq.sys type=kernel &&
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-06-05'
+Resources:
+- ''
 Detection: []
-Id: 61abe019-08cb-48a3-89b2-62810696f277
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: deb930efdc62da7c54923e3c7802a85c
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: 16a1977a9251d6d4bec86bb0702a97bcaefa94444bbfe3978af2f79ee10d62a6
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-02 04:09:08'
+  CreationTimestamp: '2022-06-02 06:09:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -73,6 +79,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 05d98a22e3a0fb56daa205538300381f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: aa52b74b487a98ed02319a5bbd21c7e8
         SHA1: 6cd85ce4aa7b0dcc72ac530bb2fcce7397c05ccd
@@ -88,6 +97,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -103,6 +115,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -116,9 +131,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: dbf09dd3e675f15c7cc9b4d2b8e6cd90
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ''
-Tags:
-- NQrmq.sys
-Verified: 'TRUE'

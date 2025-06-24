@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f
+Tags:
+- segwindrvx64.sys
+Verified: 'TRUE'
 Author: Michael Haag, Nasreddine Bencherchali
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create segwindrvx64.sys binPath=C:\windows\temp\segwindrvx64.sys     type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/65329dad28e92f4bcc64de15c552b6ef424494028b18875b7dba840053bc0cdd.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a4aa80bc-4ecd-49ab-bc0f-0f49b07fdd7f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 5751b28d2c87f7016e4271edbdcf6017
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: e1d2d76829640542eabc0c96356675c0a930e4607869de8037daf62f898903b5
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-03-25 23:49:03'
+  CreationTimestamp: '2014-03-26 01:49:03'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -135,6 +141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -149,6 +158,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -164,6 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -177,6 +192,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -191,6 +209,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0355af7ef9418e476d877eecd9f9e9e2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 768c1a47836a7536fbc50e7be60e65ff
         SHA1: 569a77bd8a095070b13b75bc81cd0422f746daa3
@@ -206,6 +227,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -225,7 +249,7 @@ KnownVulnerableSamples:
     SHA256: f1f345591efe74fd12e706132939f51963eb39dd0a1db556123c3e850c60fada
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2015, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2015-04-01 03:39:09'
+  CreationTimestamp: '2015-04-01 05:39:09'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -322,6 +346,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -336,6 +363,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -350,6 +380,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0355af7ef9418e476d877eecd9f9e9e2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 768c1a47836a7536fbc50e7be60e65ff
         SHA1: 569a77bd8a095070b13b75bc81cd0422f746daa3
@@ -365,6 +398,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -380,6 +416,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -399,7 +438,7 @@ KnownVulnerableSamples:
     SHA256: ca213b79336c69128620bc39e6d987c1e605299fb6525344ba1b08b7829197c7
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-03-18 14:20:01'
+  CreationTimestamp: '2014-03-18 16:20:01'
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
   FileVersion: 100, 0, 7, 0
@@ -490,6 +529,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -504,6 +546,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -519,6 +564,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -532,6 +580,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -546,6 +597,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0355af7ef9418e476d877eecd9f9e9e2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 768c1a47836a7536fbc50e7be60e65ff
         SHA1: 569a77bd8a095070b13b75bc81cd0422f746daa3
@@ -561,6 +615,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -580,7 +637,7 @@ KnownVulnerableSamples:
     SHA256: ee8ee16198dd8eec8d5fbb7f98f64bb849b2dfcf652cc102f4cdc63a4551549f
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-03-18 14:27:12'
+  CreationTimestamp: '2014-03-18 16:27:12'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -690,6 +747,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -704,6 +764,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -719,6 +782,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -732,6 +798,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -746,6 +815,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0355af7ef9418e476d877eecd9f9e9e2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 768c1a47836a7536fbc50e7be60e65ff
         SHA1: 569a77bd8a095070b13b75bc81cd0422f746daa3
@@ -761,6 +833,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -780,7 +855,7 @@ KnownVulnerableSamples:
     SHA256: f83465d2c38c20a3854d86c293867de3baae2f90419dbe82405bc9f9dd7bbd8c
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2014, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2014-09-19 00:42:51'
+  CreationTimestamp: '2014-09-19 02:42:51'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -875,6 +950,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -889,6 +967,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -903,6 +984,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0355af7ef9418e476d877eecd9f9e9e2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 768c1a47836a7536fbc50e7be60e65ff
         SHA1: 569a77bd8a095070b13b75bc81cd0422f746daa3
@@ -918,6 +1002,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -933,6 +1020,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -952,7 +1042,7 @@ KnownVulnerableSamples:
     SHA256: 61bd9a26c01371d865e681f6354853dc0e27b1064906cd99b15220098be6e88d
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2013, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2013-11-15 00:50:12'
+  CreationTimestamp: '2013-11-15 02:50:12'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -1039,6 +1129,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1053,6 +1146,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1068,6 +1164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -1081,6 +1180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1095,6 +1197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0355af7ef9418e476d877eecd9f9e9e2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 768c1a47836a7536fbc50e7be60e65ff
         SHA1: 569a77bd8a095070b13b75bc81cd0422f746daa3
@@ -1110,6 +1215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1129,7 +1237,7 @@ KnownVulnerableSamples:
     SHA256: b06dad9821beef3442cd9e775228baa56582a3a85c9d178693f3cf236623de17
   Company: Insyde Software Corp.
   Copyright: Copyright (c) 2012 - 2013, Insyde Software Corp. All Rights Reserved.
-  CreationTimestamp: '2013-02-21 22:35:02'
+  CreationTimestamp: '2013-02-22 00:35:02'
   Date: ''
   Description: SEG Windows Driver x64
   ExportedFunctions: ''
@@ -1216,6 +1324,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1230,6 +1341,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1245,6 +1359,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -1258,6 +1375,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1272,6 +1392,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0355af7ef9418e476d877eecd9f9e9e2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 768c1a47836a7536fbc50e7be60e65ff
         SHA1: 569a77bd8a095070b13b75bc81cd0422f746daa3
@@ -1287,6 +1410,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1300,9 +1426,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 235102691b04f562ae8aa7ece38d8bc9
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- segwindrvx64.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 05d7cfea-1fb9-4559-8837-d97b713254fe
+Tags:
+- 4.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-03-04'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create 4.sys binPath=C:\windows\temp\4.sys type=kernel && sc.exe
@@ -18,9 +21,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-04'
+Resources:
+- https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
+- ''
 Detection: []
-Id: 05d7cfea-1fb9-4559-8837-d97b713254fe
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 72b24aa23f596d91a5596e57b1c306d0
@@ -28,7 +35,7 @@ KnownVulnerableSamples:
     SHA256: 1716d4c523aeea9703032ca93eb9668b9a16f542c00cec248b0a1c132d80bb15
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-02 04:09:08'
+  CreationTimestamp: '2022-06-02 06:09:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -112,6 +119,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -126,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -138,10 +151,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 2a008187d4a73284ddcc43f1b727b513
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://www.sentinelone.com/labs/driving-through-defenses-targeted-attacks-leverage-signed-malicious-microsoft-drivers/
-- ''
-Tags:
-- 4.sys
-Verified: 'TRUE'

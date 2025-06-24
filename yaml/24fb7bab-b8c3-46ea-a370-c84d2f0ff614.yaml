@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 24fb7bab-b8c3-46ea-a370-c84d2f0ff614
+Tags:
+- ADV64DRV.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create ADV64DRV.sys binPath=C:\windows\temp\ADV64DRV.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection:
 - type: BlockRule
   value: https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules
@@ -36,7 +40,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 24fb7bab-b8c3-46ea-a370-c84d2f0ff614
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: e1c188570d8720f9c35e194e17a7fd36
@@ -44,7 +50,7 @@ KnownVulnerableSamples:
     SHA256: b2b37ef379ada79d2abe78375312bfcd4b518139bc525a522c2a6329ba097cc4
   Company: FUJITSU LIMITED.
   Copyright: Copyright(C) FUJITSU LIMITED 2005
-  CreationTimestamp: '2005-09-16 03:50:59'
+  CreationTimestamp: '2005-09-16 05:50:59'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -116,6 +122,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -129,6 +138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -144,6 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -157,6 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -172,6 +190,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6b7f98e2e421c2f95c47f321abf1aef1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3aef8abc12c5f5a0b32350fbb16f4548
         SHA1: c568d06e1fd94c11c9f1db167c15497e84a86abf
@@ -185,10 +206,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 1d9cdf46ff335712634c292180c06755
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- ADV64DRV.sys
-Verified: 'TRUE'

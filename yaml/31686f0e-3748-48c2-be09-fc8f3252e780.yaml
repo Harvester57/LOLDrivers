@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 31686f0e-3748-48c2-be09-fc8f3252e780
+Tags:
+- FairplayKD.sys
+Verified: 'FALSE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create FairplayKD.sys binPath=C:\windows\temp\FairplayKD.sys type=kernel
@@ -10,7 +13,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
+- https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
+- ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/9f4ce6ab5e8d44f355426d9a6ab79833709f39b300733b5b251a0766e895e0e5.yara
@@ -32,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 31686f0e-3748-48c2-be09-fc8f3252e780
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 5fb82230ba512d33a6e3090985a29e49
@@ -40,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: 66d59e646f3965bc5225eca4285ae65f34b8681fb1bee3eaf440f6795b2fa70f
   Company: Multi Theft Auto
   Copyright: (C) 2003 - 2017 Multi Theft Auto
-  CreationTimestamp: '2017-07-15 18:25:00'
+  CreationTimestamp: '2017-07-15 20:25:00'
   Date: ''
   Description: Multi Theft Auto patch driver
   ExportedFunctions: ''
@@ -137,6 +145,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -150,6 +161,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -164,6 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -178,6 +195,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 371fc099cdb143347b4424e9dc1f3b30
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 494b9765c3a2b4a874439b1afcdde928
         SHA1: be00543b1d5c59f704618fb5e4de9d6bcc18a2fd
@@ -192,6 +212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -203,11 +226,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: cb15f8046e159c17b0510738fa18f758
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/334557-vulnerable-driver-megathread.html
-- https://www.unknowncheats.me/forum/anti-cheat-bypass/244386-mta-fairplaykd-driver-reversed-exploited-rpm.html
-- ''
-Tags:
-- FairplayKD.sys
-Verified: 'FALSE'

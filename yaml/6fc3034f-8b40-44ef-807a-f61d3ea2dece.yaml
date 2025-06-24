@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 6fc3034f-8b40-44ef-807a-f61d3ea2dece
+Tags:
+- NBIOLib_X64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create NBIOLib_X64.sys binPath=C:\windows\temp\NBIOLib_X64.sys     type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/3f2fda9a7a9c57b7138687bbce49a2e156d6095dddabb3454ea09737e02c3fa5.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 6fc3034f-8b40-44ef-807a-f61d3ea2dece
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 2d87365d63e81ef0edc577bf0cb33995
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: d33f19a12cd8e8649a56ce2a41e2b56d2ed80f203e5ededc4114c78ef773ffa8
   Company: MSI
   Copyright: Copyright (C) 2008-2009 MSI. All rights reserved.
-  CreationTimestamp: '2015-11-23 23:34:45'
+  CreationTimestamp: '2015-11-24 01:34:45'
   Date: ''
   Description: NTIOLib
   ExportedFunctions: ''
@@ -112,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -125,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -139,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -152,6 +167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -167,6 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
@@ -178,10 +199,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: d6f977640d4810a784d152e4d3c63a6b
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- NBIOLib_X64.sys
-Verified: 'TRUE'

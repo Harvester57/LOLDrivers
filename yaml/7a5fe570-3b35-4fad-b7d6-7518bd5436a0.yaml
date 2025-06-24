@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 7a5fe570-3b35-4fad-b7d6-7518bd5436a0
+Tags:
+- NodeDriver.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-03-02'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create NodeDriver.sys binPath=C:\windows\temp\NodeDriver.sys type=kernel
@@ -10,9 +13,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-02'
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Detection: []
-Id: 7a5fe570-3b35-4fad-b7d6-7518bd5436a0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: cb01e86f3c5a26629d53856c5e4990ec
@@ -20,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: 43374fd68dc06c8491b16d177156444ee44f497bbceafd0165f40ba48bf6802f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-08-20 09:19:01'
+  CreationTimestamp: '2022-08-20 11:19:01'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -106,6 +113,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -120,6 +130,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -132,10 +145,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: e717abe060bc5c34925fe3120ac22f45
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Tags:
-- NodeDriver.sys
-Verified: 'TRUE'

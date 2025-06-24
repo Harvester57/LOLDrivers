@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 9ca73d04-3349-4c16-9384-94c43335a031
+Tags:
+- Driver7.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 9ca73d04-3349-4c16-9384-94c43335a031
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: c0422d1f940cc872c08c1d0d7103856d
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: 7fba2584bb4fb801f322e3a63253ffac36a76d9dc5f0a4747746b0791e2a0d0b
   Company: ASUStek
   Copyright: 'Copyright '
-  CreationTimestamp: '2013-03-21 06:35:29'
+  CreationTimestamp: '2013-03-21 08:35:29'
   Date: ''
   Description: The driver for the ECtool driver-based tools
   ExportedFunctions: ''
@@ -117,6 +121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -131,6 +138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -146,6 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -159,6 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -174,6 +190,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
@@ -189,6 +208,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -202,9 +224,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 83153e4562f92801f14f1b21f712cb46
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- Driver7.sys
-Verified: 'TRUE'

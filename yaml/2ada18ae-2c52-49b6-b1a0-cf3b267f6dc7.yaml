@@ -1,9 +1,11 @@
 Id: 2ada18ae-2c52-49b6-b1a0-cf3b267f6dc7
+Tags:
+- sfdrvx32.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create sfdrvx32.sys binPath=C:\windows\temp\sfdrvx32.sys type=kernel
     && sc.exe start sfdrvx32.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: sfdrvx32.sys
   MD5: 9f70cd5edcc4efc48ae21e04fb03be9d
@@ -87,6 +89,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -100,6 +105,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -115,6 +123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -129,6 +140,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 202ed4a0a58d3214998c9a2bed089580
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 55742be12a3eedd1220df04ce0bf919b
         SHA1: e385f5f8c52ddad2a1f19e6d43a289e012e5f478
@@ -142,6 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -180,8 +197,6 @@ KnownVulnerableSamples:
       Entropy: 5.771203435719941
       Virtual Size: '0x1ec'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-12-18 04:03:50'
+  CreationTimestamp: '2010-12-18 06:03:50'
   Imphash: c3c9e6c0c33bad17eb055ec795fc113e
-  LoadsDespiteHVCI: 'TRUE'
-Tags:
-- sfdrvx32.sys
+  LoadsDespiteHVCI: 'FALSE'

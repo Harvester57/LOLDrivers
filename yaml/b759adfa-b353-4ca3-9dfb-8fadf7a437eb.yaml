@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b759adfa-b353-4ca3-9dfb-8fadf7a437eb
+Tags:
+- spwizimgVT.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-12'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create spwizimgVT.sys binPath=C:\windows\temp\spwizimgVT.sys type=kernel
@@ -20,9 +23,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-12'
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Detection: []
-Id: b759adfa-b353-4ca3-9dfb-8fadf7a437eb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: d4b2c5fa7675cb780e8d4bc6bee7e41c
@@ -30,7 +36,7 @@ KnownVulnerableSamples:
     SHA256: c9fbff8b749a1f580b5b5b9e59ec3ffd769b4179970b82e32a3d36e7a3a8cb1a
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-05-15 01:22:31'
+  CreationTimestamp: '2023-05-15 03:22:31'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -170,6 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 71a0b73695ddb1afc23b2b9a18ee54cb
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 8314595952398203ab24badbbc927d39
         SHA1: b07dcf73133408eee2786a208ce4b2543bf6c583
@@ -183,6 +192,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dbdf488aeaa9795e332a1ca2747af0d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5037c865c427f7d514ac954ef7e66ccf
         SHA1: cfcc3ebb5c9003e88373beb66781dbdf9e1904d2
@@ -197,6 +209,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -208,9 +223,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: d51f0f6034eb5e45f0ed4e9b7bbc9c97
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Tags:
-- spwizimgVT.sys
-Verified: 'TRUE'

@@ -1,9 +1,11 @@
 Id: 13637210-2e1c-45a4-9f76-fe38c3c34264
+Tags:
+- HpPortIox64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys type=kernel
     && sc.exe start HpPortIox64.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: HpPortIox64.sys
   MD5: 7b9e1e5e8ff4f18f84108bb9f7b5d108
@@ -75,6 +77,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09e002ed55ebc92b8a799574f80069fd
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8e5a33e7bb54021804e4e59f3e526eb6
         SHA1: 1100fd4e09b76dbfc11a2af0be5fb874e1fb7de5
@@ -89,6 +94,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0b7e10903c38490ffa2f679a87a1a7b9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 7b0fbcf5c5aa55932726e9222f56efe2
         SHA1: f09486b2b82a88a8b82aa2a12440496c8e53c452
@@ -123,8 +131,6 @@ KnownVulnerableSamples:
       Entropy: 3.1281653750930665
       Virtual Size: '0x2f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-01-16 02:04:02'
+  CreationTimestamp: '2020-01-16 04:04:02'
   Imphash: d6f977640d4810a784d152e4d3c63a6b
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- HpPortIox64.sys

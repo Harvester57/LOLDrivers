@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 4c815256-2534-4476-b15d-7cbf24c80098
+Tags:
+- jokercontroller.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: 4c815256-2534-4476-b15d-7cbf24c80098
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 788a1df0b3fd2dfa3fdfc24e441f9d2c
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-04-19 21:19:37'
+  CreationTimestamp: '2020-04-19 23:19:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -182,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '01'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 93b601b98fc29a9e89a704048928b85f
         SHA1: 3e8e6487f8fd27d322a269a71edaac5d57811286
@@ -195,6 +204,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 48fc93b46055948d36a7c98a89d69416
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 207045ce7b7ab131e78e459b13825902
         SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
@@ -209,6 +221,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 21a266bd49f2778b24d13d95641ea6ac
         SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
@@ -222,6 +237,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 621d6d0c52019e3b9079152089211c0a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 69409ee689cc94e90149ce9bccab49ae
         SHA1: f3939507fa02c048647ede4cced7596339738157
@@ -235,6 +253,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1d11ed1006343e0fd1bc5511f3ab2084
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c9694893402b97bab780caf28eb06630
         SHA1: e4445448d88eed645840a1640ee97513e67aa457
@@ -249,6 +270,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 073637b724547cd847acfd28662a5e5b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
@@ -262,6 +286,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 812cb8ca0c79b318780ec5128ad13c1d
         SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
@@ -273,9 +300,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 409d2ab916237fb129c57aacbb7cb4fe
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- jokercontroller.sys
-Verified: 'TRUE'

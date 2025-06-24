@@ -1,9 +1,11 @@
 Id: 10b1fc3d-c444-4885-8ca9-4b5891885507
+Tags:
+- atillk64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel
     && sc.exe start atillk64.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/38bb9751a3a1f072d518afe6921a66ee6d5cf6d25bc50af49e1925f20d75d4d7.yara
@@ -41,6 +40,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: atillk64.sys
   MD5: 27d21eeff199ed555a29ca0ea4453cfb
@@ -97,6 +99,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -110,6 +115,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -125,6 +133,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -139,6 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 71bb7d93f6814cf58266cf2176e751b3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c7375b863517bb2bcb73dd7ddf66334e
         SHA1: 489a704b9899dd6f5b195b2e7f7294e5db7aedfb
@@ -152,6 +166,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -193,7 +210,7 @@ KnownVulnerableSamples:
       Entropy: 0.6102086113176999
       Virtual Size: '0x128'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-09 12:36:29'
+  CreationTimestamp: '2005-09-09 14:36:29'
   Imphash: a18b467c3b43f334ca455c495a3ef70d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: atillk64.sys
@@ -244,6 +261,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -257,6 +277,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -272,6 +295,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -286,6 +312,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 71bb7d93f6814cf58266cf2176e751b3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c7375b863517bb2bcb73dd7ddf66334e
         SHA1: 489a704b9899dd6f5b195b2e7f7294e5db7aedfb
@@ -299,6 +328,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -334,7 +366,7 @@ KnownVulnerableSamples:
       Entropy: 3.3307368674259283
       Virtual Size: '0x3a8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-09 12:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Imphash: b4c2607b2af5376910bf80b561e9a18a
   LoadsDespiteHVCI: 'FALSE'
 - Filename: atillk64.sys
@@ -385,6 +417,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -398,6 +433,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -413,6 +451,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -427,6 +468,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 71bb7d93f6814cf58266cf2176e751b3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c7375b863517bb2bcb73dd7ddf66334e
         SHA1: 489a704b9899dd6f5b195b2e7f7294e5db7aedfb
@@ -440,6 +484,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -475,8 +522,6 @@ KnownVulnerableSamples:
       Entropy: 3.3307368674259283
       Virtual Size: '0x3a8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-09-09 12:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Imphash: b4c2607b2af5376910bf80b561e9a18a
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- atillk64.sys

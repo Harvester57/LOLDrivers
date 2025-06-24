@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: Void_Sec
-  Person: Paolo Stagno
+Id: 2c3884d3-9e4f-4519-b18b-0969612621bc
+Tags:
+- LgCoreTemp.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
+Created: '2023-04-15'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create LgCoreTemp.sys binPath=C:\windows\temp\LgCoreTemp.sys     type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Denial of Service
-Created: '2023-04-15'
+Resources:
+- https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -22,7 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 2c3884d3-9e4f-4519-b18b-0969612621bc
+Acknowledgement:
+  Handle: Void_Sec
+  Person: Paolo Stagno
 KnownVulnerableSamples:
 - Authentihash:
     MD5: a4c810e750095e71c0288c1ce6669115
@@ -104,7 +110,7 @@ KnownVulnerableSamples:
     SHA256: 9c4db6ee983fd4fa74f8212031ade343a1b9abdb258d05bef1aabd7ab49fbc16
   Company: Logitech
   Copyright: "Copyright \xA9 Logitech, Inc"
-  CreationTimestamp: '2015-06-09 10:52:04'
+  CreationTimestamp: '2015-06-09 12:52:04'
   Date: ''
   Description: CPU Core Temperature Monitor
   ExportedFunctions: ''
@@ -174,6 +180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -188,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -201,6 +213,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6f20ba7d552fb9c436caf4cc7cbea4b3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ec45634a826b6d64211848832ef8dab1
         SHA1: 95e4adc0349ce66b62decc081bdd04bae5bfab64
@@ -215,6 +230,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -230,6 +248,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -242,9 +263,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 5ea78a193212fe61ac722f45f0b0eab9
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/logitech_v.9.02.65_DoS
-Tags:
-- LgCoreTemp.sys
-Verified: 'TRUE'

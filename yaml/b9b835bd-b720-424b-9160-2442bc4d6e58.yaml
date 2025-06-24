@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b9b835bd-b720-424b-9160-2442bc4d6e58
+Tags:
+- Blackbone.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: b9b835bd-b720-424b-9160-2442bc4d6e58
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 7f9d57ffbcd068082faac8c54b36be59
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: d25904fbf907e19f366d54962ff543d9f53b8fdfd2416c8b9796b6a8dd430e26
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-03-26 21:08:39'
+  CreationTimestamp: '2020-03-26 23:08:39'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -183,6 +189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000857f83dc2a6ca979b8000000000085
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85e8c40624a19ac2076dd91f49d8fb53
         SHA1: 621756d2a4e10231e34677a3c0f2a8d1fb0fb7ca
@@ -197,6 +206,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -209,9 +221,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 3fb8602cf4f6f47b09a3a3259de6786b
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- Blackbone.sys
-Verified: 'TRUE'

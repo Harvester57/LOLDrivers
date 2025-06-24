@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 0eb5f4ce-12a7-4b45-b021-42b995de07c5
+Tags:
+- Air_SYSTEM10.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-03-03'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create Air_SYSTEM10.sys binPath=C:\windows\temp\Air_SYSTEM10.sys     type=kernel
@@ -10,9 +13,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-03'
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Detection: []
-Id: 0eb5f4ce-12a7-4b45-b021-42b995de07c5
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 6f562fc03c72abd6ff33c6df23df0219
@@ -20,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: 9c31a9fbf833b732b5f3f06c31e200994a65ce187260e66eff62278660dba4ef
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-09-29 07:14:26'
+  CreationTimestamp: '2022-09-29 09:14:26'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -143,6 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -157,6 +167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -169,10 +182,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 41113a3a832353963112b94f4635a383
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Tags:
-- Air_SYSTEM10.sys
-Verified: 'TRUE'

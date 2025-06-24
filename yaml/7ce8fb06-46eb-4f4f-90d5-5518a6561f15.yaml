@@ -1,7 +1,11 @@
-Acknowledgement:
-  Handle: hfiref0x
-  Person: hfiref0x
+Id: 7ce8fb06-46eb-4f4f-90d5-5518a6561f15
+Tags:
+- gmer64.sys
+- superman.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-05-22'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create gmer64.sys binPath=C:\windows\temp\gmer64.sys type=kernel
@@ -11,7 +15,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-22'
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
+- http://www.gmer.net/
+- https://github.com/gtworek/PSBits/blob/master/Misc/KillWithLolDriver.ps1
+- https://github.com/ZeroMemoryEx/Blackout
+- https://github.com/b1-team/superman
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/18c909a2b8c5e16821d6ef908f56881aa0ecceeaccb5fa1e54995935fcfd12f7.yara
@@ -33,7 +42,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 7ce8fb06-46eb-4f4f-90d5-5518a6561f15
+Acknowledgement:
+  Handle: hfiref0x
+  Person: hfiref0x
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 7514f440c5b9e5c4a0498e4489b76d62
@@ -41,7 +52,7 @@ KnownVulnerableSamples:
     SHA256: 3913d9754b78182aa25d38fbd7ea02502bdf1d81e6525ab4b5ffe5f543200478
   Company: GMER
   Copyright: Copyright (C) GMER 2003-2013
-  CreationTimestamp: '2016-03-09 00:28:57'
+  CreationTimestamp: '2016-03-09 02:28:57'
   Date: ''
   Description: GMER Driver http://www.gmer.net
   ExportedFunctions: ''
@@ -187,6 +198,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -201,6 +215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6f0e4c627d045bd81b94ec79fd4b371d
         SHA1: a624238b100a59ac8722559c4d1e75aa4f7d99a4
@@ -214,6 +231,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -224,6 +244,7 @@ KnownVulnerableSamples:
       Issuer: C=BE, O=GlobalSign nv,sa, CN=GlobalSign CodeSigning CA , G2
       Version: 1
   Imphash: a998fe47a44bfbf2399968e21cfdf7ca
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: ''
   Libraries:
   - ntoskrnl.exe
@@ -326,7 +347,7 @@ KnownVulnerableSamples:
   Imphash: a998fe47a44bfbf2399968e21cfdf7ca
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-03-09 00:28:57'
+  CreationTimestamp: '2016-03-09 02:28:57'
   RichPEHeaderMD5: ae0016968883c7b6d9bf26bf6adcb454
   RichPEHeaderSHA1: ae1e456ae17f0bce4cb62e8cc3a76e5b83c53caa
   RichPEHeaderSHA256: 9c178663dffdd9f9429f961711da30f4c966a2437d235785d182a6e5afb40fbc
@@ -372,6 +393,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -386,6 +410,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121c5bcad73319ee0131e328a2b814e164a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6f0e4c627d045bd81b94ec79fd4b371d
         SHA1: a624238b100a59ac8722559c4d1e75aa4f7d99a4
@@ -399,6 +426,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -423,14 +453,4 @@ KnownVulnerableSamples:
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
-MitreID: T1068
-Resources:
-- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
-- http://www.gmer.net/
-- https://github.com/gtworek/PSBits/blob/master/Misc/KillWithLolDriver.ps1
-- https://github.com/ZeroMemoryEx/Blackout
-- https://github.com/b1-team/superman
-Tags:
-- gmer64.sys
-- superman.sys
-Verified: 'TRUE'
+  LoadsDespiteHVCI: 'FALSE'

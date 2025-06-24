@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: e769d1f6-8a38-426f-b5e7-447241204ee1
+Tags:
+- GEDevDrv.SYS
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create GEDevDrvSYS binPath= C:\windows\temp\GEDevDrvSYS.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: e769d1f6-8a38-426f-b5e7-447241204ee1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: GE Intelligent Platforms, Inc.
   Date: ''
@@ -78,7 +84,7 @@ KnownVulnerableSamples:
       Entropy: 1.2066155458808279
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-31 22:58:31'
+  CreationTimestamp: '2011-06-01 00:58:31'
   InternalName: GE Device Driver
   Copyright: "\xA9 2011, GE Intelligent Platforms, Inc."
   Imports:
@@ -113,6 +119,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -126,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -140,6 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 696d42a62da190c8cebe0345810f5372
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cbfc054efc981779e2e5d9f25ff0f537
         SHA1: b8b92324d6493e199f87f074f7b91c9ddab2658a
@@ -155,6 +170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -168,6 +186,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -229,7 +250,7 @@ KnownVulnerableSamples:
       Entropy: 1.2066155458808279
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-24 20:35:14'
+  CreationTimestamp: '2017-01-24 22:35:14'
   InternalName: GE Device Driver
   Copyright: "\xA9 2017 General Electric Company"
   Imports:
@@ -264,6 +285,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -278,6 +302,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -292,6 +319,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 21d1e9203b5d6fc7379869075104849a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 769eb6a61bfee7586c6fc6d3f8e6980a
         SHA1: a96b34cfe8a09e8dd8c33eafe4b2043abadcd595
@@ -306,6 +336,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -321,6 +354,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -378,7 +414,7 @@ KnownVulnerableSamples:
       Entropy: 5.970417165409168
       Virtual Size: '0x44c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-01-24 20:35:25'
+  CreationTimestamp: '2017-01-24 22:35:25'
   InternalName: GE Device Driver
   Copyright: "\xA9 2017 General Electric Company"
   Imports:
@@ -423,6 +459,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -437,6 +476,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -451,6 +493,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 21d1e9203b5d6fc7379869075104849a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 769eb6a61bfee7586c6fc6d3f8e6980a
         SHA1: a96b34cfe8a09e8dd8c33eafe4b2043abadcd595
@@ -465,6 +510,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -480,6 +528,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -537,7 +588,7 @@ KnownVulnerableSamples:
       Entropy: 5.96284808819353
       Virtual Size: '0x44c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-31 22:58:39'
+  CreationTimestamp: '2011-06-01 00:58:39'
   InternalName: GE Device Driver
   Copyright: "\xA9 2011, GE Intelligent Platforms, Inc."
   Imports:
@@ -582,6 +633,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -595,6 +649,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -609,6 +666,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 696d42a62da190c8cebe0345810f5372
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cbfc054efc981779e2e5d9f25ff0f537
         SHA1: b8b92324d6493e199f87f074f7b91c9ddab2658a
@@ -624,6 +684,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -636,9 +699,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- GEDevDrv.SYS
-Verified: 'TRUE'

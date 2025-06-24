@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 1c6e1d3b-f825-4065-9e0c-83386883e40f
+Tags:
+- rzpnk.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2017-9769
 Category: vulnerable driver
@@ -16,7 +19,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
+- https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/93d873cdf23d5edc622b74f9544cac7fe247d7a68e1e2a7bf2879fad97a3ae63.yara
@@ -38,7 +43,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 1c6e1d3b-f825-4065-9e0c-83386883e40f
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 76934be6e996e801ea4d68c504d427c3
@@ -46,7 +53,7 @@ KnownVulnerableSamples:
     SHA256: 982ad43111d8b7a7900df652c8873eeb6aa485bb429dee6c2ad44acf598bb5e6
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-07-16 13:10:48'
+  CreationTimestamp: '2017-07-16 15:10:48'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -168,6 +175,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -182,6 +192,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -197,6 +210,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -215,7 +231,7 @@ KnownVulnerableSamples:
     SHA256: 982ad43111d8b7a7900df652c8873eeb6aa485bb429dee6c2ad44acf598bb5e6
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-07-16 13:10:48'
+  CreationTimestamp: '2017-07-16 15:10:48'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -335,6 +351,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -349,6 +368,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -364,6 +386,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -382,7 +407,7 @@ KnownVulnerableSamples:
     SHA256: 3e28142ad02a1ac63ab86f97834321f30bb28e19d5c997bb0a13807ddb414c0e
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-09-20 16:35:30'
+  CreationTimestamp: '2017-09-20 18:35:30'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -515,6 +540,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -529,6 +557,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -544,6 +575,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -562,7 +596,7 @@ KnownVulnerableSamples:
     SHA256: 30d737a6da29ad2fe035c0a5f1f7a423a8cd96b8f3dc9885fe95ef3333478dd7
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2014-10-17 13:36:56'
+  CreationTimestamp: '2014-10-17 15:36:56'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -680,6 +714,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -694,6 +731,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -708,6 +748,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
@@ -723,6 +766,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -738,6 +784,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -757,7 +806,7 @@ KnownVulnerableSamples:
     SHA256: 9d61963c098b07fa7ee6dba40f476fc5d2f16301d79a3e8554319d66c69404a9
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2018. Razer, Inc.
-  CreationTimestamp: '2018-03-19 12:55:13'
+  CreationTimestamp: '2018-03-19 14:55:13'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -889,6 +938,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -903,6 +955,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -918,6 +973,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -936,7 +994,7 @@ KnownVulnerableSamples:
     SHA256: 7070ee6dd615538ca6a701e7bdc2c23a19b84ae8ca5f9edc6307fef47eb05abb
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2016-05-19 15:08:25'
+  CreationTimestamp: '2016-05-19 17:08:25'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -1053,6 +1111,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -1067,6 +1128,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -1082,6 +1146,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1100,7 +1167,7 @@ KnownVulnerableSamples:
     SHA256: a9e0f35da47fe91d887a28a0670d8e79ceef7c61ff6d9af3d0568a9737fe0673
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2015-05-28 13:22:11'
+  CreationTimestamp: '2015-05-28 15:22:11'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -1230,6 +1297,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1244,6 +1314,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1258,6 +1331,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
@@ -1273,6 +1349,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1288,6 +1367,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1307,7 +1389,7 @@ KnownVulnerableSamples:
     SHA256: bedb1e28fd1cdf391edc859c58cb318a9ab686f254195246909b245e7aaf7669
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2018. Razer, Inc.
-  CreationTimestamp: '2018-03-19 12:54:13'
+  CreationTimestamp: '2018-03-19 14:54:13'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -1424,6 +1506,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -1438,6 +1523,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -1453,6 +1541,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1471,7 +1562,7 @@ KnownVulnerableSamples:
     SHA256: e269b4cb9df863c31ae13012429f67a0f3cd81481025d35ce6531b33b63b5976
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-09-20 16:34:31'
+  CreationTimestamp: '2017-09-20 18:34:31'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -1588,6 +1679,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -1602,6 +1696,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -1617,6 +1714,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1635,7 +1735,7 @@ KnownVulnerableSamples:
     SHA256: 39789a159c1196255f1b6d83e23af4082fd4cffe2662e40b71631b4e2e4bc05d
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-07-16 13:12:07'
+  CreationTimestamp: '2017-07-16 15:12:07'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -1768,6 +1868,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -1782,6 +1885,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -1797,6 +1903,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1815,7 +1924,7 @@ KnownVulnerableSamples:
     SHA256: af9c600edb134fb8f21d585bbf7d0a4d3f1b792b6dd104c10d38f220f47671f8
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2016-05-19 15:09:43'
+  CreationTimestamp: '2016-05-19 17:09:43'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -1945,6 +2054,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -1959,6 +2071,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -1974,6 +2089,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1992,7 +2110,7 @@ KnownVulnerableSamples:
     SHA256: e269b4cb9df863c31ae13012429f67a0f3cd81481025d35ce6531b33b63b5976
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-09-20 16:34:31'
+  CreationTimestamp: '2017-09-20 18:34:31'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -2109,6 +2227,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -2123,6 +2244,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -2138,6 +2262,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2156,7 +2283,7 @@ KnownVulnerableSamples:
     SHA256: d2e10e17bca5e85e6b84345b47aab14adf45d98c672db6acf90479a7faf20b5a
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2015-09-16 18:16:35'
+  CreationTimestamp: '2015-09-16 20:16:35'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -2287,6 +2414,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2301,6 +2431,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2315,6 +2448,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
@@ -2330,6 +2466,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2345,6 +2484,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2364,7 +2506,7 @@ KnownVulnerableSamples:
     SHA256: def61560c0650717cb1da923f0d674b363b8f2051247719b34f06744bbb79000
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2015-09-16 18:15:26'
+  CreationTimestamp: '2015-09-16 20:15:26'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -2483,6 +2625,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2497,6 +2642,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2511,6 +2659,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
@@ -2526,6 +2677,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2541,6 +2695,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2560,7 +2717,7 @@ KnownVulnerableSamples:
     SHA256: bedb1e28fd1cdf391edc859c58cb318a9ab686f254195246909b245e7aaf7669
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2018. Razer, Inc.
-  CreationTimestamp: '2018-03-19 12:54:13'
+  CreationTimestamp: '2018-03-19 14:54:13'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -2677,6 +2834,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -2691,6 +2851,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -2706,6 +2869,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2724,7 +2890,7 @@ KnownVulnerableSamples:
     SHA256: 982ad43111d8b7a7900df652c8873eeb6aa485bb429dee6c2ad44acf598bb5e6
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-07-16 13:10:48'
+  CreationTimestamp: '2017-07-16 15:10:48'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -2844,6 +3010,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -2858,6 +3027,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -2873,6 +3045,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2891,7 +3066,7 @@ KnownVulnerableSamples:
     SHA256: d2e10e17bca5e85e6b84345b47aab14adf45d98c672db6acf90479a7faf20b5a
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2015-09-16 18:16:35'
+  CreationTimestamp: '2015-09-16 20:16:35'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -3022,6 +3197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3036,6 +3214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3050,6 +3231,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
@@ -3065,6 +3249,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3080,6 +3267,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3099,7 +3289,7 @@ KnownVulnerableSamples:
     SHA256: 39789a159c1196255f1b6d83e23af4082fd4cffe2662e40b71631b4e2e4bc05d
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-07-16 13:12:07'
+  CreationTimestamp: '2017-07-16 15:12:07'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -3232,6 +3422,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -3246,6 +3439,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -3261,6 +3457,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3279,7 +3478,7 @@ KnownVulnerableSamples:
     SHA256: 9d61963c098b07fa7ee6dba40f476fc5d2f16301d79a3e8554319d66c69404a9
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2018. Razer, Inc.
-  CreationTimestamp: '2018-03-19 12:55:13'
+  CreationTimestamp: '2018-03-19 14:55:13'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -3411,6 +3610,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -3425,6 +3627,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -3440,6 +3645,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3458,7 +3666,7 @@ KnownVulnerableSamples:
     SHA256: def61560c0650717cb1da923f0d674b363b8f2051247719b34f06744bbb79000
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2015-09-16 18:15:26'
+  CreationTimestamp: '2015-09-16 20:15:26'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -3577,6 +3785,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3591,6 +3802,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3605,6 +3819,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
@@ -3620,6 +3837,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3635,6 +3855,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3654,7 +3877,7 @@ KnownVulnerableSamples:
     SHA256: fec1c641c7151e931aeb0d1ac59a97d6d3b486c482c1df8794e6424e75e6da1a
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2014
-  CreationTimestamp: '2014-10-17 13:38:10'
+  CreationTimestamp: '2014-10-17 15:38:10'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -3784,6 +4007,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3798,6 +4024,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3812,6 +4041,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4e4563adead3fedac7bd44ec5c590577
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62e336c644b79eb95f869025a59a0814
         SHA1: a2f3feca99242c7df87dbe3676a64c4dba12b76b
@@ -3827,6 +4059,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3842,6 +4077,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3861,7 +4099,7 @@ KnownVulnerableSamples:
     SHA256: 3e28142ad02a1ac63ab86f97834321f30bb28e19d5c997bb0a13807ddb414c0e
   Company: Razer, Inc.
   Copyright: Copyright (C) 2010-2017. Razer, Inc.
-  CreationTimestamp: '2017-09-20 16:35:30'
+  CreationTimestamp: '2017-09-20 18:35:30'
   Date: ''
   Description: Razer Overlay Support
   ExportedFunctions: ''
@@ -3994,6 +4232,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1834b81889070312b5c4ca72ea419a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 966e59fada7c527111ba61f0cafcb355
         SHA1: d72efbe2c9127b91fffcfa0825dc16c9f7580e44
@@ -4008,6 +4249,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -4023,6 +4267,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4035,10 +4282,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 74081c86ad3e9771011f162c107927de
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/nomi-sec/PoC-in-GitHub/blob/2a85c15ed806287861a7adec6545c85aec618e3b/2017/CVE-2017-9769.json#L13
-- https://www.rapid7.com/db/modules/exploit/windows/local/razer_zwopenprocess/
-Tags:
-- rzpnk.sys
-Verified: 'TRUE'

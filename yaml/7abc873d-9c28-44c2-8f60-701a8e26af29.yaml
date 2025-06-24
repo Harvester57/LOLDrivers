@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 7abc873d-9c28-44c2-8f60-701a8e26af29
+Tags:
+- mhyprotect.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: 7abc873d-9c28-44c2-8f60-701a8e26af29
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 75ac8a7373e9f09f18bb498481b5d3d1
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 14bd76f66fe5749d1812f7cf47cc5f9a8a830c53a7ede5e42a14a4140a70f5d2
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-07-31 20:57:34'
+  CreationTimestamp: '2019-07-31 22:57:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -114,6 +120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 421af2940984191f520a4bc62426a74b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5e970fa8e5b374d84d23bf98aab0173c
         SHA1: c45627b5584bf62327df60d6185744a2d2f2bcbf
@@ -128,6 +137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 625c4d908cd542fbab2ea5733ff15419
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 3e187409e1fcd68ffc6120fb6009cf62
         SHA1: 9bd61e6a791b075faa44aa3acbe313c5691c75d8
@@ -142,6 +154,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2b73db7463114c5a5b324af230577249
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 592ad76ae898df37d17988b22279fb3b
         SHA1: bedaabb03cb578e823720eea01085b81464a3a8e
@@ -155,6 +170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 05a7559541e0fdc678d79e3272468907
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
@@ -169,6 +187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -183,6 +204,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -201,7 +225,7 @@ KnownVulnerableSamples:
     SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-04-19 21:19:37'
+  CreationTimestamp: '2020-04-19 23:19:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -360,6 +384,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -374,6 +401,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -387,6 +417,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 05a7559541e0fdc678d79e3272468907
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
@@ -401,6 +434,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -415,6 +451,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -427,9 +466,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 409d2ab916237fb129c57aacbb7cb4fe
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- mhyprotect.sys
-Verified: 'TRUE'

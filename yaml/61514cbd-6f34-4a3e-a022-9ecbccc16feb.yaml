@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 61514cbd-6f34-4a3e-a022-9ecbccc16feb
+Tags:
+- atillk64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create atillk64.sys binPath=C:\windows\temp\atillk64.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/5c04c274a708c9a7d993e33be3ea9e6119dc29527a767410dbaf93996f87369a.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 61514cbd-6f34-4a3e-a022-9ecbccc16feb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 281880f5f33d1aab062ceccd237ef992
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 126719d008d106b7100ae47ed47666c1334701bd7ddb32d5b8e84048f258700f
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2011-04-15 15:18:51'
+  CreationTimestamp: '2011-04-15 17:18:51'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -115,6 +121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -128,6 +137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -143,6 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -157,6 +172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3de959ef88a52c10bc8511ef057c233f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e600fbca7c2701b9111579168a30d24f
         SHA1: e4cd7d4093a1274a4fb11fa72e24074afd131299
@@ -170,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -189,7 +210,7 @@ KnownVulnerableSamples:
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 12:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -257,7 +278,7 @@ KnownVulnerableSamples:
     SHA256: c9b8ecd0657fda14476920fe47783bd8a951d7a4a640935d9199b4a7ae4b8b69
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 12:36:29'
+  CreationTimestamp: '2005-09-09 14:36:29'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -338,7 +359,7 @@ KnownVulnerableSamples:
     SHA256: 2952ae305f9e206bb0b6d7986f2b6942656c310f9d201cf2e2dd6e961c18804e
   Company: ATI Technologies Inc.
   Copyright: Copyright (C) ATI Technologies Inc., 2003
-  CreationTimestamp: '2005-09-09 12:40:54'
+  CreationTimestamp: '2005-09-09 14:40:54'
   Date: ''
   Description: ATI Diagnostics Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -406,7 +427,7 @@ KnownVulnerableSamples:
     SHA256: 94111de210f6b3b48dda16b3422f0f9180e30bcb5765b6858c451d1d89196199
   Company: Overclocking Tool
   Copyright: Copyright (C), 2005
-  CreationTimestamp: '2005-10-20 08:35:08'
+  CreationTimestamp: '2005-10-20 10:35:08'
   Date: ''
   Description: Overclocking Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -487,7 +508,7 @@ KnownVulnerableSamples:
     SHA256: fb19f241ddae74ec4a0f87dff025ec68dc809f9dd883649c0e58822de28e6f1b
   Company: Overclocking Tool
   Copyright: Copyright (C), 2005
-  CreationTimestamp: '2005-10-20 08:34:01'
+  CreationTimestamp: '2005-10-20 10:34:01'
   Date: ''
   Description: Overclocking Hardware Abstraction Sys
   ExportedFunctions: ''
@@ -549,10 +570,3 @@ KnownVulnerableSamples:
   Signatures: {}
   Imphash: b4c2607b2af5376910bf80b561e9a18a
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- atillk64.sys
-Verified: 'TRUE'

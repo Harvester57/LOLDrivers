@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b9e01a11-6395-4837-a202-0c777d717a43
+Tags:
+- rtcoremini64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: b9e01a11-6395-4837-a202-0c777d717a43
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 1c9092fd102eb8333e091f6f3ccc1f82
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 6279821bf9ecced596f474c8fc547dab0bddbb3ab972390596bd4c5c7b85c685
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-12-21 15:15:00'
+  CreationTimestamp: '2021-12-21 17:15:00'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -121,6 +127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000121585308a2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 3e12d32ec517f55b419739b79b663983
         SHA1: 02dd1db230dce5d495a9264bb0946a4621eeba08
@@ -135,6 +144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 481b6a07a9424c1eaafef3cdf10f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
@@ -148,6 +160,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000003b6ac01e2b21e615dc00000000003b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b61c1ad0b5d89c8170aaa81f8b6218a3
         SHA1: b84d6a44f86e112ef3ecb55e22527fd37f622de8
@@ -161,6 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01f2404240cefd22dbe96c71fc
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0457b0f3260d39d5ebb31b5a25a0f98a
         SHA1: 30396862f517c4aa71795b25d71a772badc36860
@@ -176,6 +194,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6a7bb9e55c0bbf1def6c739c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 86cb9d8321d25d44f040248ada40f6e3
         SHA1: 463cc47327cdb8d04848de5595f0f5d52d7e97ba
@@ -190,6 +211,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01ec1c9240defd2e405d7c4774
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 4b80e148166f75934663aa914e0f1992
         SHA1: dc2cbf1962ab679f4e3724e6c5953bb75f4cdb36
@@ -204,6 +228,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0184d3a8ce3781eb57f4fd877b83aeb2
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 71fa2e9dc37bcda10b8ee18e8330f0d0
         SHA1: d5f650f385330b7609759fbc058d610f52d4352e
@@ -216,9 +243,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 3a0b4122e41bf6973f2e7c1b5eee9c5b
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- rtcoremini64.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: c1265ee4-aed4-4e65-ac54-c64deb5e3b28
+Tags:
+- fur.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
+Created: '2023-05-07'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create fur.sys binPath=C:\windows\temp\fur.sys type=kernel && sc.exe
@@ -11,9 +14,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-07'
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware, https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
 Detection: []
-Id: c1265ee4-aed4-4e65-ac54-c64deb5e3b28
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 5c23bab622d6bbabd23d29b4adaa4ae0
@@ -21,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: aab97fb324c883f1de71112e1d9fb716cef40636e39a3b9f4a5b8678cf7bde3f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-09-14 22:24:03'
+  CreationTimestamp: '2022-09-15 00:24:03'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -111,6 +117,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -125,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -137,9 +149,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 28dc68bb6d6bf4f6b2db8dd7588b2511
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware, https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
-Tags:
-- fur.sys
-Verified: 'TRUE'

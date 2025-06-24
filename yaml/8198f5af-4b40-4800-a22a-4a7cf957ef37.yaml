@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 8198f5af-4b40-4800-a22a-4a7cf957ef37
+Tags:
+- MSqPq.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
+Created: '2023-06-05'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create MSqPq.sys binPath=C:\windows\temp\MSqPq.sys type=kernel &&
@@ -11,9 +14,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-06-05'
+Resources:
+- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
 Detection: []
-Id: 8198f5af-4b40-4800-a22a-4a7cf957ef37
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: e66ea646261c73baee310361524fbb7c
@@ -21,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: 0527451d72ba02db8479ea69689350cc563b939bb2cc685386719ab32b7e2772
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-12-21 06:07:48'
+  CreationTimestamp: '2022-12-21 08:07:48'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -79,6 +85,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 650869732d03e27a4fd494dc51845887
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 25491518fa7930337802391dc6ba0a58
         SHA1: 86d84a70f5ffcab0f069df5a064c21d3ae4f5c9b
@@ -94,6 +103,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -109,6 +121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -122,9 +137,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: fca0f3c7b6d79f494034b9d2a1f5921a
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.trendmicro.com/en_us/research/23/e/blackcat-ransomware-deploys-new-signed-kernel-driver.html
-Tags:
-- MSqPq.sys
-Verified: 'TRUE'

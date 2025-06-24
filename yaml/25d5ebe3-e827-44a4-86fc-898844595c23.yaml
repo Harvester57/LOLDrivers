@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 25d5ebe3-e827-44a4-86fc-898844595c23
+Tags:
+- POORTRY.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-03-04'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create POORTRY.sys binPath=C:\windows\temp\POORTRY.sys type=kernel
@@ -10,9 +13,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-03-04'
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- ''
 Detection: []
-Id: 25d5ebe3-e827-44a4-86fc-898844595c23
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 103f3c1ce174dff5dfc79a428d4bf385
@@ -20,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: 45b9eee68266d1128bc252087f4a8ae18dbb0e0b6317e28bc248b25ca2431a56
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-07 06:29:24'
+  CreationTimestamp: '2022-06-07 08:29:24'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -149,6 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -163,6 +173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -175,10 +188,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: beceab354c66949088c9e5ed1f1ff2a4
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- ''
-Tags:
-- POORTRY.sys
-Verified: 'TRUE'

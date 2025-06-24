@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: aaa92ef1-5728-4e15-9fca-b054b02f0fb0
+Tags:
+- piddrv64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create piddrv64.sys binPath=C:\windows\temp\piddrv64.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection: []
-Id: aaa92ef1-5728-4e15-9fca-b054b02f0fb0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: a6200c0995103391120e3561971560a6
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: b97f870c501714fa453cf18ae8a30c87d08ff1e6d784afdbb0121aea3da2dc28
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-01-23 01:53:06'
+  CreationTimestamp: '2019-01-23 03:53:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -120,6 +126,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000006d9da53e87009d334900000000006d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 492f0445b9066f46587442aaa5cd8e2f
         SHA1: 0cbb75cf1d4b8a17871dbadf9f16551e370bfd4f
@@ -134,6 +143,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -146,10 +158,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: e80eeed7225a880bbde0d038a5fe1af4
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- piddrv64.sys
-Verified: 'TRUE'

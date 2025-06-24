@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: f1dcb0e4-aa53-4e62-ab09-fb7b4a356916
+Tags:
+- netfilterdrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create netfilterdrv.sys binPath=C:\windows\temp \n \n \n  etfilterdrv.sys     type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
-Id: f1dcb0e4-aa53-4e62-ab09-fb7b4a356916
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -46,7 +52,7 @@ KnownVulnerableSamples:
     SHA256: 84df20b1d9d87e305c92e5ffae21b10b325609d59d835a954dbd8750ef5dabf4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-05-15 01:03:51'
+  CreationTimestamp: '2021-05-15 03:03:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -125,6 +131,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
@@ -139,6 +148,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -157,7 +169,7 @@ KnownVulnerableSamples:
     SHA256: 0391107305d76eb9ddf1a5b3b3c50da361e8ab35b573dbd19bf9383436b9303e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-04-09 00:29:46'
+  CreationTimestamp: '2021-04-09 02:29:46'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -314,7 +326,7 @@ KnownVulnerableSamples:
     SHA256: 7113dee11925b346192f6ee5441974db7d1fe9b5be1497a6b295c06930fdd264
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-03-27 02:40:44'
+  CreationTimestamp: '2021-03-27 04:40:44'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -475,6 +487,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
@@ -489,6 +504,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -507,7 +525,7 @@ KnownVulnerableSamples:
     SHA256: 455bc98ba32adab8b47d2d89bdbadca4910f91c182ab2fc3211ba07d3784537b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-04-18 05:19:48'
+  CreationTimestamp: '2021-04-18 07:19:48'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -585,6 +603,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
@@ -599,6 +620,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -617,7 +641,7 @@ KnownVulnerableSamples:
     SHA256: 12a636449a491ef3dc8688c5d25be9ebf785874f9c4573667eefd42139201aa4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-03-17 07:05:54'
+  CreationTimestamp: '2021-03-17 09:05:54'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -775,6 +799,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
@@ -789,6 +816,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -801,9 +831,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: e938b727f5a033818337f7ba0584500f
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- netfilterdrv.sys
-Verified: 'TRUE'

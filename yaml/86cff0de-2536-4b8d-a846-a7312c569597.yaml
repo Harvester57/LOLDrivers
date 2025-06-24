@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 86cff0de-2536-4b8d-a846-a7312c569597
+Tags:
+- nicm.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2013-3956
 Category: vulnerable driver
@@ -12,7 +15,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/e6056443537d4d2314dabca1b9168f1eaaf17a14eb41f6f5741b6b82b3119790.yara
@@ -34,7 +39,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 86cff0de-2536-4b8d-a846-a7312c569597
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 8ab7a633b1d27ac3e7c25caea6609472
@@ -42,7 +49,7 @@ KnownVulnerableSamples:
     SHA256: 714d8791e37373f92f0242a6694cc232686caab69d7ae64b5ed31094cc352893
   Company: Novell, Inc.
   Copyright: "Copyright \xA9 1997-2007 Novell, Inc."
-  CreationTimestamp: '2007-08-09 13:33:01'
+  CreationTimestamp: '2007-08-09 15:33:01'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -178,6 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -191,6 +201,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -206,6 +219,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -220,6 +236,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -233,6 +252,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -252,7 +274,7 @@ KnownVulnerableSamples:
     SHA256: aeaafcb5d6a7f0354915c615bd0cf0e024168d17bd87d4dfe0bd60099482b4a4
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-12-22 01:29:49'
+  CreationTimestamp: '2015-12-22 03:29:49'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -387,6 +409,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -401,6 +426,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -415,6 +443,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -430,6 +461,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -445,6 +479,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -464,7 +501,7 @@ KnownVulnerableSamples:
     SHA256: 1c4f56281d762bfaeb2168c13f3349611c8e3443602d2015540a742d6e79e6bc
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-09-29 19:29:13'
+  CreationTimestamp: '2011-09-29 21:29:13'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -600,6 +637,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -613,6 +653,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -628,6 +671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -642,6 +688,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -655,6 +704,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -674,7 +726,7 @@ KnownVulnerableSamples:
     SHA256: bae01ea7b49bd090e198448c41293830a6e2c68821d65f69ec7dc98a16baef21
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 13:36:24'
+  CreationTimestamp: '2009-09-08 15:36:24'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -810,6 +862,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -823,6 +878,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -838,6 +896,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -852,6 +913,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -865,6 +929,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -884,7 +951,7 @@ KnownVulnerableSamples:
     SHA256: 4b5ef4b48a5b23818e84e415c70bd7058f665cb7cba379d05da689e1cbe1148e
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-07-17 21:24:37'
+  CreationTimestamp: '2011-07-17 23:24:37'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -1026,6 +1093,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1039,6 +1109,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1054,6 +1127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1068,6 +1144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -1081,6 +1160,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1100,7 +1182,7 @@ KnownVulnerableSamples:
     SHA256: 75f1bea34e2bb1d26cf173eba44daeb9bbee8106d43b911a01f73f76be17a165
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:20:09'
+  CreationTimestamp: '2013-01-16 01:20:09'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -1241,6 +1323,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1255,6 +1340,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1270,6 +1358,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1284,6 +1375,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -1297,6 +1391,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1316,7 +1413,7 @@ KnownVulnerableSamples:
     SHA256: fe425d4ea7c8d8bc2e8f32969d058f06a02ab11a0e15e465b989e526be17ca84
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:53:15'
+  CreationTimestamp: '2014-08-26 15:53:15'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -1457,6 +1554,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1471,6 +1571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1485,6 +1588,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -1500,6 +1606,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1515,6 +1624,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1534,7 +1646,7 @@ KnownVulnerableSamples:
     SHA256: 1e556fc49ab6caeb5b835abf683ff04a39f0e467ea5607187c8b2fcf2ca77314
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-09-26 07:20:29'
+  CreationTimestamp: '2015-09-26 09:20:29'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -1669,6 +1781,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1683,6 +1798,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1697,6 +1815,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -1712,6 +1833,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1727,6 +1851,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1746,7 +1873,7 @@ KnownVulnerableSamples:
     SHA256: 677ec2df835069678876defc3ef5ff73f463ad39e8466d76632d06f6a29a494f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-12-18 02:18:54'
+  CreationTimestamp: '2013-12-18 04:18:54'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -1887,6 +2014,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1901,6 +2031,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1915,6 +2048,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -1930,6 +2066,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1945,6 +2084,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1964,7 +2106,7 @@ KnownVulnerableSamples:
     SHA256: 75822137b0934c2146c789d9f6e52da4de4a191698b68819d6d4b0845bbc34ed
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:08:10'
+  CreationTimestamp: '2015-06-26 08:08:10'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -2105,6 +2247,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2119,6 +2264,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2133,6 +2281,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2148,6 +2299,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2163,6 +2317,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2182,7 +2339,7 @@ KnownVulnerableSamples:
     SHA256: 8fca5b647af3f792898efc1bdc008745643b417282cdee13d4edf93a4a8308a0
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-12-18 07:21:00'
+  CreationTimestamp: '2009-12-18 09:21:00'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -2324,6 +2481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2337,6 +2497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2352,6 +2515,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2366,6 +2532,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -2379,6 +2548,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2398,7 +2570,7 @@ KnownVulnerableSamples:
     SHA256: f2cf5653792f32013c6bf8afb2217953708c7040e248ee7a48543e78097c4512
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:27:51'
+  CreationTimestamp: '2012-03-18 21:27:51'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -2539,6 +2711,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2552,6 +2727,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2567,6 +2745,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2581,6 +2762,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -2594,6 +2778,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2613,7 +2800,7 @@ KnownVulnerableSamples:
     SHA256: 00e341c11664a6330122830344bce02aab886143bcaf8f642ab8abc57d80f1e3
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-09-26 07:20:40'
+  CreationTimestamp: '2015-09-26 09:20:40'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -2754,6 +2941,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2768,6 +2958,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2782,6 +2975,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2797,6 +2993,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2812,6 +3011,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2831,7 +3033,7 @@ KnownVulnerableSamples:
     SHA256: b40db5bb6a76ca9aed98366dc19f0c31c50b3f0ac96e0f615e4c52abb6bb0cde
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:53:03'
+  CreationTimestamp: '2014-08-26 15:53:03'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -2966,6 +3168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2980,6 +3185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2994,6 +3202,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3009,6 +3220,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3024,6 +3238,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3043,7 +3260,7 @@ KnownVulnerableSamples:
     SHA256: 16e924aa8ced646c2ee99602b523f511ea386b78ed78a3d265a560fb64e88ee3
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:30:18'
+  CreationTimestamp: '2012-03-18 21:30:18'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -3178,6 +3395,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3191,6 +3411,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3206,6 +3429,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -3220,6 +3446,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -3233,6 +3462,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3252,7 +3484,7 @@ KnownVulnerableSamples:
     SHA256: 516e39dcf7480de4bb86727321c099605a34a54f1d5b3a4aa6dc4bcf260274c9
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-11-18 01:06:16'
+  CreationTimestamp: '2014-11-18 03:06:16'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -3387,6 +3619,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3401,6 +3636,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3415,6 +3653,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3430,6 +3671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3445,6 +3689,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3464,7 +3711,7 @@ KnownVulnerableSamples:
     SHA256: 11dcfa779763dd6e26344b32dd779bb49be470a7b9b43b5f03738c17fed06aa8
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:08:00'
+  CreationTimestamp: '2015-06-26 08:08:00'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -3599,6 +3846,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3613,6 +3863,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3627,6 +3880,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3642,6 +3898,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3657,6 +3916,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3676,7 +3938,7 @@ KnownVulnerableSamples:
     SHA256: e1a6c1e23108ede9167ffdf9ebc6af64a011bdafc57d25f84afab6c021ae7741
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-05-29 04:43:47'
+  CreationTimestamp: '2013-05-29 06:43:47'
   Date: ''
   Description: Novell Client Portability Layer
   ExportedFunctions:
@@ -3817,6 +4079,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3831,6 +4096,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3845,6 +4113,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3860,6 +4131,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3875,6 +4149,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3888,10 +4165,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 24c3d3be20e794c17844d030be03fd2f
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/jbaines-r7/dellicious
-- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Tags:
-- nicm.sys
-Verified: 'TRUE'

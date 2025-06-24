@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 87593c63-9e3e-4d09-aa47-94bca0783396
+Tags:
+- reddriver.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-12'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create reddriver.sys binPath=C:\windows\temp\reddriver.sys type=kernel
@@ -20,9 +23,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-12'
+Resources:
+- https://blog.talosintelligence.com/undocumented-reddriver/
 Detection: []
-Id: 87593c63-9e3e-4d09-aa47-94bca0783396
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 83a03ceabf6f3e51d5f5016cbea4759d
@@ -30,7 +36,7 @@ KnownVulnerableSamples:
     SHA256: 7aa067d928404795b4eb9c169639f23997227504ca4eb7b5b21518e6155abd47
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-04-09 19:09:40'
+  CreationTimestamp: '2023-04-09 21:09:40'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -161,6 +167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 71a0b73695ddb1afc23b2b9a18ee54cb
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 8314595952398203ab24badbbc927d39
         SHA1: b07dcf73133408eee2786a208ce4b2543bf6c583
@@ -174,6 +183,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dbdf488aeaa9795e332a1ca2747af0d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5037c865c427f7d514ac954ef7e66ccf
         SHA1: cfcc3ebb5c9003e88373beb66781dbdf9e1904d2
@@ -188,6 +200,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -199,9 +214,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: e3ee9131742bf9c9d43cb9a425e497dd
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://blog.talosintelligence.com/undocumented-reddriver/
-Tags:
-- reddriver.sys
-Verified: 'TRUE'

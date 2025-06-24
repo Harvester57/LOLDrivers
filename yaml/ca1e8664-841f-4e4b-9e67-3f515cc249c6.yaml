@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: ca1e8664-841f-4e4b-9e67-3f515cc249c6
+Tags:
+- ndislan.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create ndislan.sys binPath=C:\windows\temp \n \n \n  dislan.sys
@@ -10,7 +13,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-02-28'
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/b0eb4d999e4e0e7c2e33ff081e847c87b49940eb24a9e0794c6aa9516832c427.yara
@@ -32,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: ca1e8664-841f-4e4b-9e67-3f515cc249c6
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 8bddebd3670d9f154318afd62195a2b8
@@ -40,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: 9345c3af554c06aa949492f1642a7a03404956d2952cca8a68658b62dccb0825
   Company: Microsoft Corporation
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2012-10-12 10:49:03'
+  CreationTimestamp: '2012-10-12 12:49:03'
   Date: ''
   Description: MS LAN Driver
   ExportedFunctions: ''
@@ -132,6 +140,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 387c9476e28320264594846317d46540
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ce372214eabe9d311e4a156fe2044327
         SHA1: 7f7eb1a547c9b0b2e41b0f44515dfd20c16edceb
@@ -147,6 +158,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -162,6 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -175,11 +192,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 70e1caa5a322b56fd7951f1b2caacb0d
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Tags:
-- ndislan.sys
-Verified: 'TRUE'

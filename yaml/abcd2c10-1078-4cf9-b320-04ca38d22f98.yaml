@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: abcd2c10-1078-4cf9-b320-04ca38d22f98
+Tags:
+- Chaos-Rootkit.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-06-05'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create Chaos-Rootkit.sys binPath=C:\windows\temp\Chaos-Rootkit.sys
@@ -12,9 +15,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-06-05'
+Resources:
+- https://github.com/ZeroMemoryEx/Chaos-Rootkit
 Detection: []
-Id: abcd2c10-1078-4cf9-b320-04ca38d22f98
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 7f41d82fd2f02bb6e2d621bc225c34b2
@@ -22,7 +28,7 @@ KnownVulnerableSamples:
     SHA256: 60fb851ce3da03c319a423979b47a95dd231085d89b26516f3e25164a1a14dfb
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-05-21 06:19:33'
+  CreationTimestamp: '2023-05-21 08:19:33'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -99,6 +105,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 13d597c6ebaaaf994d4463d3387c0dd2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6b552c6f192fd7c811a7f292b41dd282
         SHA1: fbd054373b922c03cad87c948c29ed2ed0883910
@@ -110,9 +119,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 3415f704b3149ea9a3d3a54036b208dd
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://github.com/ZeroMemoryEx/Chaos-Rootkit
-Tags:
-- Chaos-Rootkit.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 73290fcb-a0d7-481e-81a5-65a9859b50f5
+Tags:
+- pchunter.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 73290fcb-a0d7-481e-81a5-65a9859b50f5
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: c5eb8ca809d54657aebef56f74ec3ab6
@@ -34,7 +38,7 @@ KnownVulnerableSamples:
   Company: "\u5B89\u82AF\u7F51\u76FE\uFF08\u5317\u4EAC\uFF09\u79D1\u6280\u6709\u9650\
     \u516C\u53F8"
   Copyright: (C) 2019-2021 AnXinSec Corporation. All Rights Reserved.
-  CreationTimestamp: '2020-07-29 09:37:31'
+  CreationTimestamp: '2020-07-29 11:37:31'
   Date: ''
   Description: "\u7CFB\u7EDF\u4FE1\u606F\u67E5\u770B\u5DE5\u5177"
   ExportedFunctions: ''
@@ -187,6 +191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -201,6 +208,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0551bc8c6aa2ca032bc6713830d849a3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3e1a270566dbef6f024e8a592eea2b08
         SHA1: 740d462ba0502946e1dc537ab97cf3825631caf9
@@ -214,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -228,6 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -241,6 +257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -253,9 +272,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: c56dbf2e72704141d7b2279a64c54621
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- pchunter.sys
-Verified: 'TRUE'

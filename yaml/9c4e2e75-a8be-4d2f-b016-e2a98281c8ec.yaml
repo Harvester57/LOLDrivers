@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 9c4e2e75-a8be-4d2f-b016-e2a98281c8ec
+Tags:
+- bs_hwmio64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: 9c4e2e75-a8be-4d2f-b016-e2a98281c8ec
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 7aee4bd242f01b3e4441b80c6a6dd593
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 7ea9b2420483183cf7b25d6577848f2dfe2ae064a61d931d6b8b65b31a1b2685
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2010-12-02 00:35:34'
+  CreationTimestamp: '2010-12-02 02:35:34'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -96,6 +102,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -109,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -124,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -137,6 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -152,6 +170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 124dc5a63cc2bd8265445e912ed07d1f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: beccd5c41126e0c537cf489954b53feb
         SHA1: 109fbb823652c1148c4949cdc860abd5b4ad24e5
@@ -165,9 +186,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 42bba6b33379ce4af9d401af88faaca3
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- bs_hwmio64.sys
-Verified: 'TRUE'

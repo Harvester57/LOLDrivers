@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b0dedc3f-6e4b-497a-aade-390cbf4beebb
+Tags:
+- GtcKmdfBs.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create GtcKmdfBssys binPath= C:\windows\temp\GtcKmdfBssys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: b0dedc3f-6e4b-497a-aade-390cbf4beebb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Getac Technology Corporation
   Date: ''
@@ -78,7 +84,7 @@ KnownVulnerableSamples:
       Entropy: 3.628051844656089
       Virtual Size: '0x44'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-02-22 23:31:41'
+  CreationTimestamp: '2021-02-23 01:31:41'
   InternalName: mtcBSv64.sys
   Copyright: Copyright (C) 2019 Getac Technology Corporation
   Imports:
@@ -126,6 +132,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -141,6 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3ace4ace02076b0bd6bb6ed06cbb540e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ebe3c04dee2bdd919e2ac4735ec46780
         SHA1: c99e6b965d1da2c16d701a22fcbae0ab5f7d0836
@@ -151,7 +163,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Getac Technology Corporation
   Date: ''
   Description: Getac System Service Provider
@@ -201,7 +213,7 @@ KnownVulnerableSamples:
       Entropy: 3.5500043357756796
       Virtual Size: '0x34'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-26 20:08:13'
+  CreationTimestamp: '2019-09-26 22:08:13'
   InternalName: mtcBSv64.sys
   Copyright: Copyright (C) 2019 Getac Technology Corporation
   Imports:
@@ -247,6 +259,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -261,6 +276,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -275,6 +293,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -290,6 +311,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3ace4ace02076b0bd6bb6ed06cbb540e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ebe3c04dee2bdd919e2ac4735ec46780
         SHA1: c99e6b965d1da2c16d701a22fcbae0ab5f7d0836
@@ -300,7 +324,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Getac Technology Corporation
   Date: ''
   Description: Getac System Service Provider
@@ -350,7 +374,7 @@ KnownVulnerableSamples:
       Entropy: 3.584439240025572
       Virtual Size: '0x34'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-07-09 01:12:34'
+  CreationTimestamp: '2019-07-09 03:12:34'
   InternalName: mtcBSv64.sys
   Copyright: Copyright (C) 2019 Getac Technology Corporation
   Imports:
@@ -397,6 +421,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -411,6 +438,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -425,6 +455,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -440,6 +473,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3ace4ace02076b0bd6bb6ed06cbb540e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ebe3c04dee2bdd919e2ac4735ec46780
         SHA1: c99e6b965d1da2c16d701a22fcbae0ab5f7d0836
@@ -450,7 +486,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Getac Technology Corporation
   Date: ''
   Description: Getac System Service Provider
@@ -497,7 +533,7 @@ KnownVulnerableSamples:
       Entropy: 6.659998518678376
       Virtual Size: '0x558'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-26 20:07:44'
+  CreationTimestamp: '2019-09-26 22:07:44'
   InternalName: mtcBSv32.sys
   Copyright: Copyright (C) 2019 Getac Technology Corporation
   Imports:
@@ -558,6 +594,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -572,6 +611,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -586,6 +628,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -601,6 +646,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3ace4ace02076b0bd6bb6ed06cbb540e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ebe3c04dee2bdd919e2ac4735ec46780
         SHA1: c99e6b965d1da2c16d701a22fcbae0ab5f7d0836
@@ -611,7 +659,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Getac Technology Corporation
   Date: ''
   Description: Getac System Service Provider
@@ -661,7 +709,7 @@ KnownVulnerableSamples:
       Entropy: 3.5500043357756796
       Virtual Size: '0x34'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-09-26 20:08:13'
+  CreationTimestamp: '2019-09-26 22:08:13'
   InternalName: mtcBSv64.sys
   Copyright: Copyright (C) 2019 Getac Technology Corporation
   Imports:
@@ -707,6 +755,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -721,6 +772,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -735,6 +789,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -750,6 +807,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3ace4ace02076b0bd6bb6ed06cbb540e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ebe3c04dee2bdd919e2ac4735ec46780
         SHA1: c99e6b965d1da2c16d701a22fcbae0ab5f7d0836
@@ -760,10 +820,4 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- GtcKmdfBs.sys
-Verified: 'TRUE'
+  LoadsDespiteHVCI: 'TRUE'

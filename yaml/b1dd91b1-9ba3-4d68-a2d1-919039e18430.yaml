@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b1dd91b1-9ba3-4d68-a2d1-919039e18430
+Tags:
+- dcr.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-04-14'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create dcr.sys binPath=C:\windows\temp\dcr.sys type=kernel && sc.exe
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-04-14'
+Resources:
+- https://github.com/wjcsharp/DriveCrypt
 Detection: []
-Id: b1dd91b1-9ba3-4d68-a2d1-919039e18430
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: accf79b751fafb101c1ce17fb7611b70
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: 2b60228db4f3092063e115537b5731ef3487ecf55c036e812605c5149071332c
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-04-03 06:12:33'
+  CreationTimestamp: '2009-04-03 08:12:33'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -136,6 +142,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01000000000111ea7d2e62
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 33218aaf2454a9863d9be77758790d24
         SHA1: 7291c25764ff0ae63ab32a0cf3c20148a10ad6d7
@@ -150,6 +159,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -164,6 +176,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9612448
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
@@ -178,6 +193,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4f63d030f815a3a5b3446940063d1689
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 6ad2be2166fde7539b29744bae5182a8
         SHA1: f5f184fe76ce3561f8c3355fd377b2d7c7583ba2
@@ -191,6 +209,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -203,9 +224,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 858ceae385cdcfcbc7814644564c23e6
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/wjcsharp/DriveCrypt
-Tags:
-- dcr.sys
-Verified: 'TRUE'

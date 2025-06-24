@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 9748d5c8-62dd-474b-a336-0aadb49e5ff9
+Tags:
+- daxin_blank3.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create daxin_blank3.sys binPath=C:\windows\temp\daxin_blank3.sys     type=kernel
@@ -10,9 +13,14 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-02-28'
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Detection: []
-Id: 9748d5c8-62dd-474b-a336-0aadb49e5ff9
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 800a604e6039d6dc93d68d116c38b640
@@ -20,7 +28,7 @@ KnownVulnerableSamples:
     SHA256: afb9e6b70f707149e7243e41ffafbdda463da9a890c56091c454df60608efa0f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-17 17:54:13'
+  CreationTimestamp: '2009-11-17 19:54:13'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -159,11 +167,3 @@ KnownVulnerableSamples:
   Signatures: {}
   Imphash: 6c8d5c79a850eecc2fb0291cebda618d
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Tags:
-- daxin_blank3.sys
-Verified: 'TRUE'

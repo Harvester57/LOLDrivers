@@ -1,9 +1,11 @@
 Id: 2d7c96d3-2d6c-44cd-a8a1-5239f571a24a
+Tags:
+- HW.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create HW.sys binPath=C:\windows\temp\HW.sys type=kernel && sc.exe
     start HW.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/fd388cf1df06d419b14dedbeb24c6f4dff37bea26018775f09d56b3067f0de2c.yara
@@ -37,6 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: HW.sys
   MD5: 3cf7a55ec897cc938aebb8161cb8e74f
@@ -121,6 +123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -134,6 +139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -148,6 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -162,6 +173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121f0942b1e09a2573e8ab9ce0e3955b2de
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5bdf35241e1bbd3dd8560aba2c4305f1
         SHA1: 34e844721f998e3b40ee75329c4e5df87e52dc61
@@ -175,6 +189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -205,8 +222,6 @@ KnownVulnerableSamples:
       Entropy: 3.6769129984563755
       Virtual Size: '0x49c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-06-24 17:52:05'
+  CreationTimestamp: '2015-06-24 19:52:05'
   Imphash: bd093a7d5ba5632ee52f3466a688ee55
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- HW.sys

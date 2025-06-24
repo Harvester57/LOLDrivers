@@ -1,9 +1,11 @@
 Id: 8c2df58f-1e02-4911-ad40-3fa4ed1f4333
+Tags:
+- ef0e1725aaf0c6c972593f860531a2ea.sys
+Verified: 'TRUE'
 Author: Alice Climent-Pommeret
 Created: '2023-07-31'
 MitreID: T1014
 Category: malicious
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ef0e1725aaf0c6c972593f860531a2ea.sys binPath=C:\windows\temp\ef0e1725aaf0c6c972593f860531a2ea.sys
     type=kernel && sc.exe start ef0e1725aaf0c6c972593f860531a2ea.sys
@@ -23,10 +25,10 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - https://blog.talosintelligence.com/undocumented-reddriver/
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: ''
   MD5: ef0e1725aaf0c6c972593f860531a2ea
@@ -70,7 +72,7 @@ KnownVulnerableSamples:
       Entropy: 5.343230388706494
       Virtual Size: '0xa96'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-23 19:41:15'
+  CreationTimestamp: '2023-06-23 21:41:15'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -177,6 +179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a005d2e2bcd4137168217d8c727747c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4d213d99215f488050faaa39765656d1
         SHA1: 0308508b5a3fcd330bbf28931f8e1a9c93c3ee69
@@ -192,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -207,6 +215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -220,5 +231,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: be0dd8b8e045356d600ee55a64d9d197
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- ef0e1725aaf0c6c972593f860531a2ea.sys

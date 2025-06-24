@@ -1,11 +1,15 @@
 Id: e5f12b82-8d07-474e-9587-8c7b3714d60c
+Tags:
+- zam64.sys
+- zamguard32.sys
+- zamguard64.sys
+Verified: 'TRUE'
 Author: Michael Haag, Nasreddine Bencherchali
 Created: '2023-01-09'
 MitreID: T1068
 CVE:
 - CVE-2018-5713
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create zam64.sys binPath=C:\windows\temp\zam64.sys type=kernel &&
     sc.exe start zam64.sys
@@ -19,9 +23,6 @@ Resources:
 - https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 - https://www.trendmicro.com/en_us/research/23/e/attack-on-security-titans-earth-longzhi-returns-with-new-tricks.html
 - https://github.com/ZeroMemoryEx/Terminator
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -33,6 +34,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: zam64.sys
   MD5: 2a3ce41bb2a7894d939fbd1b20dae5a0
@@ -190,6 +194,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -204,6 +211,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -217,6 +227,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -231,6 +244,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -245,6 +261,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -285,7 +304,7 @@ KnownVulnerableSamples:
       Entropy: 4.004251703727133
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-20 16:27:25'
+  CreationTimestamp: '2015-11-20 18:27:25'
   Imphash: b35d1d3faa6c97b106b343823d5df867
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zam64.sys
@@ -426,6 +445,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -440,6 +462,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -453,6 +478,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -467,6 +495,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -481,6 +512,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -521,7 +555,7 @@ KnownVulnerableSamples:
       Entropy: 4.005527221234636
       Virtual Size: '0x5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-07-23 05:10:50'
+  CreationTimestamp: '2015-07-23 07:10:50'
   Imphash: 7fba20994f76fb31b9f5a2b3f0c00055
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zamguard64.sys
@@ -694,6 +728,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -708,6 +745,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -721,6 +761,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -735,6 +778,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -749,6 +795,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -789,7 +838,7 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-05-24 03:38:42'
+  CreationTimestamp: '2016-05-24 05:38:42'
   Imphash: 3edc60bda68569cac7ad7604728ff40d
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zam64.sys
@@ -947,6 +996,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -961,6 +1013,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -974,6 +1029,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -988,6 +1046,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1002,6 +1063,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1042,7 +1106,7 @@ KnownVulnerableSamples:
       Entropy: 4.004251703727133
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-03 07:00:59'
+  CreationTimestamp: '2015-11-03 09:00:59'
   Imphash: c6a0f65ba653ee78255cc9e314abc442
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zam64.sys
@@ -1215,6 +1279,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000058e7c589c068dca727000000000058
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d83c9268bb1f35e4ea0f81b7b876b4f8
         SHA1: 6a784e02bf67f5791a85567716aa2d0fd701fcd0
@@ -1229,6 +1296,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -1269,7 +1339,7 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 11:06:53'
+  CreationTimestamp: '2016-08-17 13:06:53'
   Imphash: 3edc60bda68569cac7ad7604728ff40d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: zam64.sys
@@ -1410,6 +1480,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1424,6 +1497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1437,6 +1513,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -1451,6 +1530,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1465,6 +1547,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1505,7 +1590,7 @@ KnownVulnerableSamples:
       Entropy: 4.005527221234636
       Virtual Size: '0x5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-08-30 06:52:48'
+  CreationTimestamp: '2015-08-30 08:52:48'
   Imphash: 7fba20994f76fb31b9f5a2b3f0c00055
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zamguard64.sys
@@ -1646,6 +1731,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1660,6 +1748,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1673,6 +1764,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -1687,6 +1781,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1701,6 +1798,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1741,7 +1841,7 @@ KnownVulnerableSamples:
       Entropy: 3.8191100346914766
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-06-30 07:29:29'
+  CreationTimestamp: '2015-06-30 09:29:29'
   Imphash: 0e9dfd08346bbe128159bff440d13389
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zamguard32.sys
@@ -1926,6 +2026,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1940,6 +2043,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1953,6 +2059,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -1967,6 +2076,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1981,6 +2093,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2018,7 +2133,7 @@ KnownVulnerableSamples:
       Entropy: 6.750936493564276
       Virtual Size: '0x222c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 11:07:02'
+  CreationTimestamp: '2016-08-17 13:07:02'
   Imphash: a49a51d7f2ae972483961eb64d17888e
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zam64.sys
@@ -2157,6 +2272,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2171,6 +2289,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2184,6 +2305,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -2198,6 +2322,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2212,6 +2339,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2252,7 +2382,7 @@ KnownVulnerableSamples:
       Entropy: 3.7715246176915187
       Virtual Size: '0x54'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-12 07:14:11'
+  CreationTimestamp: '2015-05-12 09:14:11'
   Imphash: 089e8a8f2bb007852c63b64e66430293
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zam64.sys
@@ -2425,6 +2555,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2439,6 +2572,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2452,6 +2588,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -2466,6 +2605,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2480,6 +2622,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2520,7 +2665,7 @@ KnownVulnerableSamples:
       Entropy: 4.067679213183045
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-04-01 04:23:58'
+  CreationTimestamp: '2016-04-01 06:23:58'
   Imphash: 5f6fd4ffba177389f414dd1a6ded24b4
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zam64.sys
@@ -2670,6 +2815,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2684,6 +2832,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2697,6 +2848,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -2711,6 +2865,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2725,6 +2882,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2765,7 +2925,7 @@ KnownVulnerableSamples:
       Entropy: 3.983795976674783
       Virtual Size: '0x58'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-10-22 05:36:54'
+  CreationTimestamp: '2015-10-22 07:36:54'
   Imphash: 519cf5394541bf5e2869edeec81521e1
   LoadsDespiteHVCI: 'TRUE'
 - Filename: zam64.sys
@@ -2944,6 +3104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2958,6 +3121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2971,6 +3137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0210230fd364b469091b8a4440145e18
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 17e68f0650db3d4d698ef88ef963b47e
         SHA1: 00162854ea07ea0a83aa941767277a5c3ab03c9d
@@ -2985,6 +3154,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2999,6 +3171,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -3039,10 +3214,6 @@ KnownVulnerableSamples:
       Entropy: 4.064239284774715
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-17 11:06:53'
+  CreationTimestamp: '2016-08-17 13:06:53'
   Imphash: 3edc60bda68569cac7ad7604728ff40d
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- zam64.sys
-- zamguard32.sys
-- zamguard64.sys

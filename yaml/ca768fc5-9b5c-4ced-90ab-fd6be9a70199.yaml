@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: ca768fc5-9b5c-4ced-90ab-fd6be9a70199
+Tags:
+- amp.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create amp.sys binPath=C:\windows\temp\amp.sys type=kernel && sc.exe
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/cbb8239a765bf5b2c1b6a5c8832d2cab8fef5deacadfb65d8ed43ef56d291ab6.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: ca768fc5-9b5c-4ced-90ab-fd6be9a70199
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 74ee74d20c3afc42d7722a88aacf3671
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: a37371c4e62f106e7da03fd5bdd6f12ecdf7fcaf1195dbf9fb7ef6eb456a7506
   Company: CYREN Inc.
   Copyright: "Copyright \xA9 1999 - 2014. CYREN Inc. All rights reserved."
-  CreationTimestamp: '2014-03-25 13:59:30'
+  CreationTimestamp: '2014-03-25 15:59:30'
   Date: ''
   Description: AMP Minifilter
   ExportedFunctions: ''
@@ -226,6 +232,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -240,6 +249,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -255,6 +267,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -268,6 +283,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -282,6 +300,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 560e308d590a10d941619020e45e2c2b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1c70d34387d8008dfcb38b42d3ed1d80
         SHA1: 6128f04efd947c44e0e9034b1bbe07f37ae95f25
@@ -295,10 +316,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: d8752c1d5954bea175ac00df5acebb09
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Tags:
-- amp.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 47724cc1-bf75-4ab7-a47a-355a9aa30de1
+Tags:
+- BSMIx64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create BSMIx64.sys binPath=C:\windows\temp\BSMIx64.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/552f70374715e70c4ade591d65177be2539ec60f751223680dfaccb9e0be0ed9.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 47724cc1-bf75-4ab7-a47a-355a9aa30de1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 72a5a1e2fc2713cfa0d159485ce1253c
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 15bc804877a607ba0d017df9f6ac951ac7ffbcca8069c5ba28e0cf505f7553b8
   Company: ''
   Copyright: Copyright (C) BIOSTAR Corp. 2011
-  CreationTimestamp: '2012-04-14 00:29:52'
+  CreationTimestamp: '2012-04-14 02:29:52'
   Date: ''
   Description: SMI Driver
   ExportedFunctions: ''
@@ -114,6 +120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -127,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -142,6 +154,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -155,6 +170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -170,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 124dc5a63cc2bd8265445e912ed07d1f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: beccd5c41126e0c537cf489954b53feb
         SHA1: 109fbb823652c1148c4949cdc860abd5b4ad24e5
@@ -183,10 +204,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: bc5c06a7fa9555f3f34043d828d9b123
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- BSMIx64.sys
-Verified: 'TRUE'

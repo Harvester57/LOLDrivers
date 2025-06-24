@@ -1,9 +1,11 @@
 Id: 79542852-3a0c-43bc-bfa3-3eeb0e1d7fd2
+Tags:
+- VBoxDrv.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create VBoxDrv.sys binPath=C:\windows\temp\VBoxDrv.sys type=kernel
     && sc.exe start VBoxDrv.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: VBoxDrv.sys
   MD5: b1b8e6b85dd03c7f1290b1a071fc79c1
@@ -603,6 +605,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: c3b2c606d320e0bf4f71f1e73668a938
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: bdf06d2ae5584184829321a1af947932
         SHA1: ffbcdef9b656d73245e310774c99d2d48645eb01
@@ -616,6 +621,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -629,6 +637,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -668,7 +679,7 @@ KnownVulnerableSamples:
       Entropy: 4.07818833178508
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-06-22 05:17:13'
+  CreationTimestamp: '2018-06-22 07:17:13'
   Imphash: 9470f56376e665fb981a35b303436041
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -1246,6 +1257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d87df1b3d1e239b405dc85d0a0bad22
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: fbe18b58073fb49c37c5790f1e2065f0
         SHA1: a0a8778312b53234bbf75e19e10664c52e0c524c
@@ -1259,6 +1273,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1272,6 +1289,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1311,7 +1331,7 @@ KnownVulnerableSamples:
       Entropy: 4.078099091032765
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-15 22:57:54'
+  CreationTimestamp: '2019-02-16 00:57:54'
   Imphash: 9470f56376e665fb981a35b303436041
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -1652,6 +1672,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1665,6 +1688,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1680,6 +1706,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1694,6 +1723,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 693a64818c1e086b1b15aee63fa054a2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 50b256a55cdc23561dd4aa76abed4fd9
         SHA1: b3ee591b9218cfdcd394180558bd01bb674df627
@@ -1707,6 +1739,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1748,7 +1783,7 @@ KnownVulnerableSamples:
       Entropy: 4.803419428597937
       Virtual Size: '0x6ea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-06-30 05:41:34'
+  CreationTimestamp: '2009-06-30 07:41:34'
   Imphash: fd133033a24971502ff0b2f189215c56
   LoadsDespiteHVCI: 'FALSE'
 - Filename: VBoxDrv.sys
@@ -3635,6 +3670,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 77769240d819a3f2eb2e7f8baffecd26
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1922bd7053ed4bb7a7fb5ea723b2caae
         SHA1: db658eba418c008978ed8e7be3da0545d0eaaa35
@@ -3648,6 +3686,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47974d7873a5bcab0d2fb370192fce5e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3a93dc2a8a8a668fdbb286bfe9afab5
         SHA1: 95795d2aa2a554a423bc8c6e5b0a016d14887d35
@@ -3662,6 +3703,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611fb0a400000000001d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a3f222107d4e1085e73b5b589c2f480b
         SHA1: b94aa26cd77c48d91a53ac44506cbd255e1d362c
@@ -3701,7 +3745,7 @@ KnownVulnerableSamples:
       Entropy: 3.995412021920204
       Virtual Size: '0x1e0a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-30 09:08:50'
+  CreationTimestamp: '2021-05-30 11:08:50'
   Imphash: 2a20cc9578bb34a4bb10b87b49b24982
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -3990,6 +4034,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000033c89c66a7b45bb1fbd00000000033c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 46f57c3b860b08484cb79066ac1014ad
         SHA1: c1fe3ab97b834a98460e4ae92fe2468d16f61a92
@@ -4004,6 +4051,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61077656000000000008'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 30a3f0b64324ed7f465e7fc618cb69e7
         SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
@@ -4044,7 +4094,7 @@ KnownVulnerableSamples:
       Entropy: 4.900332523869931
       Virtual Size: '0x672'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-04-07 12:30:47'
+  CreationTimestamp: '2009-04-07 14:30:47'
   Imphash: 6723b1d5bd0f1fc13216cb44541e619e
   LoadsDespiteHVCI: 'TRUE'
 - Filename: VBoxDrv.sys
@@ -4333,6 +4383,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -4346,6 +4399,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -4361,6 +4417,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -4375,6 +4434,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 693a64818c1e086b1b15aee63fa054a2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 50b256a55cdc23561dd4aa76abed4fd9
         SHA1: b3ee591b9218cfdcd394180558bd01bb674df627
@@ -4388,6 +4450,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4429,7 +4494,7 @@ KnownVulnerableSamples:
       Entropy: 4.900332523869931
       Virtual Size: '0x672'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-05-29 11:54:09'
+  CreationTimestamp: '2009-05-29 13:54:09'
   Imphash: 6723b1d5bd0f1fc13216cb44541e619e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: VBoxDrv.sys
@@ -5007,6 +5072,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d87df1b3d1e239b405dc85d0a0bad22
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: fbe18b58073fb49c37c5790f1e2065f0
         SHA1: a0a8778312b53234bbf75e19e10664c52e0c524c
@@ -5020,6 +5088,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -5033,6 +5104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -5072,8 +5146,6 @@ KnownVulnerableSamples:
       Entropy: 4.078099091032765
       Virtual Size: '0xfb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-04 15:27:31'
+  CreationTimestamp: '2019-02-04 17:27:31'
   Imphash: 9470f56376e665fb981a35b303436041
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- VBoxDrv.sys

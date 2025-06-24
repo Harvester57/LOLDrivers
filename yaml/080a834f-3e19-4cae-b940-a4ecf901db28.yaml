@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 080a834f-3e19-4cae-b940-a4ecf901db28
+Tags:
+- HWiNFO64I.SYS
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 080a834f-3e19-4cae-b940-a4ecf901db28
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 3c96154a55e5b0cb40f5c0500639b4a7
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: 548c44566d19ba0975c9a22e7b592fda45bfa8831e56f55c1c3e7241d84dd175
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2012 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2012-05-10 07:05:22'
+  CreationTimestamp: '2012-05-10 09:05:22'
   Date: ''
   Description: HWiNFO IA64 Kernel Driver
   ExportedFunctions: ''
@@ -142,6 +146,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -155,6 +162,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -168,6 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -182,6 +195,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -196,6 +212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -209,6 +228,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -221,9 +243,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 7bf7d94570a80fb38c22341013531b14
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- HWiNFO64I.SYS
-Verified: 'TRUE'

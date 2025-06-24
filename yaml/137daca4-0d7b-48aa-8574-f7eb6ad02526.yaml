@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 137daca4-0d7b-48aa-8574-f7eb6ad02526
+Tags:
+- speedfan.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2007-5633
 Category: vulnerable driver
@@ -12,7 +15,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/22be050955347661685a4343c51f11c7811674e030386d2264cd12ecbf544b7c.yara
@@ -34,7 +39,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 137daca4-0d7b-48aa-8574-f7eb6ad02526
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: af368f76c059d1e07aa884e86d29bbab
@@ -42,7 +49,7 @@ KnownVulnerableSamples:
     SHA256: 641490e28b2a1ee223238f5d969b5abf60a1089afe597c4251b285449e6b3b04
   Company: Windows (R) Server 2003 DDK provider
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
-  CreationTimestamp: '2006-09-24 07:26:48'
+  CreationTimestamp: '2006-09-24 09:26:48'
   Date: ''
   Description: SpeedFan Device Driver
   ExportedFunctions: ''
@@ -111,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -124,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -139,6 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -153,6 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7b12cd12b82d7758c4d7c3e398845b3c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9c6803e909424a7709e1eec71bb56fee
         SHA1: 29237efa67b52838056a16648f18d5b31920f4ce
@@ -166,6 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -179,11 +201,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: adfd4c0b031598afecb6f3f585f5f581
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Tags:
-- speedfan.sys
-Verified: 'TRUE'

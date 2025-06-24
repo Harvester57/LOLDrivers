@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 2e4fedb0-30ed-400d-b4e1-b2b2004c1607
+Tags:
+- OpenLibSys.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create OpenLibSys.sys binPath=C:\windows\temp\OpenLibSys.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/91314768da140999e682d2a290d48b78bb25a35525ea12c1b1f9634d14602b2c.yara
@@ -34,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 2e4fedb0-30ed-400d-b4e1-b2b2004c1607
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 1244664c7917f03f2b43b30e132f64b5
@@ -42,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: db68a9cbe22b22cba782592eef76e63e080ee8d30943be6da694701f44b6c33e
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007 OpenLibSys.org
-  CreationTimestamp: '2007-10-18 23:03:47'
+  CreationTimestamp: '2007-10-19 01:03:47'
   Date: ''
   Description: OpenLibSys
   ExportedFunctions: ''
@@ -114,6 +120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01000000000115372421a8
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c11203d7c1fcb38e1eaff246bb8e7595
         SHA1: 99f00de6eefb2076662465e682a2429373ebcb26
@@ -128,6 +137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -142,6 +154,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -155,6 +170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -169,6 +187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9612448
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
@@ -182,6 +203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -200,7 +224,7 @@ KnownVulnerableSamples:
     SHA256: 6f3937451f0170a0aec3033cadceeb86ab30ee3c67add3926e116ccc20c0d9a7
   Company: OpenLibSys.org
   Copyright: Copyright (C) 2007 OpenLibSys.org
-  CreationTimestamp: '2007-10-23 08:03:27'
+  CreationTimestamp: '2007-10-23 10:03:27'
   Date: ''
   Description: OpenLibSys
   ExportedFunctions: ''
@@ -272,6 +296,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01000000000115372421a8
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c11203d7c1fcb38e1eaff246bb8e7595
         SHA1: 99f00de6eefb2076662465e682a2429373ebcb26
@@ -286,6 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -300,6 +330,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -313,6 +346,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -327,6 +363,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9612448
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 2fc76031fc24eec1ef3db2d246d21d6a
         SHA1: 75c3a1f76b9dfa31ef6bf56325e7bd0bf6e4779d
@@ -340,6 +379,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -352,10 +394,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: d6f977640d4810a784d152e4d3c63a6b
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- OpenLibSys.sys
-Verified: 'TRUE'

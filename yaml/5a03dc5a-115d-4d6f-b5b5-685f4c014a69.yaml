@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 5a03dc5a-115d-4d6f-b5b5-685f4c014a69
+Tags:
+- sfdrvx64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 5a03dc5a-115d-4d6f-b5b5-685f4c014a69
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 3997557bc6175c3a3fa6e7a3abcd9161
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: 8f8956abdeb2a52be2cc514790a737a0ad39a9e698a77c1f358e77f1bf9f180b
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2011"
-  CreationTimestamp: '2011-03-18 10:08:46'
+  CreationTimestamp: '2011-03-18 12:08:46'
   Date: ''
   Description: SpeedFan x64 Driver
   ExportedFunctions: ''
@@ -125,6 +129,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -138,6 +145,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -153,6 +163,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -166,6 +179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -180,6 +196,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 13aeb106771cc3a1bcef3513c2e03196
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3ba7a92d9261090182e93029fbb8cb5f
         SHA1: 909fd9f95fcd160634f33a56914a1177ee818e0d
@@ -195,6 +214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -214,7 +236,7 @@ KnownVulnerableSamples:
     SHA256: d8ff25255202321bd00f7aa792800e1fb7aab506dca771a4a8e2cc1af265fa15
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2010"
-  CreationTimestamp: '2010-12-18 04:03:51'
+  CreationTimestamp: '2010-12-18 06:03:51'
   Date: ''
   Description: Speed Fan x64 Driver
   ExportedFunctions: ''
@@ -303,6 +325,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -316,6 +341,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -331,6 +359,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -345,6 +376,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 202ed4a0a58d3214998c9a2bed089580
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 55742be12a3eedd1220df04ce0bf919b
         SHA1: e385f5f8c52ddad2a1f19e6d43a289e012e5f478
@@ -358,6 +392,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -377,7 +414,7 @@ KnownVulnerableSamples:
     SHA256: c09dfc18959fe51d3e5ca1500a94ab74faf0eb72040930e89cdbac653df9e816
   Company: Almico Software
   Copyright: "Copyright \xA9 Almico Software 2001-2013"
-  CreationTimestamp: '2012-12-29 13:59:35'
+  CreationTimestamp: '2012-12-29 15:59:35'
   Date: ''
   Description: SpeedFan x64 Driver
   ExportedFunctions: ''
@@ -468,6 +505,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -481,6 +521,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -494,6 +537,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -508,6 +554,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112195d7aa105e2ffc7b0e33f36da1636e74
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 84bc78b97f6e7688634c980ee0a78102
         SHA1: 53a67d0f8677e0c85cc75c779ffe199fcff5df42
@@ -521,6 +570,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -532,9 +584,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 9833f7dab4a59d51b04d2cf31656a0f6
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- sfdrvx64.sys
-Verified: 'TRUE'

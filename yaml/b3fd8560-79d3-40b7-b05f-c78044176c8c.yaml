@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: b3fd8560-79d3-40b7-b05f-c78044176c8c
+Tags:
+- xjokercontroller.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: b3fd8560-79d3-40b7-b05f-c78044176c8c
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 788a1df0b3fd2dfa3fdfc24e441f9d2c
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 25454028a4f56d3c58747811a86be43397a6290d1a053bc30d97b41bf3c58c6f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-04-19 21:19:37'
+  CreationTimestamp: '2020-04-19 23:19:37'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -182,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 21a266bd49f2778b24d13d95641ea6ac
         SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
@@ -196,6 +205,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 00e3214c81339540a3804fca656f5aea7d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e92698d5c465b606f7b442425888a42f
         SHA1: 28ce18c759778e18724fba34c2ba4b2b8a13b06a
@@ -210,6 +222,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 073637b724547cd847acfd28662a5e5b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
@@ -223,6 +238,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 812cb8ca0c79b318780ec5128ad13c1d
         SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
@@ -235,9 +253,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 409d2ab916237fb129c57aacbb7cb4fe
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- xjokercontroller.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 933f5671-e995-4976-8392-52d34dcd4e05
+Tags:
+- TdkLib64.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create TdkLib64sys binPath= C:\windows\temp\TdkLib64sys.sys type=kernel
@@ -15,9 +18,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection: []
-Id: 933f5671-e995-4976-8392-52d34dcd4e05
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -59,7 +65,7 @@ KnownVulnerableSamples:
       Entropy: 5.137238819476553
       Virtual Size: '0x4ac'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-02-26 00:40:56'
+  CreationTimestamp: '2013-02-26 02:40:56'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -111,6 +117,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -125,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -140,6 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -153,6 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -168,6 +186,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 46e79b91ebefa4d3229b32650e85d0fb
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1d13dffe16459c7c342c031c57a7b495
         SHA1: 4bb8ae412d1b92f9d2bc840a07822859dafa8ec2
@@ -183,6 +204,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -194,7 +218,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -235,7 +259,7 @@ KnownVulnerableSamples:
       Entropy: 5.150733446279817
       Virtual Size: '0x48a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-07-21 05:02:14'
+  CreationTimestamp: '2017-07-21 07:02:14'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -286,6 +310,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -300,6 +327,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -315,6 +345,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -328,6 +361,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -342,6 +378,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 398dac5aceed96bd2722943deb287519
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6be1b0e46d009e1aca49365bf2d882a5
         SHA1: b8c19cce8c4b08d110c3a60b152752b081fac4f8
@@ -357,6 +396,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -368,7 +410,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -412,7 +454,7 @@ KnownVulnerableSamples:
       Entropy: 2.5638651219508537
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-10-15 06:03:36'
+  CreationTimestamp: '2018-10-15 08:03:36'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -463,6 +505,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -477,6 +522,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -491,6 +539,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -506,6 +557,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 411882032859087bea5fdd62c591749a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 01e3c1335693d085eb16e91794ae8bc9
         SHA1: 74c6122a0fe3aece8641010636bba0386886d560
@@ -521,6 +575,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -531,7 +588,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -575,7 +632,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-27 04:42:38'
+  CreationTimestamp: '2020-05-27 06:42:38'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -625,6 +682,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -639,6 +699,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -653,6 +716,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -668,6 +734,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 411882032859087bea5fdd62c591749a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 01e3c1335693d085eb16e91794ae8bc9
         SHA1: 74c6122a0fe3aece8641010636bba0386886d560
@@ -683,6 +752,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -693,7 +765,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -740,7 +812,7 @@ KnownVulnerableSamples:
       Entropy: 2.7500000000000004
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-03-02 18:26:04'
+  CreationTimestamp: '2017-03-02 20:26:04'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -790,6 +862,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -804,6 +879,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -819,6 +897,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -832,6 +913,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -846,6 +930,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 398dac5aceed96bd2722943deb287519
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6be1b0e46d009e1aca49365bf2d882a5
         SHA1: b8c19cce8c4b08d110c3a60b152752b081fac4f8
@@ -861,6 +948,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -872,7 +962,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -913,7 +1003,7 @@ KnownVulnerableSamples:
       Entropy: 5.141506839882625
       Virtual Size: '0x46a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-11 20:37:28'
+  CreationTimestamp: '2013-07-11 22:37:28'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -963,6 +1053,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -977,6 +1070,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -992,6 +1088,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -1005,6 +1104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1020,6 +1122,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 46e79b91ebefa4d3229b32650e85d0fb
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1d13dffe16459c7c342c031c57a7b495
         SHA1: 4bb8ae412d1b92f9d2bc840a07822859dafa8ec2
@@ -1035,6 +1140,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1046,7 +1154,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1090,7 +1198,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-14 23:48:36'
+  CreationTimestamp: '2022-02-15 01:48:36'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1139,6 +1247,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -1153,6 +1264,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -1168,6 +1282,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01bee7b15e85c862c8f6bb0509d7272a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 803395cf9897c5a2f1dd15a172082631
         SHA1: e814fd62616c96b050d5c803d3a37cf201c60d83
@@ -1182,6 +1299,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -1192,7 +1312,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1236,7 +1356,7 @@ KnownVulnerableSamples:
       Entropy: 2.314979820516481
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-02-04 22:55:39'
+  CreationTimestamp: '2018-02-05 00:55:39'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1287,6 +1407,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1301,6 +1424,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1315,6 +1441,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -1330,6 +1459,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 411882032859087bea5fdd62c591749a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 01e3c1335693d085eb16e91794ae8bc9
         SHA1: 74c6122a0fe3aece8641010636bba0386886d560
@@ -1345,6 +1477,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1355,7 +1490,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Symantec Corporation, OU=Symantec Trust Network, CN=Symantec
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1399,7 +1534,7 @@ KnownVulnerableSamples:
       Entropy: 2.7588718484453603
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-27 04:42:38'
+  CreationTimestamp: '2020-05-27 06:42:38'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1448,6 +1583,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -1462,6 +1600,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -1477,6 +1618,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01bee7b15e85c862c8f6bb0509d7272a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 803395cf9897c5a2f1dd15a172082631
         SHA1: e814fd62616c96b050d5c803d3a37cf201c60d83
@@ -1491,6 +1635,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -1501,7 +1648,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert EV Code Signing
         CA (SHA2)
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1542,7 +1689,7 @@ KnownVulnerableSamples:
       Entropy: 5.142000901499599
       Virtual Size: '0x44e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-28 02:56:32'
+  CreationTimestamp: '2011-10-28 04:56:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1591,6 +1738,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1604,6 +1754,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1619,6 +1772,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -1632,6 +1788,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1647,6 +1806,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6e4d187717fb6daf7655d91ce7b6a028
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 33260b771ca7e0759c3e4bb889f8d731
         SHA1: 9595cfebdab1dfc33088f2941454284d0c4740ba
@@ -1662,6 +1824,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1673,7 +1838,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1714,7 +1879,7 @@ KnownVulnerableSamples:
       Entropy: 5.141506839882625
       Virtual Size: '0x46a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-11 20:37:28'
+  CreationTimestamp: '2013-07-11 22:37:28'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1764,6 +1929,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1778,6 +1946,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1793,6 +1964,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -1806,6 +1980,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1821,6 +1998,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 46e79b91ebefa4d3229b32650e85d0fb
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1d13dffe16459c7c342c031c57a7b495
         SHA1: 4bb8ae412d1b92f9d2bc840a07822859dafa8ec2
@@ -1836,6 +2016,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1847,7 +2030,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1888,7 +2071,7 @@ KnownVulnerableSamples:
       Entropy: 5.1736517365164225
       Virtual Size: '0x47c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-27 04:05:18'
+  CreationTimestamp: '2020-05-27 06:05:18'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1938,6 +2121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1952,6 +2138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1966,6 +2155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1980,6 +2172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 02b9c124a43676b1118a1e28ad4619ed
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0c2f48573796560c2239ce8c8f2d8782
         SHA1: 20cbb64d699961a3ba37001ddf2c2de9fa8db3f9
@@ -1994,6 +2189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2004,7 +2202,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert High Assurance
         Code Signing CA,1
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -2045,7 +2243,7 @@ KnownVulnerableSamples:
       Entropy: 5.142000901499599
       Virtual Size: '0x44e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-28 02:56:32'
+  CreationTimestamp: '2011-10-28 04:56:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2094,6 +2292,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2107,6 +2308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2122,6 +2326,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2135,6 +2342,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2150,6 +2360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6e4d187717fb6daf7655d91ce7b6a028
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 33260b771ca7e0759c3e4bb889f8d731
         SHA1: 9595cfebdab1dfc33088f2941454284d0c4740ba
@@ -2165,6 +2378,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2176,7 +2392,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -2217,7 +2433,7 @@ KnownVulnerableSamples:
       Entropy: 5.142000901499599
       Virtual Size: '0x44e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-28 02:56:32'
+  CreationTimestamp: '2011-10-28 04:56:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2266,6 +2482,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2279,6 +2498,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2294,6 +2516,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2307,6 +2532,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2322,6 +2550,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6e4d187717fb6daf7655d91ce7b6a028
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 33260b771ca7e0759c3e4bb889f8d731
         SHA1: 9595cfebdab1dfc33088f2941454284d0c4740ba
@@ -2337,6 +2568,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2348,7 +2582,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -2395,7 +2629,7 @@ KnownVulnerableSamples:
       Entropy: 3.5796532634600933
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-06-07 00:29:32'
+  CreationTimestamp: '2023-06-07 02:29:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2469,6 +2703,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 21a266bd49f2778b24d13d95641ea6ac
         SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
@@ -2483,6 +2720,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 073637b724547cd847acfd28662a5e5b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
@@ -2497,6 +2737,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
@@ -2510,6 +2753,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 812cb8ca0c79b318780ec5128ad13c1d
         SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
@@ -2525,6 +2771,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 07c461a16c8db0bf6ff708efe0d831fb
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7a500bc3aef709f56643b9c69914efad
         SHA1: 90ba9862a246c8674e6e0953d193e3a89b182b9d
@@ -2535,7 +2784,7 @@ KnownVulnerableSamples:
       Issuer: C=US, O=DigiCert, Inc., CN=DigiCert Trusted G4 Code Signing RSA4096
         SHA384 2021 CA1
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -2582,7 +2831,7 @@ KnownVulnerableSamples:
       Entropy: 2.4940954395801547
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-08-21 05:25:03'
+  CreationTimestamp: '2017-08-21 07:25:03'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2633,6 +2882,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2647,6 +2899,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2662,6 +2917,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2675,6 +2933,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2689,6 +2950,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 398dac5aceed96bd2722943deb287519
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6be1b0e46d009e1aca49365bf2d882a5
         SHA1: b8c19cce8c4b08d110c3a60b152752b081fac4f8
@@ -2704,6 +2968,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2715,7 +2982,7 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -2756,7 +3023,7 @@ KnownVulnerableSamples:
       Entropy: 5.141506839882625
       Virtual Size: '0x46a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-05-24 01:24:16'
+  CreationTimestamp: '2012-05-24 03:24:16'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -2806,6 +3073,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -2819,6 +3089,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2834,6 +3107,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2847,6 +3123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2862,6 +3141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 46e79b91ebefa4d3229b32650e85d0fb
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1d13dffe16459c7c342c031c57a7b495
         SHA1: 4bb8ae412d1b92f9d2bc840a07822859dafa8ec2
@@ -2877,6 +3159,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2888,10 +3173,4 @@ KnownVulnerableSamples:
         https://www.verisign.com/rpa (c)10, CN=VeriSign Class 3 Code Signing 2010
         CA
       Version: 1
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- TdkLib64.sys
-Verified: 'TRUE'
+  LoadsDespiteHVCI: 'TRUE'

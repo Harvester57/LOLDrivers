@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: ebdde780-e142-44e7-a998-504c516f4695
+Tags:
+- mhyprotrpg.Sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: ebdde780-e142-44e7-a998-504c516f4695
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 147333457f1bc42553237b1e54badabe
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 5195443274ee3a382e947f03fd409437730434c2af0c1bb1c99f5ba1953f989e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-12-20 21:33:43'
+  CreationTimestamp: '2021-12-20 23:33:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -184,6 +190,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 05a7559541e0fdc678d79e3272468907
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3e83a7572d1c522dd9072ba6399029d7
         SHA1: e2c2d59b70f028a66a8711bfa97f842475f84639
@@ -198,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -212,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -226,6 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 300f6facdd6698747ca94636a7782db9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
@@ -240,6 +258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 008c77a0008ff4d1b0c63d9f3a48838d6b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 6efd500ce038df7aa3087c1e63a5eb5c
         SHA1: 1c961712a02fb995c585080eda53a753656ca3ad
@@ -252,9 +273,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: ebb99842fa08915eb8b7f67d8dc7a13a
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- mhyprotrpg.Sys
-Verified: 'TRUE'

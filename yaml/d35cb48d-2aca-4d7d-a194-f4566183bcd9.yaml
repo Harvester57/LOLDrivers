@@ -1,9 +1,11 @@
 Id: d35cb48d-2aca-4d7d-a194-f4566183bcd9
+Tags:
+- TmComm.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create TmComm.sys binPath=C:\windows\temp\TmComm.sys type=kernel
     && sc.exe start TmComm.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: TmComm.sys
   MD5: 34686a4b10f239d781772e9e94486c1a
@@ -781,6 +783,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -795,6 +800,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -808,6 +816,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 497c4fad471540e6e453d0cafb155740
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
@@ -823,6 +834,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -838,6 +852,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -879,7 +896,7 @@ KnownVulnerableSamples:
       Entropy: 6.584816287075715
       Virtual Size: '0x368a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-10-16 04:19:20'
+  CreationTimestamp: '2017-10-16 06:19:20'
   Imphash: 383be1d728b0be96be1b810a131705ee
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -1616,6 +1633,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
@@ -1630,6 +1650,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1643,6 +1666,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1657,6 +1683,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1670,6 +1699,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1713,7 +1745,7 @@ KnownVulnerableSamples:
       Entropy: 4.092946145413326
       Virtual Size: '0x7f6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-11-24 20:59:46'
+  CreationTimestamp: '2019-11-24 22:59:46'
   Imphash: 3ac083b0ee2b752436a8a1532179f032
   LoadsDespiteHVCI: 'TRUE'
 - Filename: TmComm.sys
@@ -2410,6 +2442,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -2425,6 +2460,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -2438,6 +2476,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2451,6 +2492,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
@@ -2466,6 +2510,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2507,7 +2554,7 @@ KnownVulnerableSamples:
       Entropy: 6.563142165769885
       Virtual Size: '0x2ec2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-03 06:29:37'
+  CreationTimestamp: '2015-12-03 08:29:37'
   Imphash: f43aa654b4bfb882a0af098ad3f899e9
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -3263,6 +3310,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1688f039255e638e69143907e6330b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
@@ -3276,6 +3326,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
@@ -3291,6 +3344,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3306,6 +3362,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3347,7 +3406,7 @@ KnownVulnerableSamples:
       Entropy: 6.578935622303867
       Virtual Size: '0x35d6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-04 03:27:03'
+  CreationTimestamp: '2016-08-04 05:27:03'
   Imphash: 383be1d728b0be96be1b810a131705ee
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -4091,6 +4150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -4105,6 +4167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -4118,6 +4183,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 497c4fad471540e6e453d0cafb155740
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
@@ -4133,6 +4201,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4148,6 +4219,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4195,7 +4269,7 @@ KnownVulnerableSamples:
       Entropy: 5.319305863516213
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-07-12 21:23:02'
+  CreationTimestamp: '2017-07-12 23:23:02'
   Imphash: 234f0978e7f2aa0beb9501ff53d94e5b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -4949,6 +5023,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
@@ -4963,6 +5040,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -4976,6 +5056,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -4990,6 +5073,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -5003,6 +5089,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -5043,7 +5132,7 @@ KnownVulnerableSamples:
       Entropy: 6.508397535267547
       Virtual Size: '0x36c6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-22 02:26:17'
+  CreationTimestamp: '2020-06-22 04:26:17'
   Imphash: 31907ffcac211e27136b14bb2f442070
   LoadsDespiteHVCI: 'TRUE'
 - Filename: TmComm.sys
@@ -5697,6 +5786,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -5710,6 +5802,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -5725,6 +5820,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -5738,6 +5836,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5752,6 +5853,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 24e3d70b86ed54d0b22c3450b960984e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8ddf6d6623a3f10024af513804bb606d
         SHA1: 4daedaec405b6dfefce005517e230b2419ad08bc
@@ -5793,7 +5897,7 @@ KnownVulnerableSamples:
       Entropy: 6.456848462956811
       Virtual Size: '0x2378'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-07-27 20:25:40'
+  CreationTimestamp: '2011-07-27 22:25:40'
   Imphash: 8ed3fbdefcc1982cd7decc40ace9d2e7
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -6389,6 +6493,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -6402,6 +6509,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -6417,6 +6527,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -6431,6 +6544,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 645212f783f4d7aba3555729e99ce065
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
@@ -6444,6 +6560,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -6485,7 +6604,7 @@ KnownVulnerableSamples:
       Entropy: 6.410366991109568
       Virtual Size: '0x1b90'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-11-01 22:13:22'
+  CreationTimestamp: '2009-11-02 00:13:22'
   Imphash: 6903b92e7760c5d7f7c181b64eb13176
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -7246,6 +7365,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
@@ -7260,6 +7382,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -7273,6 +7398,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -7287,6 +7415,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -7300,6 +7431,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -7340,7 +7474,7 @@ KnownVulnerableSamples:
       Entropy: 6.625578074091372
       Virtual Size: '0x381c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-11-18 03:29:47'
+  CreationTimestamp: '2019-11-18 05:29:47'
   Imphash: 9b3ad85a76080f989d24cd89da90175a
   LoadsDespiteHVCI: 'TRUE'
 - Filename: TmComm.sys
@@ -7940,6 +8074,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -7953,6 +8090,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -7968,6 +8108,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -7982,6 +8125,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 645212f783f4d7aba3555729e99ce065
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
@@ -7995,6 +8141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -8036,7 +8185,7 @@ KnownVulnerableSamples:
       Entropy: 6.406852082339942
       Virtual Size: '0x1c9a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-02-08 02:56:46'
+  CreationTimestamp: '2010-02-08 04:56:46'
   Imphash: 0ebd5902a82ddfef8ed96678c1573a7b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -8770,6 +8919,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
@@ -8784,6 +8936,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -8827,7 +8982,7 @@ KnownVulnerableSamples:
       Entropy: 4.0313065892955455
       Virtual Size: '0x7be'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-17 20:32:14'
+  CreationTimestamp: '2021-06-17 22:32:14'
   Imphash: fbcdb079e9c13a82f98b79bb6ce86175
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -9520,6 +9675,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -9533,6 +9691,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -9548,6 +9709,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -9561,6 +9725,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -9575,6 +9742,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
@@ -9616,7 +9786,7 @@ KnownVulnerableSamples:
       Entropy: 6.549466447440598
       Virtual Size: '0x2b5c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-08-02 03:35:11'
+  CreationTimestamp: '2012-08-02 05:35:11'
   Imphash: e9077c03c44a511c2c8eaf5bad9ab90b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -10372,6 +10542,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -10387,6 +10560,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -10400,6 +10576,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -10413,6 +10592,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
@@ -10428,6 +10610,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -10469,7 +10654,7 @@ KnownVulnerableSamples:
       Entropy: 6.584936952359539
       Virtual Size: '0x35ce'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-07-16 05:25:16'
+  CreationTimestamp: '2015-07-16 07:25:16'
   Imphash: 383be1d728b0be96be1b810a131705ee
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -11046,6 +11231,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -11059,6 +11247,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -11074,6 +11265,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -11088,6 +11282,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 645212f783f4d7aba3555729e99ce065
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
@@ -11101,6 +11298,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -11142,7 +11342,7 @@ KnownVulnerableSamples:
       Entropy: 6.379725750908649
       Virtual Size: '0x1796'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-22 06:53:20'
+  CreationTimestamp: '2008-07-22 08:53:20'
   Imphash: ef102e058f6b88af0d66d26236257706
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -11900,6 +12100,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1688f039255e638e69143907e6330b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
@@ -11913,6 +12116,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
@@ -11928,6 +12134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -11943,6 +12152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -11984,7 +12196,7 @@ KnownVulnerableSamples:
       Entropy: 6.788646623912156
       Virtual Size: '0x3310'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-01 21:01:01'
+  CreationTimestamp: '2016-08-01 23:01:01'
   Imphash: 88380fdfc880da4da407c38f34fe8a3c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -12709,6 +12921,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -12724,6 +12939,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -12737,6 +12955,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -12751,6 +12972,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1a9d178ad334acdf47c8a0d15bb50e6e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 685d99029d38a9d263ea82cd02a49f6c
         SHA1: 93464d8f54b4ee7caf22ca1db15a4211e0d3c79e
@@ -12795,7 +13019,7 @@ KnownVulnerableSamples:
       Entropy: 3.7667938810500683
       Virtual Size: '0x76e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-09-27 20:56:05'
+  CreationTimestamp: '2013-09-27 22:56:05'
   Imphash: d8101af81fd826b492ced1994ebd3268
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -13448,6 +13672,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -13461,6 +13688,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -13476,6 +13706,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -13489,6 +13722,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -13503,6 +13739,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 24e3d70b86ed54d0b22c3450b960984e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8ddf6d6623a3f10024af513804bb606d
         SHA1: 4daedaec405b6dfefce005517e230b2419ad08bc
@@ -13544,7 +13783,7 @@ KnownVulnerableSamples:
       Entropy: 6.4411864426675525
       Virtual Size: '0x224c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-06-20 22:08:35'
+  CreationTimestamp: '2011-06-21 00:08:35'
   Imphash: 8418ac0d7aaa9015794e55ea54733342
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -14296,6 +14535,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -14311,6 +14553,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -14324,6 +14569,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -14338,6 +14586,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1a9d178ad334acdf47c8a0d15bb50e6e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 685d99029d38a9d263ea82cd02a49f6c
         SHA1: 93464d8f54b4ee7caf22ca1db15a4211e0d3c79e
@@ -14379,7 +14630,7 @@ KnownVulnerableSamples:
       Entropy: 6.578578500694431
       Virtual Size: '0x329e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-12-09 05:00:06'
+  CreationTimestamp: '2013-12-09 07:00:06'
   Imphash: 1de2e6e58f6b19c4ec9ad6ca9fce5c14
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -15137,6 +15388,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1688f039255e638e69143907e6330b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
@@ -15150,6 +15404,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
@@ -15165,6 +15422,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -15180,6 +15440,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -15221,7 +15484,7 @@ KnownVulnerableSamples:
       Entropy: 6.591495714645472
       Virtual Size: '0x35fa'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-12 00:50:21'
+  CreationTimestamp: '2016-08-12 02:50:21'
   Imphash: 5f4063ab963abff76d0d83d239697e36
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -15977,6 +16240,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -15991,6 +16257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0f6146af9397c7fa04b13c2d0279a1ba
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: df4ab4b67a0e9b1f9ec4a1ad9ea6052a
         SHA1: dc1d0c4be3072afed8b0739a21b87b14292815e0
@@ -16004,6 +16273,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -16018,6 +16290,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -16031,6 +16306,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -16071,7 +16349,7 @@ KnownVulnerableSamples:
       Entropy: 6.518002036355309
       Virtual Size: '0x36c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-25 02:07:39'
+  CreationTimestamp: '2020-08-25 04:07:39'
   Imphash: 31907ffcac211e27136b14bb2f442070
   LoadsDespiteHVCI: 'TRUE'
 - Filename: TmComm.sys
@@ -16765,6 +17043,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -16780,6 +17061,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -16793,6 +17077,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -16807,6 +17094,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1a9d178ad334acdf47c8a0d15bb50e6e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 685d99029d38a9d263ea82cd02a49f6c
         SHA1: 93464d8f54b4ee7caf22ca1db15a4211e0d3c79e
@@ -16848,7 +17138,7 @@ KnownVulnerableSamples:
       Entropy: 6.5624235881747826
       Virtual Size: '0x2c98'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-09-02 01:57:59'
+  CreationTimestamp: '2013-09-02 03:57:59'
   Imphash: 084b99aebda8a13e4f774a2ced272e85
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -17592,6 +17882,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -17606,6 +17899,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -17619,6 +17915,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 497c4fad471540e6e453d0cafb155740
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
@@ -17634,6 +17933,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -17649,6 +17951,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -17696,7 +18001,7 @@ KnownVulnerableSamples:
       Entropy: 5.319305863516213
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-10-02 04:43:25'
+  CreationTimestamp: '2017-10-02 06:43:25'
   Imphash: 234f0978e7f2aa0beb9501ff53d94e5b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -18389,6 +18694,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -18402,6 +18710,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -18417,6 +18728,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -18430,6 +18744,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -18444,6 +18761,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
@@ -18485,7 +18805,7 @@ KnownVulnerableSamples:
       Entropy: 6.547529823822407
       Virtual Size: '0x2c08'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-13 04:31:52'
+  CreationTimestamp: '2012-11-13 06:31:52'
   Imphash: 8add42784f4693f421d85a2bcbadc620
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -19108,6 +19428,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -19121,6 +19444,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -19136,6 +19462,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -19149,6 +19478,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -19163,6 +19495,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
@@ -19207,7 +19542,7 @@ KnownVulnerableSamples:
       Entropy: 3.755788581312189
       Virtual Size: '0x578'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-13 04:31:43'
+  CreationTimestamp: '2012-11-13 06:31:43'
   Imphash: 3c91d549b68e320924bcde3856993e87
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -19785,6 +20120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -19798,6 +20136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -19813,6 +20154,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -19827,6 +20171,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 645212f783f4d7aba3555729e99ce065
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
@@ -19840,6 +20187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -19881,7 +20231,7 @@ KnownVulnerableSamples:
       Entropy: 6.408585235130312
       Virtual Size: '0x17d2'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-27 22:11:08'
+  CreationTimestamp: '2008-10-28 00:11:08'
   Imphash: beb40a1e9d5c89308d1c56958ddac27d
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -20378,6 +20728,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -20391,6 +20744,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -20406,6 +20762,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -20420,6 +20779,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 681ce312057f03f206153b679ec06cb9
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 190c4a172b309e1a6c672bef0dc442a3
         SHA1: 0ef8720411ec5275234f4db0aedb0415bf63a45f
@@ -20461,7 +20823,7 @@ KnownVulnerableSamples:
       Entropy: 6.309665717791699
       Virtual Size: '0x1002'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-01-24 02:45:21'
+  CreationTimestamp: '2007-01-24 04:45:21'
   Imphash: 5713a0c2b363c49706fa0e60151511a8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -21032,6 +21394,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -21045,6 +21410,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -21060,6 +21428,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -21074,6 +21445,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 645212f783f4d7aba3555729e99ce065
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
@@ -21087,6 +21461,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -21128,7 +21505,7 @@ KnownVulnerableSamples:
       Entropy: 6.434544685125248
       Virtual Size: '0x16c4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-04-01 05:02:16'
+  CreationTimestamp: '2008-04-01 07:02:16'
   Imphash: 202a0f2f992ec379e2876776ae9de661
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -21886,6 +22263,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -21900,6 +22280,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -21913,6 +22296,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 497c4fad471540e6e453d0cafb155740
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
@@ -21928,6 +22314,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -21943,6 +22332,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -21984,7 +22376,7 @@ KnownVulnerableSamples:
       Entropy: 6.795234137948534
       Virtual Size: '0x3600'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-07-12 21:24:09'
+  CreationTimestamp: '2017-07-12 23:24:09'
   Imphash: db62897eb9d2098e988f830159c04c82
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -22728,6 +23120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -22742,6 +23137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -22755,6 +23153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 497c4fad471540e6e453d0cafb155740
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 78eaa337666217b1c16a9a0ebd0b8434
         SHA1: ff9cb835e78f6185eed4372096c3bae53b17d18d
@@ -22770,6 +23171,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -22785,6 +23189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -22832,7 +23239,7 @@ KnownVulnerableSamples:
       Entropy: 5.319305863516213
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-05-18 04:55:14'
+  CreationTimestamp: '2017-05-18 06:55:14'
   Imphash: 234f0978e7f2aa0beb9501ff53d94e5b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -23587,6 +23994,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
@@ -23601,6 +24011,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -23614,6 +24027,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -23628,6 +24044,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -23641,6 +24060,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -23681,7 +24103,7 @@ KnownVulnerableSamples:
       Entropy: 6.521676719817061
       Virtual Size: '0x3704'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-06-28 23:59:05'
+  CreationTimestamp: '2020-06-29 01:59:05'
   Imphash: 74cc5d779ee7dbc9f389bab9dcccac50
   LoadsDespiteHVCI: 'TRUE'
 - Filename: TmComm.sys
@@ -24248,6 +24670,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -24261,6 +24686,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -24276,6 +24704,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -24290,6 +24721,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 225c8b52640584163ec1835017ded781
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1be2a89d67bb40c5a169d9e31c1a85af
         SHA1: 626dfc9caa0b9c229d6327683e87e36da2f30a3d
@@ -24303,6 +24737,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -24344,7 +24781,7 @@ KnownVulnerableSamples:
       Entropy: 6.40160183656787
       Virtual Size: '0x1626'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-09-05 04:57:07'
+  CreationTimestamp: '2007-09-05 06:57:07'
   Imphash: cbf26c6e8cf7e294bda273e7026a2789
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -25040,6 +25477,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -25053,6 +25493,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -25068,6 +25511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4d6290e58c54f0f1eb17341a1310e6a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b7d8444a70054990435f35a5630df5e1
         SHA1: 4678c6e4a8787a8e6ed2bce8792b122f6c08afd8
@@ -25081,6 +25527,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -25095,6 +25544,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6326c00ead256b6837eeb29b5ee84720
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11b208a45459069f827186fe81c6badd
         SHA1: 456356986e8ecbb7b05e4617d37cb8cd69ce4969
@@ -25136,7 +25588,7 @@ KnownVulnerableSamples:
       Entropy: 6.567369227688049
       Virtual Size: '0x2b36'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-06-05 01:36:19'
+  CreationTimestamp: '2012-06-05 03:36:19'
   Imphash: 2e9ef79ea88178e29516dfa435a58900
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -25890,6 +26342,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 478a8efb59e1d83f0ce142d2a28707be
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: f13ede9179075999ef7f856ec31e364b
         SHA1: 2f09867166e6107e17808317f5c8d4ee157f45bc
@@ -25905,6 +26360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -25918,6 +26376,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -25932,6 +26393,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5bb307b9e6fbf0c0fd40f5772d1ad8e3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e8f93ae74cc54a00e4278f92c46c42e9
         SHA1: 1e2d3a7e0be7d05f35ede330e922292e6ffa1a0c
@@ -25947,6 +26411,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -25988,7 +26455,7 @@ KnownVulnerableSamples:
       Entropy: 6.581452060997828
       Virtual Size: '0x346c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-14 01:39:00'
+  CreationTimestamp: '2014-07-14 03:39:00'
   Imphash: 9915439d37f385dbffc72bf835f3ee02
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -26732,6 +27199,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1688f039255e638e69143907e6330b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
@@ -26745,6 +27215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
@@ -26760,6 +27233,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -26775,6 +27251,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -26819,7 +27298,7 @@ KnownVulnerableSamples:
       Entropy: 5.322414751159131
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-22 19:36:21'
+  CreationTimestamp: '2016-08-22 21:36:21'
   Imphash: 60805da513b95c3d18a93b988bdfb58f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -27573,6 +28052,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -27588,6 +28070,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -27601,6 +28086,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -27614,6 +28102,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
@@ -27629,6 +28120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -27670,7 +28164,7 @@ KnownVulnerableSamples:
       Entropy: 6.570450611341717
       Virtual Size: '0x34f0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-29 01:42:42'
+  CreationTimestamp: '2015-05-29 03:42:42'
   Imphash: 92caaf6ebb43bbe61f3da8526172f776
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -28405,6 +28899,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 009feac811b0f16247a5fc20d80523ace6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b6aa9cf28bcfc9f07ec1069fb425ab61
         SHA1: ca7a166fcd53878ba5a38d4cac37c63513cfc1fa
@@ -28420,6 +28917,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -28433,6 +28933,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -28446,6 +28949,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1519396ee230f02cad1fcfdb077a35f0
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7e2a6f93403382b4ec42463426d0a4b5
         SHA1: 62acc697c0e2dc37f3d37ab79751637346e051e2
@@ -28461,6 +28967,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -28505,7 +29014,7 @@ KnownVulnerableSamples:
       Entropy: 4.105722313144271
       Virtual Size: '0x7e0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-08-27 07:19:02'
+  CreationTimestamp: '2015-08-27 09:19:02'
   Imphash: 5e4c9e685f9b7d77c90ff710972bb7dd
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -29266,6 +29775,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -29280,6 +29792,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -29294,6 +29809,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ea0fe4dfb74cc64bc32143103c27c8b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e93e004baa6013b41135ac0648e29d5b
         SHA1: dc91e26674d4b627319c700d3ebb1a6cf83d358e
@@ -29308,6 +29826,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -29322,6 +29843,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -29362,7 +29886,7 @@ KnownVulnerableSamples:
       Entropy: 6.787941917403422
       Virtual Size: '0x3554'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-25 05:13:45'
+  CreationTimestamp: '2019-10-25 07:13:45'
   Imphash: 64d934652c680b7759f6e75d05ee3072
   LoadsDespiteHVCI: 'TRUE'
 - Filename: TmComm.sys
@@ -29952,6 +30476,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -29965,6 +30492,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -29980,6 +30510,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -29994,6 +30527,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 645212f783f4d7aba3555729e99ce065
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e00f0a38c65f7c0b9f19b97448d6a0e3
         SHA1: 91c033a2f289418c4101654dceacef1b25bb55d0
@@ -30007,6 +30543,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -30048,7 +30587,7 @@ KnownVulnerableSamples:
       Entropy: 6.395300918196204
       Virtual Size: '0x1b14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-07-06 00:10:25'
+  CreationTimestamp: '2009-07-06 02:10:25'
   Imphash: fa084cdc36f03f1aeddaa3450e2781b1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -30792,6 +31331,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1688f039255e638e69143907e6330b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
@@ -30805,6 +31347,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 774d49c5649436de6bf3190a67eedcdf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b3ca7d6b821d8e3432b29874980af55e
         SHA1: 618d7e55a24c1d8b65a0bcce79120c5e3b13fa4d
@@ -30820,6 +31365,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -30835,6 +31383,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -30879,7 +31430,7 @@ KnownVulnerableSamples:
       Entropy: 5.322414751159131
       Virtual Size: '0x4c8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-01 21:07:52'
+  CreationTimestamp: '2016-08-01 23:07:52'
   Imphash: 60805da513b95c3d18a93b988bdfb58f
   LoadsDespiteHVCI: 'FALSE'
 - Filename: TmComm.sys
@@ -31613,6 +32164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -31627,6 +32181,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0f6146af9397c7fa04b13c2d0279a1ba
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: df4ab4b67a0e9b1f9ec4a1ad9ea6052a
         SHA1: dc1d0c4be3072afed8b0739a21b87b14292815e0
@@ -31640,6 +32197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -31654,6 +32214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -31667,6 +32230,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -31710,7 +32276,7 @@ KnownVulnerableSamples:
       Entropy: 4.0313065892955455
       Virtual Size: '0x7be'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-08-25 02:07:44'
+  CreationTimestamp: '2020-08-25 04:07:44'
   Imphash: fbcdb079e9c13a82f98b79bb6ce86175
   LoadsDespiteHVCI: 'TRUE'
 - Filename: TmComm.sys
@@ -32447,6 +33013,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -32461,6 +33030,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -32474,6 +33046,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 60d927b542b7d1147fb2f0c4b9c1bbb2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 869d63236005004b14196f1446676514
         SHA1: 5ab0ae52f86a1af51af5a3421d581cc4899f1ccf
@@ -32489,6 +33064,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -32504,6 +33082,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -32548,8 +33129,6 @@ KnownVulnerableSamples:
       Entropy: 4.092946145413326
       Virtual Size: '0x7f6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-26 02:43:26'
+  CreationTimestamp: '2019-04-26 04:43:26'
   Imphash: 3ac083b0ee2b752436a8a1532179f032
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- TmComm.sys

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: fdf4f85b-47f4-4c98-a0d5-a6583463f565
+Tags:
+- vmdrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &&
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/32cccc4f249499061c0afa18f534c825d01034a1f6815f5506bf4c4ff55d1351.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: fdf4f85b-47f4-4c98-a0d5-a6583463f565
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 681bb8e9713477839a1ee8d87b498630
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 99ddeba6bcdc79e52e3ff8afc63dbe4b299161cf0f5558a2d7630c2a18daf2c6
   Company: Windows (R) Win 7 DDK provider
   Copyright: Copyright (C) Voicemod S.L.2010-2020
-  CreationTimestamp: '2022-02-22 13:12:24'
+  CreationTimestamp: '2022-02-22 15:12:24'
   Date: ''
   Description: Voicemod Virtual Audio Device (WDM)
   ExportedFunctions: ''
@@ -145,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fb8a740b9158d035143bc59d9f04029
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b4a3c39dbd2935ac070032406fa082e4
         SHA1: 891bf1b0a017f5aadbc0d997fe63eb0ec25a1655
@@ -159,6 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 014d8930c6a3fceb0f4021734d5ed508
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 59e2799dd07c9a450f06c376eb220a48
         SHA1: 8588e052171ee54d148087ef5e2b8cf81017d199
@@ -171,10 +183,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 7c24141cdcfc23f5eb0e2b6792d80740
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- vmdrv.sys
-Verified: 'TRUE'

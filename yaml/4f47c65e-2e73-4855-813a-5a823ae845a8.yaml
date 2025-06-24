@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 4f47c65e-2e73-4855-813a-5a823ae845a8
+Tags:
+- tdeio64.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create tdeio64sys binPath= C:\windows\temp\tdeio64sys.sys type=kernel
@@ -15,9 +18,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection: []
-Id: 4f47c65e-2e73-4855-813a-5a823ae845a8
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -59,7 +65,7 @@ KnownVulnerableSamples:
       Entropy: 4.946698422001189
       Virtual Size: '0x398'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-12-11 00:27:18'
+  CreationTimestamp: '2007-12-11 02:27:18'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -103,6 +109,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -116,6 +125,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -130,6 +142,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 291a8c8022af992219298e002861d3e6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 92ee6d7e7b0fbf4e755ce186dc2e2ed9
         SHA1: 2fdb5226daef89f545c7c8d0dcc4233d02126e68
@@ -145,6 +160,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -160,6 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -212,7 +233,7 @@ KnownVulnerableSamples:
       Entropy: 4.946698422001189
       Virtual Size: '0x398'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-12-11 00:27:18'
+  CreationTimestamp: '2007-12-11 02:27:18'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -257,6 +278,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -270,6 +294,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -285,6 +312,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 23eab3ac30c7016a299c8d31d99f3ae8
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 54f73eaca10fe12ff2e14194e2f019b8
         SHA1: 471cb77202e7d4941a5bff8ba813f5ed221dc32e
@@ -297,9 +327,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- tdeio64.sys
-Verified: 'TRUE'

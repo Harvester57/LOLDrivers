@@ -1,9 +1,11 @@
 Id: d74fdf19-b4b0-4ec2-9c29-4213b064138b
+Tags:
+- irec.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-11'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create irec binPath=C:\windows\temp\irec.sys type=kernel && sc.exe
     start irec.sys
@@ -23,10 +25,10 @@ Resources:
 - https://blog.dru1d.ninja/windows-driver-exploit-development-irec-sys-a5eb45093945
 - https://gist.github.com/dru1d-foofus/1af21179f253879f101c3a8d4f718bf0
 - https://www.binalyze.com/irec
+Detection: []
 Acknowledgement:
   Person: Michael Alfaro (@_mmpte_software), Tyler Booth
   Handle: '@tyler_dru1d'
-Detection: []
 KnownVulnerableSamples:
 - Filename: irec.sys
   MD5: f1a203406a680cc7e4017844b129dcbf
@@ -162,6 +164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000433a68189e33902987000000000043
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3d790bd5602e84a4aa8560133ced0a41
         SHA1: 909e31e3e3808ab55d508fc0ba47e0132a57d7ab
@@ -176,6 +181,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -210,8 +218,6 @@ KnownVulnerableSamples:
       Entropy: 3.842459215777256
       Virtual Size: '0x50'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-30 13:17:53'
+  CreationTimestamp: '2021-05-30 15:17:53'
   Imphash: 3ee1cb6085fbe05e46e2b88493426848
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- irec.sys

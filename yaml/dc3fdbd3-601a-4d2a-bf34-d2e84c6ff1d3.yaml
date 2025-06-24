@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3
+Tags:
+- stdcdrvws64.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create stdcdrvws64sys binPath= C:\windows\temp\stdcdrvws64sys.sys
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: dc3fdbd3-601a-4d2a-bf34-d2e84c6ff1d3
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Intel Corp.
   Date: ''
@@ -72,7 +78,7 @@ KnownVulnerableSamples:
       Entropy: 3.298814158938059
       Virtual Size: '0x3b8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-11-10 17:06:03'
+  CreationTimestamp: '2010-11-10 19:06:03'
   InternalName: stdcdrvws64.sys
   Copyright: "Copyright \xA9 2010"
   Imports:
@@ -109,6 +115,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 05b0ff
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: f532f9999c3f7a078f0f973c726a2a04
         SHA1: f56832bc9412c372f9a8744591258f8bb11af2d8
@@ -123,6 +132,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -136,6 +148,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -149,6 +164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610bdc8f00000000001a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
@@ -162,6 +180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 292cfc6e000100005eb6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4e672f6873333f698c07a5d678a1847f
         SHA1: 4c27cd07ca350df4687962868004d61c1301562a
@@ -175,6 +196,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61208a62000000000008
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: ebaa5c3e94eb970f0d7abc67a299662f
         SHA1: fe7ed643c9193cc253850b8a3f2b81b37acb5c6a
@@ -185,9 +209,3 @@ KnownVulnerableSamples:
       Issuer: C=US, O=Intel Corporation, CN=Intel External Basic Issuing CA 3B
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- stdcdrvws64.sys
-Verified: 'TRUE'

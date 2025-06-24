@@ -1,9 +1,11 @@
 Id: 6736cbe7-33ea-4488-b464-231c0b8d1049
+Tags:
+- gpcidrv64.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
 Created: '2023-10-12'
 MitreID: T1542
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create gpcidrv64.sys binPath=C:\windows\temp\gpcidrv64.sys type=kernel
     && sc.exe start gpcidrv64.sys
@@ -13,10 +15,10 @@ Commands:
   OperatingSystem: Windows 11
 Resources:
 - https://github.com/ucsb-seclab/popkorn-artifact/tree/main/evaluation
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: ''
   MD5: 5d4df0bac74e9ac62af6bc99440b050b
@@ -58,7 +60,7 @@ KnownVulnerableSamples:
       Entropy: 4.884811337685559
       Virtual Size: '0x284'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-10 06:58:31'
+  CreationTimestamp: '2008-07-10 08:58:31'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -95,6 +97,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -108,6 +113,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -123,6 +131,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -136,6 +147,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -151,6 +165,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 720ef3aaa1a44f7d0717a805c290c378
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0695cf8f3778103101610eccc2a78d04
         SHA1: ab5b9a4474b73d3317a7853116f62e83c9301b0d
@@ -163,5 +180,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- gpcidrv64.sys

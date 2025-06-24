@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: hfiref0x
-  Person: hfiref0x
+Id: f4c22f4d-eff8-40c5-8b31-146abe5f17b7
+Tags:
+- physmem.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create physmem.sys binPath=C:\windows\temp\physmem.sys type=kernel
@@ -10,7 +13,11 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- https://github.com/magicsword-io/LOLDrivers/issues/55
+- https://github.com/hfiref0x/KDU
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d.yara
@@ -32,7 +39,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: f4c22f4d-eff8-40c5-8b31-146abe5f17b7
+Acknowledgement:
+  Handle: hfiref0x
+  Person: hfiref0x
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -54,7 +63,7 @@ KnownVulnerableSamples:
   Company: "Hilscher Gesellschaft f\xFCr Systemaoutomation mbH"
   Copyright: "\xA9 Hilscher Gesellschaft f\xFCr Systemaoutomation mbH. All rights\
     \ reserved."
-  CreationTimestamp: '2015-03-03 03:41:21'
+  CreationTimestamp: '2015-03-03 05:41:21'
   Date: ''
   Description: Physical Memory Access Driver
   ExportedFunctions: ''
@@ -153,6 +162,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -166,6 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -180,6 +195,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121405c1f0ed258882be54d8686ba11ea45
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b95cbc184d388718612d5933f7b36770
         SHA1: ff124c5d160710720108616ffee99bbe090ed363
@@ -194,6 +212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d48f27abe17574473e4066a863792d46
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a0b38273556ad764038918e68194eec5
         SHA1: d56fdcc2f77abef441098296982738c5ee38a581
@@ -207,6 +228,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -218,12 +242,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: e5af2438da6df2aa9750aa632c80cfa4
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/jbaines-r7/dellicious
-- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-- https://github.com/magicsword-io/LOLDrivers/issues/55
-- https://github.com/hfiref0x/KDU
-Tags:
-- physmem.sys
-Verified: 'TRUE'

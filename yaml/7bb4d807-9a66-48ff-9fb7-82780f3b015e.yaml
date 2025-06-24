@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 7bb4d807-9a66-48ff-9fb7-82780f3b015e
+Tags:
+- RadHwMgr.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create RadHwMgrsys binPath= C:\windows\temp\RadHwMgrsys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 7bb4d807-9a66-48ff-9fb7-82780f3b015e
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: 'Radiant Systems, Inc. '
   Date: ''
@@ -75,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 6.033927912538727
       Virtual Size: '0x3a6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-03-04 09:24:19'
+  CreationTimestamp: '2008-03-04 11:24:19'
   InternalName: RadHwMgr.sys
   Copyright: 'Copyright (c) 2002-2004 Radiant Systems, Inc. '
   Imports:
@@ -134,7 +140,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - KeStallExecutionProcessor
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: 'Radiant Systems, Inc. '
   Date: ''
   Description: Radiant Hardware Manager for P15xx Platform
@@ -181,7 +187,7 @@ KnownVulnerableSamples:
       Entropy: 6.411381788361578
       Virtual Size: '0xbb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-05-12 15:00:20'
+  CreationTimestamp: '2016-05-12 17:00:20'
   InternalName: RadHwMgr.sys
   Copyright: '2002-2009 Radiant Systems, Inc. '
   Imports:
@@ -274,6 +280,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -288,6 +297,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -301,6 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4ec91835fedc5ed3d50a9ae6947fd588
         SHA1: 021ebc3c130aeea57308098aba78932d9a155dac
@@ -316,6 +331,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -331,6 +349,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -389,7 +410,7 @@ KnownVulnerableSamples:
       Entropy: 6.153106727619113
       Virtual Size: '0x69c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-09-15 14:56:51'
+  CreationTimestamp: '2010-09-15 16:56:51'
   InternalName: RadHwMgr.sys
   Copyright: '2002-2009 Radiant Systems, Inc. '
   Imports:
@@ -464,7 +485,7 @@ KnownVulnerableSamples:
   - KeStallExecutionProcessor
   - HalTranslateBusAddress
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: NCR Corporation
   Date: ''
   Description: Radiant Hardware Manager for P15xx Platform
@@ -511,7 +532,7 @@ KnownVulnerableSamples:
       Entropy: 6.44725210281668
       Virtual Size: '0xfac'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-02-10 14:57:04'
+  CreationTimestamp: '2022-02-10 16:57:04'
   InternalName: RadHwMgr.sys
   Copyright: 2002-2018NCR Corporation
   Imports:
@@ -608,6 +629,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -622,6 +646,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -682,7 +709,7 @@ KnownVulnerableSamples:
       Entropy: 2.893334805056936
       Virtual Size: '0x250'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-05-12 15:00:29'
+  CreationTimestamp: '2016-05-12 17:00:29'
   InternalName: RadHwMgr.sys
   Copyright: '2002-2009 Radiant Systems, Inc. '
   Imports:
@@ -762,6 +789,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -776,6 +806,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -789,6 +822,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 052d77dc3058212fb02ee74e72ef1bf5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4ec91835fedc5ed3d50a9ae6947fd588
         SHA1: 021ebc3c130aeea57308098aba78932d9a155dac
@@ -804,6 +840,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -819,6 +858,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -880,7 +922,7 @@ KnownVulnerableSamples:
       Entropy: 4.065762782521356
       Virtual Size: '0x450'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-03-10 10:26:21'
+  CreationTimestamp: '2022-03-10 12:26:21'
   InternalName: RadHwMgr.sys
   Copyright: Copyright (c) 2002-2017 NCR Corporation
   Imports:
@@ -963,6 +1005,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -976,6 +1021,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ccd588d98ef92c984668dd925028a5a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9cbe98d11c2841cb53918871ade1e650
         SHA1: 40fedcc9e4ff9a555f8b2de0c3af80e6595832f3
@@ -990,6 +1038,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0409181b5fd5bb66755343b56f955008
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 9359496ca4f021408b9d8923cab8b179
         SHA1: 2aed40d7759997830870769be250199fd609e40e
@@ -1004,6 +1055,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -1018,6 +1072,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -1029,9 +1086,3 @@ KnownVulnerableSamples:
         ID Code Signing CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- RadHwMgr.sys
-Verified: 'TRUE'

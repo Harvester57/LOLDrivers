@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a22104a8-126d-449f-ba3e-28678c60c587
+Tags:
+- wantd_3.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create wantd_3.sys binPath=C:\windows\temp\wantd_3.sys type=kernel
@@ -10,7 +13,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-02-28'
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/81c7bb39100d358f8286da5e9aa838606c98dfcc263e9a82ed91cd438cb130d1.yara
@@ -32,7 +38,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a22104a8-126d-449f-ba3e-28678c60c587
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: cbb18883d7893156620f084ff40b2fbf
@@ -40,7 +48,7 @@ KnownVulnerableSamples:
     SHA256: a1ee0b8a7974f3d11c10241027c0e7171c798a28589aae9ff8c5a86228642af7
   Company: Microsoft Corporation
   Copyright: Microsoft Corporation. All rights reserved.
-  CreationTimestamp: '2014-04-30 01:52:21'
+  CreationTimestamp: '2014-04-30 03:52:21'
   Date: ''
   Description: WAN Transport Driver
   ExportedFunctions: ''
@@ -179,11 +187,3 @@ KnownVulnerableSamples:
   Signatures: {}
   Imphash: 420625b024fba72a24025defdf95b303
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Tags:
-- wantd_3.sys
-Verified: 'TRUE'

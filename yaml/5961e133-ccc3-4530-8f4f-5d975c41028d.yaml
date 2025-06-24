@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 5961e133-ccc3-4530-8f4f-5d975c41028d
+Tags:
+- LgDataCatcher.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 5961e133-ccc3-4530-8f4f-5d975c41028d
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 26cbbcf09fcbba64d93342c273c480d2
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
   Company: Windows (R) Win 7 DDK provider
   Copyright: Copyright  2020 nn.com
-  CreationTimestamp: '2020-05-12 20:43:44'
+  CreationTimestamp: '2020-05-12 22:43:44'
   Date: ''
   Description: Leigod net data catcher.
   ExportedFunctions: ''
@@ -203,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -218,6 +225,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 04bb87e2d35b4b14bbfe76ae0f8f4372
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 93c8be246fe6a0584a07029f191006d3
         SHA1: 21d94ebf6e46aff340c81db886845b67bc6df8c8
@@ -231,6 +241,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -245,6 +258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -258,6 +274,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -276,7 +295,7 @@ KnownVulnerableSamples:
     SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
   Company: Windows (R) Win 7 DDK provider
   Copyright: Copyright  2020 nn.com
-  CreationTimestamp: '2020-05-12 20:43:44'
+  CreationTimestamp: '2020-05-12 22:43:44'
   Date: ''
   Description: Leigod net data catcher.
   ExportedFunctions: ''
@@ -446,6 +465,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -459,6 +481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dd7d4a785990584d8c0837659173272
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 559c170b8f735dd1ba8c3946354c4fa5
         SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
@@ -472,6 +497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -486,6 +514,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -499,6 +530,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -517,7 +551,7 @@ KnownVulnerableSamples:
     SHA256: df4e25990742fc8d3aed70f6cb4d402e111e7ed08fa5f76aca685b8c03b98b93
   Company: Windows (R) Win 7 DDK provider
   Copyright: Copyright  2020 nn.com
-  CreationTimestamp: '2020-05-12 20:43:44'
+  CreationTimestamp: '2020-05-12 22:43:44'
   Date: ''
   Description: Leigod net data catcher.
   ExportedFunctions: ''
@@ -686,6 +720,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -699,6 +736,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000125071df9af
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
@@ -713,6 +753,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -727,6 +770,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 481b6a07a9424c1eaafef3cdf10f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
@@ -740,6 +786,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -754,6 +803,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1ae9d4b848b34ca82bcf623a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: dc1fd334ac7950329ff4fa45a3bde8da
         SHA1: f58e04e6dd1954a2fd06e5fedd1408a9c765dd18
@@ -766,9 +818,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 8902d821cdfd8e73ca10c00a3ce66731
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- LgDataCatcher.sys
-Verified: 'TRUE'

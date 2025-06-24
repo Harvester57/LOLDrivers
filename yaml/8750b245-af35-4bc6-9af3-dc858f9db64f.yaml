@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: "Martin Smol\xE1r, ESET"
+Id: 8750b245-af35-4bc6-9af3-dc858f9db64f
+Tags:
+- blacklotus_driver.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-04-05'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create blacklotus_driver.sys binPath=C:\windows\temp\blacklotus_driver.sys
@@ -13,9 +16,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-04-05'
+Resources:
+- https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
 Detection: []
-Id: 8750b245-af35-4bc6-9af3-dc858f9db64f
+Acknowledgement:
+  Handle: ''
+  Person: "Martin Smol\xE1r, ESET"
 KnownVulnerableSamples:
 - Authentihash:
     MD5: f5742f4fb216979627236a799f614c43
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 83ac9bf01c2d2ab0f66782fade462864f42b86e53dc455e1441c2a16d0ec2847
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-10-10 13:11:06'
+  CreationTimestamp: '2022-10-10 15:11:06'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -78,7 +84,7 @@ KnownVulnerableSamples:
     SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-08-21 14:40:09'
+  CreationTimestamp: '2022-08-21 16:40:09'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -133,7 +139,7 @@ KnownVulnerableSamples:
     SHA256: 265010deb10af80885726edc450867fa69acbde449b51d13bf891322ff5c1c2d
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-08-21 14:40:09'
+  CreationTimestamp: '2022-08-21 16:40:09'
   Date: ''
   Description: ''
   ExportedFunctions:
@@ -234,9 +240,3 @@ KnownVulnerableSamples:
   SHA1: FFF4F28287677CAABC60C8AB36786C370226588D
   Signature: []
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
-Tags:
-- blacklotus_driver.sys
-Verified: 'TRUE'

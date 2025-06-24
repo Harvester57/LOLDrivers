@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a3c52cbe-90ca-432c-9520-761b60e7d9cb
+Tags:
+- AODDriver.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create AODDriversys binPath= C:\windows\temp\AODDriversys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a3c52cbe-90ca-432c-9520-761b60e7d9cb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Advanced Micro Devices
   Date: ''
@@ -75,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 5.619199574410783
       Virtual Size: '0x80a'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-21 00:46:49'
+  CreationTimestamp: '2012-11-21 02:46:49'
   InternalName: AODDriver2.sys
   Copyright: "Copyright \xA9 2012 AMD, Inc."
   Imports:
@@ -156,6 +162,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -170,6 +179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -185,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -198,6 +213,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -213,6 +231,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 30ac31a0f3257e0b0cabcbadeba5534c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c57ab6c4a315c3e64b5f571ad90cc9ba
         SHA1: 4d719c5e6fc053d4fbce935cde7bccae6d5df476
@@ -265,7 +286,7 @@ KnownVulnerableSamples:
       Entropy: 3.8816129331502913
       Virtual Size: '0xb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-10-11 01:52:30'
+  CreationTimestamp: '2007-10-11 03:52:30'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -297,7 +318,7 @@ KnownVulnerableSamples:
   - HalSetBusDataByOffset
   - WRITE_PORT_ULONG
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Advanced Micro Devices
   Date: ''
   Description: AMD OverDrive Service Driver
@@ -341,7 +362,7 @@ KnownVulnerableSamples:
       Entropy: 3.249834790290215
       Virtual Size: '0x3a8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-09-02 20:41:48'
+  CreationTimestamp: '2009-09-02 22:41:48'
   InternalName: AODDriver.sys
   Copyright: Copyright 2009 AMD, Inc.
   Imports:
@@ -381,6 +402,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -394,6 +418,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -409,6 +436,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -422,6 +452,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -437,6 +470,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 08b96c67a275ff544980bbc72a39a6d1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0e3acf9c17f4e2159356533e5a841b34
         SHA1: ecdc54b7d61942d3eaf86be64af4f9837f4f90dd
@@ -489,7 +525,7 @@ KnownVulnerableSamples:
       Entropy: 4.910053868611627
       Virtual Size: '0x300'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-12 22:38:55'
+  CreationTimestamp: '2008-10-13 00:38:55'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -529,6 +565,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -542,6 +581,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -557,6 +599,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -570,6 +615,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -585,6 +633,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 19201e5ae135ce9c8c77ce0c7b8aca13
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c3e7ab8689bcb94bf19962ac62d0b128
         SHA1: 819ee906219f1a26914b21966f8786e3bff26d27
@@ -637,7 +688,7 @@ KnownVulnerableSamples:
       Entropy: 4.499060646383309
       Virtual Size: '0xe8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-12 22:42:32'
+  CreationTimestamp: '2008-10-13 00:42:32'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -674,7 +725,7 @@ KnownVulnerableSamples:
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -715,7 +766,7 @@ KnownVulnerableSamples:
       Entropy: 4.910053868611627
       Virtual Size: '0x300'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-10-12 22:38:55'
+  CreationTimestamp: '2008-10-13 00:38:55'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -755,6 +806,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -768,6 +822,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -783,6 +840,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -796,6 +856,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -811,6 +874,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 19201e5ae135ce9c8c77ce0c7b8aca13
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c3e7ab8689bcb94bf19962ac62d0b128
         SHA1: 819ee906219f1a26914b21966f8786e3bff26d27
@@ -872,7 +938,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622462
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-04 03:58:24'
+  CreationTimestamp: '2010-03-04 05:58:24'
   InternalName: AODDriver.sys
   Copyright: Copyright 2009 AMD, Inc.
   Imports:
@@ -942,6 +1008,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -955,6 +1024,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -970,6 +1042,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -983,6 +1058,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -998,6 +1076,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 08b96c67a275ff544980bbc72a39a6d1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0e3acf9c17f4e2159356533e5a841b34
         SHA1: ecdc54b7d61942d3eaf86be64af4f9837f4f90dd
@@ -1050,7 +1131,7 @@ KnownVulnerableSamples:
       Entropy: 4.922009201916293
       Virtual Size: '0x300'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-18 01:59:35'
+  CreationTimestamp: '2009-03-18 03:59:35'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1090,6 +1171,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1103,6 +1187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1118,6 +1205,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1131,6 +1221,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1146,6 +1239,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 19201e5ae135ce9c8c77ce0c7b8aca13
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c3e7ab8689bcb94bf19962ac62d0b128
         SHA1: 819ee906219f1a26914b21966f8786e3bff26d27
@@ -1201,7 +1297,7 @@ KnownVulnerableSamples:
       Entropy: 4.577010549473324
       Virtual Size: '0x102'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-08-31 00:17:54'
+  CreationTimestamp: '2009-08-31 02:17:54'
   InternalName: AODDriver.sys
   Copyright: Copyright 2009 AMD, Inc.
   Imports:
@@ -1238,7 +1334,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_ULONG
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Advanced Micro Devices
   Date: ''
   Description: AMD OverDrive Service Driver
@@ -1285,7 +1381,7 @@ KnownVulnerableSamples:
       Entropy: 5.4358651010980035
       Virtual Size: '0x724'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-04 03:41:36'
+  CreationTimestamp: '2010-03-04 05:41:36'
   InternalName: AODDriver.sys
   Copyright: Copyright 2010 AMD, Inc.
   Imports:
@@ -1354,7 +1450,7 @@ KnownVulnerableSamples:
   - WRITE_PORT_ULONG
   - READ_PORT_ULONG
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1395,7 +1491,7 @@ KnownVulnerableSamples:
       Entropy: 4.917368719792384
       Virtual Size: '0x2a0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-10-11 00:26:50'
+  CreationTimestamp: '2007-10-11 02:26:50'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1421,7 +1517,7 @@ KnownVulnerableSamples:
   - HalSetBusDataByOffset
   - HalGetBusDataByOffset
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -1462,7 +1558,7 @@ KnownVulnerableSamples:
       Entropy: 5.003048441234915
       Virtual Size: '0x12e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-08-25 03:01:19'
+  CreationTimestamp: '2008-08-25 05:01:19'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -1500,7 +1596,7 @@ KnownVulnerableSamples:
   - HalSetBusDataByOffset
   - READ_PORT_UCHAR
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Advanced Micro Devices
   Date: ''
   Description: AMD OverDrive Service Driver
@@ -1550,7 +1646,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622462
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-11-21 00:47:09'
+  CreationTimestamp: '2012-11-21 02:47:09'
   InternalName: AODDriver2.sys
   Copyright: "Copyright \xA9 2012 AMD, Inc."
   Imports:
@@ -1620,6 +1716,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1634,6 +1733,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1649,6 +1751,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1662,6 +1767,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1677,6 +1785,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 30ac31a0f3257e0b0cabcbadeba5534c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c57ab6c4a315c3e64b5f571ad90cc9ba
         SHA1: 4d719c5e6fc053d4fbce935cde7bccae6d5df476
@@ -1689,9 +1800,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- AODDriver.sys
-Verified: 'TRUE'

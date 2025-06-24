@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 3ab0d182-6365-47a7-89f4-34121e889503
+Tags:
+- HwOs2Ec10x64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create HwOs2Ec10x64.sys binPath=C:\windows\temp\HwOs2Ec10x64.sys     type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/bb1135b51acca8348d285dc5461d10e8f57260e7d0c8cc4a092734d53fc40cbc.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 3ab0d182-6365-47a7-89f4-34121e889503
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 20be6af18d3b97968b2a8d5a9513caaa
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: ab494aba56e9ea7b6055ac437f6b678e7239b0fda54bf28019480565a098a6e3
   Company: Huawei
   Copyright: Copyright (C) 2016
-  CreationTimestamp: '2018-03-23 00:56:31'
+  CreationTimestamp: '2018-03-23 02:56:31'
   Date: ''
   Description: HwOs2Ec
   ExportedFunctions: ''
@@ -191,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '01'
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d67576f5521d1ccab52e9215e0f9f743
         SHA1: 725a5684e8ab40f2155bbd7a4490a3fbb0fa747b
@@ -205,6 +214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -219,6 +231,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 00c1008b3c3c8811d13ef663ecdf40
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 8b3c3087b7056f5ec5ddba91a1b901f0
         SHA1: 10792d184e6eb874504fd0d5ec06cabc0229da56
@@ -233,6 +248,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -247,6 +265,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -262,6 +283,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 45d8f42e053d18c5e90f3febd6e17ad7
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 43be09b45818339b6233a11e2475e003
         SHA1: 063e6aeb12a5bf2b6e02ebcda4cd474662a5be18
@@ -275,6 +299,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 79ad16a14aa0a5ad4c7358f407132e65
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: ca846b34f2abfeea2228098843a0e0c6
         SHA1: 391be92883d52509155bfeae27b9bd340170b76b
@@ -290,6 +317,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -304,6 +334,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 729404101f3e0ca347837fca175a8438
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: ee8df66ce2c464c64bb9a9eb9cbd7e90
         SHA1: f4e3b23c5b3673fb06339c35314279fdee1e003f
@@ -316,10 +349,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 071356ee9d8c7f91cbe8fa3c448286a2
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- HwOs2Ec10x64.sys
-Verified: 'TRUE'

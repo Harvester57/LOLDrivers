@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 5943b267-64f3-40d4-8669-354f23dec122
+Tags:
+- Agent64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create Agent64.sys binPath=C:\windows\temp\Agent64.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/05f052c64d192cf69a462a5ec16dda0d43ca5d0245900c9fcb9201685a2e7748.yara
@@ -40,7 +44,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 5943b267-64f3-40d4-8669-354f23dec122
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: d86884546c97e614b73d16c600cfb2df
@@ -48,7 +54,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -144,6 +150,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -157,6 +166,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000013189c637e8
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 0140a61a07f5dfb1d7d3c66ec7d6a916
         SHA1: 38cf80255975d689f1ab266a85bc72335a82e41f
@@ -170,6 +182,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000125071df9af
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
@@ -184,6 +199,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -198,6 +216,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 11216e054fad930d88cabc078eb0d3bcc8ac
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 07ff655cdba156b39f88d802c992ebf3
         SHA1: 3c8d5517e4d30167f270e3543d5e2ce2bf467070
@@ -211,6 +232,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -228,7 +252,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -325,6 +349,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -338,6 +365,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -352,6 +382,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0facb3
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
@@ -366,6 +399,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001257ee1f400
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ed0acf60cdd337b9e0a2ab818d7733c6
         SHA1: e5a9eb7de851eb17fed066190a6c4e8b13cc908b
@@ -380,6 +416,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0faf24
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
@@ -393,6 +432,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -411,7 +453,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -508,6 +550,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -521,6 +566,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -535,6 +583,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0facb3
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5ccf05e4dec10d9d6fe15d8778325272
         SHA1: 79f0a648bd7f1184f86bff43ae47c9ecc3ed3cec
@@ -549,6 +600,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001257ee1f400
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ed0acf60cdd337b9e0a2ab818d7733c6
         SHA1: e5a9eb7de851eb17fed066190a6c4e8b13cc908b
@@ -563,6 +617,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000001239e0faf24
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 7dd2351a85d3665eeb6720a21f4f7dee
         SHA1: 77838c4d7f36958a581841d28f481d61ce0696ed
@@ -576,6 +633,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -594,7 +654,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -690,6 +750,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -703,6 +766,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -717,6 +783,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -731,6 +800,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 11213d2f2fb6b9005e295e3c9596b6442513
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 570a8aca88583d09bea3e125d3d7000b
         SHA1: 08661628ab6fc154918e70be1e880d44b5ef6d18
@@ -744,6 +816,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -761,7 +836,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -857,6 +932,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000125071df9af
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
@@ -871,6 +949,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000013189c64de1
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b3d3ff804abcd2e7686c126c98cc2c10
         SHA1: 358391557c2b6213777e282ad8efe9c8112d1b0e
@@ -884,6 +965,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -899,6 +983,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121b5d4d579fe52c475c01e3da626487f05
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f072f16cdf1f6c4bf7cf7e6306bc5fdc
         SHA1: 3cd171c0933a070c0d16bca6ae068aaf4844bb89
@@ -917,7 +1004,7 @@ KnownVulnerableSamples:
     SHA256: 3bc0cec99dce687304dad8f7a6daf772e695cbd0169d346d03ae12500361a1e8
   Company: Phoenix Technologies
   Copyright: EnTech Taiwan, 1997-2009
-  CreationTimestamp: '2009-12-14 03:23:26'
+  CreationTimestamp: '2009-12-14 05:23:26'
   Date: ''
   Description: DriverAgent Direct I/O for 64-bit Windows
   ExportedFunctions: ''
@@ -1001,10 +1088,3 @@ KnownVulnerableSamples:
   Signatures: {}
   Imphash: 08c7f29f5cb29ba70e49879da2e8ddce
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- Agent64.sys
-Verified: 'TRUE'

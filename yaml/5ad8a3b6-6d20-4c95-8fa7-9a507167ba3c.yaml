@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 5ad8a3b6-6d20-4c95-8fa7-9a507167ba3c
+Tags:
+- netfilter2.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 5ad8a3b6-6d20-4c95-8fa7-9a507167ba3c
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: b2d0111f81238f6e6e6513cf7625a19f
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: 5b9623da9ba8e5c80c49473f40ffe7ad315dcadffc3230afdc9d9226d60a715a
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-05-24 14:59:14'
+  CreationTimestamp: '2019-05-24 16:59:14'
   Date: ''
   Description: WYJSQ WFP Driver (WPP)
   ExportedFunctions: ''
@@ -204,6 +208,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -217,6 +224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -230,6 +240,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -244,6 +257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -257,6 +273,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -275,7 +294,7 @@ KnownVulnerableSamples:
     SHA256: e94e8a87459db56837d1c58f9854794aa99f36566a9ded9b398be9d4d3a2c2af
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:41'
+  CreationTimestamp: '2020-09-15 02:54:41'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -445,6 +464,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000003a6ae333708fda7a7b00000000003a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6f5d716e7151f1c173396adb7213359e
         SHA1: 100610baae90027e9844a8e9c4d489fe122ecd9c
@@ -459,6 +481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -477,7 +502,7 @@ KnownVulnerableSamples:
     SHA256: 8168304169a2453c0c3e0a285c2a07d3b3b83433e0342f6b33400c371af86221
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:17'
+  CreationTimestamp: '2020-09-15 02:54:17'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -648,6 +673,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4b51e8986bf2670974fecc6dad020f19
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0538926e1c7f1fcaee6540250d010840
         SHA1: 59887d34eaaa74baf151589daef69b2b6f2d9b55
@@ -662,6 +690,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -677,6 +708,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -695,7 +729,7 @@ KnownVulnerableSamples:
     SHA256: 8168304169a2453c0c3e0a285c2a07d3b3b83433e0342f6b33400c371af86221
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:17'
+  CreationTimestamp: '2020-09-15 02:54:17'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -866,6 +900,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -880,6 +917,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0108cbaee60728f5bf06e45a56d6f170
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4e8398340fdf2c302ef881776b4626e7
         SHA1: 483073cdc5b9b560c2d5aa80b62fa184ae4467ba
@@ -893,6 +933,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -907,6 +950,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -920,6 +966,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -938,7 +987,7 @@ KnownVulnerableSamples:
     SHA256: dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:55'
+  CreationTimestamp: '2019-06-10 10:45:55'
   Date: ''
   Description: WYJSQ TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -1049,6 +1098,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1062,6 +1114,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -1075,6 +1130,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1089,6 +1147,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1102,6 +1163,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1120,7 +1184,7 @@ KnownVulnerableSamples:
     SHA256: dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:55'
+  CreationTimestamp: '2019-06-10 10:45:55'
   Date: ''
   Description: WYJSQ TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -1231,6 +1295,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1244,6 +1311,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -1257,6 +1327,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1271,6 +1344,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1284,6 +1360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1302,7 +1381,7 @@ KnownVulnerableSamples:
     SHA256: de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:52'
+  CreationTimestamp: '2019-06-10 10:45:52'
   Date: ''
   Description: WYJSQ TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -1418,6 +1497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1431,6 +1513,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -1444,6 +1529,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1458,6 +1546,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -1471,6 +1562,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1489,7 +1583,7 @@ KnownVulnerableSamples:
     SHA256: 44a0599defea351314663582dbc61069b3a095a4ddad571bb17dd0d8b21e7ff2
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:42'
+  CreationTimestamp: '2020-09-15 02:54:42'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -1663,6 +1757,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1677,6 +1774,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0af5efac8e1cb5bb290394d315079dbe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11e15766710ca8d294dcaf75cdc481c7
         SHA1: d4fbc4f59e8ac285a2a1cdde885eab8ec7c073f2
@@ -1690,6 +1790,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1704,6 +1807,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1717,6 +1823,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1735,7 +1844,7 @@ KnownVulnerableSamples:
     SHA256: 8168304169a2453c0c3e0a285c2a07d3b3b83433e0342f6b33400c371af86221
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:17'
+  CreationTimestamp: '2020-09-15 02:54:17'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -1906,6 +2015,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1920,6 +2032,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0af5efac8e1cb5bb290394d315079dbe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11e15766710ca8d294dcaf75cdc481c7
         SHA1: d4fbc4f59e8ac285a2a1cdde885eab8ec7c073f2
@@ -1933,6 +2048,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -1947,6 +2065,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -1960,6 +2081,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -1978,7 +2102,7 @@ KnownVulnerableSamples:
     SHA256: e94e8a87459db56837d1c58f9854794aa99f36566a9ded9b398be9d4d3a2c2af
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:41'
+  CreationTimestamp: '2020-09-15 02:54:41'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -2148,6 +2272,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2162,6 +2289,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0af5efac8e1cb5bb290394d315079dbe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11e15766710ca8d294dcaf75cdc481c7
         SHA1: d4fbc4f59e8ac285a2a1cdde885eab8ec7c073f2
@@ -2175,6 +2305,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2189,6 +2322,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -2202,6 +2338,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2220,7 +2359,7 @@ KnownVulnerableSamples:
     SHA256: fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:42'
+  CreationTimestamp: '2019-06-10 10:45:42'
   Date: ''
   Description: WYJSQ WFP Driver (WPP)
   ExportedFunctions: ''
@@ -2384,6 +2523,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2397,6 +2539,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -2410,6 +2555,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2424,6 +2572,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2437,6 +2588,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2455,7 +2609,7 @@ KnownVulnerableSamples:
     SHA256: dfaefd06b680f9ea837e7815fc1cc7d1f4cc375641ac850667ab20739f46ad22
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:55'
+  CreationTimestamp: '2019-06-10 10:45:55'
   Date: ''
   Description: WYJSQ TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -2566,6 +2720,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2579,6 +2736,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -2592,6 +2752,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2606,6 +2769,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2619,6 +2785,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2637,7 +2806,7 @@ KnownVulnerableSamples:
     SHA256: de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:52'
+  CreationTimestamp: '2019-06-10 10:45:52'
   Date: ''
   Description: WYJSQ TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -2753,6 +2922,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -2766,6 +2938,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -2779,6 +2954,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -2793,6 +2971,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -2806,6 +2987,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -2824,7 +3008,7 @@ KnownVulnerableSamples:
     SHA256: e9b433a33dc72eb2622947b41f01d04a48cd71beac775a88f3f1e4c838090ee8
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:19'
+  CreationTimestamp: '2020-09-15 02:54:19'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -2990,6 +3174,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3004,6 +3191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0af5efac8e1cb5bb290394d315079dbe
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 11e15766710ca8d294dcaf75cdc481c7
         SHA1: d4fbc4f59e8ac285a2a1cdde885eab8ec7c073f2
@@ -3017,6 +3207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -3031,6 +3224,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -3044,6 +3240,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -3062,7 +3261,7 @@ KnownVulnerableSamples:
     SHA256: 8168304169a2453c0c3e0a285c2a07d3b3b83433e0342f6b33400c371af86221
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:17'
+  CreationTimestamp: '2020-09-15 02:54:17'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -3232,6 +3431,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 34b2bc04e9d297465f2e52b3afe91006
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: aa18d17697a27f7af6deb97095af2a2c
         SHA1: d00a8a47f4879d72d0c724fe76c98c509406169f
@@ -3246,6 +3448,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -3261,6 +3466,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3279,7 +3487,7 @@ KnownVulnerableSamples:
     SHA256: e9b433a33dc72eb2622947b41f01d04a48cd71beac775a88f3f1e4c838090ee8
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:19'
+  CreationTimestamp: '2020-09-15 02:54:19'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -3444,6 +3652,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 34b2bc04e9d297465f2e52b3afe91006
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: aa18d17697a27f7af6deb97095af2a2c
         SHA1: d00a8a47f4879d72d0c724fe76c98c509406169f
@@ -3458,6 +3669,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -3473,6 +3687,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3491,7 +3708,7 @@ KnownVulnerableSamples:
     SHA256: e94e8a87459db56837d1c58f9854794aa99f36566a9ded9b398be9d4d3a2c2af
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:41'
+  CreationTimestamp: '2020-09-15 02:54:41'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -3661,6 +3878,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3675,6 +3895,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 02ddad01eba5f46cb2deb0f7d2acd0f7
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cd2b0d085a3d343b08650dca77f6d61a
         SHA1: 003e7627100a520659381210817e3cc34ffa5787
@@ -3688,6 +3911,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -3702,6 +3928,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -3715,6 +3944,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -3733,7 +3965,7 @@ KnownVulnerableSamples:
     SHA256: de6bf572d39e2611773e7a01f0388f84fb25da6cba2f1f8b9b36ffba467de6fa
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:52'
+  CreationTimestamp: '2019-06-10 10:45:52'
   Date: ''
   Description: WYJSQ TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -3849,6 +4081,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -3862,6 +4097,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -3875,6 +4113,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -3889,6 +4130,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -3902,6 +4146,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -3920,7 +4167,7 @@ KnownVulnerableSamples:
     SHA256: 8168304169a2453c0c3e0a285c2a07d3b3b83433e0342f6b33400c371af86221
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:17'
+  CreationTimestamp: '2020-09-15 02:54:17'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -4091,6 +4338,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -4105,6 +4355,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0108cbaee60728f5bf06e45a56d6f170
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4e8398340fdf2c302ef881776b4626e7
         SHA1: 483073cdc5b9b560c2d5aa80b62fa184ae4467ba
@@ -4118,6 +4371,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -4132,6 +4388,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -4145,6 +4404,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -4163,7 +4425,7 @@ KnownVulnerableSamples:
     SHA256: e9b433a33dc72eb2622947b41f01d04a48cd71beac775a88f3f1e4c838090ee8
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:19'
+  CreationTimestamp: '2020-09-15 02:54:19'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -4329,6 +4591,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000003a6ae333708fda7a7b00000000003a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6f5d716e7151f1c173396adb7213359e
         SHA1: 100610baae90027e9844a8e9c4d489fe122ecd9c
@@ -4343,6 +4608,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -4361,7 +4629,7 @@ KnownVulnerableSamples:
     SHA256: 44a0599defea351314663582dbc61069b3a095a4ddad571bb17dd0d8b21e7ff2
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:42'
+  CreationTimestamp: '2020-09-15 02:54:42'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -4535,6 +4803,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000003a6ae333708fda7a7b00000000003a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6f5d716e7151f1c173396adb7213359e
         SHA1: 100610baae90027e9844a8e9c4d489fe122ecd9c
@@ -4549,6 +4820,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -4567,7 +4841,7 @@ KnownVulnerableSamples:
     SHA256: fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:42'
+  CreationTimestamp: '2019-06-10 10:45:42'
   Date: ''
   Description: WYJSQ WFP Driver (WPP)
   ExportedFunctions: ''
@@ -4731,6 +5005,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -4744,6 +5021,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -4757,6 +5037,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -4771,6 +5054,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -4784,6 +5070,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -4802,7 +5091,7 @@ KnownVulnerableSamples:
     SHA256: e94e8a87459db56837d1c58f9854794aa99f36566a9ded9b398be9d4d3a2c2af
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:41'
+  CreationTimestamp: '2020-09-15 02:54:41'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -4972,6 +5261,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4b51e8986bf2670974fecc6dad020f19
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0538926e1c7f1fcaee6540250d010840
         SHA1: 59887d34eaaa74baf151589daef69b2b6f2d9b55
@@ -4986,6 +5278,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -5001,6 +5296,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -5019,7 +5317,7 @@ KnownVulnerableSamples:
     SHA256: 44a0599defea351314663582dbc61069b3a095a4ddad571bb17dd0d8b21e7ff2
   Company: Windows (R) Win 7 DDK provider
   Copyright: "Copyright \xA9 NetFilterSDK.com"
-  CreationTimestamp: '2020-09-15 00:54:42'
+  CreationTimestamp: '2020-09-15 02:54:42'
   Date: ''
   Description: NetFilter SDK WFP Driver (WPP)
   ExportedFunctions: ''
@@ -5193,6 +5491,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4b51e8986bf2670974fecc6dad020f19
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0538926e1c7f1fcaee6540250d010840
         SHA1: 59887d34eaaa74baf151589daef69b2b6f2d9b55
@@ -5207,6 +5508,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -5222,6 +5526,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -5240,7 +5547,7 @@ KnownVulnerableSamples:
     SHA256: fafa1bb36f0ac34b762a10e9f327dcab2152a6d0b16a19697362d49a31e7f566
   Company: "\u5B8F\u56FE\u65E0\u5FE7"
   Copyright: "Copyright \xA9 wyjsq.com"
-  CreationTimestamp: '2019-06-10 08:45:42'
+  CreationTimestamp: '2019-06-10 10:45:42'
   Date: ''
   Description: WYJSQ WFP Driver (WPP)
   ExportedFunctions: ''
@@ -5404,6 +5711,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -5417,6 +5727,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09450b8f73ea43e39d2cdd56049dbe40
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bcfecc67375f580ac6eadd789860b1f8
         SHA1: 3fa9cf13a1816a6e358bb1ca12e050662bc2e178
@@ -5430,6 +5743,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -5444,6 +5760,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 02c4d1e58a4a680c568da3047e7e4d5f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 829995f702421dea833a24fb2c7f4442
         SHA1: 1d7e838accd498c2e5ba9373af819ec097bb955c
@@ -5457,6 +5776,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -5469,9 +5791,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 8e0e7a2f5025b047a8ebd12a87d503fe
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- netfilter2.sys
-Verified: 'TRUE'

@@ -1,9 +1,11 @@
 Id: 6ec5ddda-f302-4008-a73e-12814c1d571f
+Tags:
+- ATSZIO.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ATSZIO.sys binPath=C:\windows\temp\ATSZIO.sys type=kernel
     && sc.exe start ATSZIO.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: ATSZIO.sys
   MD5: 17b97fbe2e8834d7ad30211635e1b271
@@ -96,6 +98,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -110,6 +115,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -125,6 +133,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -138,6 +149,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -153,6 +167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
@@ -168,6 +185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -206,7 +226,7 @@ KnownVulnerableSamples:
       Entropy: 5.157296790524136
       Virtual Size: '0x1c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 06:05:53'
+  CreationTimestamp: '2014-09-18 08:05:53'
   Imphash: bb56f25a810b329868a0ff8e94080bad
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -267,6 +287,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004de597a775e3157f7b00000000004d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
@@ -281,6 +304,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -321,7 +347,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 06:04:29'
+  CreationTimestamp: '2014-09-18 08:04:29'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -380,6 +406,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -393,6 +422,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -408,6 +440,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -421,6 +456,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -436,6 +474,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
@@ -474,7 +515,7 @@ KnownVulnerableSamples:
       Entropy: 3.6129747487589423
       Virtual Size: '0x384'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-03-03 22:49:03'
+  CreationTimestamp: '2011-03-04 00:49:03'
   Imphash: 2233472cee6457ad207017803048aaff
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -543,6 +584,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -557,6 +601,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -572,6 +619,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -585,6 +635,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -600,6 +653,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
@@ -615,6 +671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -653,7 +712,7 @@ KnownVulnerableSamples:
       Entropy: 4.460990027729786
       Virtual Size: '0x13c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-04-26 05:50:44'
+  CreationTimestamp: '2013-04-26 07:50:44'
   Imphash: ff605557fd515d7ab30ff41dbd8bd24a
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -718,6 +777,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -731,6 +793,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -746,6 +811,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -759,6 +827,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -774,6 +845,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 12d5c9e2949d48abaccd3514f0fb22ad
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a8e2727ca2cb8705c02aaef015feb372
         SHA1: 94a0711ecebe96729e048ae1c7de9c4ba5c25ec4
@@ -812,7 +886,7 @@ KnownVulnerableSamples:
       Entropy: 5.356685436726801
       Virtual Size: '0x164'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-03-03 22:49:25'
+  CreationTimestamp: '2011-03-04 00:49:25'
   Imphash: e717a2158439123c6fca79b6b2c0ba49
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -872,6 +946,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -886,6 +963,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -901,6 +981,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -914,6 +997,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -929,6 +1015,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
@@ -944,6 +1033,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -985,7 +1077,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-04-26 05:50:14'
+  CreationTimestamp: '2013-04-26 07:50:14'
   Imphash: bb981f82c2bfc3c22471df92d9d0fb89
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -1046,6 +1138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 068642beebecb7ddb4272ae42e83b490
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2c5294ef0ebb9b6df1431035fef94108
         SHA1: 4b57c734704a14602480c6912c2d51d9d5052d33
@@ -1060,6 +1155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -1100,7 +1198,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 06:04:14'
+  CreationTimestamp: '2014-09-18 08:04:14'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'TRUE'
 - Filename: ATSZIO.sys
@@ -1161,6 +1259,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1175,6 +1276,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1190,6 +1294,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -1203,6 +1310,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1218,6 +1328,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
@@ -1233,6 +1346,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1274,7 +1390,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-18 06:04:14'
+  CreationTimestamp: '2014-09-18 08:04:14'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ATSZIO.sys
@@ -1335,6 +1451,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -1350,6 +1469,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 031c8403876518b80064120f1485a103
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 88eada557d1906ff97f3f5f8ef1130cb
         SHA1: a9f92d787fd948a439fb335046e164acfe06eafa
@@ -1364,6 +1486,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -1401,8 +1526,6 @@ KnownVulnerableSamples:
       Entropy: 3.273940943248981
       Virtual Size: '0x330'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-11 05:38:01'
+  CreationTimestamp: '2018-04-11 07:38:01'
   Imphash: b19743993dc7f1d48b2a86fe9b9c91e3
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- ATSZIO.sys

@@ -1,9 +1,11 @@
 Id: 613b8509-18c0-4720-b489-736776b6713e
+Tags:
+- gdrv.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create gdrv.sys binPath=C:\windows\temp\gdrv.sys type=kernel &&
     sc.exe start gdrv.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: gdrv.sys
   MD5: b0954711c133d284a171dd560c8f492a
@@ -91,6 +93,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -105,6 +110,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -119,6 +127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -134,6 +145,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
@@ -149,6 +163,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -186,7 +203,7 @@ KnownVulnerableSamples:
       Entropy: 5.642936600253398
       Virtual Size: '0x188'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 20:25:54'
+  CreationTimestamp: '2019-02-12 22:25:54'
   Imphash: 59b3f3fa2775e407721c2491ddb2890b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -244,6 +261,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -258,6 +278,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -272,6 +295,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -287,6 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
@@ -302,6 +331,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -345,7 +377,7 @@ KnownVulnerableSamples:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-12 20:23:11'
+  CreationTimestamp: '2019-02-12 22:23:11'
   Imphash: f7d07bcaa23837d219dcb64e76290252
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -409,6 +441,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -423,6 +458,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -437,6 +475,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -452,6 +493,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
@@ -467,6 +511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -510,7 +557,7 @@ KnownVulnerableSamples:
       Entropy: 3.3380209612256118
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-15 01:45:51'
+  CreationTimestamp: '2019-04-15 03:45:51'
   Imphash: d6dc99d60798b2647006ddba21671160
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -569,6 +616,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -582,6 +632,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -597,6 +650,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -610,6 +666,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -625,6 +684,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 720ef3aaa1a44f7d0717a805c290c378
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0695cf8f3778103101610eccc2a78d04
         SHA1: ab5b9a4474b73d3317a7853116f62e83c9301b0d
@@ -660,7 +722,7 @@ KnownVulnerableSamples:
       Entropy: 4.481086585534943
       Virtual Size: '0x65c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 21:22:29'
+  CreationTimestamp: '2009-03-12 23:22:29'
   Imphash: 6816dabcee7b7d027bfbb93a16297afa
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -724,6 +786,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -738,6 +803,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -752,6 +820,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -767,6 +838,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -782,6 +856,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 47547865fbe14ca43b8231902649d74d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7ce6ab4209b99d039125f7d2466f7707
         SHA1: 6f99eeb729cc36377229a2b37172f0da37e6bbb1
@@ -825,7 +902,7 @@ KnownVulnerableSamples:
       Entropy: 3.248587587731763
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-20 04:38:40'
+  CreationTimestamp: '2018-04-20 06:38:40'
   Imphash: d6dc99d60798b2647006ddba21671160
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -890,6 +967,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47c30ffefc22bb280f96fea75251
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 729cf4baceff4ef7aa199ad4f4ebed3d
         SHA1: f478f0e790d5c8ec6056a3ab2567404a991d2837
@@ -903,6 +983,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -916,6 +999,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d424ae0be3a88ff604021ce1400f0dd
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: c0189c338449a42fe8358c2c1fbecc60
         SHA1: b8ac0ee6875594b80ad86a6df6dd1fa3048c187c
@@ -929,6 +1015,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0f05d43d469ef74a803e0b3c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 123a13c6529f9736a927a9c5e9b63fe2
         SHA1: 5af3705dcda674e6509c0c61e91a4806f71dcb62
@@ -942,6 +1031,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -956,6 +1048,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -970,6 +1065,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0aa125d6d6321b7e41e405da3697c215
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8d26184fc613f89aba1cefb30fce1b53
         SHA1: 63a7e376bad5ec2e419d514a403bcf46c8d31d95
@@ -1003,7 +1101,7 @@ KnownVulnerableSamples:
       Entropy: 3.471909950512757
       Virtual Size: '0x3e8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-03 22:27:55'
+  CreationTimestamp: '2013-07-04 00:27:55'
   Imphash: cc81a908891587ccac8059435eda4c66
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1066,6 +1164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -1080,6 +1181,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -1094,6 +1198,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -1109,6 +1216,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
@@ -1124,6 +1234,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1164,7 +1277,7 @@ KnownVulnerableSamples:
       Entropy: 3.1867043459100257
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-01-25 00:05:25'
+  CreationTimestamp: '2021-01-25 02:05:25'
   Imphash: 81acb4bb89ef49c4e7f30513b4750e53
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1222,6 +1335,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1236,6 +1352,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1250,6 +1369,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -1265,6 +1387,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4f8eefa0dcc85bbd656ab0f160743d34
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5415ec7433f8ae320658011dfcfa2998
         SHA1: 044407fe1b8e4b5af9eecf34ea87a0ecb32ee6bb
@@ -1280,6 +1405,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1323,7 +1451,7 @@ KnownVulnerableSamples:
       Entropy: 3.251870619839375
       Virtual Size: '0x2c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-01-17 01:52:53'
+  CreationTimestamp: '2019-01-17 03:52:53'
   Imphash: f7d07bcaa23837d219dcb64e76290252
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1392,6 +1520,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1406,6 +1537,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1421,6 +1555,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1434,6 +1571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1449,6 +1589,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 248472542c24ab8e429229acf121ca26
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: dc48abdae01614d4607b1f5760dfce88
         SHA1: 467c1868ddb5ef8db746e66acbaab9fdd03fb740
@@ -1481,7 +1624,7 @@ KnownVulnerableSamples:
       Entropy: 4.981256903616009
       Virtual Size: '0x12c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-07-03 22:27:29'
+  CreationTimestamp: '2013-07-04 00:27:29'
   Imphash: 45f8f347e3fb919f3164a4a3278f1c71
   LoadsDespiteHVCI: 'FALSE'
 - Filename: gdrv.sys
@@ -1543,6 +1686,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1556,6 +1702,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1571,6 +1720,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1584,6 +1736,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1599,6 +1754,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 720ef3aaa1a44f7d0717a805c290c378
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0695cf8f3778103101610eccc2a78d04
         SHA1: ab5b9a4474b73d3317a7853116f62e83c9301b0d
@@ -1631,8 +1789,6 @@ KnownVulnerableSamples:
       Entropy: 4.802440942775519
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-03-12 21:17:32'
+  CreationTimestamp: '2009-03-12 23:17:32'
   Imphash: b4c857bd3a7b1d8125c0f62aec45401e
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- gdrv.sys

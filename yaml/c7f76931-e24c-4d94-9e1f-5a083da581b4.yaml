@@ -1,9 +1,11 @@
 Id: c7f76931-e24c-4d94-9e1f-5a083da581b4
+Tags:
+- fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys
+Verified: 'TRUE'
 Author: Viral Maniar
 Created: '2023-07-25'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys binPath=C:\windows\temp\fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys
     type=kernel && sc.exe start fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys
@@ -15,10 +17,10 @@ Commands:
 Resources:
 - https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
 - https://github.com/magicsword-io/LOLDrivers/issues/114
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: ''
   MD5: fd3b7234419fafc9bdd533f48896ed73
@@ -74,7 +76,7 @@ KnownVulnerableSamples:
       Entropy: 3.9987238734590798
       Virtual Size: '0xb8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-09-14 22:23:16'
+  CreationTimestamp: '2022-09-15 00:23:16'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -116,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -130,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -142,5 +150,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 28dc68bb6d6bf4f6b2db8dd7588b2511
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- fd3b7234419fafc9bdd533f48896ed73_b816c5cd.sys

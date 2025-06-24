@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 9b65dba4-81a0-48cc-8ff0-a4f353881062
+Tags:
+- EneIo64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create EneIo64.sys binPath=C:\windows\temp\EneIo64.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
 Detection: []
-Id: 9b65dba4-81a0-48cc-8ff0-a4f353881062
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 198111fd73515aa7fe4387612f027f0f
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: ebbaa44277a3ec6e20ad3f6aef5399fdc398306eb4c13aa96e45c9a281820a12
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-03-19 21:59:12'
+  CreationTimestamp: '2018-03-19 23:59:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -93,6 +99,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000001f9800c911029569be00000000001f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adc809facabcdfc353d4e5d9f8956845
         SHA1: ec1181c8eafabeee4ba13edd8f260a880474b665
@@ -107,6 +116,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -119,10 +131,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 85f86c7c8ce81a78e84efa545d7edc65
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c'
-- https://gist.github.com/k4nfr3/af970e7facb09195e56f2112e1c9549c
-Tags:
-- EneIo64.sys
-Verified: 'TRUE'

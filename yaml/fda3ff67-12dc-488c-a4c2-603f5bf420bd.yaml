@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: fda3ff67-12dc-488c-a4c2-603f5bf420bd
+Tags:
+- cg6kwin2k.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create cg6kwin2ksys binPath= C:\windows\temp\cg6kwin2ksys.sys type=kernel
@@ -15,9 +18,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection: []
-Id: fda3ff67-12dc-488c-a4c2-603f5bf420bd
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: NMS Communications
   Date: ''
@@ -65,7 +71,7 @@ KnownVulnerableSamples:
       Entropy: 3.9098148164589683
       Virtual Size: '0x1da'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-09-13 08:32:49'
+  CreationTimestamp: '2022-09-13 10:32:49'
   InternalName: cg6kwin2k.sys
   Copyright: Copyright (C) NMS Communications Corp.2004
   Imports:
@@ -150,6 +156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -164,6 +173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -175,9 +187,3 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- cg6kwin2k.sys
-Verified: 'TRUE'

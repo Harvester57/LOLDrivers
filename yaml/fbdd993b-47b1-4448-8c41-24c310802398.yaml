@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: fbdd993b-47b1-4448-8c41-24c310802398
+Tags:
+- rwdrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create rwdrv.sys binPath=C:\windows\temp\rwdrv.sys type=kernel &&
@@ -16,7 +19,10 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
+- http://rweverything.com/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/ea0b9eecf4ad5ec8c14aec13de7d661e7615018b1a3c65464bf5eca9bbf6ded3.yara
@@ -38,7 +44,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: fbdd993b-47b1-4448-8c41-24c310802398
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 3cd1454d2308cee5c59b45d5f952e70b
@@ -46,7 +54,7 @@ KnownVulnerableSamples:
     SHA256: acb65f96f1d5c986b52d980a1c5ea009292ff472087fdd8a98a485404948f585
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2013-05-25 07:02:16'
+  CreationTimestamp: '2013-05-25 09:02:16'
   Date: ''
   Description: RwDrv Driver
   ExportedFunctions: ''
@@ -144,6 +152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -157,6 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -170,6 +184,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
@@ -184,6 +201,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -197,6 +217,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -214,7 +237,7 @@ KnownVulnerableSamples:
     SHA256: b1d0fdfddddfe520afc18b79b18b5eef730f7586639bd05857a41c0d09a9b9e6
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2012-12-26 00:59:05'
+  CreationTimestamp: '2012-12-26 02:59:05'
   Date: ''
   Description: RwDrv Driver
   ExportedFunctions: ''
@@ -307,6 +330,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -320,6 +346,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
@@ -334,6 +363,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 023a64
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1c4eabb6695c77091994554285e367d1
         SHA1: 01ee4a5386a24a8b6805c4dfcbc5816c38583ce2
@@ -348,6 +380,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7e1fdf7299e8d245a15d0ba8e5b159ba
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e451247dadf3cdbd75735f81335ede9a
         SHA1: 6488fdef17121c59aba8e4d9ee03fed253995625
@@ -361,6 +396,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -378,7 +416,7 @@ KnownVulnerableSamples:
     SHA256: 21e6d9229f380d5e9591beaa82bd93547f517af90707d7757f0e27ff4731b484
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2012-10-24 01:46:54'
+  CreationTimestamp: '2012-10-24 03:46:54'
   Date: ''
   Description: RwDrv Driver
   ExportedFunctions: ''
@@ -472,6 +510,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -485,6 +526,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -498,6 +542,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -511,6 +558,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
@@ -524,6 +574,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -541,7 +594,7 @@ KnownVulnerableSamples:
     SHA256: 1997e2a6302f3196975f858fef63188a249f79b6c2982d31ae07405e8aada58f
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2013-05-01 21:59:34'
+  CreationTimestamp: '2013-05-01 23:59:34'
   Date: ''
   Description: RwDrv Driver
   ExportedFunctions: ''
@@ -637,6 +690,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -650,6 +706,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -663,6 +722,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
@@ -677,6 +739,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -690,6 +755,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -701,11 +769,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 6f0b9814da4da038669c47e77c2f268f
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/jbaines-r7/dellicious
-- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-- http://rweverything.com/
-Tags:
-- rwdrv.sys
-Verified: 'TRUE'

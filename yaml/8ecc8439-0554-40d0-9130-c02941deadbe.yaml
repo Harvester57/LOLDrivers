@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 8ecc8439-0554-40d0-9130-c02941deadbe
+Tags:
+- rtport.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create rtportsys binPath= C:\windows\temp\rtportsys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 8ecc8439-0554-40d0-9130-c02941deadbe
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Windows (R) 2003 DDK 3790 provider
   Date: ''
@@ -72,7 +78,7 @@ KnownVulnerableSamples:
       Entropy: 4.33595482765136
       Virtual Size: '0xea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-01 03:36:49'
+  CreationTimestamp: '2005-08-01 05:36:49'
   InternalName: rtport.sys
   Copyright: Copyright (C) Microsoft Corp. 2005
   Imports:
@@ -117,6 +123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -130,6 +139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -145,6 +157,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -158,6 +173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -173,6 +191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 042f5c7333af1e4a87e231eccedb269e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a8a4ba9fa58f073453b57664f7ebfc31
         SHA1: 0fc0164d109c25e0dcdd95495085900e2fcd0f95
@@ -201,9 +222,9 @@ KnownVulnerableSamples:
   Signature: ''
   Imphash: 8b41eacbfbe5f5348579e27d30767e74
   Authentihash:
-    MD5: 71e94ae106500dae5a417f585de7b7dc
-    SHA1: f99fb23abfff0a2f05f5cf9e4e8462f95452d123
-    SHA256: dc66f649a4c5324c0aee784152639a91569a1fc2857b294b369fc16e229716ee
+    MD5: b4c4aace0c7a95285c71409310e9d5bd
+    SHA1: daf2e7e6d8b811ce52de19e239cce1a1b94cb6e0
+    SHA256: c3db6290145dc8905c0f97e218e0ef071f435a6ffaf1ed4c0699605d9a540038
   RichPEHeaderHash:
     MD5: 72e6be525c0e5cfe3d35b914a5297b20
     SHA1: 2ffd414097e1c5d7ff411de4282156dcc56debfb
@@ -228,7 +249,7 @@ KnownVulnerableSamples:
       Entropy: 3.686715655862542
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2002-04-22 10:54:09'
+  CreationTimestamp: '2002-04-22 12:54:09'
   InternalName: rtport.sys
   Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
@@ -252,7 +273,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_USHORT
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Windows (R) 2003 DDK 3790 provider
   Date: ''
   Description: Generic Port I/O for Win64
@@ -296,7 +317,7 @@ KnownVulnerableSamples:
       Entropy: 3.419986029858509
       Virtual Size: '0x450'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-01 03:36:00'
+  CreationTimestamp: '2005-08-01 05:36:00'
   InternalName: rtport.sys
   Copyright: Copyright (C) Microsoft Corp. 2005
   Imports:
@@ -327,6 +348,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -340,6 +364,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -355,6 +382,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -368,6 +398,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -383,6 +416,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 042f5c7333af1e4a87e231eccedb269e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a8a4ba9fa58f073453b57664f7ebfc31
         SHA1: 0fc0164d109c25e0dcdd95495085900e2fcd0f95
@@ -438,7 +474,7 @@ KnownVulnerableSamples:
       Entropy: 3.419986029858509
       Virtual Size: '0x450'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-08-01 03:36:00'
+  CreationTimestamp: '2005-08-01 05:36:00'
   InternalName: rtport.sys
   Copyright: Copyright (C) Microsoft Corp. 2005
   Imports:
@@ -477,9 +513,9 @@ KnownVulnerableSamples:
   Signature: ''
   Imphash: 8d2a933d039e8b8134ef41236d5ea843
   Authentihash:
-    MD5: 1984d23ae2567fcc52991e90aa4db0ae
-    SHA1: fa9b6367de0dc167edc9665d86bfa4c4acc9090c
-    SHA256: 4db3d1b695a3ce9b5772997648672ab18d1c72b11cfaaa064c68fdb7849631af
+    MD5: 54e480b9f11b70e944e0e5b1130116c8
+    SHA1: 24d9958ec0fedb77e9b5d5deba3117abaca9803f
+    SHA256: fe275be26ecca4c69f1c8ec35145fcae8cd83a5cb20f7ca71ff998d91091bb7e
   RichPEHeaderHash:
     MD5: c556eabb01acc563d3072cd12969940b
     SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
@@ -504,7 +540,7 @@ KnownVulnerableSamples:
       Entropy: 3.708569833924545
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2000-05-26 01:03:37'
+  CreationTimestamp: '2000-05-26 03:03:37'
   InternalName: rtport.sys
   Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
@@ -528,7 +564,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_ULONG
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Windows (R) 2000 DDK provider
   Date: ''
   Description: Generic Port I/O
@@ -545,9 +581,9 @@ KnownVulnerableSamples:
   Signature: ''
   Imphash: 8d2a933d039e8b8134ef41236d5ea843
   Authentihash:
-    MD5: b56c5549825ea6f63833d0b45cefc53f
-    SHA1: e3aefadddd6ef935b3bbd55ce5444f39725d5d9b
-    SHA256: 627cff52c9a025d47c78d048d6cd4441d88ab6b5a047643f188bfa70cf51f992
+    MD5: 914defd13cc2e1b6c4d42a7f806c8b45
+    SHA1: c2308ff02a8a05d7b20e59d7734b90fe950d15bc
+    SHA256: 74264ce2e0ed67730b0f3c719aee37664d4688f872875322a64022cd68e060bb
   RichPEHeaderHash:
     MD5: c556eabb01acc563d3072cd12969940b
     SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
@@ -572,7 +608,7 @@ KnownVulnerableSamples:
       Entropy: 3.708569833924545
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2000-05-26 01:03:37'
+  CreationTimestamp: '2000-05-26 03:03:37'
   InternalName: rtport.sys
   Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
@@ -596,7 +632,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_ULONG
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: Windows (R) 2000 DDK provider
   Date: ''
   Description: Generic Port I/O
@@ -613,9 +649,9 @@ KnownVulnerableSamples:
   Signature: ''
   Imphash: 8d2a933d039e8b8134ef41236d5ea843
   Authentihash:
-    MD5: e9fdc37c4fbb50a54332326c3acf6306
-    SHA1: cc2cb981eba10e47b9808f9121912fa5c794af6a
-    SHA256: 2bfb520910ce96af9256747a157f9e9c13ab3a4a5192bc89c3237e734abdde45
+    MD5: 21b25c420a7e1569c8b26d93edf9548f
+    SHA1: 5599900b51571f6557c862f5d82b8f6706a21a9d
+    SHA256: 353a36d445e4ff60396702ad7b22b5f30bdce52aa05126e2701714a3f11a11c7
   RichPEHeaderHash:
     MD5: c556eabb01acc563d3072cd12969940b
     SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
@@ -640,7 +676,7 @@ KnownVulnerableSamples:
       Entropy: 3.708569833924545
       Virtual Size: '0x62'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2000-05-26 01:03:37'
+  CreationTimestamp: '2000-05-26 03:03:37'
   InternalName: rtport.sys
   Copyright: Copyright (C) Microsoft Corp. 1981-1999
   Imports:
@@ -664,7 +700,7 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_ULONG
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: REALTEK Semiconductor Corp.
   Date: ''
   Description: REALTEK Port I/O
@@ -681,9 +717,9 @@ KnownVulnerableSamples:
   Signature: ''
   Imphash: 8b41eacbfbe5f5348579e27d30767e74
   Authentihash:
-    MD5: 742fb07853a369dceb380af33c0be60c
-    SHA1: 37310c027eb0899af246edb95a4ad68643cd9c49
-    SHA256: 3f5d7a0115a28883d712567bd1675392eae7c9fff50cba2c7b2e33d164cac761
+    MD5: 418f88ade9d08467bc9401fc7b76cc2a
+    SHA1: 93c1b76f3fb828aaf98d37e6c138fc948f75f748
+    SHA256: ebe114a72d27b5abf47e17137dbb85f52ca987c8bb80ea709eb3293c9637f73c
   RichPEHeaderHash:
     MD5: c556eabb01acc563d3072cd12969940b
     SHA1: 4cd47adc61202eb2ce67fbeceaa44d7b214fb761
@@ -708,7 +744,7 @@ KnownVulnerableSamples:
       Entropy: 3.732353824331908
       Virtual Size: '0x64'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2001-03-08 18:15:23'
+  CreationTimestamp: '2001-03-08 20:15:23'
   InternalName: RTPORT.SYS
   Copyright: Copyright (c) 1999-2001 REALTEK Semiconductor Corp.
   Imports:
@@ -732,10 +768,4 @@ KnownVulnerableSamples:
   - READ_PORT_ULONG
   - WRITE_PORT_USHORT
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- rtport.sys
-Verified: 'TRUE'
+  LoadsDespiteHVCI: 'TRUE'

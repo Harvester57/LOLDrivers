@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 56b320b3-5b12-4ec6-81e2-5a16c56c7478
+Tags:
+- spf.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: 56b320b3-5b12-4ec6-81e2-5a16c56c7478
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: cc216e3696b7c60bf00217438f753d71
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 73a0ccf3e32c262142bde91c19f5b1f395878783f157c6bed5874ede5a3afddd
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-03-25 00:39:46'
+  CreationTimestamp: '2021-03-25 02:39:46'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -82,6 +88,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 459f66550fe479a84170eb50c75c9f3c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7773789c84ab7bbe854ea7a8e3fc4a13
         SHA1: 45c7568ed49b056a5db0e62aa4f42a50173b9ba1
@@ -93,9 +102,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 8464f3f6600ee4eccbbfe08f3a2a53e0
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- spf.sys
-Verified: 'TRUE'

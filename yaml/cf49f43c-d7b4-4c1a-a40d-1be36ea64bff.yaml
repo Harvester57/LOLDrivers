@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: hfiref0x
-  Person: hfiref0x
+Id: cf49f43c-d7b4-4c1a-a40d-1be36ea64bff
+Tags:
+- SysDrv3S.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-05-22'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create SysDrv3S.sys binPath=C:\windows\temp\SysDrv3S.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-22'
+Resources:
+- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/0e53b58415fa68552928622118d5b8a3a851b2fc512709a90b63ba46acda8b6b.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: cf49f43c-d7b4-4c1a-a40d-1be36ea64bff
+Acknowledgement:
+  Handle: hfiref0x
+  Person: hfiref0x
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0ef111dc998659cbc37f0d9845cdd2df
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 97cada65b735f3eece349c7b7021c4469d5a9fb3cf8b5e2ac187006469ffbc98
   Company: 3S-Smart Software Solutions GmbH
   Copyright: "Copyright \xA9 2006-2014"
-  CreationTimestamp: '2016-02-24 05:31:51'
+  CreationTimestamp: '2016-02-24 07:31:51'
   Date: ''
   Description: SysDrv3S
   ExportedFunctions: ''
@@ -139,6 +145,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000125071df9af
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
@@ -153,6 +162,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 481b6a07a9424c1eaafef3cdf10f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
@@ -166,6 +178,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -181,6 +196,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 60a8b030535055def1677cc6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e3f11dbfce17755c33f8e88f75d1920e
         SHA1: 78dcece49b4dbff1bd9a4d66644961c0805aef51
@@ -193,9 +211,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 1e6875beefe8571686d3e8530f8c4bfb
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
-Tags:
-- SysDrv3S.sys
-Verified: 'TRUE'

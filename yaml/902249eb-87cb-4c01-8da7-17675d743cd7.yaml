@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 902249eb-87cb-4c01-8da7-17675d743cd7
+Tags:
+- WinFlash64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection: []
-Id: 902249eb-87cb-4c01-8da7-17675d743cd7
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 9fd32632e404f7d009ffe1ed34364539
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: f2b51fbeead17f5ee34d5b4a3a83c848fb76f8f0e80769212e137a7aa539a3bc
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2007-01-04 19:39:31'
+  CreationTimestamp: '2007-01-04 21:39:31'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -90,6 +96,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -103,6 +112,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -118,6 +130,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -131,6 +146,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -146,6 +164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2ca9ca93cd9b19a96ddad68aff3a668d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 47b0f73f8cc709595616e0d6ae88c5db
         SHA1: 83d27f045fa24c61544842dd4a9ac8759fa6900a
@@ -159,10 +180,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 7a4a0df0bde1f8da6547a580d5bee7c3
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- WinFlash64.sys
-Verified: 'TRUE'

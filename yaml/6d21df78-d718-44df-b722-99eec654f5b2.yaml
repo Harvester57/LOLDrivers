@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 6d21df78-d718-44df-b722-99eec654f5b2
+Tags:
+- MsIo64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2020-17382
 Category: vulnerable driver
@@ -13,7 +16,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/
+- https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html
+- https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities
+- https://github.com/Exploitables/CVE-2020-17382
+- https://github.com/namazso/physmem_drivers
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/43ba8d96d5e8e54cab59d82d495eeca730eeb16e4743ed134cdd495c51a4fc89.yara
@@ -35,7 +43,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 6d21df78-d718-44df-b722-99eec654f5b2
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 9bb721ac0afc94a499a238ae32418d51
@@ -43,7 +53,7 @@ KnownVulnerableSamples:
     SHA256: 5bf00eff58e5bbe4cf578ec37b9e13c8fa74511fb2644352fcc091347153a709
   Company: MICSYS Technology Co., LTd
   Copyright: Copyright (c) 2019 MICSYS
-  CreationTimestamp: '2019-10-16 19:19:01'
+  CreationTimestamp: '2019-10-16 21:19:01'
   Date: ''
   Description: MICSYS driver
   ExportedFunctions: ''
@@ -117,6 +127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -131,6 +144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -143,14 +159,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 8a424cd36ae3eab0d11332ce3b982a02
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- ' https://www.matteomalvica.com/blog/2020/09/24/weaponizing-cve-2020-17382/'
-- https://packetstormsecurity.com/files/159315/MSI-Ambient-Link-Driver-1.0.0.8-Privilege-Escalation.html
-- https://www.coresecurity.com/core-labs/advisories/msi-ambient-link-multiple-vulnerabilities
-- https://github.com/Exploitables/CVE-2020-17382
-- https://github.com/namazso/physmem_drivers
-Tags:
-- MsIo64.sys
-Verified: 'TRUE'

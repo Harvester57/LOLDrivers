@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 64f3d4b0-6d2b-4275-b3d4-15d092af4092
+Tags:
+- fiddrv64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create fiddrv64.sys binPath=C:\windows\temp\fiddrv64.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
-Id: 64f3d4b0-6d2b-4275-b3d4-15d092af4092
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -46,7 +52,7 @@ KnownVulnerableSamples:
     SHA256: feef191064d18b6fb63b7299415d1b1e2ec8fcdd742854aa96268d0ec4a0f7b6
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-19 11:54:07'
+  CreationTimestamp: '2009-11-19 13:54:07'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -110,6 +116,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 05b0ff
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: f532f9999c3f7a078f0f973c726a2a04
         SHA1: f56832bc9412c372f9a8744591258f8bb11af2d8
@@ -124,6 +133,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -137,6 +149,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -150,6 +165,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610bdc8f00000000001a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 6e11ed171e9a07e607b8ca65bf0e8858
         SHA1: 6d329a72420f76868584957854cdc45172e9f902
@@ -163,6 +181,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 13fd5f58000000002ea3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b3bd1f3e90334bd036db0c87a99bbe67
         SHA1: 560fd30788b6778228d6f72d2383fdad0ea7d6f4
@@ -176,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 612c9489000000000005
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5563adcf63b9dd7859bcf84b3c2c95bb
         SHA1: 83c83dbb905a1b9612d3de74267f36cfb88f714c
@@ -187,9 +211,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 840e656bdb2987fa422092ec9d588895
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- fiddrv64.sys
-Verified: 'TRUE'

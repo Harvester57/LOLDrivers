@@ -1,8 +1,10 @@
 Id: e32bc3da-4db1-4858-a62c-6fbe4db6afbd
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Tags:
+- RTCore64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create RTCore64.sys binPath=C:\windows\temp\RTCore64.sys type=kernel
@@ -16,8 +18,15 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
+- https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/RTCore64_MSI_Afterburner_v.4.6.4.16117
 Detection: []
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 538e5e595c61d2ea8defb7b047784734
@@ -25,7 +34,7 @@ KnownVulnerableSamples:
     SHA256: 478c36f8af7844a80e24c1822507beef6314519185717ec7ae224a0e04b2f330
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-30 06:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -95,6 +104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -108,6 +120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -122,6 +137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -137,6 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
@@ -150,6 +171,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -167,7 +191,7 @@ KnownVulnerableSamples:
     SHA256: ff8d17761c1645bdd1f0eccc69024907bbbfbe5c60679402b7d02f95b16310fe
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-30 06:03:16'
+  CreationTimestamp: '2016-09-30 08:03:16'
   Date: null
   Description: ''
   ExportedFunctions: ''
@@ -343,7 +367,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -411,6 +435,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -424,6 +451,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -438,6 +468,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -453,6 +486,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -466,6 +502,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -485,7 +524,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -554,6 +593,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -567,6 +609,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -582,6 +627,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -596,6 +644,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -609,6 +660,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -628,7 +682,7 @@ KnownVulnerableSamples:
     SHA256: 5182caf10de9cec0740ecde5a081c21cdc100d7eb328ffe6f3f63183889fec6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -697,6 +751,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -710,6 +767,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -725,6 +785,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -738,6 +801,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -752,6 +818,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26d7f5563eb3e42a81f7c715fcd2799d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e994671d8d440b7739cdd9775bbca72f
         SHA1: ea9446b39b968aa6953e1bf74a36435759b3d2e3
@@ -767,6 +836,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -786,7 +858,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -854,6 +926,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -867,6 +942,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -881,6 +959,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -896,6 +977,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -909,6 +993,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -928,7 +1015,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -997,6 +1084,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -1010,6 +1100,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -1025,6 +1118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1039,6 +1135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -1052,6 +1151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1071,7 +1173,7 @@ KnownVulnerableSamples:
     SHA256: 918d2e68a724b58d37443aea159e70bf8b1b5ebb089c395cad1d62745ecdaa19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1140,6 +1242,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -1153,6 +1258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -1166,6 +1274,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -1181,6 +1292,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
@@ -1194,6 +1308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1211,7 +1328,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1278,7 +1395,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1346,6 +1463,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -1359,6 +1479,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -1373,6 +1496,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -1388,6 +1514,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1401,6 +1530,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1420,7 +1552,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1488,6 +1620,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -1501,6 +1636,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -1515,6 +1653,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -1530,6 +1671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1543,6 +1687,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1562,7 +1709,7 @@ KnownVulnerableSamples:
     SHA256: 5182caf10de9cec0740ecde5a081c21cdc100d7eb328ffe6f3f63183889fec6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1631,6 +1778,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -1644,6 +1794,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -1658,6 +1811,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -1673,6 +1829,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1686,6 +1845,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1705,7 +1867,7 @@ KnownVulnerableSamples:
     SHA256: 3c9829a16eb85272b0e1a2917feffaab8ddb23e633b168b389669339a0cee0b5
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2015-04-24 01:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1776,6 +1938,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -1789,6 +1954,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -1803,6 +1971,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -1818,6 +1989,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
@@ -1831,6 +2005,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1848,7 +2025,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1913,7 +2090,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -1982,6 +2159,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -1995,6 +2175,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -2010,6 +2193,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2024,6 +2210,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -2037,6 +2226,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2056,7 +2248,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2124,6 +2316,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -2137,6 +2332,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -2151,6 +2349,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -2166,6 +2367,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2179,6 +2383,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2198,7 +2405,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2266,6 +2473,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -2279,6 +2489,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -2293,6 +2506,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -2308,6 +2524,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2321,6 +2540,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2340,7 +2562,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2409,6 +2631,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -2422,6 +2647,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -2437,6 +2665,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2451,6 +2682,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -2464,6 +2698,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2483,7 +2720,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2552,6 +2789,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2565,6 +2805,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2579,6 +2822,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -2592,6 +2838,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011c08b7f67e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
@@ -2606,6 +2855,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -2619,6 +2871,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2637,7 +2892,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2706,6 +2961,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2719,6 +2977,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2733,6 +2994,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -2746,6 +3010,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011c08b7f67e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
@@ -2760,6 +3027,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -2773,6 +3043,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2791,7 +3064,7 @@ KnownVulnerableSamples:
     SHA256: 5182caf10de9cec0740ecde5a081c21cdc100d7eb328ffe6f3f63183889fec6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -2860,6 +3133,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -2873,6 +3149,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -2886,6 +3165,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -2901,6 +3183,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
@@ -2914,6 +3199,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2931,7 +3219,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3000,6 +3288,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3013,6 +3304,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3027,6 +3321,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -3040,6 +3337,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011c08b7f67e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
@@ -3054,6 +3354,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -3067,6 +3370,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3085,7 +3391,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3154,6 +3460,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -3167,6 +3476,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -3182,6 +3494,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -3196,6 +3511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -3209,6 +3527,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3228,7 +3549,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3297,6 +3618,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3310,6 +3634,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3324,6 +3651,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -3337,6 +3667,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011c08b7f67e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
@@ -3351,6 +3684,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -3364,6 +3700,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3382,7 +3721,7 @@ KnownVulnerableSamples:
     SHA256: 5182caf10de9cec0740ecde5a081c21cdc100d7eb328ffe6f3f63183889fec6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3451,6 +3790,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -3464,6 +3806,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -3477,6 +3822,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -3492,6 +3840,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
@@ -3505,6 +3856,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3522,7 +3876,7 @@ KnownVulnerableSamples:
     SHA256: 478c36f8af7844a80e24c1822507beef6314519185717ec7ae224a0e04b2f330
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-30 06:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3593,6 +3947,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -3606,6 +3963,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -3620,6 +3980,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -3635,6 +3998,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
@@ -3648,6 +4014,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3665,7 +4034,7 @@ KnownVulnerableSamples:
     SHA256: 3c9829a16eb85272b0e1a2917feffaab8ddb23e633b168b389669339a0cee0b5
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2015-04-24 01:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3736,6 +4105,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -3749,6 +4121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -3763,6 +4138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -3778,6 +4156,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
@@ -3791,6 +4172,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3808,7 +4192,7 @@ KnownVulnerableSamples:
     SHA256: 918d2e68a724b58d37443aea159e70bf8b1b5ebb089c395cad1d62745ecdaa19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -3877,6 +4261,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -3890,6 +4277,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -3903,6 +4293,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -3918,6 +4311,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
@@ -3931,6 +4327,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -3948,7 +4347,7 @@ KnownVulnerableSamples:
     SHA256: 918d2e68a724b58d37443aea159e70bf8b1b5ebb089c395cad1d62745ecdaa19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4017,6 +4416,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -4030,6 +4432,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -4043,6 +4448,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -4058,6 +4466,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
@@ -4071,6 +4482,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4088,7 +4502,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4157,6 +4571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -4170,6 +4587,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -4184,6 +4604,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -4197,6 +4620,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011c08b7f67e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4566c37f56f951a0ce5b4ae966c0ea9f
         SHA1: a51cbf2834eb6f8535bc5e44913a9ec979379782
@@ -4211,6 +4637,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -4224,6 +4653,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -4242,7 +4674,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4311,6 +4743,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -4324,6 +4759,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -4339,6 +4777,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -4353,6 +4794,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -4366,6 +4810,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4385,7 +4832,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4454,6 +4901,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -4467,6 +4917,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -4482,6 +4935,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -4496,6 +4952,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -4509,6 +4968,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4528,7 +4990,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4596,6 +5058,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -4609,6 +5074,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -4623,6 +5091,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -4638,6 +5109,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -4651,6 +5125,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4670,7 +5147,7 @@ KnownVulnerableSamples:
     SHA256: 918d2e68a724b58d37443aea159e70bf8b1b5ebb089c395cad1d62745ecdaa19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4739,6 +5216,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -4752,6 +5232,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -4767,6 +5250,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -4780,6 +5266,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4794,6 +5283,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26d7f5563eb3e42a81f7c715fcd2799d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e994671d8d440b7739cdd9775bbca72f
         SHA1: ea9446b39b968aa6953e1bf74a36435759b3d2e3
@@ -4809,6 +5301,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4828,7 +5323,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -4897,6 +5392,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -4910,6 +5408,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -4925,6 +5426,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -4939,6 +5443,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 546ea040bf5075ce0a5c01d4c6ded19d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8f51b4e16b87e1cc89b9d0c997227546
         SHA1: 8f3cdd2b86ae03653f0612911a2f01a9dca49a22
@@ -4952,6 +5459,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4971,7 +5481,7 @@ KnownVulnerableSamples:
     SHA256: 918d2e68a724b58d37443aea159e70bf8b1b5ebb089c395cad1d62745ecdaa19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5040,6 +5550,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -5053,6 +5566,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -5068,6 +5584,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -5081,6 +5600,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5095,6 +5617,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 26d7f5563eb3e42a81f7c715fcd2799d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e994671d8d440b7739cdd9775bbca72f
         SHA1: ea9446b39b968aa6953e1bf74a36435759b3d2e3
@@ -5110,6 +5635,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -5129,7 +5657,7 @@ KnownVulnerableSamples:
     SHA256: b8eb26b6f79020ae988e4fb752dc06e1b6779749bf4f8df2872fc2b92bab8020
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2005-05-25 00:39:12'
+  CreationTimestamp: '2005-05-25 02:39:12'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5197,6 +5725,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -5210,6 +5741,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -5224,6 +5758,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -5239,6 +5776,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -5252,6 +5792,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5271,7 +5814,7 @@ KnownVulnerableSamples:
     SHA256: 3c9829a16eb85272b0e1a2917feffaab8ddb23e633b168b389669339a0cee0b5
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2015-04-24 01:01:47'
+  CreationTimestamp: '2015-04-24 03:01:47'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5342,6 +5885,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -5355,6 +5901,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -5369,6 +5918,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -5384,6 +5936,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
@@ -5397,6 +5952,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5414,7 +5972,7 @@ KnownVulnerableSamples:
     SHA256: 478c36f8af7844a80e24c1822507beef6314519185717ec7ae224a0e04b2f330
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2016-09-30 06:03:17'
+  CreationTimestamp: '2016-09-30 08:03:17'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5485,6 +6043,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -5498,6 +6059,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -5512,6 +6076,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -5527,6 +6094,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112158044863e4dc19cf29a85668b7f45842
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 403bb44a62aed1a94bd5df05b3292482
         SHA1: e4a0353e75940ab1e8cbff2f433f186c7f0b0f09
@@ -5540,6 +6110,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5557,7 +6130,7 @@ KnownVulnerableSamples:
     SHA256: 918d2e68a724b58d37443aea159e70bf8b1b5ebb089c395cad1d62745ecdaa19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5626,6 +6199,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -5639,6 +6215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -5653,6 +6232,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121405c1f0ed258882be54d8686ba11ea45
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b95cbc184d388718612d5933f7b36770
         SHA1: ff124c5d160710720108616ffee99bbe090ed363
@@ -5668,6 +6250,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
@@ -5681,6 +6266,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5698,7 +6286,7 @@ KnownVulnerableSamples:
     SHA256: 5182caf10de9cec0740ecde5a081c21cdc100d7eb328ffe6f3f63183889fec6b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2011-09-06 06:24:50'
+  CreationTimestamp: '2011-09-06 08:24:50'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5767,6 +6355,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -5780,6 +6371,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -5794,6 +6388,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79c32d7ddd2458cf2eabe5b1b5c5290f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5ba772ec00357ae706016510775c7a00
         SHA1: eeb31b244ea14abae1e947ecdca0d6ae4720031b
@@ -5809,6 +6406,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -5822,6 +6422,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5841,7 +6444,7 @@ KnownVulnerableSamples:
     SHA256: 918d2e68a724b58d37443aea159e70bf8b1b5ebb089c395cad1d62745ecdaa19
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-03-10 23:32:06'
+  CreationTimestamp: '2013-03-11 01:32:06'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -5910,6 +6513,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -5923,6 +6529,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -5936,6 +6545,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -5951,6 +6563,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121a559b50ef9848661f0faeb7421bbdd2c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3a98a18e8636f2a01e49e2a6d116c360
         SHA1: a2938150e46525adcec2e3a2348824bc1cf532b2
@@ -5964,6 +6579,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -5975,12 +6593,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 690a0fb27a0c47c785d6bbbfc2e56501
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-- https://news.sophos.com/en-us/2022/10/04/blackbyte-ransomware-returns/
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-- https://github.com/VoidSec/Exploit-Development/tree/b82b6d3ac1cce66221101d3e0f4634aa64cb4ca7/windows/x64/kernel/RTCore64_MSI_Afterburner_v.4.6.4.16117
-Tags:
-- RTCore64.sys
-Verified: 'TRUE'

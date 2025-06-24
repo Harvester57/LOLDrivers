@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 080ff223-f8e0-49c0-a7b5-e97349cf81a0
+Tags:
+- HpPortIox64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create HpPortIox64.sys binPath=C:\windows\temp\HpPortIox64.sys     type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/c5050a2017490fff7aa53c73755982b339ddb0fd7cef2cde32c81bc9834331c5.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 080ff223-f8e0-49c0-a7b5-e97349cf81a0
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 986877a0cf596be97155e9469f3c4b40
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: 35b31c96194d78cbb98b3223bf810f78f53fc0e4601f49169938ca883586e4e9
   Company: HP Inc.
   Copyright: Copyright (C) 2020-2021 HP Inc. All rights reserved.
-  CreationTimestamp: '2021-04-20 21:22:47'
+  CreationTimestamp: '2021-04-20 23:22:47'
   Date: ''
   Description: HpPortIo
   ExportedFunctions: ''
@@ -141,6 +147,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0409181b5fd5bb66755343b56f955008
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 9359496ca4f021408b9d8923cab8b179
         SHA1: 2aed40d7759997830870769be250199fd609e40e
@@ -155,6 +164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0449edef08b987f05203c4e0f2356499
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5e993a919f907013f89ff0215fcfdf29
         SHA1: b8b101040d1a81a545ae65cc953979880d3c1b10
@@ -167,10 +179,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 75018719e85e67b75e73c57d682dbcbf
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/elastic/protections-artifacts/search?q=VulnDriver'
-- https://github.com/elastic/protections-artifacts/search?q=VulnDriver
-Tags:
-- HpPortIox64.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 705facba-b595-41dd-86a6-93aefe6a6234
+Tags:
+- titidrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 705facba-b595-41dd-86a6-93aefe6a6234
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: dbb48a1b8fa3673466b53c6f16f2eddf
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: 7afdb552a7fa25dd716fe3a55c988a59d120e78f9ee95067f31901f51987ab8d
   Company: genitlkiwi (Benjamin XXXXX)
   Copyright: Copyright (c) 2007 - 2017 genitlkiwi (Benjamin XXXXX)
-  CreationTimestamp: '2017-12-03 13:13:32'
+  CreationTimestamp: '2017-12-03 15:13:32'
   Date: ''
   Description: titidrv for Windows (titicatz)
   ExportedFunctions: ''
@@ -139,6 +143,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -152,6 +159,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112169417a1c3ef46a301f99385f50680fa0
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ee0a53dda8301d1e78bd5487f1d49bf4
         SHA1: 5538f8cd492c2ec8d581f3665d2b4217c86fa19a
@@ -165,6 +175,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -176,9 +189,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 059c6bd84285f4960e767f032b33f19b
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- titidrv.sys
-Verified: 'TRUE'

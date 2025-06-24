@@ -1,9 +1,11 @@
 Id: ee6fa2de-d388-416c-862d-24385c152fad
+Tags:
+- msr.sys
+Verified: 'TRUE'
 Author: Michael Haag
 Created: '2023-12-02'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create msr.sys binPath=C:\windows\temp\msr.sys type=kernel && sc.exe
     start msr.sys
@@ -14,10 +16,10 @@ Commands:
 Resources:
 - https://twitter.com/wdormann/status/1699878227261411699
 - https://learn.microsoft.com/en-us/windows/security/application-security/application-control/windows-defender-application-control/design/microsoft-recommended-driver-block-rules
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: msr.sys
   Libraries:
@@ -43,7 +45,7 @@ KnownVulnerableSamples:
   Imphash: ddffac000a9ce8309fadca5939bd6b19
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-02-07 07:46:11'
+  CreationTimestamp: '2019-02-07 09:46:11'
   RichPEHeaderMD5: d4f3dea543c7d1110de608833ff941e6
   RichPEHeaderSHA1: ca0a39ffadb3f6c0106d0be3b3f7f08a3a153dd1
   RichPEHeaderSHA256: e94f754b1eb264a935896cf00f5dd78aeb61f6e8448841eb5ee3150f1d8d85d5
@@ -90,6 +92,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000062f45cf99e58a96a89000000000062
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 93c79f426eb2f2a03b74a6275cac238f
         SHA1: e3ae60577ad97b4113d71845e11bd33a1ef2bea8
@@ -104,6 +109,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -130,6 +138,7 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: msr.sys
   Libraries:
   - ntoskrnl.exe
@@ -160,7 +169,7 @@ KnownVulnerableSamples:
   Imphash: 90862ed3cb06642744e5aff0d881f694
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-03-13 06:03:45'
+  CreationTimestamp: '2023-03-13 08:03:45'
   RichPEHeaderMD5: a9a5e090dd2f0faae708d12243a6beb2
   RichPEHeaderSHA1: 89fb87aed185c809cd36b07ac5f9e7a5830925a2
   RichPEHeaderSHA256: aa3af1f1ddf9ec78ac1569ee1f30193f9636ed216fbe99e5d3f3167807749249
@@ -207,6 +216,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000062f45cf99e58a96a89000000000062
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 93c79f426eb2f2a03b74a6275cac238f
         SHA1: e3ae60577ad97b4113d71845e11bd33a1ef2bea8
@@ -221,6 +233,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -247,5 +262,4 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
-Tags:
-- msr.sys
+  LoadsDespiteHVCI: 'FALSE'

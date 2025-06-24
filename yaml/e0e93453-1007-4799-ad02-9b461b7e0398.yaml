@@ -1,9 +1,11 @@
 Id: e0e93453-1007-4799-ad02-9b461b7e0398
+Tags:
+- truesight.sys
+Verified: 'TRUE'
 Author: ph4nt0mbyt3, Michael Haag
 Created: '2023-11-10'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create truesight.sys binPath=C:\windows\temp\truesight.sys type=kernel
     && sc.exe start truesight.sys
@@ -20,10 +22,10 @@ Commands:
   OperatingSystem: Windows 11
 Resources:
 - https://github.com/ph4nt0mbyt3/Darkside
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: Truesight
   Libraries:
@@ -110,7 +112,7 @@ KnownVulnerableSamples:
   Imphash: b95bc1a99081d695b1c0b37b90a4a0be
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-08-29 06:07:25'
+  CreationTimestamp: '2023-08-29 08:07:25'
   RichPEHeaderMD5: 2aa941242ce069665648272f38f01e61
   RichPEHeaderSHA1: 27a430c07c51453e908a94ae3e2640dc733030e3
   RichPEHeaderSHA256: 78b94bc1db7ed451dff0467fac7a5e568a1d35f9cabcffbdb4690c13719861bb
@@ -162,6 +164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 48fc93b46055948d36a7c98a89d69416
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 207045ce7b7ab131e78e459b13825902
         SHA1: bcf7530a1ab309fb1926cb720f9fd58cff1cb88f
@@ -175,6 +180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33d708a891405319e2a5bbd339b9ad6e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b81404c775a2621debdb7825b87b8316
         SHA1: 47ae94067c3c59b13605192288705db7b52f3685
@@ -189,6 +197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 169d2c94309c0380414bcfdd93a6b27d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c35e4c3a6f6e5f166c542006132f8c91
         SHA1: 3a3f2daf6898839dd0cf73f3783501106997865a
@@ -208,10 +219,8 @@ KnownVulnerableSamples:
     SHA256: 78b94bc1db7ed451dff0467fac7a5e568a1d35f9cabcffbdb4690c13719861bb
   Description: RogueKiller Antirootkit Driver
   Company: Adlice Software
-  Product: Truesight
   Copyright: Copyright Adlice Software(C) 2023
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
-Tags:
-- truesight.sys
+  LoadsDespiteHVCI: 'FALSE'

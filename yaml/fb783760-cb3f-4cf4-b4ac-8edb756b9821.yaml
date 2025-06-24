@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: fb783760-cb3f-4cf4-b4ac-8edb756b9821
+Tags:
+- atlAccess.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create atlAccesssys binPath= C:\windows\temp\atlAccesssys.sys type=kernel
@@ -15,9 +18,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection: []
-Id: fb783760-cb3f-4cf4-b4ac-8edb756b9821
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Windows (R) Win 7 DDK provider
   Date: ''
@@ -62,7 +68,7 @@ KnownVulnerableSamples:
       Entropy: 3.4471340230661465
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-03-31 01:35:36'
+  CreationTimestamp: '2020-03-31 03:35:36'
   InternalName: atlAccess.sys
   Copyright: "\xA9 Microsoft Corporation. All rights reserved."
   Imports:
@@ -100,6 +106,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -114,6 +123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -128,6 +140,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7c3eead1d01e25d1efe1e3a788d520e8
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 72de81c11261fe09bcf8e625f61bf119
         SHA1: 5b1dfe2c24c571c2c5ead9824c2aa2c2cbc2f514
@@ -142,6 +157,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3d78d7f9764960b2617df4f01eca862a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 1f056ff7d5f874984dc605402b7cb042
         SHA1: bdb348353a2203deb4b767914fa1bd7248dd728b
@@ -157,6 +175,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -168,9 +189,3 @@ KnownVulnerableSamples:
         Class 3 SHA256 Code Signing CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- atlAccess.sys
-Verified: 'TRUE'

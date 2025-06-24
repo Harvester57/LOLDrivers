@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 351ff5ca-f07b-4eb6-9300-d5d31514defb
+Tags:
+- nscm.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 CVE:
 - CVE-2013-3956
 Category: vulnerable driver
@@ -12,7 +15,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/76660e91f1ff3cb89630df5af4fe09de6098d09baa66b1a130c89c3c5edd5b22.yara
@@ -34,7 +39,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 351ff5ca-f07b-4eb6-9300-d5d31514defb
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0d1a4e506e7c928f1683a9cf38eb0835
@@ -42,7 +49,7 @@ KnownVulnerableSamples:
     SHA256: 0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -137,6 +144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -151,6 +161,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -166,6 +179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -180,6 +196,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -193,6 +212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -212,7 +234,7 @@ KnownVulnerableSamples:
     SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:56:49'
+  CreationTimestamp: '2009-03-27 13:56:49'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -291,6 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -304,6 +329,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -319,6 +347,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -333,6 +364,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -346,6 +380,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -365,7 +402,7 @@ KnownVulnerableSamples:
     SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -454,6 +491,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7ece739fdaa27d96b67f587db04186a7
         SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
@@ -468,6 +508,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61077656000000000008'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 30a3f0b64324ed7f465e7fc618cb69e7
         SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
@@ -486,7 +529,7 @@ KnownVulnerableSamples:
     SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
   Company: Micro Focus
   Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  CreationTimestamp: '2022-03-03 03:52:58'
+  CreationTimestamp: '2022-03-03 05:52:58'
   Description: XTier Security Context Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -576,6 +619,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004de597a775e3157f7b00000000004d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
@@ -590,6 +636,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -608,7 +657,7 @@ KnownVulnerableSamples:
     SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-04-01 19:18:14'
+  CreationTimestamp: '2011-04-01 21:18:14'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -687,6 +736,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -700,6 +752,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -715,6 +770,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -729,6 +787,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -742,6 +803,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -761,7 +825,7 @@ KnownVulnerableSamples:
     SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:52:17'
+  CreationTimestamp: '2009-03-27 13:52:17'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -837,6 +901,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -850,6 +917,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -865,6 +935,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -879,6 +952,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -892,6 +968,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -911,7 +990,7 @@ KnownVulnerableSamples:
     SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1000,6 +1079,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000002528b33aaf895f339db000000000252
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
@@ -1014,6 +1096,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610e90d2000000000003
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
@@ -1032,7 +1117,7 @@ KnownVulnerableSamples:
     SHA256: 0e291148da43ea6a491b8b94bdf573365087940c9b90f6a15a4e589da86a518d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -1127,6 +1212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1141,6 +1229,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1156,6 +1247,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1170,6 +1264,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -1183,6 +1280,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1202,7 +1302,7 @@ KnownVulnerableSamples:
     SHA256: 1622ac0c618a86be17e0f97daa061f9aaa0e721dc0fd30d76bbc5c958e9a9d92
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:56:49'
+  CreationTimestamp: '2009-03-27 13:56:49'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1281,6 +1381,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1294,6 +1397,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1309,6 +1415,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1323,6 +1432,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -1336,6 +1448,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1355,7 +1470,7 @@ KnownVulnerableSamples:
     SHA256: 92ca1aec3afc90b44861c2e0be084a3db38d22d52f35e1697643d6477151392f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1444,6 +1559,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000036ce57eeb5d1cc2be1700000000036c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7ece739fdaa27d96b67f587db04186a7
         SHA1: b8701efa0ab12b8fea2293c9cff8772ecca084d0
@@ -1458,6 +1576,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61077656000000000008'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 30a3f0b64324ed7f465e7fc618cb69e7
         SHA1: 002de3561519b662c5e3f5faba1b92c403fb7c41
@@ -1476,7 +1597,7 @@ KnownVulnerableSamples:
     SHA256: a363deaf1790e9c0610e07a7203749aab8b60f5ededc944abc0ef3010f5e2105
   Company: Micro Focus
   Copyright: (C) Copyright 2000-2017, Micro Focus. All Rights Reserved.
-  CreationTimestamp: '2022-03-03 03:52:58'
+  CreationTimestamp: '2022-03-03 05:52:58'
   Description: XTier Security Context Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1566,6 +1687,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004de597a775e3157f7b00000000004d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
@@ -1580,6 +1704,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -1598,7 +1725,7 @@ KnownVulnerableSamples:
     SHA256: 34f36a59ecf6174eeac15994e54c41fe1e3e3b1eee8ed4c399ec8c63212373d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-04-01 19:18:14'
+  CreationTimestamp: '2011-04-01 21:18:14'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1677,6 +1804,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1690,6 +1820,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1705,6 +1838,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1719,6 +1855,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -1732,6 +1871,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1751,7 +1893,7 @@ KnownVulnerableSamples:
     SHA256: 00dfeab446afecac7b44b0b1680d5ca7d421eda243e16db8c08706bb593a8391
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-03-27 11:52:17'
+  CreationTimestamp: '2009-03-27 13:52:17'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1827,6 +1969,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1840,6 +1985,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1855,6 +2003,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1869,6 +2020,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -1882,6 +2036,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1901,7 +2058,7 @@ KnownVulnerableSamples:
     SHA256: 253ed7f5c7115e957dfdb1f5c6c51592b491a70b27787903c8fd848e45b9cf22
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:24:57'
+  CreationTimestamp: '2013-01-16 01:24:57'
   Description: Novell XTier Session Manager
   ExportedFunctions:
   - DllGetClassObject
@@ -1990,6 +2147,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000002528b33aaf895f339db000000000252
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 92b6022918bc02eb361b8a02fb1da57d
         SHA1: 8ceb945fac0f6d623d464e21740ae6eb60351652
@@ -2004,6 +2164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610e90d2000000000003
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: b4ec95434f1d45b8055077cf90540a5f
         SHA1: 71f74db41d045d6eaf81a849bbb3e21544edcff4
@@ -2022,7 +2185,7 @@ KnownVulnerableSamples:
     SHA256: 410d79a49c02da50f4567166d5acef977b5dbc3aafb67522939bf902e65596a5
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-12-22 01:35:10'
+  CreationTimestamp: '2015-12-22 03:35:10'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2116,6 +2279,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2130,6 +2296,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2144,6 +2313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2159,6 +2331,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2174,6 +2349,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2193,7 +2371,7 @@ KnownVulnerableSamples:
     SHA256: 1d640783395631c1b4878ac7945f227c4c4f64fe26dd30cbed755dc440931e85
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:12:50'
+  CreationTimestamp: '2015-06-26 08:12:50'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2287,6 +2465,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2301,6 +2482,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2315,6 +2499,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2330,6 +2517,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2345,6 +2535,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2364,7 +2557,7 @@ KnownVulnerableSamples:
     SHA256: 37b9fbd6547091b83b2595bb0f9f9035ae95111868a4393aab52bf22087233d7
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:29:20'
+  CreationTimestamp: '2012-03-18 21:29:20'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2445,6 +2638,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2458,6 +2654,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2473,6 +2672,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2487,6 +2689,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -2500,6 +2705,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2519,7 +2727,7 @@ KnownVulnerableSamples:
     SHA256: 748b6350472e21bab16497e4296794619dede7fcdb188fea1574f89498a2ff54
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2008-08-18 10:18:12'
+  CreationTimestamp: '2008-08-18 12:18:12'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2602,6 +2810,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2615,6 +2826,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2630,6 +2844,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2644,6 +2861,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -2657,6 +2877,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2676,7 +2899,7 @@ KnownVulnerableSamples:
     SHA256: 0f4ca9e9507724526f2b624d165750344473d388da38b7f3f6a8366dbc15140b
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 13:40:51'
+  CreationTimestamp: '2009-09-08 15:40:51'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2759,6 +2982,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2772,6 +2998,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2787,6 +3016,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2801,6 +3033,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -2814,6 +3049,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2833,7 +3071,7 @@ KnownVulnerableSamples:
     SHA256: 4c21b7065cb961127ab9e2a0251ab8d50cfd65369a41e88e36bc2908af2b1d8d
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-12-18 02:23:27'
+  CreationTimestamp: '2013-12-18 04:23:27'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -2925,6 +3163,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2939,6 +3180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2953,6 +3197,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -2968,6 +3215,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2983,6 +3233,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3002,7 +3255,7 @@ KnownVulnerableSamples:
     SHA256: 234fc829bfd4d8d5dca351be176f5a06cb29bbfd5632a93cc218936d32a44851
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:58:19'
+  CreationTimestamp: '2014-08-26 15:58:19'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3094,6 +3347,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3108,6 +3364,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3122,6 +3381,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3137,6 +3399,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3152,6 +3417,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3171,7 +3439,7 @@ KnownVulnerableSamples:
     SHA256: 8ac341d36e1af8959de6410a976400ded8554f5ffb6a462a8080c38a0140f4d4
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-07-17 21:25:32'
+  CreationTimestamp: '2011-07-17 23:25:32'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3252,6 +3520,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3265,6 +3536,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3280,6 +3554,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -3294,6 +3571,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -3307,6 +3587,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3326,7 +3609,7 @@ KnownVulnerableSamples:
     SHA256: 5271f526b19331c7f8526a5e10b9aedc0ddd325958aa0e908ceaee40692f7ae2
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-06-26 06:12:59'
+  CreationTimestamp: '2015-06-26 08:12:59'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3418,6 +3701,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3432,6 +3718,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3446,6 +3735,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3461,6 +3753,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3476,6 +3771,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3495,7 +3793,7 @@ KnownVulnerableSamples:
     SHA256: f62282e44713d7d2f4c780027c7bbb82ba0b491c8836dfae33a2d82e8b5a43d2
   Company: Novell, Inc.
   Copyright: "Copyright \xA9 1997-2007 Novell, Inc."
-  CreationTimestamp: '2007-08-09 13:35:11'
+  CreationTimestamp: '2007-08-09 15:35:11'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3578,6 +3876,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3591,6 +3892,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3606,6 +3910,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -3620,6 +3927,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -3633,6 +3943,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3652,7 +3965,7 @@ KnownVulnerableSamples:
     SHA256: cf2ea0e4d21d3774bbacf10a14c75583b448829f87a90b869678fbc4de9b2a99
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2012, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2012-03-18 19:31:45'
+  CreationTimestamp: '2012-03-18 21:31:45'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3735,6 +4048,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -3748,6 +4064,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3763,6 +4082,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -3777,6 +4099,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -3790,6 +4115,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3809,7 +4137,7 @@ KnownVulnerableSamples:
     SHA256: 1204026fdc9c859960ee561eb9f1fd9ebf6c88c78c5d4cee35ef029ad5050ec6
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2015, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2015-09-26 07:24:31'
+  CreationTimestamp: '2015-09-26 09:24:31'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -3903,6 +4231,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3917,6 +4248,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3931,6 +4265,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -3946,6 +4283,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3961,6 +4301,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3980,7 +4323,7 @@ KnownVulnerableSamples:
     SHA256: cdcf71696db4031fe3e70969bbe6169744ff91eebb24d6ffb734f922a850183b
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-01-15 23:25:05'
+  CreationTimestamp: '2013-01-16 01:25:05'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4070,6 +4413,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -4084,6 +4430,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -4099,6 +4448,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -4113,6 +4465,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -4126,6 +4481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4145,7 +4503,7 @@ KnownVulnerableSamples:
     SHA256: 058c4fbd3a12f0d7ddfc771067f03dea88cc33dd4b61139edcb0b2d17905f084
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2013, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2013-05-29 04:48:33'
+  CreationTimestamp: '2013-05-29 06:48:33'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4235,6 +4593,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -4249,6 +4610,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -4263,6 +4627,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -4278,6 +4645,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4293,6 +4663,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4312,7 +4685,7 @@ KnownVulnerableSamples:
     SHA256: 52c7b29023ac2a98b7a9c73de790d820d3d6d095bea0b077d4dad53fa97b0731
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-12-18 07:22:32'
+  CreationTimestamp: '2009-12-18 09:22:32'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4393,6 +4766,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -4406,6 +4782,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -4421,6 +4800,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -4435,6 +4817,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -4448,6 +4833,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4467,7 +4855,7 @@ KnownVulnerableSamples:
     SHA256: 0174cea1dd70b374f355126ae6be650dff95897d8c8200caac91d4f9e5e5b871
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2011, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2011-09-29 19:30:09'
+  CreationTimestamp: '2011-09-29 21:30:09'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4550,6 +4938,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -4563,6 +4954,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -4578,6 +4972,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -4592,6 +4989,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 41ec87c0295f2c734169b8a23c66ac9a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b1504f143b89a6080710bafcededb833
         SHA1: 5c2696893ebba1e81d918a4fadda143c25c77286
@@ -4605,6 +5005,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -4624,7 +5027,7 @@ KnownVulnerableSamples:
     SHA256: 5173b9240e9bcd0d9b25290bb0aa45d156fd5a0080841515ab44f61e0e6bd894
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-11-18 01:10:41'
+  CreationTimestamp: '2014-11-18 03:10:41'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4718,6 +5121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -4732,6 +5138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -4746,6 +5155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -4761,6 +5173,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4776,6 +5191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4795,7 +5213,7 @@ KnownVulnerableSamples:
     SHA256: aa1c07fc6289ddc2182b11e555073e66b7acbfc17c38efb44ecaa19a6aaf722f
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2014, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2014-08-26 13:58:08'
+  CreationTimestamp: '2014-08-26 15:58:08'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -4890,6 +5308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -4904,6 +5325,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -4918,6 +5342,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 22184f284c89a9c053cd2b78b4189eea
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b1207ffffc0eff3784003d17b3e71a9
         SHA1: 564b29bd3d1ae704393bf72a6e3e6931d3d4184d
@@ -4933,6 +5360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4948,6 +5378,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4967,7 +5400,7 @@ KnownVulnerableSamples:
     SHA256: 11b0e5d7971aaa2a6c4621f068af390f291fd796c202369605c2e0c7940f50ee
   Company: Novell, Inc.
   Copyright: (C) Copyright 2000-2008, Novell, Inc. All Rights Reserved.
-  CreationTimestamp: '2009-09-08 13:31:34'
+  CreationTimestamp: '2009-09-08 15:31:34'
   Date: ''
   Description: Novell XTier Session Manager
   ExportedFunctions:
@@ -5048,6 +5481,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -5061,6 +5497,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -5076,6 +5515,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -5090,6 +5532,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4808d93b14b8600dbfa18dab5d15310f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: adddb65a3a360b3c1a55cb33e426f32a
         SHA1: 93d9b282265288a94ee4f1a01c5fb3a08badb7ac
@@ -5103,6 +5548,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -5116,11 +5564,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 052280a42374b8d779c10cd0d8118691
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/jbaines-r7/dellicious'
-- ' https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/'
-- https://github.com/jbaines-r7/dellicious and https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Tags:
-- nscm.sys
-Verified: 'TRUE'

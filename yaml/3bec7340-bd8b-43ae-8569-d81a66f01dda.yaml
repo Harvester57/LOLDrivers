@@ -1,9 +1,11 @@
 Id: 3bec7340-bd8b-43ae-8569-d81a66f01dda
+Tags:
+- ene.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create ene.sys binPath=C:\windows\temp\ene.sys type=kernel && sc.exe
     start ene.sys
@@ -13,10 +15,10 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: ene.sys
   MD5: fd80c3d38669b302de4b4b736941c0d1
@@ -69,6 +71,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000253a2738690a3451c1000000000025
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 60cb2d8488f8724a67bf3254e6a57ff1
         SHA1: 37aef77a1afaa33ac5787fc43a2c1e2509a19eb1
@@ -83,6 +88,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -114,7 +122,7 @@ KnownVulnerableSamples:
       Entropy: 5.023217119758618
       Virtual Size: '0x2a6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-05-15 09:36:46'
+  CreationTimestamp: '2019-05-15 11:36:46'
   Imphash: 85f86c7c8ce81a78e84efa545d7edc65
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ene.sys
@@ -182,6 +190,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000003a6ae333708fda7a7b00000000003a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 6f5d716e7151f1c173396adb7213359e
         SHA1: 100610baae90027e9844a8e9c4d489fe122ecd9c
@@ -196,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -230,7 +244,7 @@ KnownVulnerableSamples:
       Entropy: 2.684183719779189
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-08 00:07:19'
+  CreationTimestamp: '2020-05-08 02:07:19'
   Imphash: baa420e9d4e3baf0d65d4fc2bf497708
   LoadsDespiteHVCI: 'FALSE'
 - Filename: ene.sys
@@ -284,6 +298,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1688f039255e638e69143907e6330b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 0179e8ddeebaf8998fec419d65cdf13d
         SHA1: 34c724c3369f2da8c25b591808962f66f10bde28
@@ -298,6 +315,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -312,6 +332,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
         SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
@@ -327,6 +350,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 00e7640d3b521f8b0b6fd8ce64c827613b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 4926d545fbfffd080f86c130a9858617
         SHA1: de9cafee670382ee4ad8a306c36c2b908e1542fb
@@ -341,6 +367,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f64df7e88bb2b95c7204bc07bb197a87
         SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
@@ -372,9 +401,9 @@ KnownVulnerableSamples:
       Entropy: 5.023217119758618
       Virtual Size: '0x2a6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-03-19 21:59:12'
+  CreationTimestamp: '2018-03-19 23:59:12'
   Imphash: 85f86c7c8ce81a78e84efa545d7edc65
-  LoadsDespiteHVCI: 'TRUE'
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: ene.sys
   MD5: 1f3522c5db7b9dcdd7729148f105018e
   SHA1: 17b3163aecd1f512f1603548ef6eb4947fbec95e
@@ -465,6 +494,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000319479a318f5522d06000000000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b81fd0f706522a8d7c9f2957283c0b4
         SHA1: 84d894599653a8ed0e0b2802db3197dc177908cc
@@ -479,6 +511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -516,8 +551,6 @@ KnownVulnerableSamples:
       Entropy: 3.449082295352821
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-03-21 13:16:55'
+  CreationTimestamp: '2020-03-21 15:16:55'
   Imphash: ec5ee9a38e54ed3d4a6e6545672cb651
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- ene.sys

@@ -1,9 +1,11 @@
 Id: 2ea12acc-95b6-4f91-afb7-8ded7a2fe9d9
+Tags:
+- vmdrv.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create vmdrv.sys binPath=C:\windows\temp\vmdrv.sys type=kernel &&
     sc.exe start vmdrv.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: vmdrv.sys
   MD5: 6d67da13cf84f15f6797ed929dd8cf5d
@@ -102,6 +104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -116,6 +121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 02c5372170daa825b5e24b614268c5b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8431e52b92e0051577de716f75313854
         SHA1: 8ad5802e684da7297a1f3ef73bed0ea370b42db9
@@ -130,6 +138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -170,7 +181,7 @@ KnownVulnerableSamples:
       Entropy: 5.080566974333831
       Virtual Size: '0x19c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-15 15:19:53'
+  CreationTimestamp: '2020-05-15 17:19:53'
   Imphash: 02a27dc9a48b694b7df4b821eb65178c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: vmdrv.sys
@@ -247,6 +258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 02c5372170daa825b5e24b614268c5b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8431e52b92e0051577de716f75313854
         SHA1: 8ad5802e684da7297a1f3ef73bed0ea370b42db9
@@ -261,6 +275,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 03f1b4e15f3a82f1149678b3d7d8475c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 83f5de89f641d0fbf60248e10a7b9534
         SHA1: 382a73a059a08698d6eb98c87e1b36fc750933a4
@@ -301,8 +318,6 @@ KnownVulnerableSamples:
       Entropy: 4.9921117821079095
       Virtual Size: '0x17c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-25 07:11:31'
+  CreationTimestamp: '2020-09-25 09:11:31'
   Imphash: 7c24141cdcfc23f5eb0e2b6792d80740
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- vmdrv.sys

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 722772ee-a461-48ec-933d-f3df1578963e
+Tags:
+- BlackBoneDrv10.sys
+Verified: 'FALSE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create BlackBoneDrv10.sys binPath=C:\windows\temp\BlackBoneDrv10.sys     type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
-Id: 722772ee-a461-48ec-933d-f3df1578963e
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 068d02b18a4c87366e8d54200f319e50
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: a4ac619fb531793945ad4c72bdd809ebd38512fc234aa452cb8364ee05465a7b
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-08-22 02:28:52'
+  CreationTimestamp: '2020-08-22 04:28:52'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -183,6 +189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -198,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 20e65f5d29b5822410504b1ac183ca3d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8219b89810131cf32fbe06e74b40f51f
         SHA1: f5e1c4d98f9ce552ead3776c16f3ad91fe5f3984
@@ -213,6 +225,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -226,10 +241,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 5988ec9f159fefbdf89d893aa634dd92
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- BlackBoneDrv10.sys
-Verified: 'FALSE'

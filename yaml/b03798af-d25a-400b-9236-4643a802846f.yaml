@@ -1,9 +1,11 @@
 Id: b03798af-d25a-400b-9236-4643a802846f
+Tags:
+- RwDrv.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create RwDrv.sys binPath=C:\windows\temp\RwDrv.sys type=kernel &&
     sc.exe start RwDrv.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: RwDrv.sys
   MD5: f853abe0dc162601e66e4a346faed854
@@ -99,6 +101,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -112,6 +117,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -127,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -140,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -154,6 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 45dfec7bb3d378c97feb24efd699bb4e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 544af7037e76dccfe47a9dffd9b847fd
         SHA1: ea7dceadac1b76a4a0ed5624632072f8aa6ce02c
@@ -169,6 +186,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -204,7 +224,7 @@ KnownVulnerableSamples:
       Entropy: 3.270238715581358
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-07-24 18:34:56'
+  CreationTimestamp: '2011-07-24 20:34:56'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -264,6 +284,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -278,6 +301,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -293,6 +319,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -306,6 +335,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -320,6 +352,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ffdaa3aac322387d7eb98acf9524bf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 987b0fb90b05c0b59ba66fb1527c27e3
         SHA1: 1b5d5279beed01b2355731588b1a26da29218b55
@@ -335,6 +370,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -370,7 +408,7 @@ KnownVulnerableSamples:
       Entropy: 3.3169950909252863
       Virtual Size: '0x3c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-25 01:39:58'
+  CreationTimestamp: '2015-12-25 03:39:58'
   Imphash: 9d7183c1d8107495354c4fad9dae3452
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -430,6 +468,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -443,6 +484,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -458,6 +502,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -471,6 +518,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -485,6 +535,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 45dfec7bb3d378c97feb24efd699bb4e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 544af7037e76dccfe47a9dffd9b847fd
         SHA1: ea7dceadac1b76a4a0ed5624632072f8aa6ce02c
@@ -500,6 +553,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -535,7 +591,7 @@ KnownVulnerableSamples:
       Entropy: 3.3169950909252863
       Virtual Size: '0x3c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-19 01:42:38'
+  CreationTimestamp: '2011-05-19 03:42:38'
   Imphash: 9d7183c1d8107495354c4fad9dae3452
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -608,6 +664,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7030126691c282b942598e0cdadcf4bc
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ef07eb5dd1fe11676d44b02b8602d5e1
         SHA1: 9ae0ce1b89411464dfdac02c612029a9d5a19e72
@@ -622,6 +681,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0e9b188ef9d02de7efdb50e20840185a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 21a266bd49f2778b24d13d95641ea6ac
         SHA1: 21319f341fdf06bf6a104427afa8b7823b1ea7f3
@@ -636,6 +698,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 073637b724547cd847acfd28662a5e5b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
@@ -649,6 +714,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0c4d69724b94fa3c2a4a3d2907803d5a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 812cb8ca0c79b318780ec5128ad13c1d
         SHA1: 3f8047d078307123301e50a25e9afb0dc4b6843d
@@ -682,7 +750,7 @@ KnownVulnerableSamples:
       Entropy: 3.2712100257771235
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-25 07:02:31'
+  CreationTimestamp: '2013-05-25 09:02:31'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'TRUE'
 - Filename: RwDrv.sys
@@ -756,6 +824,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -769,6 +840,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -784,6 +858,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -797,6 +874,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -811,6 +891,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 45dfec7bb3d378c97feb24efd699bb4e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 544af7037e76dccfe47a9dffd9b847fd
         SHA1: ea7dceadac1b76a4a0ed5624632072f8aa6ce02c
@@ -826,6 +909,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -861,7 +947,7 @@ KnownVulnerableSamples:
       Entropy: 3.3169950909252863
       Virtual Size: '0x3c0'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-05-31 00:05:48'
+  CreationTimestamp: '2011-05-31 02:05:48'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: RwDrv.sys
@@ -934,6 +1020,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dabd5a60a452fb44eadf46f478c7028
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0f0faff15ab5919650797c8d5d0fd4e0
         SHA1: 7753a3a0158d16efbdecf1e164312129f399c071
@@ -948,6 +1037,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01240afb1e380b8a16f14b719df4d3c0
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a780e8237c69d6012c9a0ce5576fbab0
         SHA1: 613115803ff02f51d735686030790041e4207ecd
@@ -962,6 +1054,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 073637b724547cd847acfd28662a5e5b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
@@ -975,6 +1070,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a7a4a889ec99942900663384d86979d
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d49300b4e758e36a3832679763a83c58
         SHA1: ec3075370fcea680e09497d44a4b246012f24160
@@ -1008,7 +1106,7 @@ KnownVulnerableSamples:
       Entropy: 3.2712100257771235
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-25 07:02:31'
+  CreationTimestamp: '2013-05-25 09:02:31'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'TRUE'
 - Filename: RwDrv.sys
@@ -1082,6 +1180,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1095,6 +1196,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -1108,6 +1212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 11218f56dafd7542d5f3d70b213e2a546cff
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b990c61c8edf9e8d0ac6504541be0b65
         SHA1: 519e011f6cab88c812da20225dd37cc1808d5180
@@ -1122,6 +1229,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1135,6 +1245,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -1168,8 +1281,6 @@ KnownVulnerableSamples:
       Entropy: 3.2712100257771235
       Virtual Size: '0x370'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-05-25 07:02:31'
+  CreationTimestamp: '2013-05-25 09:02:31'
   Imphash: 955e7b12a8fa06444c68e54026c45de1
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- RwDrv.sys

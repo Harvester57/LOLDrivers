@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 3e5c0fc4-bfe8-4af2-9613-4f56b0e3c2c8
+Tags:
+- malicious.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
+Created: '2023-06-05'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create malicious.sys binPath=C:\windows\temp\malicious.sys type=kernel
@@ -15,9 +18,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-06-05'
+Resources:
+- https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo
 Detection: []
-Id: 3e5c0fc4-bfe8-4af2-9613-4f56b0e3c2c8
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: b877e53d3bc3df3d62dc7b26c9b9b006
@@ -25,7 +31,7 @@ KnownVulnerableSamples:
     SHA256: 4cfd9cb41a51b1e1fdfc9a6855323bf11a0baf18e5d8f0ee7480a8cb5be7c8ac
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2023-05-11 11:16:19'
+  CreationTimestamp: '2023-05-11 13:16:19'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -87,6 +93,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7b475bcb4233f98946d0a1fbeb9de9ce
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d606eff6aa2f4e57d695c323c6a3591d
         SHA1: 83bcbb816007b04a98dddc2ce9d83569e0a913d8
@@ -98,9 +107,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 2de3451f3e7b02970582bb8f9fd8c73a
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://github.com/zeze-zeze/CYBERSEC2023-BYOVD-Demo
-Tags:
-- malicious.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 5f70bde4-9f81-44a8-9d3e-c6c7cf65bfae
+Tags:
+- PanIO.sys
+Verified: 'FALSE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create PanIO.sys binPath=C:\windows\temp\PanIO.sys type=kernel &&
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/f596e64f4c5d7c37a00493728d8756b243cfdc11e3372d6d6dfeffc13c9ab960.yara
@@ -32,7 +36,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 5f70bde4-9f81-44a8-9d3e-c6c7cf65bfae
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 5af91c612918020b1dbc829a040d1c88
@@ -40,7 +46,7 @@ KnownVulnerableSamples:
     SHA256: f246b9d22b3ffe15f2e97f306d049020f38ed162150c97d7a72e3ae0b22c79ad
   Company: Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
   Copyright: Copyright (c) 2012-2014 Pan Yazilim Bilisim Teknolojileri Tic. Ltd. Sti.
-  CreationTimestamp: '2014-04-17 03:16:02'
+  CreationTimestamp: '2014-04-17 05:16:02'
   Date: ''
   Description: Temperature and system information driver
   ExportedFunctions: ''
@@ -121,6 +127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -134,6 +143,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -148,6 +160,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121405c1f0ed258882be54d8686ba11ea45
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b95cbc184d388718612d5933f7b36770
         SHA1: ff124c5d160710720108616ffee99bbe090ed363
@@ -162,6 +177,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121506480253469e07e54ee8612041fbb92
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f56d9ee0c69c7569e5c15b486bca6e2e
         SHA1: 819ca6276ed76625e86bb6def0d45f61d37c8975
@@ -175,6 +193,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -186,10 +207,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 7cf815757705e26b809574488ed56d0e
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- PanIO.sys
-Verified: 'FALSE'

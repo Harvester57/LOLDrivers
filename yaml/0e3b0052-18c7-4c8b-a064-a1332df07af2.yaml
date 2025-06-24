@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 0e3b0052-18c7-4c8b-a064-a1332df07af2
+Tags:
+- ProxyDrv.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 0e3b0052-18c7-4c8b-a064-a1332df07af2
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0139a9cdb5f84d47dbf553890e9a5377
@@ -34,7 +38,7 @@ KnownVulnerableSamples:
   Company: "\u96F7\u795E\uFF08\u6B66\u6C49\uFF09\u7F51\u7EDC\u6280\u672F\u6709\u9650\
     \u516C\u53F8"
   Copyright: Copyright @ Www.Nn.Com
-  CreationTimestamp: '2020-04-03 04:51:25'
+  CreationTimestamp: '2020-04-03 06:51:25'
   Date: ''
   Description: "\u96F7\u795ENN\u52A0\u901F\u5668-\u9A71\u52A8\u7A0B\u5E8F\u6587\u4EF6"
   ExportedFunctions: ''
@@ -203,6 +207,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -216,6 +223,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dd7d4a785990584d8c0837659173272
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 559c170b8f735dd1ba8c3946354c4fa5
         SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
@@ -229,6 +239,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -243,6 +256,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -256,6 +272,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -275,7 +294,7 @@ KnownVulnerableSamples:
   Company: "\u96F7\u795E\uFF08\u6B66\u6C49\uFF09\u7F51\u7EDC\u6280\u672F\u6709\u9650\
     \u516C\u53F8"
   Copyright: Copyright @ Www.Nn.Com
-  CreationTimestamp: '2020-04-03 04:54:10'
+  CreationTimestamp: '2020-04-03 06:54:10'
   Date: ''
   Description: "\u96F7\u795ENN\u52A0\u901F\u5668-\u9A71\u52A8\u7A0B\u5E8F\u6587\u4EF6"
   ExportedFunctions: ''
@@ -443,6 +462,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -456,6 +478,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dd7d4a785990584d8c0837659173272
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 559c170b8f735dd1ba8c3946354c4fa5
         SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
@@ -469,6 +494,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -483,6 +511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -496,6 +527,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -508,9 +542,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: ff016f73670717be3741d1044bf4b7a6
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- ProxyDrv.sys
-Verified: 'TRUE'

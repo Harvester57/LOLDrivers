@@ -1,9 +1,11 @@
 Id: 4dd3289c-522c-4fce-b48e-5370efc90fa1
+Tags:
+- iQVW64.SYS
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create iQVW64.sys binPath=C:\windows\temp\iQVW64.SYS type=kernel
     && sc.exe start iQVW64.SYS
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: iQVW64.SYS
   MD5: c796a92a66ec725b7b7febbdc13dc69b
@@ -110,6 +112,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -123,6 +128,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -138,6 +146,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -151,6 +162,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -165,6 +179,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 058258571670ab2b1bac50679cec49a1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2db2db8ad770f96c4ba2de12f5336353
         SHA1: d70fb0f12785771b5eff8029e0801fbe0caca8b3
@@ -209,7 +226,7 @@ KnownVulnerableSamples:
       Entropy: 0.41227279241255127
       Virtual Size: '0x1020'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-10-05 01:13:31'
+  CreationTimestamp: '2011-10-05 03:13:31'
   Imphash: 4bd0bd7710a7f71d38f056241c8ce0a7
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -313,6 +330,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -327,6 +347,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
         SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
@@ -340,6 +363,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 560000013927007472d9b99b9b000000000139
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cdc266193e7ecfd8e1e7f3aed67e75ed
         SHA1: d384f171c6ae3e92f8cc93ca26690c3d5be2a81b
@@ -354,6 +380,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 069b5e99277284c8767f1368a7deb0f3
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5578c7331db18bb448db403ad32c94ee
         SHA1: dfcfe5d6087cf830513d705aa701ff957d960298
@@ -394,7 +423,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-04-06 02:56:07'
+  CreationTimestamp: '2018-04-06 04:56:07'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -471,6 +500,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 79a2a585f9d1154213d9b83ef6b68ded
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e6d820afb23af20a65cf0b03247ea05e
         SHA1: 7a8f7c37453f99390ee1e94bb5d3d1cba3a0eea7
@@ -484,6 +516,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -498,6 +533,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2776ab5cf2d09872f1ad05fbc3f21a87
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fa13cce803fbe5b5256430f9bfee76de
         SHA1: ce566e0c55909bbf2bb0d43280ee78b4ba3d582f
@@ -513,6 +551,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -528,6 +569,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -563,7 +607,7 @@ KnownVulnerableSamples:
       Entropy: 3.419370252627768
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-10-23 02:48:15'
+  CreationTimestamp: '2012-10-23 04:48:15'
   Imphash: 55db306bc2be3ff71a6b91fd9db051b8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -667,6 +711,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -681,6 +728,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
         SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
@@ -695,6 +745,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 560000077b478c76c9afcafcaf00000000077b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f3eba8fe0d2dd1bc861e0b0e6e23d96e
         SHA1: bce46695d618b69de8a4bb5ebede302378c1aebb
@@ -709,6 +762,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 069b5e99277284c8767f1368a7deb0f3
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5578c7331db18bb448db403ad32c94ee
         SHA1: dfcfe5d6087cf830513d705aa701ff957d960298
@@ -749,7 +805,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-09-17 03:18:08'
+  CreationTimestamp: '2018-09-17 05:18:08'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -833,6 +889,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -846,6 +905,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -861,6 +923,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -874,6 +939,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -888,6 +956,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 65680c783b728ab2a1880df4232ded32
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9d44550dc9e1d18ef155513f85ab1f12
         SHA1: 5f3d3da7374d8edbe4b2a2534c07682861458b3c
@@ -932,7 +1003,7 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-02-13 16:23:41'
+  CreationTimestamp: '2007-02-13 18:23:41'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1016,6 +1087,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1029,6 +1103,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -1044,6 +1121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1057,6 +1137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1071,6 +1154,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 65680c783b728ab2a1880df4232ded32
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9d44550dc9e1d18ef155513f85ab1f12
         SHA1: 5f3d3da7374d8edbe4b2a2534c07682861458b3c
@@ -1115,7 +1201,7 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-05-24 00:36:30'
+  CreationTimestamp: '2007-05-24 02:36:30'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1218,6 +1304,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000ba45a7f4234edca115e400020000ba45
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fd23f7497ae36eb7eaaff376598e060b
         SHA1: e6b5f8479757625ad54c8a3fe9819feb2dde06fe
@@ -1232,6 +1321,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 612cff88000100000010
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: da9a02953cdcc039174d11b07dd2967d
         SHA1: 568cfca269ff49615d305e680988337f0a90bc32
@@ -1245,6 +1337,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 79174aa9141736fe15a7ca9f2cff4588
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 6ce466d55ab160317ee9b13522c2a82a
         SHA1: 53b052ba209c525233293274854b264bc0f68b73
@@ -1258,6 +1353,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 69b2d1ccf02e20dcc95c62894f7f9e5f5fc057bf
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 4e0fbd79a99e4a55f97ef41efee38a9f
         SHA1: 114f36d5f22b84de97893469fc00b7035b3ef734
@@ -1272,6 +1370,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 28a11e74fc0b8754580f50954c47c94e67754f28
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 990afc9a12be270c0fa6921df0223974
         SHA1: a7025b6889dbdeb4c6770d524d4c80a0a75da5df
@@ -1286,6 +1387,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -1326,7 +1430,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-03 09:14:26'
+  CreationTimestamp: '2017-04-03 11:14:26'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1429,6 +1533,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000b7c6cfa9df260db5243500020000b7c6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d04e62ad536be27b5ae5f53dfe14060b
         SHA1: 558dc33cda5a996d71afe98ea75f5d81c358f42b
@@ -1443,6 +1550,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 612cff88000100000010
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: da9a02953cdcc039174d11b07dd2967d
         SHA1: 568cfca269ff49615d305e680988337f0a90bc32
@@ -1456,6 +1566,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 79174aa9141736fe15a7ca9f2cff4588
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 6ce466d55ab160317ee9b13522c2a82a
         SHA1: 53b052ba209c525233293274854b264bc0f68b73
@@ -1469,6 +1582,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 69b2d1ccf02e20dcc95c62894f7f9e5f5fc057bf
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 4e0fbd79a99e4a55f97ef41efee38a9f
         SHA1: 114f36d5f22b84de97893469fc00b7035b3ef734
@@ -1483,6 +1599,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 385dccec5fe14d3974c9591a3ab1c2caad188c2d
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4d35161b8be0a29812bb748b548e94b1
         SHA1: bf27e048115892363598dec245759aa7529eb154
@@ -1497,6 +1616,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -1537,7 +1659,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-08-23 19:52:09'
+  CreationTimestamp: '2016-08-23 21:52:09'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1614,6 +1736,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1627,6 +1752,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1642,6 +1770,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1655,6 +1786,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1669,6 +1803,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 65680c783b728ab2a1880df4232ded32
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9d44550dc9e1d18ef155513f85ab1f12
         SHA1: 5f3d3da7374d8edbe4b2a2534c07682861458b3c
@@ -1707,7 +1844,7 @@ KnownVulnerableSamples:
       Entropy: 1.2283624043981463
       Virtual Size: '0x12c'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-05-12 14:12:21'
+  CreationTimestamp: '2009-05-12 16:12:21'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1811,6 +1948,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -1825,6 +1965,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 2766ee56eb49f38eabd770a2fc84de22
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: be5bfbe77379139ac5cdcbcc8d4d3b34
         SHA1: 606b701bc9f448ddbfe6fa63ccb8061b838ee254
@@ -1838,6 +1981,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 5600000a6c1826788c3ae621c1000000000a6c
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cd868880a6dccf68ec7c1c66ce39d77a
         SHA1: c876af6fba8aa3b9aa12a5cff67a85f1f5a9c580
@@ -1852,6 +1998,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 069b5e99277284c8767f1368a7deb0f3
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5578c7331db18bb448db403ad32c94ee
         SHA1: dfcfe5d6087cf830513d705aa701ff957d960298
@@ -1892,7 +2041,7 @@ KnownVulnerableSamples:
       Entropy: 1.2072398645622464
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-04-24 05:50:56'
+  CreationTimestamp: '2019-04-24 07:50:56'
   Imphash: 2cf48a541dc193e91bb2a831adcf278e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -1969,6 +2118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1982,6 +2134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1997,6 +2152,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2010,6 +2168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2024,6 +2185,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 058258571670ab2b1bac50679cec49a1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2db2db8ad770f96c4ba2de12f5336353
         SHA1: d70fb0f12785771b5eff8029e0801fbe0caca8b3
@@ -2059,7 +2223,7 @@ KnownVulnerableSamples:
       Entropy: 3.411600288391384
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-09-01 23:02:32'
+  CreationTimestamp: '2010-09-02 01:02:32'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2136,6 +2300,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2150,6 +2317,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2164,6 +2334,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2776ab5cf2d09872f1ad05fbc3f21a87
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fa13cce803fbe5b5256430f9bfee76de
         SHA1: ce566e0c55909bbf2bb0d43280ee78b4ba3d582f
@@ -2179,6 +2352,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2194,6 +2370,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2229,7 +2408,7 @@ KnownVulnerableSamples:
       Entropy: 3.423830950438437
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-11-14 08:22:43'
+  CreationTimestamp: '2013-11-14 10:22:43'
   Imphash: 55db306bc2be3ff71a6b91fd9db051b8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2306,6 +2485,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2319,6 +2501,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2334,6 +2519,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2347,6 +2535,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2361,6 +2552,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 058258571670ab2b1bac50679cec49a1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2db2db8ad770f96c4ba2de12f5336353
         SHA1: d70fb0f12785771b5eff8029e0801fbe0caca8b3
@@ -2396,7 +2590,7 @@ KnownVulnerableSamples:
       Entropy: 3.411600288391384
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-10-28 08:22:55'
+  CreationTimestamp: '2010-10-28 10:22:55'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2473,6 +2667,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -2486,6 +2683,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2501,6 +2701,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -2514,6 +2717,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2528,6 +2734,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 058258571670ab2b1bac50679cec49a1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 2db2db8ad770f96c4ba2de12f5336353
         SHA1: d70fb0f12785771b5eff8029e0801fbe0caca8b3
@@ -2563,7 +2772,7 @@ KnownVulnerableSamples:
       Entropy: 3.411600288391384
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-08-26 07:48:52'
+  CreationTimestamp: '2010-08-26 09:48:52'
   Imphash: 5c77661ac2951da388949d9a834eb694
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2640,6 +2849,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000b7c6cfa9df260db5243500020000b7c6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d04e62ad536be27b5ae5f53dfe14060b
         SHA1: 558dc33cda5a996d71afe98ea75f5d81c358f42b
@@ -2654,6 +2866,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 612cff88000100000010
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: da9a02953cdcc039174d11b07dd2967d
         SHA1: 568cfca269ff49615d305e680988337f0a90bc32
@@ -2667,6 +2882,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 79174aa9141736fe15a7ca9f2cff4588
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 6ce466d55ab160317ee9b13522c2a82a
         SHA1: 53b052ba209c525233293274854b264bc0f68b73
@@ -2680,6 +2898,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 69b2d1ccf02e20dcc95c62894f7f9e5f5fc057bf
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 4e0fbd79a99e4a55f97ef41efee38a9f
         SHA1: 114f36d5f22b84de97893469fc00b7035b3ef734
@@ -2694,6 +2915,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 28a11e74fc0b8754580f50954c47c94e67754f28
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 990afc9a12be270c0fa6921df0223974
         SHA1: a7025b6889dbdeb4c6770d524d4c80a0a75da5df
@@ -2708,6 +2932,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -2742,7 +2969,7 @@ KnownVulnerableSamples:
       Entropy: 3.4283016769481693
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-10-29 15:44:49'
+  CreationTimestamp: '2015-10-29 17:44:49'
   Imphash: a86fb9a41955bda815ab902fb58baa27
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -2826,6 +3053,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -2839,6 +3069,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -2854,6 +3087,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2867,6 +3103,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2881,6 +3120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 65680c783b728ab2a1880df4232ded32
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9d44550dc9e1d18ef155513f85ab1f12
         SHA1: 5f3d3da7374d8edbe4b2a2534c07682861458b3c
@@ -2925,7 +3167,7 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-06-12 08:31:18'
+  CreationTimestamp: '2007-06-12 10:31:18'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -3002,6 +3244,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000b7c6cfa9df260db5243500020000b7c6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d04e62ad536be27b5ae5f53dfe14060b
         SHA1: 558dc33cda5a996d71afe98ea75f5d81c358f42b
@@ -3016,6 +3261,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 612cff88000100000010
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: da9a02953cdcc039174d11b07dd2967d
         SHA1: 568cfca269ff49615d305e680988337f0a90bc32
@@ -3029,6 +3277,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 79174aa9141736fe15a7ca9f2cff4588
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 6ce466d55ab160317ee9b13522c2a82a
         SHA1: 53b052ba209c525233293274854b264bc0f68b73
@@ -3042,6 +3293,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 69b2d1ccf02e20dcc95c62894f7f9e5f5fc057bf
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 4e0fbd79a99e4a55f97ef41efee38a9f
         SHA1: 114f36d5f22b84de97893469fc00b7035b3ef734
@@ -3056,6 +3310,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 28a11e74fc0b8754580f50954c47c94e67754f28
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 990afc9a12be270c0fa6921df0223974
         SHA1: a7025b6889dbdeb4c6770d524d4c80a0a75da5df
@@ -3070,6 +3327,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -3104,7 +3364,7 @@ KnownVulnerableSamples:
       Entropy: 3.4182486205222795
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-11-24 07:11:47'
+  CreationTimestamp: '2015-11-24 09:11:47'
   Imphash: a86fb9a41955bda815ab902fb58baa27
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -3182,6 +3442,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000b4a079accd956034e6ae00020000b4a0
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 557387a7a96e3f151cc3c13fa63d68ba
         SHA1: e04a58597b2e5e13751077fd04eba275a3facc0e
@@ -3196,6 +3459,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 612cff88000100000010
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: da9a02953cdcc039174d11b07dd2967d
         SHA1: 568cfca269ff49615d305e680988337f0a90bc32
@@ -3209,6 +3475,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 79174aa9141736fe15a7ca9f2cff4588
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 6ce466d55ab160317ee9b13522c2a82a
         SHA1: 53b052ba209c525233293274854b264bc0f68b73
@@ -3223,6 +3492,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 112106a081d33fd87ae5824cc16b52094e03
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a0ac4d48fe852f7b3ed4e623d59a825f
         SHA1: d4db9846bc4d7db142eeb364286f6de7c102420c
@@ -3236,6 +3508,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -3250,6 +3525,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000035d8d5595b0671412b000000000035
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 3d488d41aaeb5661974952080abef2fd
         SHA1: df01e35e6befc7d65625319f17397b861e618d56
@@ -3284,7 +3562,7 @@ KnownVulnerableSamples:
       Entropy: 3.4182486205222795
       Virtual Size: '0x3f8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-04-22 05:46:58'
+  CreationTimestamp: '2015-04-22 07:46:58'
   Imphash: a86fb9a41955bda815ab902fb58baa27
   LoadsDespiteHVCI: 'FALSE'
 - Filename: iQVW64.SYS
@@ -3368,6 +3646,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -3381,6 +3662,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -3396,6 +3680,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -3409,6 +3696,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3423,6 +3713,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 65680c783b728ab2a1880df4232ded32
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9d44550dc9e1d18ef155513f85ab1f12
         SHA1: 5f3d3da7374d8edbe4b2a2534c07682861458b3c
@@ -3467,8 +3760,6 @@ KnownVulnerableSamples:
       Entropy: 0.5046360681325445
       Virtual Size: '0x1170'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-11-15 08:41:42'
+  CreationTimestamp: '2006-11-15 10:41:42'
   Imphash: a793af44219650b4dd07d8a19ede33f1
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- iQVW64.SYS

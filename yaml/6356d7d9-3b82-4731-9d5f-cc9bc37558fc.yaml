@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 6356d7d9-3b82-4731-9d5f-cc9bc37558fc
+Tags:
+- test2.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: 6356d7d9-3b82-4731-9d5f-cc9bc37558fc
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: ff295de93e6b6dcc3938d50901a7240d
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 0c7809ac1fa074408518ddc0ac118912c9cd43ed9c89213bc4d59043016b040c
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-08-16 21:38:03'
+  CreationTimestamp: '2020-08-16 23:38:03'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -183,6 +189,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 00a7e4ded4bf949d15aa4201843f1ab64d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a999fc8af07f531dd59dcb4b972e90a1
         SHA1: 118bc957893b1d91a35e13a91b209729b6561722
@@ -197,6 +206,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 2e7c87cc0e934a52fe94fd1cb7cd34af
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f64df7e88bb2b95c7204bc07bb197a87
         SHA1: a1bfa9f0f46a1e9ac66259c9b2b1b2dcaf16db9b
@@ -211,6 +223,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 300f6facdd6698747ca94636a7782db9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
@@ -225,6 +240,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 008c77a0008ff4d1b0c63d9f3a48838d6b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 6efd500ce038df7aa3087c1e63a5eb5c
         SHA1: 1c961712a02fb995c585080eda53a753656ca3ad
@@ -237,9 +255,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: a74f61fdcea718cb9579907b2caf54ab
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- test2.sys
-Verified: 'TRUE'

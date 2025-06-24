@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 2e1531b2-d370-4543-9e2e-5319a1c13c22
+Tags:
+- daxin_blank2.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-02-28'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create daxin_blank2.sys binPath=C:\windows\temp\daxin_blank2.sys     type=kernel
@@ -10,9 +13,14 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-02-28'
+Resources:
+- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
+- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
+- ''
 Detection: []
-Id: 2e1531b2-d370-4543-9e2e-5319a1c13c22
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 9853eedacdfe3384f34b8eaa771f4f70
@@ -20,7 +28,7 @@ KnownVulnerableSamples:
     SHA256: 4b10f4f03eaa545d2fdb3b88890917a6fa24142689d3c43a7c39fc5bed5725bf
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-02-05 21:05:26'
+  CreationTimestamp: '2021-02-05 23:05:26'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -97,6 +105,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 516ceb03f17e10c24b45ffb6336e5915
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fe2cc3b135dc2f887e620d33a02ef639
         SHA1: a92b0a710c038b8556fb3d74742118f75c5c3d57
@@ -112,6 +123,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -127,6 +141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -140,11 +157,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: bf9d32a6ab9effcd2fd6a734e5be98f9
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/MHaggis/9ab3bb795a6018d70fb11fa7c31f8f48
-- https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/daxin-backdoor-espionage
-- ''
-Tags:
-- daxin_blank2.sys
-Verified: 'TRUE'

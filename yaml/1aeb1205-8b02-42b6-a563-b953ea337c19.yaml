@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 1aeb1205-8b02-42b6-a563-b953ea337c19
+Tags:
+- Tmel.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 1aeb1205-8b02-42b6-a563-b953ea337c19
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 9452955f95c4dde4370d5ea363a86400
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: 3de38ef40dbda07a537a7e48cb5d59dbd17bf27d5d399b32df737cd67c0cdb25
   Company: Trend Micro Inc.
   Copyright: Copyright (C) 2015 Trend Micro Incorporated. All rights reserved.
-  CreationTimestamp: '2015-05-08 00:06:46'
+  CreationTimestamp: '2015-05-08 02:06:46'
   Date: ''
   Description: TrendMicro ELAM Driver
   ExportedFunctions: ''
@@ -123,6 +127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000000a35c02110041db90300000000000a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3d599ae8f2823b242ef0b42a48eb116c
         SHA1: 87d1616058dae44dd602ab9acd4ac4e736bbd451
@@ -137,6 +144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -155,7 +165,7 @@ KnownVulnerableSamples:
     SHA256: 4bef5f5160c6a981562597dda319f9a235c28d5beba5268a454f734500ec1f4f
   Company: Trend Micro Inc.
   Copyright: Copyright (C) 2015 Trend Micro Incorporated. All rights reserved.
-  CreationTimestamp: '2015-11-18 03:14:15'
+  CreationTimestamp: '2015-11-18 05:14:15'
   Date: ''
   Description: TrendMicro ELAM Driver (64-Bit)
   ExportedFunctions: ''
@@ -244,6 +254,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000000a35c02110041db90300000000000a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3d599ae8f2823b242ef0b42a48eb116c
         SHA1: 87d1616058dae44dd602ab9acd4ac4e736bbd451
@@ -258,6 +271,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -276,7 +292,7 @@ KnownVulnerableSamples:
     SHA256: 0e121d80264c51df9a6fca2f2201d75ccd4dc29d9566bbf0975bb05759e9c6c7
   Company: Trend Micro Inc.
   Copyright: Copyright (C) 2015 Trend Micro Incorporated. All rights reserved.
-  CreationTimestamp: '2015-05-08 01:13:56'
+  CreationTimestamp: '2015-05-08 03:13:56'
   Date: ''
   Description: TrendMicro ELAM Driver (64-Bit)
   ExportedFunctions: ''
@@ -364,6 +380,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000000a35c02110041db90300000000000a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3d599ae8f2823b242ef0b42a48eb116c
         SHA1: 87d1616058dae44dd602ab9acd4ac4e736bbd451
@@ -378,6 +397,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -390,9 +412,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: e54f28e331d8e2b722551f3b280cc686
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- Tmel.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 6fe10a55-7fb8-4a9d-9ebc-1b27b6e5b833
+Tags:
+- prokiller64.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
+Created: '2023-05-07'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create prokiller64.sys binPath=C:\windows\temp\prokiller64.sys type=kernel
@@ -10,9 +13,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-07'
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
+- https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
 Detection: []
-Id: 6fe10a55-7fb8-4a9d-9ebc-1b27b6e5b833
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 4252d83e18ad41f0cea7ac168218d95b
@@ -20,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: cd66e893300e7e59a749fe4e1b1706f8ccb5ae140254def9f5a614648e2da36f
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-02 04:09:08'
+  CreationTimestamp: '2022-06-02 06:09:08'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -103,6 +110,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 627dfdf73a1455de5143a270799e6b7b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b91ec3270e80aa93214c42d1eed66d36
         SHA1: c27a40cbc754d2bb1f7b872a5a9fd385ff1c2b2f
@@ -118,6 +128,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -133,6 +146,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -146,10 +162,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 832219eb71b8bdb771f1d29d27b0acf4
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-- https://news.sophos.com/en-us/2022/12/13/signed-driver-malware-moves-up-the-software-trust-chain/
-Tags:
-- prokiller64.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: f16f82de-1ad0-47d8-a869-2c10ed25d9f1
+Tags:
+- FH-EtherCAT_DIO.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create FH-EtherCAT_DIOsys binPath= C:\windows\temp\FH-EtherCAT_DIOsys.sys
@@ -15,9 +18,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection: []
-Id: f16f82de-1ad0-47d8-a869-2c10ed25d9f1
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -62,7 +68,7 @@ KnownVulnerableSamples:
       Entropy: 5.846387306381428
       Virtual Size: '0x266'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-05-28 23:01:50'
+  CreationTimestamp: '2018-05-29 01:01:50'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -113,7 +119,7 @@ KnownVulnerableSamples:
   - KfReleaseSpinLock
   - KeGetCurrentIrql
   Signatures: {}
-  LoadsDespiteHVCI: 'FALSE'
+  LoadsDespiteHVCI: 'TRUE'
 - Company: ''
   Date: ''
   Description: ''
@@ -157,7 +163,7 @@ KnownVulnerableSamples:
       Entropy: 5.533732474907791
       Virtual Size: '0x6d4'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-05-28 23:01:57'
+  CreationTimestamp: '2018-05-29 01:01:57'
   InternalName: ''
   Copyright: ''
   Imports:
@@ -212,6 +218,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a60585e11d143fc61db92bd9370b833
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0d0c0b9219f7ce087c4a9c1e756b88c8
         SHA1: 2841dd43b7491ce68f777036ff910b70c57efd0f
@@ -226,6 +235,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -241,6 +253,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -252,9 +267,3 @@ KnownVulnerableSamples:
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- FH-EtherCAT_DIO.sys
-Verified: 'TRUE'

@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 19003e00-d42d-4cbe-91f3-756451bdd7da
+Tags:
+- AsrSetupDrv103.sys
+Verified: 'TRUE'
 Author: Michael Haag, Guus Verbeek
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create AsrSetupDrv103.sys binPath=C:\windows\temp\AsrSetupDrv103.sys
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -22,7 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 19003e00-d42d-4cbe-91f3-756451bdd7da
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -146,7 +152,7 @@ KnownVulnerableSamples:
     SHA256: 399effe75d32bdab6fa0a6bffe02dbf0a59219d940b654837c3be1c0bd02e9aa
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2022-01-04 01:19:15'
+  CreationTimestamp: '2022-01-04 03:19:15'
   Date: ''
   Description: AsrSetupDrv103 Driver
   ExportedFunctions: ''
@@ -263,6 +269,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01ee5f169dff97352b6465d66a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
@@ -276,6 +285,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -289,6 +301,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7803184245708a41cf6f01b8eeb4a954
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a33260428269bc902bc1cd280e4b1837
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
@@ -302,6 +317,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
@@ -317,6 +335,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3be24b96d2c8d729eddb03e3
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: bce317dc724ff8d4f6f02fca3e0e481e
         SHA1: c84cd3e5f7120b9fcf38bbd968c2921dbd0a1e76
@@ -334,7 +355,7 @@ KnownVulnerableSamples:
     SHA256: 7aaf2aa194b936e48bc90f01ee854768c8383c0be50cfb41b346666aec0cf853
   Company: RW-Everything
   Copyright: Copyright (C) 2011 RW-Everything
-  CreationTimestamp: '2015-01-14 02:11:44'
+  CreationTimestamp: '2015-01-14 04:11:44'
   Date: ''
   Description: AsrSetupDrv103 Driver
   ExportedFunctions: ''
@@ -452,6 +473,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -466,6 +490,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -481,6 +508,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -494,6 +524,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -508,6 +541,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03ffdaa3aac322387d7eb98acf9524bf
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 987b0fb90b05c0b59ba66fb1527c27e3
         SHA1: 1b5d5279beed01b2355731588b1a26da29218b55
@@ -523,6 +559,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -536,10 +575,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 88e21ed9e717781eaf87209acbdbb567
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- AsrSetupDrv103.sys
-Verified: 'TRUE'

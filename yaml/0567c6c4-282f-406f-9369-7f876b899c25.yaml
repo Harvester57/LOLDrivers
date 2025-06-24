@@ -1,9 +1,11 @@
 Id: 0567c6c4-282f-406f-9369-7f876b899c25
+Tags:
+- procexp.Sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create procexp.sys binPath=C:\windows\temp\procexp.Sys type=kernel
     && sc.exe start procexp.Sys
@@ -20,9 +22,6 @@ Resources:
 - https://github.com/Yaxser/Backstab/blob/master/resources/PROCEXP.sys
 - https://news.sophos.com/en-us/2023/04/19/aukill-edr-killer-malware-abuses-process-explorer-driver/
 - https://github.com/magicsword-io/LOLDrivers/issues/55#issuecomment-1537161951
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/075de997497262a9d105afeadaaefc6348b25ce0e0126505c24aa9396c251e85.yara
@@ -104,6 +103,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: procexp.Sys
   MD5: e6cb1728c50bd020e531d19a14904e1c
@@ -202,6 +204,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000009484c47568579aafe9000000000094
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b46a69db7e461e55282dc24dc594e5d6
         SHA1: 3b19241d555a74781e2b63a7c14ad12b1ec68205
@@ -216,6 +221,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -256,7 +264,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-04-27 01:35:06'
+  CreationTimestamp: '2020-04-27 03:35:06'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -335,6 +343,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
@@ -349,6 +360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -386,7 +400,7 @@ KnownVulnerableSamples:
       Entropy: 2.7841837197791888
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-01 08:24:35'
+  CreationTimestamp: '2021-06-01 10:24:35'
   Imphash: bfe13c695e41d3eee414d3929b1bd523
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -463,6 +477,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
@@ -478,6 +495,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -491,6 +511,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -526,7 +549,7 @@ KnownVulnerableSamples:
       Entropy: 5.426276217210761
       Virtual Size: '0x186'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-04-15 03:23:35'
+  CreationTimestamp: '2010-04-15 05:23:35'
   Imphash: 9376f1c4ab79240cc948b77bf9e8814b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -599,6 +622,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -613,6 +639,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
@@ -626,6 +655,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -661,7 +693,7 @@ KnownVulnerableSamples:
       Entropy: 3.294153762600323
       Virtual Size: '0x380'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-11-03 14:19:45'
+  CreationTimestamp: '2008-11-03 16:19:45'
   Imphash: 0b40636205c64cacfd2e4f407518ad58
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -762,6 +794,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000001058eca29221e6a345b000000000105
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 31c86790d5106374a2387094c9e925f9
         SHA1: 02effd51d770a6881492009028d3e37d52a353ec
@@ -776,6 +811,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000387a14cce6619d8c51000200000038
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
@@ -790,6 +828,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610435f1000000000041
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
@@ -804,6 +845,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -844,7 +888,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-13 07:35:39'
+  CreationTimestamp: '2019-06-13 09:35:39'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -946,6 +990,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
@@ -961,6 +1008,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -974,6 +1024,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1015,7 +1068,7 @@ KnownVulnerableSamples:
       Entropy: 1.1266429267004154
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2012-06-16 15:21:56'
+  CreationTimestamp: '2012-06-16 17:21:56'
   Imphash: 8a5edbe5251fe141ea0262d5d572178b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1117,6 +1170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -1131,6 +1187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
@@ -1144,6 +1203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1182,7 +1244,7 @@ KnownVulnerableSamples:
       Entropy: 5.7007058924695935
       Virtual Size: '0x29e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-30 18:27:21'
+  CreationTimestamp: '2010-03-30 20:27:21'
   Imphash: ebf30b4cd57a4f4548a03eab0f6c418c
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1280,6 +1342,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
@@ -1295,6 +1360,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1308,6 +1376,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1349,7 +1420,7 @@ KnownVulnerableSamples:
       Entropy: 1.2270124269441627
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-12-30 16:49:03'
+  CreationTimestamp: '2011-12-30 18:49:03'
   Imphash: f27327907e57c0c2c9fddc68eab2eb7b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1444,6 +1515,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 4112e632c7b18a029a3a1fac803ab89f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 55a4c08c9404782113330a8cd169ed20
         SHA1: 74807ba52ae6108b0fbac5031090b3295b2c3bba
@@ -1459,6 +1533,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 655226e1b22e18e1590f2985ac22e75c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 650704c342850095f3288eaf791147d4
         SHA1: 4cdc38c800761463749c3cbd94a12f32e49877bf
@@ -1472,6 +1549,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -1513,7 +1593,7 @@ KnownVulnerableSamples:
       Entropy: 1.2280731978955797
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2011-04-25 12:19:41'
+  CreationTimestamp: '2011-04-25 14:19:41'
   Imphash: 505e0a016962137ca6169bce64ba2f53
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1613,6 +1693,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -1627,6 +1710,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -1641,6 +1727,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
@@ -1656,6 +1745,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1671,6 +1763,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1712,7 +1807,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-10 22:52:10'
+  CreationTimestamp: '2015-05-11 00:52:10'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1814,6 +1909,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
@@ -1829,6 +1927,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -1844,6 +1945,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -1885,7 +1989,7 @@ KnownVulnerableSamples:
       Entropy: 1.1266429267004154
       Virtual Size: '0x60'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2013-10-20 18:16:05'
+  CreationTimestamp: '2013-10-20 20:16:05'
   Imphash: 8a5edbe5251fe141ea0262d5d572178b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -1986,6 +2090,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000f6380d9a86d05ca43b0000000000f6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 3094214121c022fb9a5e410920d5eb96
         SHA1: 388c68e81cfc19e838d5070ac4e6793b32bfd293
@@ -2000,6 +2107,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000317c61d46115ceba6a000100000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9a2de17c0445f3e68c9315347b5805f8
         SHA1: df228171e01e890d9b69a749887197af4a3f7602
@@ -2014,6 +2124,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000382e50e86a989d957f000000000038
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: cfa5fa49250320f7a3473a82877fabf3
         SHA1: 6b3242a9a639b0da4d5882c7eeb402be6615ad0c
@@ -2028,6 +2141,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -2068,7 +2184,7 @@ KnownVulnerableSamples:
       Entropy: 3.667481250360578
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-09 12:21:38'
+  CreationTimestamp: '2018-11-09 14:21:38'
   Imphash: b8a35d469bc164d86ac7c64e93b0037b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2169,6 +2285,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000109e219d6f9b8a4bebf000000000109
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 10a173441d459944d30bbcfc69f7521b
         SHA1: 500cf2d67d9e3b7c31b2a65d4f121f7201cade0e
@@ -2183,6 +2302,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000387a14cce6619d8c51000200000038
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
@@ -2197,6 +2319,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610435f1000000000041
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
@@ -2211,6 +2336,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -2251,7 +2379,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-28 15:02:57'
+  CreationTimestamp: '2019-06-28 17:02:57'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2351,6 +2479,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
@@ -2365,6 +2496,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -2405,7 +2539,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-05-26 08:02:20'
+  CreationTimestamp: '2021-05-26 10:02:20'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2504,6 +2638,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -2518,6 +2655,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
@@ -2531,6 +2671,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -2578,7 +2721,7 @@ KnownVulnerableSamples:
       Entropy: 1.4379095220400315
       Virtual Size: '0x338'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2010-03-30 18:30:49'
+  CreationTimestamp: '2010-03-30 20:30:49'
   Imphash: 421730c2b3fa3a7d78c2eda3da1be6a8
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2678,6 +2821,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000cccbb813eb5d722d450000000000cc
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: b23d5388c0fa7b32ff0a91fccb5cce6d
         SHA1: ab5d6cc2d03e34f4fe2e51fa524401d5806f9a9f
@@ -2692,6 +2838,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000244d59538809906ea7000100000024
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 16a85b0d3a49b45acb03c9165240f78a
         SHA1: d21820acd2d9a023556d949773b2177b63552ea3
@@ -2706,6 +2855,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000382e50e86a989d957f000000000038
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: cfa5fa49250320f7a3473a82877fabf3
         SHA1: 6b3242a9a639b0da4d5882c7eeb402be6615ad0c
@@ -2720,6 +2872,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -2760,7 +2915,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2017-04-30 17:23:14'
+  CreationTimestamp: '2017-04-30 19:23:14'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -2860,6 +3015,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -2874,6 +3032,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -2888,6 +3049,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
@@ -2903,6 +3067,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -2918,6 +3085,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -2959,7 +3129,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-08 00:28:27'
+  CreationTimestamp: '2014-07-08 02:28:27'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3059,6 +3229,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
@@ -3073,6 +3246,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -3113,7 +3289,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-06-01 08:24:37'
+  CreationTimestamp: '2021-06-01 10:24:37'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3220,6 +3396,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3234,6 +3413,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6a0b994fc0004aab11df8adce1e027aa
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8ee8b5683b30c385e8f50ba39c817ecf
         SHA1: 0bead658f967af350cfce561ac851470f0bea7a7
@@ -3248,6 +3430,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3262,6 +3447,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000021dd626c1271c15d6f000100000021
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: af75bafa171badc569c547f8cb748b04
         SHA1: ca9e1727c61692a1894e9f78f646a34f1a4046c1
@@ -3275,6 +3463,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 77005ec5ff32646dcbf76aac900003005ec5ff
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d47b1f71468f38d938a59072612c5a81
         SHA1: f029c7017324e858115d76088dd21ab0106145d2
@@ -3312,7 +3503,7 @@ KnownVulnerableSamples:
       Entropy: 6.4689942009857395
       Virtual Size: '0x360'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-12-05 14:43:50'
+  CreationTimestamp: '2015-12-05 16:43:50'
   Imphash: 3c9af2347198d96c8ab5b189b4e3db37
   LoadsDespiteHVCI: 'TRUE'
 - Filename: procexp.Sys
@@ -3382,6 +3573,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -3395,6 +3589,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3409,6 +3606,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 75c1a798b875894335c78cddbf05cbff
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a41a1fbfc85b812b2a1570204015b8b4
         SHA1: a7e0f6ba7402a18a3a4e861e57a3ffacb582e8c0
@@ -3438,7 +3638,7 @@ KnownVulnerableSamples:
       Entropy: 4.850293456344704
       Virtual Size: '0x12e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-01-06 15:04:34'
+  CreationTimestamp: '2006-01-06 17:04:34'
   Imphash: 5bb79a6caa12076a6d140085cb53892e
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3511,6 +3711,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -3525,6 +3728,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d2c89d309e57beef2d791bb8ed6a26f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ae18dfd140f9414eadf1f611ec1b84b7
         SHA1: 9aecb2568e995d5965e49acf3ff247bc3d1ab99c
@@ -3538,6 +3744,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -3573,7 +3782,7 @@ KnownVulnerableSamples:
       Entropy: 3.2795326755401355
       Virtual Size: '0x380'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2008-07-21 14:42:49'
+  CreationTimestamp: '2008-07-21 16:42:49'
   Imphash: 0b40636205c64cacfd2e4f407518ad58
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3673,6 +3882,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -3687,6 +3899,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -3701,6 +3916,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
@@ -3716,6 +3934,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -3731,6 +3952,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -3772,7 +3996,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-07-08 00:28:27'
+  CreationTimestamp: '2014-07-08 02:28:27'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -3872,6 +4096,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000009484c47568579aafe9000000000094
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b46a69db7e461e55282dc24dc594e5d6
         SHA1: 3b19241d555a74781e2b63a7c14ad12b1ec68205
@@ -3886,6 +4113,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -3926,7 +4156,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-11 15:57:25'
+  CreationTimestamp: '2020-09-11 17:57:25'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4027,6 +4257,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000f6380d9a86d05ca43b0000000000f6
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 3094214121c022fb9a5e410920d5eb96
         SHA1: 388c68e81cfc19e838d5070ac4e6793b32bfd293
@@ -4041,6 +4274,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000317c61d46115ceba6a000100000031
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9a2de17c0445f3e68c9315347b5805f8
         SHA1: df228171e01e890d9b69a749887197af4a3f7602
@@ -4055,6 +4291,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000382e50e86a989d957f000000000038
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: cfa5fa49250320f7a3473a82877fabf3
         SHA1: 6b3242a9a639b0da4d5882c7eeb402be6615ad0c
@@ -4069,6 +4308,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -4109,7 +4351,7 @@ KnownVulnerableSamples:
       Entropy: 3.667481250360578
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2018-11-16 16:15:17'
+  CreationTimestamp: '2018-11-16 18:15:17'
   Imphash: b8a35d469bc164d86ac7c64e93b0037b
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4209,6 +4451,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000008a57ea89a349eb8be800000000008a
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: fc736157189c18985ff54e87edc06166
         SHA1: 9c4ab0e49bf223f88f1a9cd4be69e53db6f59ef2
@@ -4223,6 +4468,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000010a2c79aed7797ba6ac00010000010a
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 14e79171202b9f17d8770ee3e9e1a04c
         SHA1: ce13da3e20f06d1c9ebef5646f4b763f423fbffa
@@ -4237,6 +4485,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6133261a000000000031
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 482f91c72e48878971dcf15579a96bd8
         SHA1: 27543a3f7612de2261c7228321722402f63a07de
@@ -4251,6 +4502,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -4291,7 +4545,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2016-02-04 15:04:43'
+  CreationTimestamp: '2016-02-04 17:04:43'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'TRUE'
 - Filename: procexp.Sys
@@ -4392,6 +4646,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 3300000109e219d6f9b8a4bebf000000000109
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 10a173441d459944d30bbcfc69f7521b
         SHA1: 500cf2d67d9e3b7c31b2a65d4f121f7201cade0e
@@ -4406,6 +4663,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000387a14cce6619d8c51000200000038
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
@@ -4420,6 +4680,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610435f1000000000041
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
@@ -4434,6 +4697,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -4474,7 +4740,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-28 15:02:57'
+  CreationTimestamp: '2019-06-28 17:02:57'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4575,6 +4841,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000eb69aacc3e299f2d390000000000eb
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 474aa22f78903fa7bca0bf6ff4dabe03
         SHA1: 1745a1caaa7a8dd0da3ae4b2c3037b327e66ca86
@@ -4589,6 +4858,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 33000000387a14cce6619d8c51000200000038
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: f9a6526d8f83e3d33d925ae95b752dca
         SHA1: ad9f086d0642e3b5de60584c44123cf4603c4525
@@ -4603,6 +4875,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610435f1000000000041
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 77dab20d8e23cd8e18633adca506cf6e
         SHA1: c5506bee3c29254dc5b5a0e6e7a14046522708ef
@@ -4617,6 +4892,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6116683400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 335713f62536c68d0acc82df3dceb932
         SHA1: 023cf1c5e99dc2f24133dae6937145bb481306e6
@@ -4657,7 +4935,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-06-13 08:03:46'
+  CreationTimestamp: '2019-06-13 10:03:46'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp152.sys
@@ -4760,6 +5038,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -4774,6 +5055,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -4788,6 +5072,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1efd983a49d3f152ac9cd2941b8a0edd
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 1b7ca026e68405de56477b5b7bb3a0a5
         SHA1: b2a1bd13d8833154f02e51e25c9f023d54a27d21
@@ -4803,6 +5090,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -4818,6 +5108,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -4859,7 +5152,7 @@ KnownVulnerableSamples:
       Entropy: 2.855388542207534
       Virtual Size: '0x18'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2015-05-10 22:52:10'
+  CreationTimestamp: '2015-05-11 00:52:10'
   Imphash: 4792bcb395d06f9efb72e8020c4af5e6
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.Sys
@@ -4965,6 +5258,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b20f9ad86794f322f60000000000b2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b9dc0ff1a60c3aba24a78d505955bf39
         SHA1: 15a5da2c8aa2955af75615009d249071f91fd252
@@ -4979,6 +5275,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -5019,7 +5318,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2021-08-16 20:01:16'
+  CreationTimestamp: '2021-08-16 22:01:16'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
 - Filename: procexp.sys
@@ -5070,7 +5369,7 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-09-11 15:57:25'
+  CreationTimestamp: '2020-09-11 17:57:25'
   InternalName: procexp.sys
   Copyright: Copyright (C) Mark Russinovich 1996-2020
   Imports:
@@ -5153,6 +5452,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000009484c47568579aafe9000000000094
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: b46a69db7e461e55282dc24dc594e5d6
         SHA1: 3b19241d555a74781e2b63a7c14ad12b1ec68205
@@ -5167,6 +5469,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -5279,6 +5584,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000082c88ba15b1c3ef710000000000082
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: d47b44dce52973327e0283b8aaa49df4
         SHA1: d8c5ee55191da114e9e73f01e6222025ede696ac
@@ -5293,6 +5601,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -5333,8 +5644,6 @@ KnownVulnerableSamples:
       Entropy: 3.698934896284056
       Virtual Size: '0x30'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-12-13 09:37:59'
+  CreationTimestamp: '2019-12-13 11:37:59'
   Imphash: d122c1eaa50839be14c31876d0d4e0be
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- procexp.Sys

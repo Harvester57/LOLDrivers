@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: f92f4c60-b39c-4726-ba74-dcab7f653ae2
+Tags:
+- hwdetectng.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create hwdetectngsys binPath= C:\windows\temp\hwdetectngsys.sys
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: f92f4c60-b39c-4726-ba74-dcab7f653ae2
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: iNFERRE
   Date: ''
@@ -72,7 +78,7 @@ KnownVulnerableSamples:
       Entropy: 3.3405647393075157
       Virtual Size: '0x338'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-01-10 03:54:33'
+  CreationTimestamp: '2009-01-10 05:54:33'
   InternalName: hwdetectng.sys
   Copyright: (c) 2008-09 iNFERRE
   Imports:
@@ -116,6 +122,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -130,6 +139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -143,6 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -156,6 +171,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011eb6590a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5e43f6d26158ba6af72f462711ffbda8
         SHA1: 810286c6701d2b3c310250e18e8435e3d4a3c8a3
@@ -170,6 +188,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -183,6 +204,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -237,7 +261,7 @@ KnownVulnerableSamples:
       Entropy: 5.65361579991719
       Virtual Size: '0x1f6'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-01-10 03:53:00'
+  CreationTimestamp: '2009-01-10 05:53:00'
   InternalName: hwdetectng.sys
   Copyright: (c) 2008-09 iNFERRE
   Imports:
@@ -299,6 +323,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -313,6 +340,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -326,6 +356,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -339,6 +372,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011eb6590a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5e43f6d26158ba6af72f462711ffbda8
         SHA1: 810286c6701d2b3c310250e18e8435e3d4a3c8a3
@@ -353,6 +389,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -366,6 +405,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -420,7 +462,7 @@ KnownVulnerableSamples:
       Entropy: 5.500048045775867
       Virtual Size: '0x20e'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-01-10 03:51:57'
+  CreationTimestamp: '2009-01-10 05:51:57'
   InternalName: hwdetectng.sys
   Copyright: (c) 2008-09 iNFERRE
   Imports:
@@ -482,6 +524,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 040000000000f97faa2e1e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 59466cb0c1788b2f251fce3495837102
         SHA1: c5cfc5f6a131a3a77c3905c9893c99bb1b2baa0b
@@ -496,6 +541,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000108d9611cd6
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 698f075151097d84c0b1f3e7bc3d6fca
         SHA1: 041750993d7c9e063f02dfe74699598640911aab
@@ -509,6 +557,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011092eb8295
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 11d73a3638fc78e0bac6c459feadcc42
         SHA1: 6636f7dcf81b370b919966f9063295ec84422f91
@@ -522,6 +573,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0100000000011eb6590a5e
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5e43f6d26158ba6af72f462711ffbda8
         SHA1: 810286c6701d2b3c310250e18e8435e3d4a3c8a3
@@ -536,6 +590,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000117ab50b915
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 5686b287d716c4d2428b092c4ef30f9c
         SHA1: 306fb5fbeb3d531510bb4b663c4fd48adc121e14
@@ -549,6 +606,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -560,9 +620,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- hwdetectng.sys
-Verified: 'TRUE'

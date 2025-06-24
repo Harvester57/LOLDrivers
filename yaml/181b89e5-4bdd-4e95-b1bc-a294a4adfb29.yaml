@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 181b89e5-4bdd-4e95-b1bc-a294a4adfb29
+Tags:
+- mhyprotrpg.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,11 +14,14 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
 - type: ''
   value: ''
-Id: 181b89e5-4bdd-4e95-b1bc-a294a4adfb29
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 851be1f42dc892ce408034b98dc035bb
@@ -23,7 +29,7 @@ KnownVulnerableSamples:
     SHA256: 8ecd15521b2c37d2ff02a138700007f2aff28a0accfa6fb3480a4421194ef7d2
   Company: ''
   Copyright: "\xA9COGNOSPHERE"
-  CreationTimestamp: '2021-12-20 21:33:43'
+  CreationTimestamp: '2021-12-20 23:33:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -185,6 +191,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 330000004de597a775e3157f7b00000000004d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 9f0782e89bd41cdd96ec55357457478a
         SHA1: 35c2180572baad19019acca1334e6c653699c389
@@ -199,6 +208,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -211,9 +223,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: ebb99842fa08915eb8b7f67d8dc7a13a
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- mhyprotrpg.sys
-Verified: 'TRUE'

@@ -1,9 +1,11 @@
 Id: 90ecbbf7-b02f-424d-8b7d-56cc9e3b5873
+Tags:
+- eneio64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create eneio64.sys binPath=C:\windows\temp\eneio64.sys type=kernel
     && sc.exe start eneio64.sys
@@ -13,10 +15,10 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: eneio64.sys
   MD5: 66066d9852bc65988fb4777f0ff3fbb4
@@ -68,6 +70,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -82,6 +87,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -97,6 +105,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -110,6 +121,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -125,6 +139,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 7d08d9bc130726de26ee4ef28e133084
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 72cafb0a175f0481177fa2c9803283c7
         SHA1: b603167b958c5fcd7094552891ddc4e2ea4c149f
@@ -140,6 +157,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -175,7 +195,7 @@ KnownVulnerableSamples:
       Entropy: 1.584962500721156
       Virtual Size: '0xc'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-09-10 00:36:29'
+  CreationTimestamp: '2014-09-10 02:36:29'
   Imphash: b3204707f6e489cd5a2484881eaf78ca
   LoadsDespiteHVCI: 'TRUE'
 - Filename: EneIo64.sys
@@ -243,6 +263,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01240afb1e380b8a16f14b719df4d3c0
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a780e8237c69d6012c9a0ce5576fbab0
         SHA1: 613115803ff02f51d735686030790041e4207ecd
@@ -257,6 +280,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 073637b724547cd847acfd28662a5e5b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e4b8ad9932ff9205f580cf8fb2afbb86
         SHA1: 5301f7044d78bf94dd2b6e4871083a17fdba1dcc
@@ -271,6 +297,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 08ad40b260d29c4c9f5ecda9bd93aed9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 5d8003a64dfa5a4d88365da1566038cb
         SHA1: 79465b56bc7ad55a37bdf633943da8bfc84db228
@@ -284,6 +313,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0a7a4a889ec99942900663384d86979d
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d49300b4e758e36a3832679763a83c58
         SHA1: ec3075370fcea680e09497d44a4b246012f24160
@@ -298,6 +330,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0d6403ef47571a33435fc827ccefc858
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 03c022b5bd95b982d374487f2e446818
         SHA1: 9bb3db6bee31ae0eeea7d58eb4dbef14528602ec
@@ -332,8 +367,6 @@ KnownVulnerableSamples:
       Entropy: 2.684183719779189
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-05-08 00:07:19'
+  CreationTimestamp: '2020-05-08 02:07:19'
   Imphash: baa420e9d4e3baf0d65d4fc2bf497708
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- eneio64.sys

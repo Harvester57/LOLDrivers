@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 5261cacf-380c-4573-85ff-a643cbdf009a
+Tags:
+- KApcHelper_x64.sys
+Verified: 'TRUE'
 Author: Guus Verbeek
+Created: '2023-05-06'
+MitreID: T1068
 Category: malicious
 Commands:
   Command: sc.exe create KApcHelper_x64.sys binPath=C:\windows\temp\KApcHelper_x64.sys
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-05-06'
+Resources:
+- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
 Detection: []
-Id: 5261cacf-380c-4573-85ff-a643cbdf009a
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: adb7de0467bd3f92fce34819ec656658
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: 2a30ad675142cf411e7e5f5c53c6423de570a398295b0956130a7a7d77383103
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2022-06-06 09:14:46'
+  CreationTimestamp: '2022-06-06 11:14:46'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -103,6 +109,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 43bb437d609866286dd839e1d00309f5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: cef292b5c6cdb07e480ccbba0c9d56d1
         SHA1: 15c37dbebe6fcc77108e3d7ad982676d3d5e77f7
@@ -118,6 +127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -133,6 +145,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -146,9 +161,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 4c7cc13a110ccdbb932bb9d7d42efdf4
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://www.mandiant.com/resources/blog/hunting-attestation-signed-malware
-Tags:
-- KApcHelper_x64.sys
-Verified: 'TRUE'

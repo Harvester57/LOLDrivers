@@ -1,9 +1,11 @@
 Id: 66be9e0a-9246-4404-b5b5-7fbde351668f
+Tags:
+- BS_I2cIo.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create BS_I2cIo.sys binPath=C:\windows\temp\BS_I2cIo.sys type=kernel
     && sc.exe start BS_I2cIo.sys
@@ -13,9 +15,6 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
-Acknowledgement:
-  Person: ''
-  Handle: ''
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,6 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
+Acknowledgement:
+  Person: ''
+  Handle: ''
 KnownVulnerableSamples:
 - Filename: BS_I2cIo.sys
   MD5: 3c4154866f3d483fdc9f4f64ef868888
@@ -96,6 +98,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -109,6 +114,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -124,6 +132,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 49a570277854e9481d38e34c081226ee
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 27a32ddae1fd74f01b6324484fb5995a
         SHA1: d68dfe595f9f0f94672e1a7b876a2987ba81e675
@@ -165,8 +176,6 @@ KnownVulnerableSamples:
       Entropy: 3.593030469985413
       Virtual Size: '0xf8'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-12-11 00:48:39'
+  CreationTimestamp: '2006-12-11 02:48:39'
   Imphash: f939ef0b7f792672866386600f82aa04
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- BS_I2cIo.sys

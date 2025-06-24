@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: cce291c8-4534-4362-af45-5f45cd32bd92
+Tags:
+- smep_namco.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create smep_namco.sys binPath=C:\windows\temp\smep_namco.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
 Detection: []
-Id: cce291c8-4534-4362-af45-5f45cd32bd92
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 5673638fc95d46f6b323144472c6e608
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: 7fd788358585e0b863328475898bb4400ed8d478466d1b7f5cc0252671456cc8
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2013-07-09 19:35:24'
+  CreationTimestamp: '2013-07-09 21:35:24'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -82,6 +88,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012019c19066
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 42023b9487cafe46c1b6a49c369a362e
         SHA1: 7c7b524d269334b9f073c32e888e09544c6acd98
@@ -95,6 +104,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee1355c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f6a9e8eb8784f3f694b4e353c08a0ff5
         SHA1: 589a7d4df869395601ba7538a65afae8c4616385
@@ -108,6 +120,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 01000000000125b0b4cc01
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e3369c8e5aec0504b3a50455f615d9f9
         SHA1: 13c244a894b40ecd18aaf97c362f20385bd005a7
@@ -122,6 +137,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121953cf4f12153ed3974a70d218298b988
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ed2401f2f2a40ae687096d79a85955d7
         SHA1: 01bbd03bb2a9285563adf031b7379cb95e34c26b
@@ -135,6 +153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -146,10 +167,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 45bfe170e0cd654bc1e2ae3fca3ac3f4
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- smep_namco.sys
-Verified: 'TRUE'

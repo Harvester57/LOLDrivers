@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 6a7d882b-3d9d-4334-be5f-2e29c6bf9ff8
+Tags:
+- kbdcap64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create kbdcap64.sys binPath=C:\windows\temp\kbdcap64.sys type=kernel
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection: []
-Id: 6a7d882b-3d9d-4334-be5f-2e29c6bf9ff8
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: ''
   Date: ''
@@ -33,7 +39,7 @@ KnownVulnerableSamples:
     SHA256: 72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-11-03 23:10:09'
+  CreationTimestamp: '2019-11-04 01:10:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -128,6 +134,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -142,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09b92d7a420083c94eaf18145cfaedd1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62acdecc22447b159a7e2efb0350bd63
         SHA1: ddd0bd1dded2c9189fc5b8563f8210deb83c590b
@@ -156,6 +168,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -174,7 +189,7 @@ KnownVulnerableSamples:
     SHA256: 72b99147839bcfb062d29014ec09fe20a8f261748b5925b00171ef3cb849a4c1
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-11-03 23:10:09'
+  CreationTimestamp: '2019-11-04 01:10:09'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -269,6 +284,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 61204db4000000000027
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 8e3ffc222fbcebdbb8b23115ab259be7
         SHA1: ee20bff28ffe13be731c294c90d6ded5aae0ec0e
@@ -283,6 +301,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 09b92d7a420083c94eaf18145cfaedd1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 62acdecc22447b159a7e2efb0350bd63
         SHA1: ddd0bd1dded2c9189fc5b8563f8210deb83c590b
@@ -297,6 +318,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0dd0e3374ac95bdbfa6b434b2a48ec06
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: f92649915476229b093c211c2b18e6c4
         SHA1: 2d54c16a8f8b69ccdea48d0603c132f547a5cf75
@@ -309,10 +333,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: b679ac08daf4b4ce8a58d85a8e0904ac
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- kbdcap64.sys
-Verified: 'TRUE'

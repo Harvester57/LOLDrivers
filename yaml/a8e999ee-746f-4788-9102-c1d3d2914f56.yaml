@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a8e999ee-746f-4788-9102-c1d3d2914f56
+Tags:
+- LgDCatcher.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create LgDCatcher.sys binPath=C:\windows\temp\LgDCatcher.sys type=kernel
@@ -10,7 +13,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -22,7 +26,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a8e999ee-746f-4788-9102-c1d3d2914f56
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 0011ec462e11bd6288e1dc38def9be06
@@ -30,7 +36,7 @@ KnownVulnerableSamples:
     SHA256: 3ba724dd78864cd527a99673fde1bf7f9f85f2415c91708e7380fbe5e2c085dd
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-07-21 01:22:27'
+  CreationTimestamp: '2021-07-21 03:22:27'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -164,6 +170,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0409181b5fd5bb66755343b56f955008
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 9359496ca4f021408b9d8923cab8b179
         SHA1: 2aed40d7759997830870769be250199fd609e40e
@@ -178,6 +187,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -191,6 +203,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0efd9bd4b4281c6522d96011df46c9c4
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a79bd916766d1d84788c637368712a33
         SHA1: 59253425fe3216db3b4a61d841bb2e5a04b16de4
@@ -205,6 +220,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 300f6facdd6698747ca94636a7782db9
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 63499ed59a1293b786649470e4ce0bd7
         SHA1: 7309d8eaa65da1f3da7030c08f00a3b0a20fa908
@@ -219,6 +237,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 008c77a0008ff4d1b0c63d9f3a48838d6b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 6efd500ce038df7aa3087c1e63a5eb5c
         SHA1: 1c961712a02fb995c585080eda53a753656ca3ad
@@ -237,7 +258,7 @@ KnownVulnerableSamples:
     SHA256: 350e15bf24dcfdc052db117718329a03e930c17ac8c835e51d001e74bad784e4
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2020-11-29 19:41:05'
+  CreationTimestamp: '2020-11-29 21:41:05'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -410,6 +431,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -423,6 +447,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dd7d4a785990584d8c0837659173272
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 559c170b8f735dd1ba8c3946354c4fa5
         SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
@@ -436,6 +463,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -450,6 +480,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -463,6 +496,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -481,7 +517,7 @@ KnownVulnerableSamples:
     SHA256: 13b82d81d6eac1a8b2e4655504dabecbd70673cdf45c244702a02f3397fdff9a
   Company: NetFilterSDK.com
   Copyright: Copyright ? NetFilterSDK.com
-  CreationTimestamp: '2020-09-24 20:14:24'
+  CreationTimestamp: '2020-09-24 22:14:24'
   Date: ''
   Description: NetFilter SDK TDI Hook Driver (WPP)
   ExportedFunctions: ''
@@ -596,6 +632,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -609,6 +648,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0dd7d4a785990584d8c0837659173272
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 559c170b8f735dd1ba8c3946354c4fa5
         SHA1: e7432e65001ca5e56478ee25ae9906981432ee75
@@ -622,6 +664,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -636,6 +681,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -649,6 +697,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -661,10 +712,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 835e364e2175338d970c2aaee365f3dc
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules'
-- https://learn.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules
-Tags:
-- LgDCatcher.sys
-Verified: 'TRUE'

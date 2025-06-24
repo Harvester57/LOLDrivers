@@ -1,9 +1,11 @@
 Id: 7b893f79-b5b0-4373-9d29-c53a21fe6fc3
+Tags:
+- WinFlash64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create WinFlash64.sys binPath=C:\windows\temp\WinFlash64.sys type=kernel
     && sc.exe start WinFlash64.sys
@@ -13,10 +15,10 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: WinFlash64.sys
   MD5: a216803d691d92acc44ac77d981aa767
@@ -66,6 +68,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -79,6 +84,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -94,6 +102,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -107,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -122,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 2ca9ca93cd9b19a96ddad68aff3a668d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 47b0f73f8cc709595616e0d6ae88c5db
         SHA1: 83d27f045fa24c61544842dd4a9ac8759fa6900a
@@ -154,7 +171,7 @@ KnownVulnerableSamples:
       Entropy: 4.880215733396521
       Virtual Size: '0x262'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2006-11-09 02:11:41'
+  CreationTimestamp: '2006-11-09 04:11:41'
   Imphash: 7a4a0df0bde1f8da6547a580d5bee7c3
   LoadsDespiteHVCI: 'FALSE'
 - Filename: WinFlash64.sys
@@ -204,6 +221,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -217,6 +237,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0de92bf0d4d82988183205095e9a7688
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 45c204b8a20f6abb0188d2d38a3fb0c9
         SHA1: cdf3a3c5c2eda4c29621f30fd3154f9f8c765739
@@ -232,6 +255,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -245,6 +271,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -260,6 +289,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 226a266fde87a6d82d69d22ba10dce2f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 8d6e9b2b7b3354b41c443655b723f844
         SHA1: 5836b80ddac629024f98b948f5160fd2d9012176
@@ -292,7 +324,7 @@ KnownVulnerableSamples:
       Entropy: 4.456575761689918
       Virtual Size: '0x1da'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2005-11-22 18:14:16'
+  CreationTimestamp: '2005-11-22 20:14:16'
   Imphash: e4f1a9234e4ea105321909d4c0e597ae
   LoadsDespiteHVCI: 'FALSE'
 - Filename: WinFlash64.sys
@@ -348,6 +380,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -361,6 +396,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -376,6 +414,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -389,6 +430,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -404,6 +448,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 55272d7780471b989f3def09bb221c53
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: e25e721298ff095a569a15965845ad33
         SHA1: 241fbb78e76a1bed275262fa03b82141602acce0
@@ -436,8 +483,6 @@ KnownVulnerableSamples:
       Entropy: 4.9483973408107955
       Virtual Size: '0x304'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2009-06-24 00:53:27'
+  CreationTimestamp: '2009-06-24 02:53:27'
   Imphash: 8c3af6c25ab40c4daefb4f836d12e1c8
   LoadsDespiteHVCI: 'FALSE'
-Tags:
-- WinFlash64.sys

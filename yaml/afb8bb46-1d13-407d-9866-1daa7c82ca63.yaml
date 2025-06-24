@@ -1,15 +1,10 @@
 Id: afb8bb46-1d13-407d-9866-1daa7c82ca63
+Tags:
+- echo_driver.sys
+Verified: 'TRUE'
 Author: Protocol & Zach
 Created: '2023-07-14'
-Verified: 'TRUE'
 MitreID: T1134
-Resources:
-- https://ioctl.fail/echo-ac-writeup/
-- https://github.com/kite03/echoac-poc/tree/main/PoC
-- https://github.com/pseuxide/kur
-Acknowledgement:
-  Handle: '@WindowsKernel'
-  Person: protocol
 Category: vulnerable driver
 Commands:
   Command: sc.exe create echo_driver.sys binPath=C:\windows\temp\echo_driver.sys type=kernel
@@ -20,7 +15,14 @@ Commands:
   OperatingSystem: Windows 10/11
   Privileges: kernel
   Usecase: Elevate privileges, arbitrary memory read/write
+Resources:
+- https://ioctl.fail/echo-ac-writeup/
+- https://github.com/kite03/echoac-poc/tree/main/PoC
+- https://github.com/pseuxide/kur
 Detection: []
+Acknowledgement:
+  Handle: '@WindowsKernel'
+  Person: protocol
 KnownVulnerableSamples:
 - Authentihash:
     MD5: cad120d8ba6473b07a3b76a41921d720
@@ -28,7 +30,7 @@ KnownVulnerableSamples:
     SHA256: 92f9d73cec5ab3352c4b3cbf4574d13b2e506cba24cc74580e19e941063eaf7d
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-06-17 17:17:15'
+  CreationTimestamp: '2021-06-17 19:17:15'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -136,6 +138,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000433a68189e33902987000000000043
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3d790bd5602e84a4aa8560133ced0a41
         SHA1: 909e31e3e3808ab55d508fc0ba47e0132a57d7ab
@@ -150,6 +155,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -161,6 +169,7 @@ KnownVulnerableSamples:
         Windows Third Party Component CA 2014
       Version: 1
   Imphash: a94892b77a6474429b9f692d9952a9d5
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: echodriver
   Libraries:
   - ntoskrnl.exe
@@ -279,6 +288,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: echodriver.sys
   Libraries:
   - cng.sys
@@ -420,6 +430,7 @@ KnownVulnerableSamples:
       Issuer: C=US, ST=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft
         Windows Third Party Component CA 2014
       Version: 1
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: echo.sys
   Libraries:
   - ntoskrnl.exe
@@ -493,7 +504,7 @@ KnownVulnerableSamples:
   Imphash: d5b8227536ae03b96e542a52b80aab47
   Machine: I386
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-10-15 00:28:23'
+  CreationTimestamp: '2020-10-15 02:28:23'
   RichPEHeaderMD5: 2e2215b2069ed96fcec4649c25ecce07
   RichPEHeaderSHA1: f2dea0094772b0451202d789ab6f4e440a5dbb62
   RichPEHeaderSHA256: 65ad8fd2d58ed83b8f95fcc50f82a9aef53c7db80c072589b30194f15776a3e7
@@ -537,6 +548,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611cb28a000000000026
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 983a0c315a50542362f2bd6a5d71c8d0
         SHA1: 8047f476001f5cb16a661d2a3fd0c3576168f5e2
@@ -551,6 +565,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0b1e1774fd8f4ea3d7ff1381fb73da92
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7024d0a6b5e55936a7935914788421d5
         SHA1: efab40dd88bfe8550db10f51a4cbcfc9cea76af0
@@ -564,6 +581,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 03019a023aff58b16bd6d5eae617f066
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: a752afee44f017e8d74e3f3eb7914ae3
         SHA1: 8eca80a6b80e9c69dcef7745748524afb8019e2d
@@ -578,6 +598,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0fa8490615d700a0be2176fdc5ec6dbd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a9a31555bbc92b6033975c5428fb3679
         SHA1: 47f4b9898631773231b32844ec0d49990ac4eb1e
@@ -591,6 +614,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 06fdf9039603adea000aeb3f27bbba1b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 4e5ad189638cf52ba9cd881d4d44668c
         SHA1: cdc115e98d798b33904c820d63cc1e1afc19251d
@@ -617,6 +643,7 @@ KnownVulnerableSamples:
   Imports:
   - ntoskrnl.exe
   - HAL.dll
+  LoadsDespiteHVCI: 'FALSE'
 - Filename: rentdrv2.sys
   Libraries:
   - ntoskrnl.exe
@@ -687,7 +714,7 @@ KnownVulnerableSamples:
   Imphash: 1fb8e85267a70537d661f9df2fc215ac
   Machine: AMD64
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2023-01-17 01:17:14'
+  CreationTimestamp: '2023-01-17 03:17:14'
   RichPEHeaderMD5: df57763699cf5115bb47b14154391019
   RichPEHeaderSHA1: cdf22aa848a0e173ed5aa1fef4ca77eea65b9403
   RichPEHeaderSHA256: cf67066a7ed3bb69752ec5fc482e9d74f8bcff9683a417db05eeab1484cefea1
@@ -731,6 +758,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3300000057ee4d659a923e7c10000000000057
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fdc11a5676aed4e9cc0c09eeb7450dfb
         SHA1: 4902077d9a05d4231b791d3b05bafa4a79132f03
@@ -745,6 +775,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 330000000d690d5d7893d076df00000000000d
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 83f69422963f11c3c340b81712eef319
         SHA1: 0c5e5f24590b53bc291e28583acb78e5adc95601
@@ -770,5 +803,4 @@ KnownVulnerableSamples:
   MachineType: AMD64
   Imports:
   - ntoskrnl.exe
-Tags:
-- echo_driver.sys
+  LoadsDespiteHVCI: 'FALSE'

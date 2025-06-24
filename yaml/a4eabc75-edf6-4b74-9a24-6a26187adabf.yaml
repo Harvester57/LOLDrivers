@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a4eabc75-edf6-4b74-9a24-6a26187adabf
+Tags:
+- dbutil_2_3.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create dbutil_2_3.sys binPath=C:\windows\temp\dbutil_2_3.sys type=kernel
@@ -10,9 +13,13 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/namazso/physmem_drivers
+- https://www.sentinelone.com/labs/cve-2021-21551-hundreds-of-millions-of-dell-computers-at-risk-due-to-multiple-bios-driver-privilege-escalation-flaws/
 Detection: []
-Id: a4eabc75-edf6-4b74-9a24-6a26187adabf
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: e593dd14a41fd9a6cb42fdae324c3092
@@ -20,7 +27,7 @@ KnownVulnerableSamples:
     SHA256: fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-02 22:14:51'
+  CreationTimestamp: '2009-11-03 00:14:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -95,6 +102,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -108,6 +118,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -123,6 +136,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -137,6 +153,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 18a686a1229059017a672136ac2e7265
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3f3990fd4fcf9d9ca9e6a3d53abb0083
         SHA1: e642b59ed916131746a973ddecfc5549cc81ecb3
@@ -150,6 +169,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -169,7 +191,7 @@ KnownVulnerableSamples:
     SHA256: fe4270a61dbed978c28b2915fcc2826d011148dcb7533fa8bd072ddce5944cef
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-02 22:14:51'
+  CreationTimestamp: '2009-11-03 00:14:51'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -244,6 +266,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -257,6 +282,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -272,6 +300,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -286,6 +317,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 18a686a1229059017a672136ac2e7265
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3f3990fd4fcf9d9ca9e6a3d53abb0083
         SHA1: e642b59ed916131746a973ddecfc5549cc81ecb3
@@ -299,6 +333,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -318,12 +355,12 @@ KnownVulnerableSamples:
     SHA256: 96ee751f7c38731e97773e07e0f13f4dd361af9aaa1d30b41652c2e6efc3fb3e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2009-11-02 22:17:17'
+  CreationTimestamp: '2009-11-03 00:17:17'
   Date: ''
   Description: ''
   ExportedFunctions: ''
   FileVersion: ''
-  Filename: ''
+  Filename: dbutil_2_3.sys
   ImportedFunctions:
   - KeInsertQueueDpc
   - MmFreeContiguousMemorySpecifyCache
@@ -397,6 +434,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -410,6 +450,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -425,6 +468,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -439,6 +485,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 18a686a1229059017a672136ac2e7265
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 3f3990fd4fcf9d9ca9e6a3d53abb0083
         SHA1: e642b59ed916131746a973ddecfc5549cc81ecb3
@@ -452,6 +501,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -465,10 +517,54 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 7e1327419d10a7eeece5579526f75d9f
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- ' https://github.com/namazso/physmem_drivers'
-- https://github.com/namazso/physmem_drivers
-Tags:
-- dbutil_2_3.sys
-Verified: 'TRUE'
+- Authentihash:
+    MD5: 3a15f75c672fd3f26510ee4c42785cbd
+    SHA1: 71307f712022732585b78afe1ba655a6d4892d1f
+    SHA256: 56c6977777763d72cd82b3327d97bb05b13c2424d886d87f9ffbb07ead628142
+  Filename: dbutil_2_3.sys
+  MD5: d2fd132ab7bbc6bbb87a84f026fa0244
+  SHA1: 10b30bdee43b3a2ec4aa63375577ade650269d25
+  SHA256: ddbf5ecca5c8086afde1fb4f551e9e6400e94f4428fe7fb5559da5cffa654cc1
+  Signature: ''
+  Date: ''
+  Publisher: ''
+  Company: ''
+  Description: ''
+  Product: ''
+  ProductVersion: ''
+  FileVersion: ''
+  MachineType: AMD64
+  OriginalFilename: ''
+  Imphash: ''
+  RichPEHeaderHash:
+    MD5: 0df29e332220beca9a43c8a546411803
+    SHA1: fbc770f7abc1c150d19058bc52b402f0530f28bf
+    SHA256: 890246379c5e6ebdb38b657798a7615b23836e48297e4a1d72324cd9388c6ab5
+  Sections:
+    .text:
+      Entropy: 0.4700941726633142
+      Virtual Size: '0xcbe'
+    .rdata:
+      Entropy: 5.562685278219123
+      Virtual Size: '0x1dc'
+    .data:
+      Entropy: 5.882833523179626
+      Virtual Size: '0x170'
+    .pdata:
+      Entropy: 4.878200449167054
+      Virtual Size: '0x90'
+    PAGE:
+      Entropy: 5.52594721767507
+      Virtual Size: '0x32c'
+    INIT:
+      Entropy: 1.8484630171924943
+      Virtual Size: '0x296'
+  MagicHeader: 50 45 0 0
+  CreationTimestamp: '2009-11-03 00:14:51'
+  InternalName: ''
+  Copyright: ''
+  Imports: []
+  ExportedFunctions: ''
+  ImportedFunctions: ''
+  Signatures: {}
+  LoadsDespiteHVCI: 'TRUE'

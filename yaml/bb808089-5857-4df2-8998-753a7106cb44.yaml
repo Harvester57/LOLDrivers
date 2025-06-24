@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: bb808089-5857-4df2-8998-753a7106cb44
+Tags:
+- DBUtilDrv2.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create DBUtilDrv2.sys binPath=C:\windows\temp\DBUtilDrv2.sys type=kernel
@@ -10,7 +13,9 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/jbaines-r7/dellicious
+- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/71fe5af0f1564dc187eea8d59c0fbc897712afa07d18316d2080330ba17cf009.yara
@@ -32,7 +37,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: bb808089-5857-4df2-8998-753a7106cb44
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 3736439958e5533142648f0d278fe7df
@@ -40,7 +47,7 @@ KnownVulnerableSamples:
     SHA256: d7c683ef033ac2dc4dfa0dc61f39931f91c0e8fd19e613f664cb03e14112ef6e
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2019-11-19 11:14:20'
+  CreationTimestamp: '2019-11-19 13:14:20'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -123,6 +130,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000857f83dc2a6ca979b8000000000085
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 85e8c40624a19ac2076dd91f49d8fb53
         SHA1: 621756d2a4e10231e34677a3c0f2a8d1fb0fb7ca
@@ -137,6 +147,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -155,7 +168,7 @@ KnownVulnerableSamples:
     SHA256: 7bacb353363cc29f7f3815a9d01e85cd86202d92378d1ab1b11df1ab2f42f40a
   Company: Dell
   Copyright: "\xA9 2021 Dell Inc. All Rights Reserved. "
-  CreationTimestamp: '2021-05-06 17:20:18'
+  CreationTimestamp: '2021-05-06 19:20:18'
   Date: ''
   Description: DBUtil
   ExportedFunctions: ''
@@ -237,6 +250,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 33000000b5213fca1e4aa03de40000000000b5
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: a0dd89c33c4973bf6758331e200fb6de
         SHA1: 65ff7fa429c0f08f8a8bf30509e8ca2919d9edb5
@@ -251,6 +267,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610baac1000000000009
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: a569061297e8e824767dbc3184a69bea
         SHA1: adbb26a587a8f44b4fccaecb306f980d1c55a150
@@ -263,10 +282,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 506a31d768aec26b297c45b50026c820
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- https://github.com/jbaines-r7/dellicious
-- https://www.rapid7.com/blog/post/2021/12/13/driver-based-attacks-past-and-present/
-Tags:
-- DBUtilDrv2.sys
-Verified: 'TRUE'

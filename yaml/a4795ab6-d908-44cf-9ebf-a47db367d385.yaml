@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a4795ab6-d908-44cf-9ebf-a47db367d385
+Tags:
+- WiRwaDrv.sys
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create WiRwaDrvsys binPath= C:\windows\temp\WiRwaDrvsys.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a4795ab6-d908-44cf-9ebf-a47db367d385
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Wistron Corporation
   Date: ''
@@ -75,7 +81,7 @@ KnownVulnerableSamples:
       Entropy: 2.684183719779189
       Virtual Size: '0x14'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2019-10-18 02:40:37'
+  CreationTimestamp: '2019-10-18 04:40:37'
   InternalName: WiRwaDrv.sys
   Copyright: Copyright (C) 2019 Wistron Corporation
   Imports:
@@ -107,6 +113,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -121,6 +130,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3fab6983c8188ce80d06ddd6b92ef292
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 05bc106762d78fe49ebb5136aba4f0ed
         SHA1: a5f824c6cb64fad75d9adcb6e1bb85eafd6bfb40
@@ -136,6 +148,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 611993e400000000001c
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 78a717e082dcc1cda3458d917e677d14
         SHA1: 4a872e0e51f9b304469cd1dedb496ee9b8b983a4
@@ -147,9 +162,3 @@ KnownVulnerableSamples:
         Class 3 Extended Validation Code Signing CA , G2
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- WiRwaDrv.sys
-Verified: 'TRUE'

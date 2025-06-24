@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: a08ee79f-801d-4b98-996f-55f6a72ac5f7
+Tags:
+- CP2X72C.SYS
+Verified: 'TRUE'
 Author: Takahiro Haruyama
+Created: '2023-11-02'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create CP2X72CSYS binPath= C:\windows\temp\CP2X72CSYS.sys type=kernel
@@ -15,7 +18,8 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-11-02'
+Resources:
+- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
 Detection:
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
@@ -27,7 +31,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: a08ee79f-801d-4b98-996f-55f6a72ac5f7
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Company: Interface Corporation
   Date: ''
@@ -78,7 +84,7 @@ KnownVulnerableSamples:
       Entropy: 5.251511541647596
       Virtual Size: '0x4ea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-03-25 22:53:21'
+  CreationTimestamp: '2020-03-26 00:53:21'
   InternalName: CP2X72C.SYS
   Copyright: Copyright 2001, 2020 Interface Corporation. All rights reserved.
   Imports:
@@ -177,6 +183,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -192,6 +201,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6ec713048249f5421753b77c2796320f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 899ac369826f1405bd7bf55c1d034016
         SHA1: 27edea8e430cad6d62f38aa060eaa042c4e8c9ed
@@ -252,7 +264,7 @@ KnownVulnerableSamples:
       Entropy: 6.061067314312593
       Virtual Size: '0x4ea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2007-03-12 00:06:43'
+  CreationTimestamp: '2007-03-12 02:06:43'
   InternalName: CP2X72C.sys
   Copyright: Copyright 2001, 2007 Interface Corp. All rights reserved.
   Imports:
@@ -335,6 +347,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -348,6 +363,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -363,6 +381,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -377,6 +398,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 69513db11ff8c46acacef4fa45441973
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 7872f0a6159c70980c4e682420c1d612
         SHA1: 1de98c55375993a6a3ed8281ce7d9fedc7dd39af
@@ -438,7 +462,7 @@ KnownVulnerableSamples:
       Entropy: 3.5913055129335945
       Virtual Size: '0xe50'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2020-03-25 22:53:57'
+  CreationTimestamp: '2020-03-26 00:53:57'
   InternalName: CP2X72C.SYS
   Copyright: Copyright 2001, 2020 Interface Corporation. All rights reserved.
   Imports:
@@ -528,6 +552,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 191a32cb759c97b8cfac118dd5127f49
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 788b61bd26da89253179e3de2cdb527f
         SHA1: 7d06f16e7bf21bce4f71c2cb7a3e74351451bf69
@@ -543,6 +570,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6ec713048249f5421753b77c2796320f
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 899ac369826f1405bd7bf55c1d034016
         SHA1: 27edea8e430cad6d62f38aa060eaa042c4e8c9ed
@@ -603,7 +633,7 @@ KnownVulnerableSamples:
       Entropy: 5.221651508671624
       Virtual Size: '0x4ea'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-04-27 22:36:43'
+  CreationTimestamp: '2014-04-28 00:36:43'
   InternalName: CP2X72C.SYS
   Copyright: Copyright 2001, 2014 Interface Corporation. All rights reserved.
   Imports:
@@ -702,6 +732,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -716,6 +749,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -731,6 +767,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -745,6 +784,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 05f803452203a09cc083f213aad07fb6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ef79dcc14a9e19d41d383b3979d58a05
         SHA1: 9388992f7a914b818de4832a0e9c071bfad99ac8
@@ -760,6 +802,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -821,7 +866,7 @@ KnownVulnerableSamples:
       Entropy: 3.5884380372230194
       Virtual Size: '0xe50'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2014-04-27 22:37:11'
+  CreationTimestamp: '2014-04-28 00:37:11'
   InternalName: CP2X72C.SYS
   Copyright: Copyright 2001, 2014 Interface Corporation. All rights reserved.
   Imports:
@@ -911,6 +956,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7e93ebfb7cc64e59ea4b9a77d406fc3b
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: d0785ad36e427c92b19f6826ab1e8020
         SHA1: 365b7a9c21bd9373e49052c3e7b3e4646ddd4d43
@@ -925,6 +973,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0ecff438c8febf356e04d86a981b1a50
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: e9d38360b914c8863f6cba3ee58764d3
         SHA1: 4cba8eae47b6bf76f20b3504b98b8f062694a89b
@@ -940,6 +991,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 250ce8e030612e9f2b89f7054d7cf8fd
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 918d9eb6a6cd36c531eceb926170a7e1
         SHA1: 0ae95700d65e6f59715aa47048993ca7858e676a
@@ -954,6 +1008,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 05f803452203a09cc083f213aad07fb6
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: ef79dcc14a9e19d41d383b3979d58a05
         SHA1: 9388992f7a914b818de4832a0e9c071bfad99ac8
@@ -969,6 +1026,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 5200e5aa2556fc1a86ed96c9d44b33c7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: b30c31a572b0409383ed3fbe17e56e81
         SHA1: 4843a82ed3b1f2bfbee9671960e1940c942f688d
@@ -981,9 +1041,3 @@ KnownVulnerableSamples:
         CA
       Version: 1
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://blogs.vmware.com/security/2023/10/hunting-vulnerable-kernel-drivers.html
-Tags:
-- CP2X72C.SYS
-Verified: 'TRUE'

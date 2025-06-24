@@ -1,9 +1,11 @@
 Id: 5c45ae9e-cb6f-4eab-a070-b0187202e080
+Tags:
+- amigendrv64.sys
+Verified: 'TRUE'
 Author: Nasreddine Bencherchali
 Created: '2023-05-06'
 MitreID: T1068
 Category: vulnerable driver
-Verified: 'TRUE'
 Commands:
   Command: sc.exe create amigendrv64.sys binPath=C:\windows\temp\amigendrv64.sys type=kernel
     && sc.exe start amigendrv64.sys
@@ -13,10 +15,10 @@ Commands:
   OperatingSystem: Windows 10
 Resources:
 - Internal Research
+Detection: []
 Acknowledgement:
   Person: ''
   Handle: ''
-Detection: []
 KnownVulnerableSamples:
 - Filename: amigendrv64.sys
   MD5: 32365e3e64d28cc94756ac9a09b67f06
@@ -91,6 +93,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 00b9963758ead236c6e15cd48ba5433aae
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: fad04f09614b2237bc7ff05ed3d6af76
         SHA1: 44f498abb05904d7e8e4cc8808e234e9db1fc883
@@ -105,6 +110,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6dd472eb02ae0406e3dd843f5fe145e1
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: e3898a5cae592360ce7bfdf5ff3fb13f
         SHA1: 217c51b90dbb7f0528e8ba170d227f647fbc995b
@@ -119,6 +127,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: '61185486000000000024'
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: ad73330abdd8883ba17ac2572100221e
         SHA1: 3770402ce3d71f9823386167aa35a7c862f409d3
@@ -156,8 +167,6 @@ KnownVulnerableSamples:
       Entropy: 3.003055907333275
       Virtual Size: '0x28'
   MagicHeader: 50 45 0 0
-  CreationTimestamp: '2022-05-17 04:01:28'
+  CreationTimestamp: '2022-05-17 06:01:28'
   Imphash: 1f2627fc453dc35031a9502372bd3549
   LoadsDespiteHVCI: 'TRUE'
-Tags:
-- amigendrv64.sys

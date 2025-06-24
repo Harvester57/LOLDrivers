@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 2225128d-a23f-434a-aaee-69a88ea64fbd
+Tags:
+- HWiNFO32.SYS
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-07-22'
+MitreID: T1068
 CVE:
 - ''
 Category: vulnerable drivers
@@ -11,10 +14,9 @@ Commands:
   OperatingSystem: Windows
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-07-22'
+Resources:
+- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
 Detection:
-- type: ''
-  value: ''
 - type: yara_signature
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/yara/yara-rules_vuln_drivers_strict_renamed.yar
 - type: sigma_hash
@@ -25,7 +27,9 @@ Detection:
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes.xml
 - type: sysmon_hash_block
   value: https://github.com/magicsword-io/LOLDrivers/blob/main/detections/sysmon/sysmon_config_vulnerable_hashes_block.xml
-Id: 2225128d-a23f-434a-aaee-69a88ea64fbd
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 969796117a4fa98be98ac97f8f2b591e
@@ -33,7 +37,7 @@ KnownVulnerableSamples:
     SHA256: c44b807e14e5da43a060cb36a83aa5b1e4b7b95620f9e41d289694f9daa8b77a
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-09-09 03:22:55'
+  CreationTimestamp: '2010-09-09 05:22:55'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -131,6 +135,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -144,6 +151,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -157,6 +167,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -171,6 +184,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -185,6 +201,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -198,6 +217,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -216,7 +238,7 @@ KnownVulnerableSamples:
     SHA256: 80b2c44b2cdb74bafcc1271c5338f1d80f3621308b6c9d24d52bb28c8983677c
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-12-19 01:47:57'
+  CreationTimestamp: '2011-12-19 03:47:57'
   Date: ''
   Description: HWiNFO32/64 Kernel Driver
   ExportedFunctions: ''
@@ -323,6 +345,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -336,6 +361,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -349,6 +377,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -363,6 +394,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -377,6 +411,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -390,6 +427,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -408,7 +448,7 @@ KnownVulnerableSamples:
     SHA256: 02f63773cdd991c891e10044633630154ae6fa63dbfe9b35082e48d4924f2dde
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-05-22 14:51:10'
+  CreationTimestamp: '2011-05-22 16:51:10'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -506,6 +546,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -519,6 +562,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -532,6 +578,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -546,6 +595,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -560,6 +612,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -573,6 +628,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -591,7 +649,7 @@ KnownVulnerableSamples:
     SHA256: 3bf77c52cc0e6b1b0f2b8ceffaadb156673768146950401c27fbfd7e2bedd618
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2008 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2008-11-21 01:48:44'
+  CreationTimestamp: '2008-11-21 03:48:44'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -677,6 +735,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -690,6 +751,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -705,6 +769,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 4191a15a3978dfcf496566381d4c75c2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 41011f8d0e7c7a6408334ca387914c61
         SHA1: c7fc1727f5b75a6421a1f95c73bbdb23580c48e5
@@ -719,6 +786,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 6e476474a7abff3a7b04ae741f7e6ed1
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 5b7ee623fe90fcb14bd8367d9f739b70
         SHA1: 06cda38f916ca04cbfe060ad324e6e7fbd0ec0a5
@@ -732,6 +802,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610c120600000000001b
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 53c41bc1164e09e0cd1617a5bf913efd
         SHA1: 93c03aac8951d494ecd5696b1c08658541b18727
@@ -751,7 +824,7 @@ KnownVulnerableSamples:
     SHA256: 3e62730949b6cbbaf938d9b2015fe1b84eb63322c4287d0ce2b4c6f987c2dadd
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-09-22 00:45:00'
+  CreationTimestamp: '2011-09-22 02:45:00'
   Date: ''
   Description: HWiNFO32/64 Kernel Driver
   ExportedFunctions: ''
@@ -858,6 +931,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -871,6 +947,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -884,6 +963,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -898,6 +980,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -912,6 +997,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -925,6 +1013,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -943,7 +1034,7 @@ KnownVulnerableSamples:
     SHA256: 742b102cc69403c669244f0efcf9ac8e5bbdb9b10f35f03c743651afe5ac32ba
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-07-25 06:37:28'
+  CreationTimestamp: '2010-07-25 08:37:28'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1041,6 +1132,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1054,6 +1148,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1067,6 +1164,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -1081,6 +1181,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -1095,6 +1198,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -1108,6 +1214,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1126,7 +1235,7 @@ KnownVulnerableSamples:
     SHA256: de09000bb9f5f81ff6c9ba239ea2498cff4e3decf6ae0220e4b0d64c3500acf8
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2009 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2009-07-16 08:22:02'
+  CreationTimestamp: '2009-07-16 10:22:02'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1215,6 +1324,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1228,6 +1340,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1241,6 +1356,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -1255,6 +1373,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -1269,6 +1390,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -1282,6 +1406,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1300,7 +1427,7 @@ KnownVulnerableSamples:
     SHA256: c191c7d4ec03c4ef0f51a67af42a90390f75ebd6f83dbc05e317fe5a90a1fb31
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-09-29 16:13:28'
+  CreationTimestamp: '2010-09-29 18:13:28'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1398,6 +1525,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1411,6 +1541,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1424,6 +1557,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -1438,6 +1574,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -1452,6 +1591,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -1465,6 +1607,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1483,7 +1628,7 @@ KnownVulnerableSamples:
     SHA256: 52b9302507bccd7eb775137a4c17b0df9a5a99671968c01924cd0c52a0c69262
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-06-20 11:16:25'
+  CreationTimestamp: '2010-06-20 13:16:25'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1581,6 +1726,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1594,6 +1742,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1607,6 +1758,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -1621,6 +1775,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -1635,6 +1792,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -1648,6 +1808,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1666,7 +1829,7 @@ KnownVulnerableSamples:
     SHA256: 13d7c729c019c1c5a4b3e9fb27d1dd0b992fb7099f4314e011aafcb3472b7107
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2011 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2011-08-23 01:06:20'
+  CreationTimestamp: '2011-08-23 03:06:20'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1773,6 +1936,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1786,6 +1952,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1799,6 +1968,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -1813,6 +1985,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -1827,6 +2002,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -1840,6 +2018,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -1858,7 +2039,7 @@ KnownVulnerableSamples:
     SHA256: a082cdb569b9f1f82252402fa05785fd409222912d5b9e5423299819e6f940ed
   Company: REALiX(tm)
   Copyright: "Copyright (c)1999-2010 Martin Mal\xEDk - REALiX"
-  CreationTimestamp: '2010-02-16 14:45:04'
+  CreationTimestamp: '2010-02-16 16:45:04'
   Date: ''
   Description: HWiNFO32 Kernel Driver
   ExportedFunctions: ''
@@ -1947,6 +2128,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3825d7faf861af9ef490e726b5d65ad5
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: d6c7684e9aaa508cf268335f83afe040
         SHA1: 18066d20ad92409c567cdfde745279ff71c75226
@@ -1960,6 +2144,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 47bf1995df8d524643f7db6d480d31a4
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 518d2ea8a21e879c942d504824ac211c
         SHA1: 21ce87d827077e61abddf2beba69fde5432ea031
@@ -1973,6 +2160,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 010000000001228403475b
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: c08c341aadc50a4843dc7f12d2b7dda6
         SHA1: 0077567a36c455505f2cfed87b2e47d6e836fb9e
@@ -1987,6 +2177,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5e24e
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 1523b60530a241a9dc96e8890e42a0fa
         SHA1: 879269f3f467a6d59641960a62fe9cb419355ff6
@@ -2001,6 +2194,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000011e44a5ecbe
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 16fb30314f4f5ff4dac603580f605778
         SHA1: 55c862df1f775f6a4c8e4f963115962a5cffc4ee
@@ -2014,6 +2210,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 610b7f6b000000000019
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 4798d55be7663a75649cda4dedc686ef
         SHA1: 0f1ab2937b245d9466ea6f9bf056a5942e3989cf
@@ -2026,9 +2225,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 280d5f0b7808e698f0875e61137fcd71
   LoadsDespiteHVCI: 'FALSE'
-MitreID: T1068
-Resources:
-- https://gist.github.com/mgraeber-rc/1bde6a2a83237f17b463d051d32e802c
-Tags:
-- HWiNFO32.SYS
-Verified: 'TRUE'

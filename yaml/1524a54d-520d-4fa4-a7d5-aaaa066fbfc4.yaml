@@ -1,7 +1,10 @@
-Acknowledgement:
-  Handle: ''
-  Person: ''
+Id: 1524a54d-520d-4fa4-a7d5-aaaa066fbfc4
+Tags:
+- dbk64.sys
+Verified: 'TRUE'
 Author: Michael Haag
+Created: '2023-01-09'
+MitreID: T1068
 Category: vulnerable driver
 Commands:
   Command: sc.exe create dbk64.sys binPath=C:\windows\temp\dbk64.sys type=kernel &&
@@ -10,9 +13,12 @@ Commands:
   OperatingSystem: Windows 10
   Privileges: kernel
   Usecase: Elevate privileges
-Created: '2023-01-09'
+Resources:
+- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
 Detection: []
-Id: 1524a54d-520d-4fa4-a7d5-aaaa066fbfc4
+Acknowledgement:
+  Handle: ''
+  Person: ''
 KnownVulnerableSamples:
 - Authentihash:
     MD5: 50dadd183094b8711a4f00a198972e6b
@@ -20,7 +26,7 @@ KnownVulnerableSamples:
     SHA256: 71dc8d678e0749599d3db144c93741f64def1b8b0efb98bef963d2215ebb4992
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2018-06-10 02:06:16'
+  CreationTimestamp: '2018-06-10 04:06:16'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -206,6 +212,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 0400000000012f4ee152d7
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: e140543fe3256027cfa79fc3c19c1776
         SHA1: c655f94eb1ecc93de319fc0c9a2dc6c5ec063728
@@ -219,6 +228,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000125071df9af
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: f47739306d14722e670d9436eadb8e4f
         SHA1: 457d9df00a652cb4c3356d00145d9528fc309172
@@ -233,6 +245,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1121d699a764973ef1f8427ee919cc534114
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: acb5170547d76873f1e4ff18ed5de2eb
         SHA1: bd6e261e75b807381bada7287de04d259258a5fa
@@ -247,6 +262,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 481b6a07a9424c1eaafef3cdf10f
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: fd8cfeea06be14fa89689909e1fc72dc
         SHA1: 8bc3cd2f70abe543e0dbe721065a4076c8521f36
@@ -260,6 +278,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -274,6 +295,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 1a9706fde692d88ca99b822d
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 0b13dccb2637dc9079aedef86a08fa6b
         SHA1: f51d58aee7ca738a2dce7744b39859e2d2806a6f
@@ -292,7 +316,7 @@ KnownVulnerableSamples:
     SHA256: d041654d8cbf189c29919733fd40184ceaf0050295fc7a7e6e3f4cda45b5e090
   Company: ''
   Copyright: ''
-  CreationTimestamp: '2021-06-05 08:22:43'
+  CreationTimestamp: '2021-06-05 10:22:43'
   Date: ''
   Description: ''
   ExportedFunctions: ''
@@ -475,6 +499,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 04000000000121585308a2
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 3e12d32ec517f55b419739b79b663983
         SHA1: 02dd1db230dce5d495a9264bb0946a4621eeba08
@@ -488,6 +515,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01ee5f169dff97352b6465d66a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 51c3959a45cecf3d21a3effb05762573
         SHA1: ecfcd25fd0525448a74875ba271566bc0bfbf061
@@ -501,6 +531,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 6129152700000000002a
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0bb058d116f02817737920f112d9fd3b
         SHA1: fd116235171a4feafedee586b7a59185fb5fd7e6
@@ -514,6 +547,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01f2404240cefd22dbe96c71fc
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 0457b0f3260d39d5ebb31b5a25a0f98a
         SHA1: 30396862f517c4aa71795b25d71a772badc36860
@@ -527,6 +563,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 7803184245708a41cf6f01b8eeb4a954
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: a33260428269bc902bc1cd280e4b1837
         SHA1: 254209ca172cffcc67bd2a88996556d2f09538f0
@@ -541,6 +580,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 01ec1c9240defd2e405d7c4774
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: false
+      IsCA: true
       TBS:
         MD5: 4b80e148166f75934663aa914e0f1992
         SHA1: dc2cbf1962ab679f4e3724e6c5953bb75f4cdb36
@@ -555,6 +597,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 3038811fdd430a77db5b3cc2
       Version: 3
+      CertificateType: Leaf (Code Signing)
+      IsCodeSigning: true
+      IsCA: false
       TBS:
         MD5: 896731b509196bf3f30582a3c5c04c38
         SHA1: 5112cf67db96a72398bbefb4ec44086c27511fb7
@@ -569,6 +614,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: false
       SerialNumber: 0184d3a8ce3781eb57f4fd877b83aeb2
       Version: 3
+      CertificateType: Intermediate
+      IsCodeSigning: false
+      IsCA: false
       TBS:
         MD5: 71fa2e9dc37bcda10b8ee18e8330f0d0
         SHA1: d5f650f385330b7609759fbc058d610f52d4352e
@@ -582,6 +630,9 @@ KnownVulnerableSamples:
       IsCertificateAuthority: true
       SerialNumber: 77bd0e05b7590bb61d4761531e3f75ed
       Version: 3
+      CertificateType: CA
+      IsCodeSigning: true
+      IsCA: true
       TBS:
         MD5: 65fd1dac1f115d9507f4e1840c8cb36a
         SHA1: c7cf5607e19b22fe60c055e71d9b555d70f71f66
@@ -593,10 +644,3 @@ KnownVulnerableSamples:
       Version: 1
   Imphash: 105b74485670215ab231a942c9101ccf
   LoadsDespiteHVCI: 'TRUE'
-MitreID: T1068
-Resources:
-- ' https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md'
-- https://github.com/eclypsium/Screwed-Drivers/blob/master/DRIVERS.md
-Tags:
-- dbk64.sys
-Verified: 'TRUE'
