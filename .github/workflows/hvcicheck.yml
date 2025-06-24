@@ -11,7 +11,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3.3.0
+      uses: actions/checkout@v4
     - name: Run PowerShell script
       run: |
         Invoke-WebRequest -Uri "https://gist.github.com/MHaggis/8d6de45b883b338e47de08b3cb4c9819" -OutFile "script.ps1"
@@ -27,14 +27,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3.3.0
+      uses: actions/checkout@v4
     - name: Download CSV
       uses: actions/download-artifact@v4
       with:
         name: hvci_drivers
         path: bin/
     - name: Set up Python 3.11
-      uses: actions/setup-python@v4.5.0
+      uses: actions/setup-python@v5.6.0
       with:
         python-version: 3.11
     - name: Install dependencies
@@ -44,7 +44,7 @@ jobs:
       run: |
         python bin/hvcitag.py
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
+      uses: peter-evans/create-pull-request@v7
       with:
         reviewers: nasbench, mhaggis
         delete-branch: true
