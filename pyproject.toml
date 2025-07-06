@@ -27,7 +27,7 @@ lief = "^0.16.6"
 pefile = "^2024.8.26"
 shortuuid = "^1.0.13"
 plyara = "^2.2.8"
-cryptography = "^45.0.4"
+cryptography = "^45.0.5"
 
 [tool.poetry.dev-dependencies]
 
