@@ -13,7 +13,7 @@ jobs:
         HUGO_VERSION: 0.111.3
       steps:
         - name: Harden the runner (Audit all outbound calls)
-          uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
+          uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
           with:
             egress-policy: audit
 
@@ -24,7 +24,7 @@ jobs:
         - name: Install Dart Sass Embedded
           run: sudo snap install dart-sass-embedded
         - name: Checkout
-          uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+          uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
           with:
             submodules: true
             token: ${{ secrets.PUSH_TOKEN }}
@@ -47,7 +47,7 @@ jobs:
               --minify \
               --baseURL "${{ steps.pages.outputs.base_url }}/"
         - name: Upload artifact
-          uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+          uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
           with:
             path: ./loldrivers.io/public
   
@@ -63,7 +63,7 @@ jobs:
           id-token: write
         steps:
           - name: Harden the runner (Audit all outbound calls)
-            uses: step-security/harden-runner@6c439dc8bdf85cadbbce9ed30d1c7b959517bc49 # v2.12.2
+            uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
             with:
               egress-policy: audit
 
