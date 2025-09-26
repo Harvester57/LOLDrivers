@@ -8,7 +8,7 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.10"
 PyYAML = "^6.0"
-pandas = "^2.3.0"
+pandas = "^2.3.2"
 Jinja2 = "^3.1.6"
 stix2 = "^3.0.1"
 colorama = ">=0.3.9"
@@ -20,14 +20,14 @@ flask = ">=1.0"
 flask-caching = "^2.3.1"
 cfscrape = "^2.1.1"
 pyzipper = "^0.3.6"
-dnspython = "^2.7.0"
+dnspython = "^2.8.0"
 ipy = "^1.1"
 valhallaapi = "^0.6.0"
-lief = "^0.16.6"
+lief = "^0.17.0"
 pefile = "^2024.8.26"
 shortuuid = "^1.0.13"
 plyara = "^2.2.8"
-cryptography = "^45.0.5"
+cryptography = "^46.0.1"
 
 [tool.poetry.dev-dependencies]
 
