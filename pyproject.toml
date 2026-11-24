@@ -19,15 +19,15 @@ pymisp = ">=2.4.123"
 flask = ">=1.0"
 flask-caching = "^2.3.1"
 cfscrape = "^2.1.1"
-pyzipper = "^0.3.6"
+pyzipper = ">=0.3.6,<0.5.0"
 dnspython = "^2.7.0"
 ipy = "^1.1"
 valhallaapi = "^0.6.0"
-lief = "^0.16.6"
+lief = ">=0.16.6,<1.1.0"
 pefile = "^2024.8.26"
 shortuuid = "^1.0.13"
 plyara = "^2.2.8"
-cryptography = "^45.0.5"
+cryptography = ">=45.0.5,<51.0.0"
 
 [tool.poetry.dev-dependencies]
 
